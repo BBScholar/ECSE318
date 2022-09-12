@@ -10,7 +10,7 @@ module p1_tb;
   wire co;
 
   // modules 
-  unsigned_parallel_multiplier mult(
+  unsigned_parallel_multiplier #(.W(4)) mult(
     .x(x), .y(y),
     .p(p), .cout(co)
   );
