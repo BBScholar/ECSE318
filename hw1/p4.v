@@ -1,21 +1,10 @@
 
 
-module full_adder(
-  input a, b, c,
-  output wire s, cout
-);
-
-  assign s = a ^ b ^ c;
-  assign cout = (a&b) | (a&c) | (b&c);
-
-endmodule
-
-
 module csa_module
 #(parameter W = 8)
 (
-  input [W-1:0] a, b, c,
-  output reg [W-1:0] cout, sout
+  input [W-1:0] a, b, c, 
+  output wire [W-1:0] cout, sout
 );
 
   
@@ -56,19 +45,19 @@ module csa8x10(
 
   // stage 2
   csa_module #(.W(9)) s2m1 (
-    .a(s1_cout[0] << 1), .b({1'b0, s1_sout[0]}), .c(s1_cout[1] << 1),
+    .a({s1_cout[0], 1'b0}), .b({1'b0, s1_sout[0]}), .c({s1_cout[1], 1'b0}),
     .cout(s2_cout[0]), .sout(s2_sout[0])
   );
 
   csa_module #(.W(9)) s2m2 (
-    .a({1'b0, s1_sout[1]}), .b(s1_cout[2] << 1), .c({1'b0, s1_sout[2]}),
+    .a({1'b0, s1_sout[1]}), .b({s1_cout[2], 1'b0}), .c({1'b0, s1_sout[2]}),
     .cout(s2_cout[1]), .sout(s2_sout[1])
   );
 
 
   // stage 3
   csa_module #(.W(10)) s3m1(
-    .a(s2_cout[0] << 1), .b({1'b0, s2_sout[0]}), .c(s2_cout[1] << 1), 
+    .a({s2_cout[0], 1'b0}), .b({1'b0, s2_sout[0]}), .c({s2_cout[1], 1'b0}), 
     .cout(s3_cout[0]), .sout(s3_sout[0])
   );
 
@@ -79,18 +68,18 @@ module csa8x10(
 
   // stage 4
   csa_module #(.W(11)) s4m1 (
-    .a(s3_cout[0] << 1), .b({1'b0, s3_sout[0]}), .c(s3_cout[1] << 1),
+    .a({s3_cout[0], 1'b0}), .b({1'b0, s3_sout[0]}), .c({s3_cout[1], 1'b0}),
     .cout(s4_cout), .sout(s4_sout)
   );
 
   // stage 5
   csa_module #(.W(12)) s5m1 (
-    .a(s4_cout << 1), .b({1'b0, s4_sout}), .c({2'b0, s3_sout[1]}),
+    .a({s4_cout, 1'b0}), .b({1'b0, s4_sout}), .c({2'b0, s3_sout[1]}),
     .cout(s5_cout), .sout(s5_sout)
   );
 
   // final adder 
-  assign out = (s5_cout << 1) + {1'b0, s5_sout};
+  assign out = {s5_cout, 1'b0} + {1'b0, s5_sout};
 
 endmodule
 

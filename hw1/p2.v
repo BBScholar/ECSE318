@@ -26,8 +26,8 @@ module mult2
   wire [N:0] adder_out;
   wire [2*N:0] next_reg, shifted_next_reg, selected_next_reg;
 
-  assign anded_b = N{a_int[0]} & b_int;
-  assign adder_out = anded_b + int_p;
+  assign anded_b = {N{a_int[0]}} & b_int;
+  assign adder_out = anded_b + p_int;
   assign next_reg = {adder_out, a_int};
   assign next_reg_shifted = next_reg >> 1;
   assign shifted = !(|counter); // checks if counter is equal to 0
@@ -36,7 +36,7 @@ module mult2
     if(load) begin 
       counter <= $unsigned(N - 1);
       b_int <= b;
-      {c_int, p_int, a_int} <= {1'b0, N{1'b0}, a};
+      {c_int, p_int, a_int} <= {1'b0, {N{1'b0}}, a};
     end else if(running) begin 
       counter <= counter - 1;
       b_int <= b_int;

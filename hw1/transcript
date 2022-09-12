@@ -1,0 +1,23 @@
+# vsim -do {run -all} -c work.p1_tb 
+# //  QuestaSim-64 6.5f Jun 16 2010 Linux 5.15.0-46-generic
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading work.p1_tb
+# Loading work.unsigned_parallel_multiplier
+# ** Warning: (vsim-3009) [TSCALE] - Module 'unsigned_parallel_multiplier' does not have a `timescale directive in effect, but previous modules do.
+#         Region: :p1_tb:mult
+# Loading work.prop_adder
+# Loading work.csa
+# ** Warning: (vsim-3009) [TSCALE] - Module 'csa' does not have a `timescale directive in effect, but previous modules do.
+#         Region: :p1_tb:mult:csa_loop[3]:c[3]
+# Loading work.full_adder
+# run -all 
+# x=2, y=4 => p=8
+# x=15, y=3 => p=45

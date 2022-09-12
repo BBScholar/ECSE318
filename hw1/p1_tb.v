@@ -1,0 +1,32 @@
+`timescale 10ns/1ns
+
+module p1_tb;
+
+  // inputs
+  reg [3:0] x, y;
+
+  //outputs
+  wire [7:0] p;
+  wire co;
+
+  // modules 
+  unsigned_parallel_multiplier mult(
+    .x(x), .y(y),
+    .p(p), .cout(co)
+  );
+
+  initial begin 
+    $monitor("x=%0d, y=%0d => p=%0d", x, y, p);
+    x <= 4'd2;
+    y <= 4'd4;
+    #10
+
+    x <= 4'd15;
+    y <= 4'd3;
+    #10
+
+    $finish();
+  end
+
+
+endmodule
