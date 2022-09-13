@@ -55,10 +55,4 @@ module p2_tb;
     $finish();
   end
 
-
-
-
-
-
-
 endmodule
