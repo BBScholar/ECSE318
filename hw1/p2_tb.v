@@ -14,7 +14,7 @@ module p2_tb;
   wire valid;
 
   // modules
-  mult2v2 mult(
+  mult2 mult(
     .clk(clk), .load(load),
     .a(a), .b(b),
     .p(p),
