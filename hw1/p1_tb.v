@@ -25,6 +25,11 @@ module p1_tb;
     y <= 4'd3;
     #10
 
+    x <= 4'd15;
+    y <= 4'd15;
+
+    #10
+
     $finish();
   end
 

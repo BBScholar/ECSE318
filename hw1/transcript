@@ -1,4 +1,4 @@
-# vsim -do {run -all} -c work.p1_tb 
+# vsim -do {run -all} -c work.p2_tb 
 # //  QuestaSim-64 6.5f Jun 16 2010 Linux 5.15.0-46-generic
 # //
 # //  Copyright 1991-2010 Mentor Graphics Corporation
@@ -9,15 +9,24 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-# Loading work.p1_tb
-# Loading work.unsigned_parallel_multiplier
-# ** Warning: (vsim-3009) [TSCALE] - Module 'unsigned_parallel_multiplier' does not have a `timescale directive in effect, but previous modules do.
-#         Region: :p1_tb:mult
-# Loading work.prop_adder
-# Loading work.csa
-# ** Warning: (vsim-3009) [TSCALE] - Module 'csa' does not have a `timescale directive in effect, but previous modules do.
-#         Region: :p1_tb:mult:csa_loop[3]:c[3]
-# Loading work.full_adder
+# Loading work.p2_tb
+# Loading work.mult2v2
 # run -all 
-# x=2, y=4 => p=8
-# x=15, y=3 => p=45
+# a=2, b=4 => p=x, co=x
+# a=2, b=4 => p=2, co=0
+# a=2, b=4 => p=1, co=0
+# a=2, b=4 => p=32, co=0
+# a=2, b=4 => p=16, co=0
+# a=2, b=4 => p=8, co=0
+# a=3, b=15 => p=8, co=0
+# a=3, b=15 => p=3, co=0
+# a=3, b=15 => p=121, co=0
+# a=3, b=15 => p=180, co=0
+# a=3, b=15 => p=90, co=0
+# a=3, b=15 => p=45, co=0
+# a=15, b=15 => p=45, co=0
+# a=15, b=15 => p=15, co=0
+# a=15, b=15 => p=127, co=0
+# a=15, b=15 => p=183, co=0
+# a=15, b=15 => p=211, co=0
+# a=15, b=15 => p=225, co=0
