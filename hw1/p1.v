@@ -31,7 +31,7 @@ module unsigned_parallel_multiplier
   assign carry[0] = {W{1'b0}};
   assign sum[0] = {W{1'b0}};
 
-  genvar i, j;
+  genvar i;
   generate
    for(i = 0; i < W; i = i + 1) begin : csa_loop
      csa c [W-1:0] (
