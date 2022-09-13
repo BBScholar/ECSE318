@@ -11,8 +11,7 @@ module p1_tb;
 
   // modules 
   unsigned_parallel_multiplier #(.W(4)) mult(
-    .x(x), .y(y),
-    .p(p), .cout(co)
+    .x(x), .y(y), .p(p)
   );
 
   initial begin 

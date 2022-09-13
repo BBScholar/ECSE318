@@ -19,8 +19,7 @@ module unsigned_parallel_multiplier
 )
 (
   input [W-1:0] x, y,
-  output [2*W - 1:0] p,
-  output cout
+  output [2*W - 1:0] p
 );
 
 
@@ -33,7 +32,7 @@ module unsigned_parallel_multiplier
 
   genvar i;
   generate
-   for(i = 0; i < W; i = i + 1) begin : csa_loop
+   for(i = 0; i < W; i = i + 1) begin : row_loop 
      csa c [W-1:0] (
        .a(y), .b(x[i]), .cin(carry[i]), .sin({1'b0, sum[i][W-1:1]}),
        .sout(sum[i + 1]), .cout(carry[i + 1])
@@ -46,7 +45,7 @@ module unsigned_parallel_multiplier
 
   prop_adder #(.WIDTH(W)) cpa(
     .a({1'b0, sum[W][W-1:1]}), .b(carry[W]), .cin(1'b0),
-    .s(p[2*W-1:W]), .cout(cout)
+    .s(p[2*W-1:W])
   );
 
 endmodule

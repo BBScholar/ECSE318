@@ -11,7 +11,7 @@ module prop_adder
   wire [WIDTH:0] carry;
 
   assign carry[0] = cin;
-  assign carry[WIDTH] = cout;
+  assign cout = carry[WIDTH];
 
   full_adder adders [WIDTH - 1:0] (
     .a(a), .b(b), .c(carry[WIDTH-1:0]),
