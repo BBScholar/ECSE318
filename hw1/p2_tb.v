@@ -3,18 +3,18 @@
 
 module p2_tb;
 
-  localparam N = 4;
+  localparam W = 4;
   
   // inputs
   reg clk, load;
-  reg [N-1:0] a, b;
+  reg [W-1:0] a, b;
   
   // outputs
-  wire [2*N - 1:0] p;
+  wire [2*W - 1:0] p;
   wire valid;
 
   // modules
-  mult2 mult(
+  cyc_mult #(.W(W)) mult(
     .clk(clk), .load(load),
     .a(a), .b(b),
     .p(p),
@@ -31,7 +31,7 @@ module p2_tb;
     a = 4'd2;
     b = 4'd4;
     load = 1'b1;
-    #20
+    #25
     load = 1'b0;
     #100
   
