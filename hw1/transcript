@@ -17,21 +17,23 @@
 # Loading work.uni_shift_reg
 # Loading work.mux
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: bscholar  Hostname: Scholar-Zenbook  ProcessID: 51469
-#           Attempting to use alternate WLF file "./wlftVrMdKT".
+#           File in use by: bscholar  Hostname: Scholar-Zenbook  ProcessID: 60302
+#           Attempting to use alternate WLF file "./wlftyIwwkH".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftVrMdKT
+#           Using alternate file: ./wlftyIwwkH
 # ** Warning: (vsim-3009) [TSCALE] - Module 'mux' does not have a `timescale directive in effect, but previous modules do.
 #         Region: :p2_tb:mult:p_input_mux[3]
 # Loading work.full_adder
 # ** Warning: (vsim-3009) [TSCALE] - Module 'full_adder' does not have a `timescale directive in effect, but previous modules do.
 #         Region: :p2_tb:mult:adder:adders[3]
+# ** Warning: (vsim-3017) p2v3.v(125): [TFMPC] - Too few port connections. Expected 7, found 6.
+#         Region: :p2_tb:mult:ctl
+# ** Warning: (vsim-3722) p2v3.v(125): [TFMPC] - Missing connection for port 'done'.
 # ** Warning: (vsim-3017) p2v3.v(78): [TFMPC] - Too few port connections. Expected 5, found 4.
 #         Region: :p2_tb:mult:ctl:adder
 # ** Warning: (vsim-3722) p2v3.v(78): [TFMPC] - Missing connection for port 'cout'.
 # run -all 
 # a=2, b=4 => p=x, valid=x
-# a=2, b=4 => p=x, valid=0
 # a=2, b=4 => p=2, valid=0
 # a=2, b=4 => p=1, valid=0
 # a=2, b=4 => p=32, valid=0
@@ -39,7 +41,6 @@
 # a=2, b=4 => p=8, valid=1
 # 
 # a=3, b=15 => p=8, valid=1
-# a=3, b=15 => p=8, valid=0
 # a=3, b=15 => p=3, valid=0
 # a=3, b=15 => p=121, valid=0
 # a=3, b=15 => p=180, valid=0
@@ -47,7 +48,6 @@
 # a=3, b=15 => p=45, valid=1
 # 
 # a=15, b=15 => p=45, valid=1
-# a=15, b=15 => p=45, valid=0
 # a=15, b=15 => p=15, valid=0
 # a=15, b=15 => p=127, valid=0
 # a=15, b=15 => p=183, valid=0

@@ -46,7 +46,7 @@ module cyc_control
 )
 ( 
   clk, load_in,
-  valid, load_out, calc,
+  valid, load_out, calc, done,
   state
 );
 
@@ -55,7 +55,7 @@ module cyc_control
   input wire clk, load_in;
   
   output reg [state_bits-1:0] state;
-  output wire valid, load_out, calc;
+  output wire valid, load_out, calc, done;
 
   // wires
   wire max;
@@ -65,10 +65,10 @@ module cyc_control
   // assignments
   assign valid = !(|state);
   assign load_out = (state == one); // make this bitwise operation?
-  assign calc = !valid & !load_out;
+  assign calc = !valid & !load_in;
 
   assign one = {{{state_bits-1}{1'b0}}, 1'b1};
-  assign done = (state == $unsigned(W + 1));
+  assign done = (state == $unsigned(W));
   /* assign next_state = ({state_bits{load}} & one) | ({state_bits{valid}} & {state_bits{1'b0}}) | ({state_bits{!valid & !load}} & adder_out); */
 
   // modules
@@ -106,7 +106,7 @@ wire adder_co, and_bit, p_reg_so;
 wire [W-1:0] p_reg_q, a_reg_q, b_reg_q;
 wire [W-1:0] anded_b, adder_sout, p_reg_in;
 
-wire state_load, state_valid, state_calc;
+wire state_load, state_valid, state_calc ,done;
 
 
 // assignments
@@ -121,28 +121,28 @@ assign p = {p_reg_q, a_reg_q};
 cyc_control ctl(
   .clk(clk), .load_in(load),
   .state(),
-  .load_out(state_load), .valid(state_valid), .calc(state_calc)
+  .load_out(state_load), .valid(state_valid), .calc(state_calc) 
 );
 
 mux p_input_mux [W-1:0] (
-  .a({adder_co, adder_sout[W-1:1]}), .b({W{1'b0}}), .sel(state_load),
+  .a({adder_co, adder_sout[W-1:1]}), .b({W{1'b0}}), .sel(load),
   .o(p_reg_in)
 );
 
 register#(.W(W)) p_reg(
-  .clk(clk), .load(state_load | state_calc),
+  .clk(clk), .load(load | state_calc),
   .d(p_reg_in),
   .q(p_reg_q)
 );
 
 uni_shift_reg #(.W(W)) a_reg(
-  .clk(clk), .load(state_load), .hold(state_valid),
+  .clk(clk), .load(load), .hold(state_valid),
   .shift_in(adder_sout[0]), .load_data(a),
   .q(a_reg_q), .shift_out(and_bit)
 );
 
 register #(.W(W)) b_reg(
-  .clk(clk), .load(state_load),
+  .clk(clk), .load(load),
   .d(b), 
   .q(b_reg_q)
 );
