@@ -28,12 +28,8 @@ module p4_tb;
 
     #10 
 
-    for(i = 0; i < 10; i = i + 1) begin 
-      if(i < 3)
-        data[8*i +: 8] <= 0;
-      else
-        data[8*i +: 8] <= $unsigned(i + 1);
-    end
+    data[0 +: 8] <= 0;
+    data[8 +: 8] <= 0;
 
     #10
 

@@ -4,7 +4,6 @@ module p5_tb;
   reg clk;
 
   initial clk = 0;
-
   always #10 clk = ~clk;
   
   reg w, e;
@@ -21,6 +20,13 @@ module p5_tb;
 
   initial begin 
     $monitor("w=%0b, e=%0b => out1=%0b, out2=%0b", w, e, out1, out2);
+    
+    w <= 1'b1; 
+    e <= 1'b1;
+    #10;
+
+
+
 
   end
 

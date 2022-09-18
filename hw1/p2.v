@@ -1,46 +1,5 @@
 
-module register
-#(parameter W = 4)
-(
-  input clk, load,
-  input [W-1:0] d,
-  output reg [W-1:0] q
-);
-
-  always @ (posedge clk) begin 
-    if(load) begin 
-      q <= d;
-    end else begin 
-      q <= q;
-    end
-  end
-
-endmodule
-
-module uni_shift_reg
-#(parameter W = 4)
-(
-  input clk, load, hold, shift_in,
-  input [W-1:0] load_data,
-  output shift_out,
-  output reg [W-1:0] q
-);
-
-  assign shift_out = q[0];
-
-  always @ (posedge clk) begin 
-    if(load) begin 
-      q <= load_data;
-    end else if(hold) begin 
-      q <= q; // is this ok?
-    end else begin 
-      q <= {shift_in, q[W-1:1]};
-    end
-  end
-
-endmodule
-
-module cyc_control
+module cyclic_control
 #( 
   parameter W=4
 )
@@ -58,9 +17,7 @@ module cyc_control
   output wire valid, load_out, calc, done;
 
   // wires
-  wire max;
   wire [state_bits-1:0] next_state, adder_out, one;
-
 
   // assignments
   assign valid = !(|state);
@@ -69,7 +26,6 @@ module cyc_control
 
   assign one = {{{state_bits-1}{1'b0}}, 1'b1};
   assign done = (state == $unsigned(W));
-  /* assign next_state = ({state_bits{load}} & one) | ({state_bits{valid}} & {state_bits{1'b0}}) | ({state_bits{!valid & !load}} & adder_out); */
 
   // modules
   prop_adder #(.WIDTH(state_bits)) adder (
@@ -89,7 +45,7 @@ module cyc_control
 
 endmodule
 
-module cyc_mult
+module cyclic_multiplier
 #(
   parameter W=4
 )
@@ -99,8 +55,6 @@ module cyc_mult
   output [2*W-1:0] p,
   output valid
 );
-
-localparam counter_bits = $clog2(W);
 
 wire adder_co, and_bit, p_reg_so;
 wire [W-1:0] p_reg_q, a_reg_q, b_reg_q;
@@ -118,7 +72,7 @@ assign p = {p_reg_q, a_reg_q};
 
 // modules
 
-cyc_control ctl(
+cyclic_control ctl(
   .clk(clk), .load_in(load),
   .state(),
   .load_out(state_load), .valid(state_valid), .calc(state_calc) 
@@ -135,7 +89,7 @@ register#(.W(W)) p_reg(
   .q(p_reg_q)
 );
 
-uni_shift_reg #(.W(W)) a_reg(
+unidirectional_shift_reg #(.W(W)) a_reg(
   .clk(clk), .load(load), .hold(state_valid),
   .shift_in(adder_sout[0]), .load_data(a),
   .q(a_reg_q), .shift_out(and_bit)
@@ -151,9 +105,5 @@ prop_adder #(.WIDTH(W)) adder(
   .a(p_reg_q), .b(anded_b), .cin(1'b0),
   .s(adder_sout), .cout(adder_co)
 );
-
-  
-
-  
 
 endmodule

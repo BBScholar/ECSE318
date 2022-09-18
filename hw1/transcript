@@ -1,4 +1,4 @@
-# vsim -do {run -all} -c work.p2_tb 
+# vsim -do {run -all} -c work.p4_tb 
 # //  QuestaSim-64 6.5f Jun 16 2010 Linux 5.15.0-46-generic
 # //
 # //  Copyright 1991-2010 Mentor Graphics Corporation
@@ -9,47 +9,19 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-# Loading work.p2_tb
-# Loading work.cyc_mult
-# Loading work.cyc_control
-# Loading work.prop_adder
-# Loading work.register
-# Loading work.uni_shift_reg
-# Loading work.mux
+# Loading work.p4_tb
+# Loading work.csa8x10
+# Loading work.csa_module
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: bscholar  Hostname: Scholar-Zenbook  ProcessID: 60302
-#           Attempting to use alternate WLF file "./wlftyIwwkH".
+#           File in use by: bscholar  Hostname: Scholar-Zenbook  ProcessID: 32307
+#           Attempting to use alternate WLF file "./wlft7LPNHP".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftyIwwkH
-# ** Warning: (vsim-3009) [TSCALE] - Module 'mux' does not have a `timescale directive in effect, but previous modules do.
-#         Region: :p2_tb:mult:p_input_mux[3]
+#           Using alternate file: ./wlft7LPNHP
+# ** Warning: (vsim-3009) [TSCALE] - Module 'csa_module' does not have a `timescale directive in effect, but previous modules do.
+#         Region: :p4_tb:csa:s1m1
 # Loading work.full_adder
 # ** Warning: (vsim-3009) [TSCALE] - Module 'full_adder' does not have a `timescale directive in effect, but previous modules do.
-#         Region: :p2_tb:mult:adder:adders[3]
-# ** Warning: (vsim-3017) p2v3.v(125): [TFMPC] - Too few port connections. Expected 7, found 6.
-#         Region: :p2_tb:mult:ctl
-# ** Warning: (vsim-3722) p2v3.v(125): [TFMPC] - Missing connection for port 'done'.
-# ** Warning: (vsim-3017) p2v3.v(78): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: :p2_tb:mult:ctl:adder
-# ** Warning: (vsim-3722) p2v3.v(78): [TFMPC] - Missing connection for port 'cout'.
+#         Region: :p4_tb:csa:s5m1:adders[11]
 # run -all 
-# a=2, b=4 => p=x, valid=x
-# a=2, b=4 => p=2, valid=0
-# a=2, b=4 => p=1, valid=0
-# a=2, b=4 => p=32, valid=0
-# a=2, b=4 => p=16, valid=0
-# a=2, b=4 => p=8, valid=1
-# 
-# a=3, b=15 => p=8, valid=1
-# a=3, b=15 => p=3, valid=0
-# a=3, b=15 => p=121, valid=0
-# a=3, b=15 => p=180, valid=0
-# a=3, b=15 => p=90, valid=0
-# a=3, b=15 => p=45, valid=1
-# 
-# a=15, b=15 => p=45, valid=1
-# a=15, b=15 => p=15, valid=0
-# a=15, b=15 => p=127, valid=0
-# a=15, b=15 => p=183, valid=0
-# a=15, b=15 => p=211, valid=0
-# a=15, b=15 => p=225, valid=1
+# out=55
+# out=52

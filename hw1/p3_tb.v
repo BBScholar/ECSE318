@@ -10,10 +10,8 @@ module p3_tb;
   // outputs
   wire [2*W-1:0] p;
 
-
   // modules
-
-  signed_mult #(.W(W)) mult(
+  signed_multiplier #(.W(W)) mult(
     .a(a), .b(b), .p(p)
   );
 
@@ -25,16 +23,13 @@ module p3_tb;
     b <= 5'd4;
     #10
 
-
     a <= 5'd11;
     b <= -5'd3;
     #10
 
-
     a <= -5'd10;
     b <= -5'd11;
     #10
-
 
     a <= -5'd15;
     b <= 5'd14;

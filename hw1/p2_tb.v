@@ -14,7 +14,7 @@ module p2_tb;
   wire valid;
 
   // modules
-  cyc_mult #(.W(W)) mult(
+  cyclic_multiplier #(.W(W)) mult(
     .clk(clk), .load(load),
     .a(a), .b(b),
     .p(p),
