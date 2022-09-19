@@ -5,7 +5,7 @@ module cyclic_control
 )
 ( 
   clk, load_in,
-  valid, load_out, calc, done,
+  valid, load_out, calc,
   state
 );
 
@@ -14,9 +14,11 @@ module cyclic_control
   input wire clk, load_in;
   
   output reg [state_bits-1:0] state;
-  output wire valid, load_out, calc, done;
+  output wire valid, load_out, calc;
+
 
   // wires
+  wire done;
   wire [state_bits-1:0] next_state, adder_out, one;
 
   // assignments
@@ -28,9 +30,9 @@ module cyclic_control
   assign done = (state == $unsigned(W));
 
   // modules
-  prop_adder #(.WIDTH(state_bits)) adder (
+  prop_adder #(.W(state_bits)) adder (
     .a(state), .b(one), .cin(1'b0),
-    .s(adder_out)
+    .s(adder_out), .cout()
   );
 
   always @ (posedge clk) begin 
@@ -56,11 +58,11 @@ module cyclic_multiplier
   output valid
 );
 
-wire adder_co, and_bit, p_reg_so;
+wire adder_co, and_bit;
 wire [W-1:0] p_reg_q, a_reg_q, b_reg_q;
 wire [W-1:0] anded_b, adder_sout, p_reg_in;
 
-wire state_load, state_valid, state_calc ,done;
+wire state_load, state_valid, state_calc;
 
 
 // assignments
@@ -101,7 +103,7 @@ register #(.W(W)) b_reg(
   .q(b_reg_q)
 );
 
-prop_adder #(.WIDTH(W)) adder(
+prop_adder #(.W(W)) adder(
   .a(p_reg_q), .b(anded_b), .cin(1'b0),
   .s(adder_sout), .cout(adder_co)
 );

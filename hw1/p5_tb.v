@@ -7,7 +7,7 @@ module p5_tb;
   always #10 clk = ~clk;
   
   reg w, e;
-  reg out1, out2;
+  wire out1, out2;
 
   p5_struct s1(
     .clk, .w, .e, .out(out1)
@@ -23,11 +23,27 @@ module p5_tb;
     
     w <= 1'b1; 
     e <= 1'b1;
-    #10;
+    #20
 
+    w <= 1'b0;
+    e <= 1'b0;
+    #20
+  
+    w <= 1'b0;
+    e <= 1'b1;
+    #20
 
+    w <= 1'b0;
+    e <= 1'b0;
+    #20
 
+    e <= 1'b1;
+    #20
 
+    e <= 1'b0;
+    #10
+  
+    $finish();
   end
 
 endmodule
