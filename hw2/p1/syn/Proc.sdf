@@ -1,0 +1,24 @@
+(DELAYFILE
+ (SDFVERSION "2.0")
+ (DESIGN "mux2x1")
+ (DATE "Thu Oct  6 19:31:12 2022")
+ (VENDOR "Exemplar Logic, Inc., Alameda")
+ (PROGRAM "LeonardoSpectrum Level 3")
+ (VERSION "2009a.6")
+ (DIVIDER /)
+ (VOLTAGE)
+ (PROCESS)
+ (TEMPERATURE)
+ (TIMESCALE 1 ns)
+(CELL
+ (CELLTYPE "mux21_ni")
+ (INSTANCE ix7)
+ (DELAY
+  (ABSOLUTE
+   (PORT A0 (::0.00) (::0.00))
+   (PORT A1 (::0.00) (::0.00))
+   (PORT S0 (::0.00) (::0.00))
+   (IOPATH A0 Y (::0.42) (::0.40))
+   (IOPATH A1 Y (::0.42) (::0.40))
+   (IOPATH S0 Y (::0.62) (::0.68)))))
+)

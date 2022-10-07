@@ -1,0 +1,73 @@
+/mgc/Leonardo/bin/Linux/spectrum 
+-------------------------------------------------
+LeonardoSpectrum Level 3 - 2009a.6 (Release Production Release, compiled Aug 17 2009 at 17:56:52)
+Copyright 1990-2009 Mentor Graphics.  All rights reserved.
+Portions copyright 1991-2009 Compuware Corporation
+
+Checking Security ...
+
+   *** Welcome to Interactive LeonardoSpectrum Level 3 Version 2009a.6 ***
+
+News :
+  * Enter "help" to get an overview of all commands
+  * Enter <command> -help  to get usage of each command
+
+Session history will be logged to file '/home/bscholar/Documents/ECSE318/hw2/p1/syn/leospec.his'
+Reading library file `/mgc/Leonardo/lib/ami05_typ.syn`...
+Library version = 3.0 Release : Patch (a) : 09/13/04
+Delays assume: Process=typical Temp= 27.0 C  Voltage=5.00 V  
+Info: setting encoding to auto
+Info, Command 'load_library' finished successfully
+-- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/shift.v'...
+-- Loading module 'shift16'
+-- Loading module 'data_reverser'
+-- Loading module 'conditional_data_reverser'
+-- Loading module 'mux2x1'
+-- Compiling root module 'mux2x1'
+Info, Command 'read' finished successfully
+-- Boundary optimization.
+-- Start pre-optimization for design .work.mux2x1.INTERFACE
+Info, Command 'pre_optimize' finished successfully
+-- Start pre-optimization for design .work.mux2x1.INTERFACE
+Info, Command 'pre_optimize' finished successfully
+Info: The target technology was not selected, ami05_typ was automatically selected for you.
+-- Optimizing netlist .work.mux2x1.INTERFACE
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+-- Final Design Rule Check..
+Info, Command 'optimize' finished successfully
+Info: The target technology was not selected, ami05_typ was automatically selected for you.
+.work.shift16.INTERFACE not found
+.work.shift16.INTERFACE not found
+Info: setting edif_write_arrays to FALSE
+FALSE
+-- Writing file Proc.v
+Info, Command 'write' finished successfully
+-- Writing file Proc.sdf
+Info, Command 'write' finished successfully
+CriticalPath
+
+
+
+                        Critical Path Report
+
+Critical path #1, (unconstrained path)
+NAME                               GATE              ARRIVAL              LOAD
+------------------------------------------------------------------------------
+sel/                                           0.00  0.00 up             0.03
+ix7/Y                              mux21_ni    0.68  0.68 dn             0.00
+z/                                             0.00  0.68 dn             0.00
+data arrival time                                    0.68
+
+data required time                                not specified
+------------------------------------------------------------------------------
+data required time                                not specified
+data arrival time                                    0.68
+                                                  ----------
+                                               unconstrained path
+------------------------------------------------------------------------------
+
+
+Info, Command 'report_delay' finished successfully

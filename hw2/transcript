@@ -1,0 +1,25 @@
+# vsim -c work.alu 
+# //  QuestaSim-64 6.5f Jun 16 2010 Linux 5.15.0-48-generic
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading work.alu
+# Loading work.barrel_shifter
+# Loading work.conditional_data_reverser
+# Loading work.comparator_unit
+# Loading work.logic_unit
+# Loading work.adder
+# Loading work.mux4x1
+# Loading work.mux2x1
+# ** Warning: (vsim-3015) mux4x1.v(16): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'a'. The port definition is at: mux2x1.v(5).
+#         Region: :alu:out_mux:l1_mux
+# ** Warning: (vsim-3015) mux4x1.v(16): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'b'. The port definition is at: mux2x1.v(5).
+#         Region: :alu:out_mux:l1_mux
+# ** Warning: (vsim-3015) mux4x1.v(16): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'z'. The port definition is at: mux2x1.v(7).
+#         Region: :alu:out_mux:l1_mux
