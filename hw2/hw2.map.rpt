@@ -1,5 +1,5 @@
 Analysis & Synthesis report for hw2
-Fri Oct  7 02:47:25 2022
+Sun Oct  9 20:41:57 2022
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -13,43 +13,47 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |cond_sum_with_cin
- 10. Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l
- 11. Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l
- 12. Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l
- 13. Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l
- 14. Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum:csa_h
- 15. Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum:csa_h
- 16. Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum:csa_h|cond_sum:csa_l
- 17. Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum:csa_h|cond_sum:csa_h
- 18. Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum:csa_h
- 19. Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum:csa_h|cond_sum:csa_l
- 20. Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum:csa_h|cond_sum:csa_l|cond_sum:csa_l
- 21. Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum:csa_h|cond_sum:csa_l|cond_sum:csa_h
- 22. Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum:csa_h|cond_sum:csa_h
- 23. Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum:csa_h|cond_sum:csa_h|cond_sum:csa_l
- 24. Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum:csa_h|cond_sum:csa_h|cond_sum:csa_h
- 25. Parameter Settings for User Entity Instance: cond_sum:csa_h
- 26. Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_l
- 27. Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_l|cond_sum:csa_l
- 28. Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_l|cond_sum:csa_l|cond_sum:csa_l
- 29. Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_l|cond_sum:csa_l|cond_sum:csa_h
- 30. Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_l|cond_sum:csa_h
- 31. Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_l|cond_sum:csa_h|cond_sum:csa_l
- 32. Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_l|cond_sum:csa_h|cond_sum:csa_h
- 33. Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_h
- 34. Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_h|cond_sum:csa_l
- 35. Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_h|cond_sum:csa_l|cond_sum:csa_l
- 36. Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_h|cond_sum:csa_l|cond_sum:csa_h
- 37. Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_h|cond_sum:csa_h
- 38. Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_h|cond_sum:csa_h|cond_sum:csa_l
- 39. Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_h|cond_sum:csa_h|cond_sum:csa_h
- 40. Port Connectivity Checks: "cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum:csa_h|full_adder:cond_sum_if.adder1"
- 41. Port Connectivity Checks: "cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum:csa_h|full_adder:cond_sum_if.adder0"
- 42. Post-Synthesis Netlist Statistics for Top Partition
- 43. Elapsed Time Per Partition
- 44. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: card_stack:tab_gen[0].tableau
+ 13. Parameter Settings for User Entity Instance: card_stack:tab_gen[1].tableau
+ 14. Parameter Settings for User Entity Instance: card_stack:tab_gen[2].tableau
+ 15. Parameter Settings for User Entity Instance: card_stack:tab_gen[3].tableau
+ 16. Parameter Settings for User Entity Instance: card_stack:tab_gen[4].tableau
+ 17. Parameter Settings for User Entity Instance: card_stack:tab_gen[5].tableau
+ 18. Parameter Settings for User Entity Instance: card_stack:tab_gen[6].tableau
+ 19. Parameter Settings for User Entity Instance: card_stack:tab_gen[7].tableau
+ 20. Parameter Settings for User Entity Instance: card_stack:home_free_gen[0].home
+ 21. Parameter Settings for User Entity Instance: card_stack:home_free_gen[0].free
+ 22. Parameter Settings for User Entity Instance: card_stack:home_free_gen[1].home
+ 23. Parameter Settings for User Entity Instance: card_stack:home_free_gen[1].free
+ 24. Parameter Settings for User Entity Instance: card_stack:home_free_gen[2].home
+ 25. Parameter Settings for User Entity Instance: card_stack:home_free_gen[2].free
+ 26. Parameter Settings for User Entity Instance: card_stack:home_free_gen[3].home
+ 27. Parameter Settings for User Entity Instance: card_stack:home_free_gen[3].free
+ 28. Port Connectivity Checks: "card_stack:home_free_gen[3].free"
+ 29. Port Connectivity Checks: "card_stack:home_free_gen[3].home"
+ 30. Port Connectivity Checks: "card_stack:home_free_gen[2].free"
+ 31. Port Connectivity Checks: "card_stack:home_free_gen[2].home"
+ 32. Port Connectivity Checks: "card_stack:home_free_gen[1].free"
+ 33. Port Connectivity Checks: "card_stack:home_free_gen[1].home"
+ 34. Port Connectivity Checks: "card_stack:home_free_gen[0].free"
+ 35. Port Connectivity Checks: "card_stack:home_free_gen[0].home"
+ 36. Port Connectivity Checks: "card_stack:tab_gen[7].tableau"
+ 37. Port Connectivity Checks: "card_stack:tab_gen[6].tableau"
+ 38. Port Connectivity Checks: "card_stack:tab_gen[5].tableau"
+ 39. Port Connectivity Checks: "card_stack:tab_gen[4].tableau"
+ 40. Port Connectivity Checks: "card_stack:tab_gen[3].tableau"
+ 41. Port Connectivity Checks: "card_stack:tab_gen[2].tableau"
+ 42. Port Connectivity Checks: "card_stack:tab_gen[1].tableau"
+ 43. Port Connectivity Checks: "card_stack:tab_gen[0].tableau"
+ 44. Port Connectivity Checks: "freecell_logic:invalid_detect"
+ 45. Post-Synthesis Netlist Statistics for Top Partition
+ 46. Elapsed Time Per Partition
+ 47. Analysis & Synthesis Messages
+ 48. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -76,14 +80,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Oct  7 02:47:25 2022       ;
+; Analysis & Synthesis Status     ; Successful - Sun Oct  9 20:41:57 2022       ;
 ; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                   ; hw2                                         ;
-; Top-level Entity Name           ; cond_sum_with_cin                           ;
+; Top-level Entity Name           ; freecellPlayer                              ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 50                                          ;
+; Total registers                 ; 1604                                        ;
+; Total pins                      ; 10                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -102,7 +106,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; cond_sum_with_cin  ; hw2                ;
+; Top-level entity name                                                           ; freecellPlayer     ; hw2                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -192,68 +196,145 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                    ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                      ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
-; p1/test.v                        ; yes             ; User Verilog HDL File  ; /home/bscholar/Documents/ECSE318/hw2/p1/test.v                    ;         ;
-; p1/conditional_sum_adder16.v     ; yes             ; User Verilog HDL File  ; /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                              ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
+; p2/order_validator.v             ; yes             ; User Verilog HDL File  ; /home/bscholar/Documents/ECSE318/hw2/p2/order_validator.v   ;         ;
+; p2/card_stack.v                  ; yes             ; User Verilog HDL File  ; /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v        ;         ;
+; p2/freecellPlayer.v              ; yes             ; User Verilog HDL File  ; /home/bscholar/Documents/ECSE318/hw2/p2/freecellPlayer.v    ;         ;
+; p2/freecell_notation.v           ; yes             ; User Verilog HDL File  ; /home/bscholar/Documents/ECSE318/hw2/p2/freecell_notation.v ;         ;
+; p2/decoder.v                     ; yes             ; User Verilog HDL File  ; /home/bscholar/Documents/ECSE318/hw2/p2/decoder.v           ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                  ;
-+---------------------------------------------+--------------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                          ;
-+---------------------------------------------+--------------------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 19                                                                             ;
-;                                             ;                                                                                ;
-; Combinational ALUT usage for logic          ; 31                                                                             ;
-;     -- 7 input functions                    ; 0                                                                              ;
-;     -- 6 input functions                    ; 6                                                                              ;
-;     -- 5 input functions                    ; 11                                                                             ;
-;     -- 4 input functions                    ; 1                                                                              ;
-;     -- <=3 input functions                  ; 13                                                                             ;
-;                                             ;                                                                                ;
-; Dedicated logic registers                   ; 0                                                                              ;
-;                                             ;                                                                                ;
-; I/O pins                                    ; 50                                                                             ;
-;                                             ;                                                                                ;
-; Total DSP Blocks                            ; 0                                                                              ;
-;                                             ;                                                                                ;
-; Maximum fan-out node                        ; cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cout~0 ;
-; Maximum fan-out                             ; 4                                                                              ;
-; Total fan-out                               ; 195                                                                            ;
-; Average fan-out                             ; 1.49                                                                           ;
-+---------------------------------------------+--------------------------------------------------------------------------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 1614        ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 2339        ;
+;     -- 7 input functions                    ; 298         ;
+;     -- 6 input functions                    ; 546         ;
+;     -- 5 input functions                    ; 193         ;
+;     -- 4 input functions                    ; 50          ;
+;     -- <=3 input functions                  ; 1252        ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 1604        ;
+;                                             ;             ;
+; I/O pins                                    ; 10          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 1604        ;
+; Total fan-out                               ; 12885       ;
+; Average fan-out                             ; 3.25        ;
++---------------------------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                 ;
-+---------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
-; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                 ; Entity Name       ; Library Name ;
-+---------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
-; |cond_sum_with_cin                                ; 31 (11)             ; 0 (0)                     ; 0                 ; 0          ; 50   ; 0            ; |cond_sum_with_cin                                                                                                                                  ; cond_sum_with_cin ; work         ;
-;    |cond_sum:csa_h|                               ; 5 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cond_sum_with_cin|cond_sum:csa_h                                                                                                                   ; cond_sum          ; work         ;
-;       |cond_sum:csa_l|                            ; 4 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cond_sum_with_cin|cond_sum:csa_h|cond_sum:csa_l                                                                                                    ; cond_sum          ; work         ;
-;          |cond_sum:csa_l|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cond_sum_with_cin|cond_sum:csa_h|cond_sum:csa_l|cond_sum:csa_l                                                                                     ; cond_sum          ; work         ;
-;    |cond_sum_with_cin:csa_l|                      ; 15 (5)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cond_sum_with_cin|cond_sum_with_cin:csa_l                                                                                                          ; cond_sum_with_cin ; work         ;
-;       |cond_sum:csa_h|                            ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cond_sum_with_cin|cond_sum_with_cin:csa_l|cond_sum:csa_h                                                                                           ; cond_sum          ; work         ;
-;          |cond_sum:csa_l|                         ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cond_sum_with_cin|cond_sum_with_cin:csa_l|cond_sum:csa_h|cond_sum:csa_l                                                                            ; cond_sum          ; work         ;
-;       |cond_sum_with_cin:csa_l|                   ; 6 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cond_sum_with_cin|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l                                                                                  ; cond_sum_with_cin ; work         ;
-;          |cond_sum_with_cin:csa_l|                ; 3 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cond_sum_with_cin|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l                                                          ; cond_sum_with_cin ; work         ;
-;             |cond_sum_with_cin:csa_l|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cond_sum_with_cin|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l                                  ; cond_sum_with_cin ; work         ;
-;                |full_adder:cond_sum_cin_if.adder| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cond_sum_with_cin|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|full_adder:cond_sum_cin_if.adder ; full_adder        ; work         ;
-+---------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                 ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                               ; Entity Name     ; Library Name ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------+-----------------+--------------+
+; |freecellPlayer                       ; 2339 (95)           ; 1604 (0)                  ; 0                 ; 0          ; 10   ; 0            ; |freecellPlayer                                                   ; freecellPlayer  ; work         ;
+;    |card_stack:home_free_gen[0].free| ; 14 (14)             ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |freecellPlayer|card_stack:home_free_gen[0].free                  ; card_stack      ; work         ;
+;    |card_stack:home_free_gen[0].home| ; 43 (43)             ; 83 (83)                   ; 0                 ; 0          ; 0    ; 0            ; |freecellPlayer|card_stack:home_free_gen[0].home                  ; card_stack      ; work         ;
+;    |card_stack:home_free_gen[1].free| ; 15 (15)             ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |freecellPlayer|card_stack:home_free_gen[1].free                  ; card_stack      ; work         ;
+;    |card_stack:home_free_gen[1].home| ; 53 (53)             ; 70 (70)                   ; 0                 ; 0          ; 0    ; 0            ; |freecellPlayer|card_stack:home_free_gen[1].home                  ; card_stack      ; work         ;
+;    |card_stack:home_free_gen[2].free| ; 15 (15)             ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |freecellPlayer|card_stack:home_free_gen[2].free                  ; card_stack      ; work         ;
+;    |card_stack:home_free_gen[2].home| ; 51 (51)             ; 70 (70)                   ; 0                 ; 0          ; 0    ; 0            ; |freecellPlayer|card_stack:home_free_gen[2].home                  ; card_stack      ; work         ;
+;    |card_stack:home_free_gen[3].free| ; 15 (15)             ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |freecellPlayer|card_stack:home_free_gen[3].free                  ; card_stack      ; work         ;
+;    |card_stack:home_free_gen[3].home| ; 49 (49)             ; 57 (57)                   ; 0                 ; 0          ; 0    ; 0            ; |freecellPlayer|card_stack:home_free_gen[3].home                  ; card_stack      ; work         ;
+;    |card_stack:tab_gen[0].tableau|    ; 242 (242)           ; 162 (162)                 ; 0                 ; 0          ; 0    ; 0            ; |freecellPlayer|card_stack:tab_gen[0].tableau                     ; card_stack      ; work         ;
+;    |card_stack:tab_gen[1].tableau|    ; 250 (250)           ; 162 (162)                 ; 0                 ; 0          ; 0    ; 0            ; |freecellPlayer|card_stack:tab_gen[1].tableau                     ; card_stack      ; work         ;
+;    |card_stack:tab_gen[2].tableau|    ; 221 (221)           ; 162 (162)                 ; 0                 ; 0          ; 0    ; 0            ; |freecellPlayer|card_stack:tab_gen[2].tableau                     ; card_stack      ; work         ;
+;    |card_stack:tab_gen[3].tableau|    ; 250 (250)           ; 162 (162)                 ; 0                 ; 0          ; 0    ; 0            ; |freecellPlayer|card_stack:tab_gen[3].tableau                     ; card_stack      ; work         ;
+;    |card_stack:tab_gen[4].tableau|    ; 254 (254)           ; 162 (162)                 ; 0                 ; 0          ; 0    ; 0            ; |freecellPlayer|card_stack:tab_gen[4].tableau                     ; card_stack      ; work         ;
+;    |card_stack:tab_gen[5].tableau|    ; 244 (244)           ; 162 (162)                 ; 0                 ; 0          ; 0    ; 0            ; |freecellPlayer|card_stack:tab_gen[5].tableau                     ; card_stack      ; work         ;
+;    |card_stack:tab_gen[6].tableau|    ; 248 (248)           ; 162 (162)                 ; 0                 ; 0          ; 0    ; 0            ; |freecellPlayer|card_stack:tab_gen[6].tableau                     ; card_stack      ; work         ;
+;    |card_stack:tab_gen[7].tableau|    ; 251 (251)           ; 162 (162)                 ; 0                 ; 0          ; 0    ; 0            ; |freecellPlayer|card_stack:tab_gen[7].tableau                     ; card_stack      ; work         ;
+;    |decoder2to4:free_src_dec|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |freecellPlayer|decoder2to4:free_src_dec                          ; decoder2to4     ; work         ;
+;    |decoder3to8:tab_dest_dec|         ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |freecellPlayer|decoder3to8:tab_dest_dec                          ; decoder3to8     ; work         ;
+;    |freecell_logic:invalid_detect|    ; 16 (3)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |freecellPlayer|freecell_logic:invalid_detect                     ; freecell_logic  ; work         ;
+;       |order_validator:ord|           ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |freecellPlayer|freecell_logic:invalid_detect|order_validator:ord ; order_validator ; work         ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++-----------------------------------------------+----------------------------------------+
+; Register name                                 ; Reason for Removal                     ;
++-----------------------------------------------+----------------------------------------+
+; card_stack:home_free_gen[1].home|all_cards~76 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[1].home|all_cards~70 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[1].home|all_cards~64 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[1].home|all_cards~58 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[1].home|all_cards~52 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[1].home|all_cards~46 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[1].home|all_cards~40 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[1].home|all_cards~34 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[1].home|all_cards~28 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[1].home|all_cards~22 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[1].home|all_cards~16 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[1].home|all_cards~10 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[1].home|all_cards~4  ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~76 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~70 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~64 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~58 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~52 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~46 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~40 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~34 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~28 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~22 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~16 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~10 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~4  ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[2].home|all_cards~77 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[2].home|all_cards~71 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[2].home|all_cards~65 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[2].home|all_cards~59 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[2].home|all_cards~53 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[2].home|all_cards~47 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[2].home|all_cards~41 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[2].home|all_cards~35 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[2].home|all_cards~29 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[2].home|all_cards~23 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[2].home|all_cards~17 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[2].home|all_cards~11 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[2].home|all_cards~5  ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~77 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~71 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~65 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~59 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~53 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~47 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~41 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~35 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~29 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~23 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~17 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~11 ; Stuck at GND due to stuck port data_in ;
+; card_stack:home_free_gen[3].home|all_cards~5  ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 52        ;                                        ;
++-----------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -261,342 +342,419 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 1604  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 1580  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |cond_sum_with_cin ;
-+----------------+-------+----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                     ;
-+----------------+-------+----------------------------------------------------------+
-; W              ; 16    ; Signed Integer                                           ;
-+----------------+-------+----------------------------------------------------------+
++------------------------------------------------------+
+; Inverted Register Statistics                         ;
++--------------------------------------------+---------+
+; Inverted Register                          ; Fan out ;
++--------------------------------------------+---------+
+; card_stack:tab_gen[4].tableau|num_cards[1] ; 19      ;
+; card_stack:tab_gen[4].tableau|num_cards[2] ; 18      ;
+; card_stack:tab_gen[5].tableau|num_cards[1] ; 19      ;
+; card_stack:tab_gen[5].tableau|num_cards[2] ; 18      ;
+; card_stack:tab_gen[6].tableau|num_cards[1] ; 19      ;
+; card_stack:tab_gen[6].tableau|num_cards[2] ; 18      ;
+; card_stack:tab_gen[7].tableau|num_cards[1] ; 19      ;
+; card_stack:tab_gen[7].tableau|num_cards[2] ; 18      ;
+; card_stack:tab_gen[0].tableau|num_cards[1] ; 19      ;
+; card_stack:tab_gen[0].tableau|num_cards[2] ; 18      ;
+; card_stack:tab_gen[0].tableau|num_cards[0] ; 61      ;
+; card_stack:tab_gen[1].tableau|num_cards[1] ; 19      ;
+; card_stack:tab_gen[1].tableau|num_cards[2] ; 18      ;
+; card_stack:tab_gen[1].tableau|num_cards[0] ; 61      ;
+; card_stack:tab_gen[2].tableau|num_cards[1] ; 19      ;
+; card_stack:tab_gen[2].tableau|num_cards[2] ; 18      ;
+; card_stack:tab_gen[2].tableau|num_cards[0] ; 61      ;
+; card_stack:tab_gen[3].tableau|num_cards[1] ; 19      ;
+; card_stack:tab_gen[3].tableau|num_cards[2] ; 18      ;
+; card_stack:tab_gen[3].tableau|num_cards[0] ; 61      ;
+; Total number of inverted registers = 20    ;         ;
++--------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |freecellPlayer|card_stack:tab_gen[0].tableau|num_cards[5] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |freecellPlayer|card_stack:tab_gen[1].tableau|num_cards[3] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |freecellPlayer|card_stack:tab_gen[2].tableau|num_cards[5] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |freecellPlayer|card_stack:tab_gen[3].tableau|num_cards[3] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |freecellPlayer|card_stack:tab_gen[4].tableau|num_cards[4] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |freecellPlayer|card_stack:tab_gen[5].tableau|num_cards[5] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |freecellPlayer|card_stack:tab_gen[6].tableau|num_cards[5] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |freecellPlayer|card_stack:tab_gen[7].tableau|num_cards[5] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |freecellPlayer|card_stack:tab_gen[0].tableau|num_cards[0] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |freecellPlayer|card_stack:tab_gen[1].tableau|num_cards[2] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |freecellPlayer|card_stack:tab_gen[2].tableau|num_cards[2] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |freecellPlayer|card_stack:tab_gen[3].tableau|num_cards[0] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |freecellPlayer|card_stack:tab_gen[4].tableau|num_cards[2] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |freecellPlayer|card_stack:tab_gen[5].tableau|num_cards[1] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |freecellPlayer|card_stack:tab_gen[6].tableau|num_cards[2] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |freecellPlayer|card_stack:tab_gen[7].tableau|num_cards[2] ;
+; 12:1               ; 7 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |freecellPlayer|src_empty                                  ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |freecellPlayer|Selector7                                  ;
+; 20:1               ; 6 bits    ; 78 LEs        ; 78 LEs               ; 0 LEs                  ; No         ; |freecellPlayer|Selector0                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: card_stack:tab_gen[0].tableau    ;
++----------------+--------------------------------------------+-----------------+
+; Parameter Name ; Value                                      ; Type            ;
++----------------+--------------------------------------------+-----------------+
+; MAX_SIZE       ; 26                                         ; Signed Integer  ;
+; INITIAL_N      ; 7                                          ; Signed Integer  ;
+; INITIAL_CARDS  ; 110011001010001001000101110010000000100000 ; Unsigned Binary ;
++----------------+--------------------------------------------+-----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l ;
-+----------------+-------+---------------------------------------------+
-; Parameter Name ; Value ; Type                                        ;
-+----------------+-------+---------------------------------------------+
-; W              ; 8     ; Signed Integer                              ;
-+----------------+-------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: card_stack:tab_gen[1].tableau    ;
++----------------+--------------------------------------------+-----------------+
+; Parameter Name ; Value                                      ; Type            ;
++----------------+--------------------------------------------+-----------------+
+; MAX_SIZE       ; 26                                         ; Signed Integer  ;
+; INITIAL_N      ; 7                                          ; Signed Integer  ;
+; INITIAL_CARDS  ; 110100111001100111010011100101101100100001 ; Unsigned Binary ;
++----------------+--------------------------------------------+-----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l ;
-+----------------+-------+---------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                ;
-+----------------+-------+---------------------------------------------------------------------+
-; W              ; 4     ; Signed Integer                                                      ;
-+----------------+-------+---------------------------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: card_stack:tab_gen[2].tableau    ;
++----------------+--------------------------------------------+-----------------+
+; Parameter Name ; Value                                      ; Type            ;
++----------------+--------------------------------------------+-----------------+
+; MAX_SIZE       ; 26                                         ; Signed Integer  ;
+; INITIAL_N      ; 7                                          ; Signed Integer  ;
+; INITIAL_CARDS  ; 111010010110011000010101010001111100010000 ; Unsigned Binary ;
++----------------+--------------------------------------------+-----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l ;
-+----------------+-------+---------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                        ;
-+----------------+-------+---------------------------------------------------------------------------------------------+
-; W              ; 2     ; Signed Integer                                                                              ;
-+----------------+-------+---------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------+
-; W              ; 1     ; Signed Integer                                                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum:csa_h ;
-+----------------+-------+------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                       ;
-+----------------+-------+------------------------------------------------------------------------------------------------------------+
-; W              ; 1     ; Signed Integer                                                                                             ;
-+----------------+-------+------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum:csa_h ;
-+----------------+-------+------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                               ;
-+----------------+-------+------------------------------------------------------------------------------------+
-; W              ; 2     ; Signed Integer                                                                     ;
-+----------------+-------+------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum:csa_h|cond_sum:csa_l ;
-+----------------+-------+---------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                              ;
-+----------------+-------+---------------------------------------------------------------------------------------------------+
-; W              ; 1     ; Signed Integer                                                                                    ;
-+----------------+-------+---------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum:csa_h|cond_sum:csa_h ;
-+----------------+-------+---------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                              ;
-+----------------+-------+---------------------------------------------------------------------------------------------------+
-; W              ; 1     ; Signed Integer                                                                                    ;
-+----------------+-------+---------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum:csa_h ;
-+----------------+-------+------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                       ;
-+----------------+-------+------------------------------------------------------------+
-; W              ; 4     ; Signed Integer                                             ;
-+----------------+-------+------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum:csa_h|cond_sum:csa_l ;
-+----------------+-------+---------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------+
-; W              ; 2     ; Signed Integer                                                            ;
-+----------------+-------+---------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum:csa_h|cond_sum:csa_l|cond_sum:csa_l ;
-+----------------+-------+------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                     ;
-+----------------+-------+------------------------------------------------------------------------------------------+
-; W              ; 1     ; Signed Integer                                                                           ;
-+----------------+-------+------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum:csa_h|cond_sum:csa_l|cond_sum:csa_h ;
-+----------------+-------+------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                     ;
-+----------------+-------+------------------------------------------------------------------------------------------+
-; W              ; 1     ; Signed Integer                                                                           ;
-+----------------+-------+------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum:csa_h|cond_sum:csa_h ;
-+----------------+-------+---------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------+
-; W              ; 2     ; Signed Integer                                                            ;
-+----------------+-------+---------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum:csa_h|cond_sum:csa_h|cond_sum:csa_l ;
-+----------------+-------+------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                     ;
-+----------------+-------+------------------------------------------------------------------------------------------+
-; W              ; 1     ; Signed Integer                                                                           ;
-+----------------+-------+------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum_with_cin:csa_l|cond_sum:csa_h|cond_sum:csa_h|cond_sum:csa_h ;
-+----------------+-------+------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                     ;
-+----------------+-------+------------------------------------------------------------------------------------------+
-; W              ; 1     ; Signed Integer                                                                           ;
-+----------------+-------+------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum:csa_h ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; W              ; 8     ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: card_stack:tab_gen[3].tableau    ;
++----------------+--------------------------------------------+-----------------+
+; Parameter Name ; Value                                      ; Type            ;
++----------------+--------------------------------------------+-----------------+
+; MAX_SIZE       ; 26                                         ; Signed Integer  ;
+; INITIAL_N      ; 7                                          ; Signed Integer  ;
+; INITIAL_CARDS  ; 100011110000011011010100110110101000110111 ; Unsigned Binary ;
++----------------+--------------------------------------------+-----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_l ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; W              ; 4     ; Signed Integer                                    ;
-+----------------+-------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_l|cond_sum:csa_l ;
-+----------------+-------+------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                             ;
-+----------------+-------+------------------------------------------------------------------+
-; W              ; 2     ; Signed Integer                                                   ;
-+----------------+-------+------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_l|cond_sum:csa_l|cond_sum:csa_l ;
-+----------------+-------+---------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                            ;
-+----------------+-------+---------------------------------------------------------------------------------+
-; W              ; 1     ; Signed Integer                                                                  ;
-+----------------+-------+---------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_l|cond_sum:csa_l|cond_sum:csa_h ;
-+----------------+-------+---------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                            ;
-+----------------+-------+---------------------------------------------------------------------------------+
-; W              ; 1     ; Signed Integer                                                                  ;
-+----------------+-------+---------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_l|cond_sum:csa_h ;
-+----------------+-------+------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                             ;
-+----------------+-------+------------------------------------------------------------------+
-; W              ; 2     ; Signed Integer                                                   ;
-+----------------+-------+------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_l|cond_sum:csa_h|cond_sum:csa_l ;
-+----------------+-------+---------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                            ;
-+----------------+-------+---------------------------------------------------------------------------------+
-; W              ; 1     ; Signed Integer                                                                  ;
-+----------------+-------+---------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_l|cond_sum:csa_h|cond_sum:csa_h ;
-+----------------+-------+---------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                            ;
-+----------------+-------+---------------------------------------------------------------------------------+
-; W              ; 1     ; Signed Integer                                                                  ;
-+----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: card_stack:tab_gen[4].tableau ;
++----------------+--------------------------------------+--------------------+
+; Parameter Name ; Value                                ; Type               ;
++----------------+--------------------------------------+--------------------+
+; MAX_SIZE       ; 26                                   ; Signed Integer     ;
+; INITIAL_N      ; 6                                    ; Signed Integer     ;
+; INITIAL_CARDS  ; 001011101010111011110101000001111000 ; Unsigned Binary    ;
++----------------+--------------------------------------+--------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_h ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; W              ; 4     ; Signed Integer                                    ;
-+----------------+-------+---------------------------------------------------+
+; Parameter Settings for User Entity Instance: card_stack:tab_gen[5].tableau ;
++----------------+--------------------------------------+--------------------+
+; Parameter Name ; Value                                ; Type               ;
++----------------+--------------------------------------+--------------------+
+; MAX_SIZE       ; 26                                   ; Signed Integer     ;
+; INITIAL_N      ; 6                                    ; Signed Integer     ;
+; INITIAL_CARDS  ; 000100001100010010001000100010110001 ; Unsigned Binary    ;
++----------------+--------------------------------------+--------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_h|cond_sum:csa_l ;
-+----------------+-------+------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                             ;
-+----------------+-------+------------------------------------------------------------------+
-; W              ; 2     ; Signed Integer                                                   ;
-+----------------+-------+------------------------------------------------------------------+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: card_stack:tab_gen[6].tableau ;
++----------------+--------------------------------------+--------------------+
+; Parameter Name ; Value                                ; Type               ;
++----------------+--------------------------------------+--------------------+
+; MAX_SIZE       ; 26                                   ; Signed Integer     ;
+; INITIAL_N      ; 6                                    ; Signed Integer     ;
+; INITIAL_CARDS  ; 100100000010101011000110011100011001 ; Unsigned Binary    ;
++----------------+--------------------------------------+--------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_h|cond_sum:csa_l|cond_sum:csa_l ;
-+----------------+-------+---------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                            ;
-+----------------+-------+---------------------------------------------------------------------------------+
-; W              ; 1     ; Signed Integer                                                                  ;
-+----------------+-------+---------------------------------------------------------------------------------+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: card_stack:tab_gen[7].tableau ;
++----------------+--------------------------------------+--------------------+
+; Parameter Name ; Value                                ; Type               ;
++----------------+--------------------------------------+--------------------+
+; MAX_SIZE       ; 26                                   ; Signed Integer     ;
+; INITIAL_N      ; 6                                    ; Signed Integer     ;
+; INITIAL_CARDS  ; 011010000011101001010111100110000111 ; Unsigned Binary    ;
++----------------+--------------------------------------+--------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_h|cond_sum:csa_l|cond_sum:csa_h ;
-+----------------+-------+---------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                            ;
-+----------------+-------+---------------------------------------------------------------------------------+
-; W              ; 1     ; Signed Integer                                                                  ;
-+----------------+-------+---------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: card_stack:home_free_gen[0].home ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; MAX_SIZE       ; 13    ; Signed Integer                                       ;
+; INITIAL_N      ; 0     ; Signed Integer                                       ;
+; INITIAL_CARDS  ; 00    ; Unsigned Binary                                      ;
++----------------+-------+------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_h|cond_sum:csa_h ;
-+----------------+-------+------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                             ;
-+----------------+-------+------------------------------------------------------------------+
-; W              ; 2     ; Signed Integer                                                   ;
-+----------------+-------+------------------------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: card_stack:home_free_gen[0].free ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; MAX_SIZE       ; 1     ; Signed Integer                                       ;
+; INITIAL_N      ; 0     ; Signed Integer                                       ;
+; INITIAL_CARDS  ; 00    ; Unsigned Binary                                      ;
++----------------+-------+------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_h|cond_sum:csa_h|cond_sum:csa_l ;
-+----------------+-------+---------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                            ;
-+----------------+-------+---------------------------------------------------------------------------------+
-; W              ; 1     ; Signed Integer                                                                  ;
-+----------------+-------+---------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: card_stack:home_free_gen[1].home ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; MAX_SIZE       ; 13    ; Signed Integer                                       ;
+; INITIAL_N      ; 0     ; Signed Integer                                       ;
+; INITIAL_CARDS  ; 00    ; Unsigned Binary                                      ;
++----------------+-------+------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cond_sum:csa_h|cond_sum:csa_h|cond_sum:csa_h|cond_sum:csa_h ;
-+----------------+-------+---------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                            ;
-+----------------+-------+---------------------------------------------------------------------------------+
-; W              ; 1     ; Signed Integer                                                                  ;
-+----------------+-------+---------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: card_stack:home_free_gen[1].free ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; MAX_SIZE       ; 1     ; Signed Integer                                       ;
+; INITIAL_N      ; 0     ; Signed Integer                                       ;
+; INITIAL_CARDS  ; 00    ; Unsigned Binary                                      ;
++----------------+-------+------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum:csa_h|full_adder:cond_sum_if.adder1" ;
-+------+-------+----------+------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                ;
-+------+-------+----------+------------------------------------------------------------------------------------------------------------------------+
-; c    ; Input ; Info     ; Stuck at VCC                                                                                                           ;
-+------+-------+----------+------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: card_stack:home_free_gen[2].home ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; MAX_SIZE       ; 13    ; Signed Integer                                       ;
+; INITIAL_N      ; 0     ; Signed Integer                                       ;
+; INITIAL_CARDS  ; 00    ; Unsigned Binary                                      ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum:csa_h|full_adder:cond_sum_if.adder0" ;
-+------+-------+----------+------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                ;
-+------+-------+----------+------------------------------------------------------------------------------------------------------------------------+
-; c    ; Input ; Info     ; Stuck at GND                                                                                                           ;
-+------+-------+----------+------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: card_stack:home_free_gen[2].free ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; MAX_SIZE       ; 1     ; Signed Integer                                       ;
+; INITIAL_N      ; 0     ; Signed Integer                                       ;
+; INITIAL_CARDS  ; 00    ; Unsigned Binary                                      ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: card_stack:home_free_gen[3].home ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; MAX_SIZE       ; 13    ; Signed Integer                                       ;
+; INITIAL_N      ; 0     ; Signed Integer                                       ;
+; INITIAL_CARDS  ; 00    ; Unsigned Binary                                      ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: card_stack:home_free_gen[3].free ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; MAX_SIZE       ; 1     ; Signed Integer                                       ;
+; INITIAL_N      ; 0     ; Signed Integer                                       ;
+; INITIAL_CARDS  ; 00    ; Unsigned Binary                                      ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "card_stack:home_free_gen[3].free"                                                        ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; num_cards ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "card_stack:home_free_gen[3].home"                                                        ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; pop       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; num_cards ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "card_stack:home_free_gen[2].free"                                                        ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; num_cards ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "card_stack:home_free_gen[2].home"                                                        ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; pop       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; num_cards ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "card_stack:home_free_gen[1].free"                                                        ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; num_cards ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "card_stack:home_free_gen[1].home"                                                        ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; pop       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; num_cards ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "card_stack:home_free_gen[0].free"                                                        ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; num_cards ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "card_stack:home_free_gen[0].home"                                                        ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; pop       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; num_cards ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "card_stack:tab_gen[7].tableau"                                                           ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; num_cards ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "card_stack:tab_gen[6].tableau"                                                           ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; num_cards ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "card_stack:tab_gen[5].tableau"                                                           ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; num_cards ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "card_stack:tab_gen[4].tableau"                                                           ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; num_cards ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "card_stack:tab_gen[3].tableau"                                                           ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; num_cards ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "card_stack:tab_gen[2].tableau"                                                           ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; num_cards ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "card_stack:tab_gen[1].tableau"                                                           ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; num_cards ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "card_stack:tab_gen[0].tableau"                                                           ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; num_cards ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "freecell_logic:invalid_detect"                                                         ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; invalid ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -604,17 +762,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 31                          ;
-;     normal            ; 31                          ;
-;         2 data inputs ; 6                           ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 1                           ;
-;         5 data inputs ; 11                          ;
-;         6 data inputs ; 6                           ;
-; boundary_port         ; 50                          ;
+; arriav_ff             ; 1604                        ;
+;     ENA               ; 1580                        ;
+;     plain             ; 24                          ;
+; arriav_lcell_comb     ; 2339                        ;
+;     arith             ; 48                          ;
+;         1 data inputs ; 8                           ;
+;         3 data inputs ; 40                          ;
+;     extend            ; 298                         ;
+;         7 data inputs ; 298                         ;
+;     normal            ; 1993                        ;
+;         1 data inputs ; 1070                        ;
+;         2 data inputs ; 81                          ;
+;         3 data inputs ; 53                          ;
+;         4 data inputs ; 50                          ;
+;         5 data inputs ; 193                         ;
+;         6 data inputs ; 546                         ;
+; boundary_port         ; 10                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 4.61                        ;
+; Max LUT depth         ; 16.10                       ;
+; Average LUT depth     ; 13.33                       ;
 +-----------------------+-----------------------------+
 
 
@@ -623,7 +790,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -633,32 +800,49 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Fri Oct  7 02:47:15 2022
+    Info: Processing started: Sun Oct  9 20:41:45 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off hw2 -c hw2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file p2/order_validator.v
+    Info (12023): Found entity 1: order_validator File: /home/bscholar/Documents/ECSE318/hw2/p2/order_validator.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file p2/card_stack.v
+    Info (12023): Found entity 1: card_stack File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file p2/testFreecell.v
+    Info (12023): Found entity 1: testFreecell File: /home/bscholar/Documents/ECSE318/hw2/p2/testFreecell.v Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file p2/mux8x1.v
+    Info (12023): Found entity 1: mux8x1 File: /home/bscholar/Documents/ECSE318/hw2/p2/mux8x1.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file p2/mux2x1.v
+    Info (12023): Found entity 1: mux2x1 File: /home/bscholar/Documents/ECSE318/hw2/p2/mux2x1.v Line: 3
+Info (12021): Found 2 design units, including 2 entities, in source file p2/freecellPlayer.v
+    Info (12023): Found entity 1: freecellPlayer File: /home/bscholar/Documents/ECSE318/hw2/p2/freecellPlayer.v Line: 3
+    Info (12023): Found entity 2: freecell_logic File: /home/bscholar/Documents/ECSE318/hw2/p2/freecellPlayer.v Line: 207
+Info (12021): Found 0 design units, including 0 entities, in source file p2/freecell_notation.v
+Info (12021): Found 2 design units, including 2 entities, in source file p2/decoder.v
+    Info (12023): Found entity 1: decoder2to4 File: /home/bscholar/Documents/ECSE318/hw2/p2/decoder.v Line: 3
+    Info (12023): Found entity 2: decoder3to8 File: /home/bscholar/Documents/ECSE318/hw2/p2/decoder.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file p1/full_adder.v
+    Info (12023): Found entity 1: full_adder File: /home/bscholar/Documents/ECSE318/hw2/p1/full_adder.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file p1/test_tb.v
     Info (12023): Found entity 1: test_tb File: /home/bscholar/Documents/ECSE318/hw2/p1/test_tb.v Line: 5
 Info (12021): Found 2 design units, including 2 entities, in source file p1/test.v
     Info (12023): Found entity 1: cond_sum File: /home/bscholar/Documents/ECSE318/hw2/p1/test.v Line: 2
-    Info (12023): Found entity 2: cond_sum_with_cin File: /home/bscholar/Documents/ECSE318/hw2/p1/test.v Line: 49
-Info (12021): Found 4 design units, including 4 entities, in source file p1/shift.v
-    Info (12023): Found entity 1: mux2x1 File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 4
-    Info (12023): Found entity 2: data_reverser File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 17
-    Info (12023): Found entity 3: conditional_data_reverser File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 45
-    Info (12023): Found entity 4: shift16 File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 70
+    Info (12023): Found entity 2: cond_sum_with_cin File: /home/bscholar/Documents/ECSE318/hw2/p1/test.v Line: 46
+Info (12021): Found 3 design units, including 3 entities, in source file p1/shift.v
+    Info (12023): Found entity 1: data_reverser File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 4
+    Info (12023): Found entity 2: conditional_data_reverser File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 32
+    Info (12023): Found entity 3: shift16 File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 57
 Info (12021): Found 1 design units, including 1 entities, in source file p1/logic.v
     Info (12023): Found entity 1: logic16 File: /home/bscholar/Documents/ECSE318/hw2/p1/logic.v Line: 3
-Info (12021): Found 9 design units, including 9 entities, in source file p1/conditional_sum_adder16.v
-    Info (12023): Found entity 1: full_adder File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 3
-    Info (12023): Found entity 2: conditional_sum_adder1 File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 16
-    Info (12023): Found entity 3: conditional_sum_adder2 File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 37
-    Info (12023): Found entity 4: conditional_sum_adder2_with_cin File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 84
-    Info (12023): Found entity 5: conditional_sum_adder4 File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 121
-    Info (12023): Found entity 6: conditional_sum_adder4_with_cin File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 170
-    Info (12023): Found entity 7: conditional_sum_adder8 File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 209
-    Info (12023): Found entity 8: conditional_sum_adder8_with_cin File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 257
-    Info (12023): Found entity 9: conditional_sum_adder16_with_cin File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 295
+Info (12021): Found 8 design units, including 8 entities, in source file p1/conditional_sum_adder16.v
+    Info (12023): Found entity 1: conditional_sum_adder1 File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 5
+    Info (12023): Found entity 2: conditional_sum_adder2 File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 26
+    Info (12023): Found entity 3: conditional_sum_adder2_with_cin File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 57
+    Info (12023): Found entity 4: conditional_sum_adder4 File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 86
+    Info (12023): Found entity 5: conditional_sum_adder4_with_cin File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 117
+    Info (12023): Found entity 6: conditional_sum_adder8 File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 149
+    Info (12023): Found entity 7: conditional_sum_adder8_with_cin File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 180
+    Info (12023): Found entity 8: conditional_sum_adder16_with_cin File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 210
 Info (12021): Found 1 design units, including 1 entities, in source file p1/comparator.v
     Info (12023): Found entity 1: comparator16 File: /home/bscholar/Documents/ECSE318/hw2/p1/comparator.v Line: 3
 Warning (10463): Verilog HDL Declaration warning at alu.v(42): "logic" is SystemVerilog-2005 keyword File: /home/bscholar/Documents/ECSE318/hw2/p1/alu.v Line: 42
@@ -672,25 +856,28 @@ Warning (12019): Can't analyze file -- file adder.v is missing
 Warning (12019): Can't analyze file -- file mux4x1.v is missing
 Warning (12019): Can't analyze file -- file alu.v is missing
 Warning (12019): Can't analyze file -- file barrel_shifter.v is missing
-Warning (10236): Verilog HDL Implicit Net warning at alu.v(35): created implicit net for "b" File: /home/bscholar/Documents/ECSE318/hw2/p1/alu.v Line: 35
-Warning (10236): Verilog HDL Implicit Net warning at adder.v(38): created implicit net for "subtraction" File: /home/bscholar/Documents/ECSE318/hw2/p1/adder.v Line: 38
-Warning (10236): Verilog HDL Implicit Net warning at adder.v(49): created implicit net for "a_b_sign_compare" File: /home/bscholar/Documents/ECSE318/hw2/p1/adder.v Line: 49
-Warning (10227): Verilog HDL Port Declaration warning at shift.v(24): data type declaration for "a" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 24
-Info (10499): HDL info at shift.v(21): see declaration for object "a" File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 21
-Warning (10227): Verilog HDL Port Declaration warning at shift.v(24): data type declaration for "z" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 24
-Info (10499): HDL info at shift.v(22): see declaration for object "z" File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 22
-Warning (10227): Verilog HDL Port Declaration warning at shift.v(52): data type declaration for "a" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 52
-Info (10499): HDL info at shift.v(49): see declaration for object "a" File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 49
-Warning (10227): Verilog HDL Port Declaration warning at shift.v(53): data type declaration for "z" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 53
-Info (10499): HDL info at shift.v(50): see declaration for object "z" File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 50
-Warning (10227): Verilog HDL Port Declaration warning at shift.v(77): data type declaration for "a" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 77
-Info (10499): HDL info at shift.v(74): see declaration for object "a" File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 74
-Warning (10227): Verilog HDL Port Declaration warning at shift.v(77): data type declaration for "b" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 77
-Info (10499): HDL info at shift.v(74): see declaration for object "b" File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 74
-Warning (10227): Verilog HDL Port Declaration warning at shift.v(78): data type declaration for "op" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 78
-Info (10499): HDL info at shift.v(74): see declaration for object "op" File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 74
-Warning (10227): Verilog HDL Port Declaration warning at shift.v(77): data type declaration for "s" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 77
-Info (10499): HDL info at shift.v(75): see declaration for object "s" File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 75
+Warning (10227): Verilog HDL Port Declaration warning at card_stack.v(14): data type declaration for "card_in" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 14
+Info (10499): HDL info at card_stack.v(10): see declaration for object "card_in" File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 10
+Warning (10227): Verilog HDL Port Declaration warning at card_stack.v(15): data type declaration for "top_card" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 15
+Info (10499): HDL info at card_stack.v(11): see declaration for object "top_card" File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 11
+Warning (10227): Verilog HDL Port Declaration warning at card_stack.v(16): data type declaration for "num_cards" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 16
+Info (10499): HDL info at card_stack.v(11): see declaration for object "num_cards" File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 11
+Warning (10227): Verilog HDL Port Declaration warning at shift.v(11): data type declaration for "a" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 11
+Info (10499): HDL info at shift.v(8): see declaration for object "a" File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 8
+Warning (10227): Verilog HDL Port Declaration warning at shift.v(11): data type declaration for "z" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 11
+Info (10499): HDL info at shift.v(9): see declaration for object "z" File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 9
+Warning (10227): Verilog HDL Port Declaration warning at shift.v(39): data type declaration for "a" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 39
+Info (10499): HDL info at shift.v(36): see declaration for object "a" File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 36
+Warning (10227): Verilog HDL Port Declaration warning at shift.v(40): data type declaration for "z" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 40
+Info (10499): HDL info at shift.v(37): see declaration for object "z" File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 37
+Warning (10227): Verilog HDL Port Declaration warning at shift.v(64): data type declaration for "a" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 64
+Info (10499): HDL info at shift.v(61): see declaration for object "a" File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 61
+Warning (10227): Verilog HDL Port Declaration warning at shift.v(64): data type declaration for "b" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 64
+Info (10499): HDL info at shift.v(61): see declaration for object "b" File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 61
+Warning (10227): Verilog HDL Port Declaration warning at shift.v(65): data type declaration for "op" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 65
+Info (10499): HDL info at shift.v(61): see declaration for object "op" File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 61
+Warning (10227): Verilog HDL Port Declaration warning at shift.v(64): data type declaration for "s" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 64
+Info (10499): HDL info at shift.v(62): see declaration for object "s" File: /home/bscholar/Documents/ECSE318/hw2/p1/shift.v Line: 62
 Warning (10227): Verilog HDL Port Declaration warning at logic.v(11): data type declaration for "a" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/logic.v Line: 11
 Info (10499): HDL info at logic.v(8): see declaration for object "a" File: /home/bscholar/Documents/ECSE318/hw2/p1/logic.v Line: 8
 Warning (10227): Verilog HDL Port Declaration warning at logic.v(11): data type declaration for "b" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/logic.v Line: 11
@@ -699,50 +886,50 @@ Warning (10227): Verilog HDL Port Declaration warning at logic.v(13): data type 
 Info (10499): HDL info at logic.v(8): see declaration for object "op" File: /home/bscholar/Documents/ECSE318/hw2/p1/logic.v Line: 8
 Warning (10227): Verilog HDL Port Declaration warning at logic.v(12): data type declaration for "s" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/logic.v Line: 12
 Info (10499): HDL info at logic.v(9): see declaration for object "s" File: /home/bscholar/Documents/ECSE318/hw2/p1/logic.v Line: 9
-Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(45): data type declaration for "s0" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 45
-Info (10499): HDL info at conditional_sum_adder16.v(42): see declaration for object "s0" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 42
-Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(45): data type declaration for "s1" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 45
-Info (10499): HDL info at conditional_sum_adder16.v(42): see declaration for object "s1" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 42
-Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(91): data type declaration for "a" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 91
-Info (10499): HDL info at conditional_sum_adder16.v(88): see declaration for object "a" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 88
-Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(91): data type declaration for "b" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 91
-Info (10499): HDL info at conditional_sum_adder16.v(88): see declaration for object "b" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 88
-Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(94): data type declaration for "s" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 94
-Info (10499): HDL info at conditional_sum_adder16.v(89): see declaration for object "s" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 89
-Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(128): data type declaration for "a" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 128
-Info (10499): HDL info at conditional_sum_adder16.v(125): see declaration for object "a" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 125
-Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(128): data type declaration for "b" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 128
-Info (10499): HDL info at conditional_sum_adder16.v(125): see declaration for object "b" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 125
-Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(130): data type declaration for "s0" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 130
-Info (10499): HDL info at conditional_sum_adder16.v(126): see declaration for object "s0" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 126
-Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(130): data type declaration for "s1" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 130
-Info (10499): HDL info at conditional_sum_adder16.v(126): see declaration for object "s1" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 126
-Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(177): data type declaration for "a" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 177
-Info (10499): HDL info at conditional_sum_adder16.v(174): see declaration for object "a" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 174
-Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(177): data type declaration for "b" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 177
-Info (10499): HDL info at conditional_sum_adder16.v(174): see declaration for object "b" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 174
-Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(180): data type declaration for "s" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 180
-Info (10499): HDL info at conditional_sum_adder16.v(175): see declaration for object "s" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 175
-Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(216): data type declaration for "a" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 216
-Info (10499): HDL info at conditional_sum_adder16.v(213): see declaration for object "a" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 213
-Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(216): data type declaration for "b" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 216
-Info (10499): HDL info at conditional_sum_adder16.v(213): see declaration for object "b" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 213
-Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(218): data type declaration for "s0" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 218
-Info (10499): HDL info at conditional_sum_adder16.v(214): see declaration for object "s0" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 214
-Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(218): data type declaration for "s1" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 218
-Info (10499): HDL info at conditional_sum_adder16.v(214): see declaration for object "s1" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 214
-Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(264): data type declaration for "a" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 264
-Info (10499): HDL info at conditional_sum_adder16.v(261): see declaration for object "a" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 261
-Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(264): data type declaration for "b" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 264
-Info (10499): HDL info at conditional_sum_adder16.v(261): see declaration for object "b" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 261
-Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(267): data type declaration for "s" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 267
-Info (10499): HDL info at conditional_sum_adder16.v(262): see declaration for object "s" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 262
-Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(302): data type declaration for "a" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 302
-Info (10499): HDL info at conditional_sum_adder16.v(299): see declaration for object "a" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 299
-Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(302): data type declaration for "b" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 302
-Info (10499): HDL info at conditional_sum_adder16.v(299): see declaration for object "b" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 299
-Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(305): data type declaration for "s" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 305
-Info (10499): HDL info at conditional_sum_adder16.v(300): see declaration for object "s" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 300
+Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(34): data type declaration for "s0" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 34
+Info (10499): HDL info at conditional_sum_adder16.v(31): see declaration for object "s0" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 31
+Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(34): data type declaration for "s1" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 34
+Info (10499): HDL info at conditional_sum_adder16.v(31): see declaration for object "s1" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 31
+Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(64): data type declaration for "a" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 64
+Info (10499): HDL info at conditional_sum_adder16.v(61): see declaration for object "a" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 61
+Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(64): data type declaration for "b" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 64
+Info (10499): HDL info at conditional_sum_adder16.v(61): see declaration for object "b" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 61
+Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(67): data type declaration for "s" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 67
+Info (10499): HDL info at conditional_sum_adder16.v(62): see declaration for object "s" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 62
+Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(93): data type declaration for "a" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 93
+Info (10499): HDL info at conditional_sum_adder16.v(90): see declaration for object "a" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 90
+Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(93): data type declaration for "b" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 93
+Info (10499): HDL info at conditional_sum_adder16.v(90): see declaration for object "b" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 90
+Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(95): data type declaration for "s0" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 95
+Info (10499): HDL info at conditional_sum_adder16.v(91): see declaration for object "s0" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 91
+Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(95): data type declaration for "s1" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 95
+Info (10499): HDL info at conditional_sum_adder16.v(91): see declaration for object "s1" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 91
+Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(124): data type declaration for "a" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 124
+Info (10499): HDL info at conditional_sum_adder16.v(121): see declaration for object "a" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 121
+Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(124): data type declaration for "b" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 124
+Info (10499): HDL info at conditional_sum_adder16.v(121): see declaration for object "b" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 121
+Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(127): data type declaration for "s" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 127
+Info (10499): HDL info at conditional_sum_adder16.v(122): see declaration for object "s" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 122
+Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(156): data type declaration for "a" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 156
+Info (10499): HDL info at conditional_sum_adder16.v(153): see declaration for object "a" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 153
+Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(156): data type declaration for "b" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 156
+Info (10499): HDL info at conditional_sum_adder16.v(153): see declaration for object "b" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 153
+Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(158): data type declaration for "s0" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 158
+Info (10499): HDL info at conditional_sum_adder16.v(154): see declaration for object "s0" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 154
+Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(158): data type declaration for "s1" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 158
+Info (10499): HDL info at conditional_sum_adder16.v(154): see declaration for object "s1" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 154
+Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(187): data type declaration for "a" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 187
+Info (10499): HDL info at conditional_sum_adder16.v(184): see declaration for object "a" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 184
+Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(187): data type declaration for "b" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 187
+Info (10499): HDL info at conditional_sum_adder16.v(184): see declaration for object "b" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 184
+Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(190): data type declaration for "s" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 190
+Info (10499): HDL info at conditional_sum_adder16.v(185): see declaration for object "s" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 185
+Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(217): data type declaration for "a" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 217
+Info (10499): HDL info at conditional_sum_adder16.v(214): see declaration for object "a" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 214
+Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(217): data type declaration for "b" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 217
+Info (10499): HDL info at conditional_sum_adder16.v(214): see declaration for object "b" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 214
+Warning (10227): Verilog HDL Port Declaration warning at conditional_sum_adder16.v(220): data type declaration for "s" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 220
+Info (10499): HDL info at conditional_sum_adder16.v(215): see declaration for object "s" File: /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v Line: 215
 Warning (10227): Verilog HDL Port Declaration warning at comparator.v(10): data type declaration for "a" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/comparator.v Line: 10
 Info (10499): HDL info at comparator.v(7): see declaration for object "a" File: /home/bscholar/Documents/ECSE318/hw2/p1/comparator.v Line: 7
 Warning (10227): Verilog HDL Port Declaration warning at comparator.v(10): data type declaration for "b" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/comparator.v Line: 10
@@ -767,27 +954,101 @@ Warning (10227): Verilog HDL Port Declaration warning at adder.v(14): data type 
 Info (10499): HDL info at adder.v(10): see declaration for object "CODE" File: /home/bscholar/Documents/ECSE318/hw2/p1/adder.v Line: 10
 Warning (10227): Verilog HDL Port Declaration warning at adder.v(13): data type declaration for "C" declares packed dimensions but the port declaration declaration does not File: /home/bscholar/Documents/ECSE318/hw2/p1/adder.v Line: 13
 Info (10499): HDL info at adder.v(11): see declaration for object "C" File: /home/bscholar/Documents/ECSE318/hw2/p1/adder.v Line: 11
-Info (12127): Elaborating entity "cond_sum_with_cin" for the top level hierarchy
-Info (12128): Elaborating entity "cond_sum_with_cin" for hierarchy "cond_sum_with_cin:csa_l" File: /home/bscholar/Documents/ECSE318/hw2/p1/test.v Line: 77
-Info (12128): Elaborating entity "cond_sum_with_cin" for hierarchy "cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l" File: /home/bscholar/Documents/ECSE318/hw2/p1/test.v Line: 77
-Info (12128): Elaborating entity "cond_sum_with_cin" for hierarchy "cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l" File: /home/bscholar/Documents/ECSE318/hw2/p1/test.v Line: 77
-Info (12128): Elaborating entity "cond_sum_with_cin" for hierarchy "cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l" File: /home/bscholar/Documents/ECSE318/hw2/p1/test.v Line: 77
-Info (12128): Elaborating entity "full_adder" for hierarchy "cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|full_adder:cond_sum_cin_if.adder" File: /home/bscholar/Documents/ECSE318/hw2/p1/test.v Line: 65
-Info (12128): Elaborating entity "cond_sum" for hierarchy "cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum:csa_h" File: /home/bscholar/Documents/ECSE318/hw2/p1/test.v Line: 82
-Info (12128): Elaborating entity "cond_sum" for hierarchy "cond_sum_with_cin:csa_l|cond_sum_with_cin:csa_l|cond_sum:csa_h" File: /home/bscholar/Documents/ECSE318/hw2/p1/test.v Line: 82
-Info (12128): Elaborating entity "cond_sum" for hierarchy "cond_sum_with_cin:csa_l|cond_sum:csa_h" File: /home/bscholar/Documents/ECSE318/hw2/p1/test.v Line: 82
-Info (12128): Elaborating entity "cond_sum" for hierarchy "cond_sum:csa_h" File: /home/bscholar/Documents/ECSE318/hw2/p1/test.v Line: 82
+Info (12127): Elaborating entity "freecellPlayer" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at freecellPlayer.v(16): object "src_home" assigned a value but never read File: /home/bscholar/Documents/ECSE318/hw2/p2/freecellPlayer.v Line: 16
+Warning (10235): Verilog HDL Always Construct warning at freecellPlayer.v(136): variable "tab_dest_empty" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/bscholar/Documents/ECSE318/hw2/p2/freecellPlayer.v Line: 136
+Warning (10235): Verilog HDL Always Construct warning at freecellPlayer.v(141): variable "free_dest_empty" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/bscholar/Documents/ECSE318/hw2/p2/freecellPlayer.v Line: 141
+Warning (10235): Verilog HDL Always Construct warning at freecellPlayer.v(146): variable "home_dest_empty" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/bscholar/Documents/ECSE318/hw2/p2/freecellPlayer.v Line: 146
+Info (12128): Elaborating entity "decoder2to4" for hierarchy "decoder2to4:free_src_dec" File: /home/bscholar/Documents/ECSE318/hw2/p2/freecellPlayer.v Line: 35
+Info (12128): Elaborating entity "decoder3to8" for hierarchy "decoder3to8:tab_src_dec" File: /home/bscholar/Documents/ECSE318/hw2/p2/freecellPlayer.v Line: 48
+Info (12128): Elaborating entity "freecell_logic" for hierarchy "freecell_logic:invalid_detect" File: /home/bscholar/Documents/ECSE318/hw2/p2/freecellPlayer.v Line: 63
+Info (12128): Elaborating entity "order_validator" for hierarchy "freecell_logic:invalid_detect|order_validator:ord" File: /home/bscholar/Documents/ECSE318/hw2/p2/freecellPlayer.v Line: 231
+Warning (10036): Verilog HDL or VHDL warning at order_validator.v(15): object "same_color" assigned a value but never read File: /home/bscholar/Documents/ECSE318/hw2/p2/order_validator.v Line: 15
+Info (12128): Elaborating entity "card_stack" for hierarchy "card_stack:tab_gen[0].tableau" File: /home/bscholar/Documents/ECSE318/hw2/p2/freecellPlayer.v Line: 159
+Warning (10230): Verilog HDL assignment warning at card_stack.v(28): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 28
+Warning (10230): Verilog HDL assignment warning at card_stack.v(31): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 31
+Warning (10230): Verilog HDL assignment warning at card_stack.v(53): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 53
+Info (12128): Elaborating entity "card_stack" for hierarchy "card_stack:tab_gen[1].tableau" File: /home/bscholar/Documents/ECSE318/hw2/p2/freecellPlayer.v Line: 159
+Warning (10230): Verilog HDL assignment warning at card_stack.v(28): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 28
+Warning (10230): Verilog HDL assignment warning at card_stack.v(31): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 31
+Warning (10230): Verilog HDL assignment warning at card_stack.v(53): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 53
+Info (12128): Elaborating entity "card_stack" for hierarchy "card_stack:tab_gen[2].tableau" File: /home/bscholar/Documents/ECSE318/hw2/p2/freecellPlayer.v Line: 159
+Warning (10230): Verilog HDL assignment warning at card_stack.v(28): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 28
+Warning (10230): Verilog HDL assignment warning at card_stack.v(31): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 31
+Warning (10230): Verilog HDL assignment warning at card_stack.v(53): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 53
+Info (12128): Elaborating entity "card_stack" for hierarchy "card_stack:tab_gen[3].tableau" File: /home/bscholar/Documents/ECSE318/hw2/p2/freecellPlayer.v Line: 159
+Warning (10230): Verilog HDL assignment warning at card_stack.v(28): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 28
+Warning (10230): Verilog HDL assignment warning at card_stack.v(31): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 31
+Warning (10230): Verilog HDL assignment warning at card_stack.v(53): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 53
+Info (12128): Elaborating entity "card_stack" for hierarchy "card_stack:tab_gen[4].tableau" File: /home/bscholar/Documents/ECSE318/hw2/p2/freecellPlayer.v Line: 159
+Warning (10230): Verilog HDL assignment warning at card_stack.v(28): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 28
+Warning (10230): Verilog HDL assignment warning at card_stack.v(31): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 31
+Warning (10230): Verilog HDL assignment warning at card_stack.v(53): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 53
+Info (12128): Elaborating entity "card_stack" for hierarchy "card_stack:tab_gen[5].tableau" File: /home/bscholar/Documents/ECSE318/hw2/p2/freecellPlayer.v Line: 159
+Warning (10230): Verilog HDL assignment warning at card_stack.v(28): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 28
+Warning (10230): Verilog HDL assignment warning at card_stack.v(31): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 31
+Warning (10230): Verilog HDL assignment warning at card_stack.v(53): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 53
+Info (12128): Elaborating entity "card_stack" for hierarchy "card_stack:tab_gen[6].tableau" File: /home/bscholar/Documents/ECSE318/hw2/p2/freecellPlayer.v Line: 159
+Warning (10230): Verilog HDL assignment warning at card_stack.v(28): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 28
+Warning (10230): Verilog HDL assignment warning at card_stack.v(31): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 31
+Warning (10230): Verilog HDL assignment warning at card_stack.v(53): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 53
+Info (12128): Elaborating entity "card_stack" for hierarchy "card_stack:tab_gen[7].tableau" File: /home/bscholar/Documents/ECSE318/hw2/p2/freecellPlayer.v Line: 159
+Warning (10230): Verilog HDL assignment warning at card_stack.v(28): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 28
+Warning (10230): Verilog HDL assignment warning at card_stack.v(31): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 31
+Warning (10230): Verilog HDL assignment warning at card_stack.v(53): truncated value with size 32 to match size of target (6) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 53
+Info (12128): Elaborating entity "card_stack" for hierarchy "card_stack:home_free_gen[0].home" File: /home/bscholar/Documents/ECSE318/hw2/p2/freecellPlayer.v Line: 168
+Warning (10230): Verilog HDL assignment warning at card_stack.v(28): truncated value with size 32 to match size of target (5) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 28
+Warning (10230): Verilog HDL assignment warning at card_stack.v(31): truncated value with size 32 to match size of target (5) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 31
+Warning (10230): Verilog HDL assignment warning at card_stack.v(53): truncated value with size 32 to match size of target (5) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 53
+Info (12128): Elaborating entity "card_stack" for hierarchy "card_stack:home_free_gen[0].free" File: /home/bscholar/Documents/ECSE318/hw2/p2/freecellPlayer.v Line: 173
+Warning (10230): Verilog HDL assignment warning at card_stack.v(28): truncated value with size 32 to match size of target (1) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 28
+Warning (10230): Verilog HDL assignment warning at card_stack.v(31): truncated value with size 32 to match size of target (1) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 31
+Warning (10230): Verilog HDL assignment warning at card_stack.v(53): truncated value with size 32 to match size of target (1) File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 53
+Info (276014): Found 16 instances of uninferred RAM logic
+    Info (276004): RAM logic "card_stack:home_free_gen[3].free|all_cards" is uninferred due to inappropriate RAM size File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 19
+    Info (276007): RAM logic "card_stack:home_free_gen[3].home|all_cards" is uninferred due to asynchronous read logic File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 19
+    Info (276004): RAM logic "card_stack:home_free_gen[2].free|all_cards" is uninferred due to inappropriate RAM size File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 19
+    Info (276007): RAM logic "card_stack:home_free_gen[2].home|all_cards" is uninferred due to asynchronous read logic File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 19
+    Info (276004): RAM logic "card_stack:home_free_gen[1].free|all_cards" is uninferred due to inappropriate RAM size File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 19
+    Info (276007): RAM logic "card_stack:home_free_gen[1].home|all_cards" is uninferred due to asynchronous read logic File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 19
+    Info (276004): RAM logic "card_stack:home_free_gen[0].free|all_cards" is uninferred due to inappropriate RAM size File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 19
+    Info (276007): RAM logic "card_stack:home_free_gen[0].home|all_cards" is uninferred due to asynchronous read logic File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 19
+    Info (276007): RAM logic "card_stack:tab_gen[7].tableau|all_cards" is uninferred due to asynchronous read logic File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 19
+    Info (276007): RAM logic "card_stack:tab_gen[6].tableau|all_cards" is uninferred due to asynchronous read logic File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 19
+    Info (276007): RAM logic "card_stack:tab_gen[5].tableau|all_cards" is uninferred due to asynchronous read logic File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 19
+    Info (276007): RAM logic "card_stack:tab_gen[4].tableau|all_cards" is uninferred due to asynchronous read logic File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 19
+    Info (276007): RAM logic "card_stack:tab_gen[3].tableau|all_cards" is uninferred due to asynchronous read logic File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 19
+    Info (276007): RAM logic "card_stack:tab_gen[2].tableau|all_cards" is uninferred due to asynchronous read logic File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 19
+    Info (276007): RAM logic "card_stack:tab_gen[1].tableau|all_cards" is uninferred due to asynchronous read logic File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 19
+    Info (276007): RAM logic "card_stack:tab_gen[0].tableau|all_cards" is uninferred due to asynchronous read logic File: /home/bscholar/Documents/ECSE318/hw2/p2/card_stack.v Line: 19
+Critical Warning (127005): Memory depth (32) in the design file differs from memory depth (26) in the Memory Initialization File "/home/bscholar/Documents/ECSE318/hw2/db/hw2.ram0_card_stack_3bcadf57.hdl.mif" -- setting initial value for remaining addresses to 0
+Critical Warning (127005): Memory depth (32) in the design file differs from memory depth (26) in the Memory Initialization File "/home/bscholar/Documents/ECSE318/hw2/db/hw2.ram0_card_stack_8f00f3a2.hdl.mif" -- setting initial value for remaining addresses to 0
+Critical Warning (127005): Memory depth (32) in the design file differs from memory depth (26) in the Memory Initialization File "/home/bscholar/Documents/ECSE318/hw2/db/hw2.ram0_card_stack_28680110.hdl.mif" -- setting initial value for remaining addresses to 0
+Critical Warning (127005): Memory depth (32) in the design file differs from memory depth (26) in the Memory Initialization File "/home/bscholar/Documents/ECSE318/hw2/db/hw2.ram0_card_stack_1bc437d8.hdl.mif" -- setting initial value for remaining addresses to 0
+Critical Warning (127005): Memory depth (2) in the design file differs from memory depth (1) in the Memory Initialization File "/home/bscholar/Documents/ECSE318/hw2/db/hw2.ram0_card_stack_78a12d34.hdl.mif" -- setting initial value for remaining addresses to 0
+Critical Warning (127005): Memory depth (32) in the design file differs from memory depth (26) in the Memory Initialization File "/home/bscholar/Documents/ECSE318/hw2/db/hw2.ram0_card_stack_92f85841.hdl.mif" -- setting initial value for remaining addresses to 0
+Critical Warning (127005): Memory depth (32) in the design file differs from memory depth (26) in the Memory Initialization File "/home/bscholar/Documents/ECSE318/hw2/db/hw2.ram0_card_stack_d1535c50.hdl.mif" -- setting initial value for remaining addresses to 0
+Critical Warning (127005): Memory depth (32) in the design file differs from memory depth (26) in the Memory Initialization File "/home/bscholar/Documents/ECSE318/hw2/db/hw2.ram0_card_stack_ef274d25.hdl.mif" -- setting initial value for remaining addresses to 0
+Critical Warning (127005): Memory depth (32) in the design file differs from memory depth (26) in the Memory Initialization File "/home/bscholar/Documents/ECSE318/hw2/db/hw2.ram0_card_stack_5aa8c0c3.hdl.mif" -- setting initial value for remaining addresses to 0
+Critical Warning (127005): Memory depth (16) in the design file differs from memory depth (13) in the Memory Initialization File "/home/bscholar/Documents/ECSE318/hw2/db/hw2.ram0_card_stack_c3eee8f8.hdl.mif" -- setting initial value for remaining addresses to 0
 Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file /home/bscholar/Documents/ECSE318/hw2/hw2.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 81 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 33 input pins
-    Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 31 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 57 warnings
-    Info: Peak virtual memory: 468 megabytes
-    Info: Processing ended: Fri Oct  7 02:47:25 2022
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:28
+Info (21057): Implemented 2807 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 2797 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 102 warnings
+    Info: Peak virtual memory: 493 megabytes
+    Info: Processing ended: Sun Oct  9 20:41:57 2022
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:25
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/bscholar/Documents/ECSE318/hw2/hw2.map.smsg.
 
 

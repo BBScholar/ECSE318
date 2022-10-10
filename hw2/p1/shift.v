@@ -1,19 +1,6 @@
 
 // https://iverilog.fandom.com/wiki/Using_The_Verilog_%2795_Code_Generator
 
-module mux2x1(
-  a, b, sel, z
-);
-  
-  input a, b, sel;
-  output z;
-
-  wire a, b, sel, z;
-
-  assign z = (a & !sel) | (b & sel);
-
-endmodule
-
 module data_reverser(
   a, z
 );
@@ -82,7 +69,6 @@ module shift16(
   wire sign, fill_sign;
   wire [3:0] shamt;
   
-  wire [15:0] shamt0, shamt1, shamt2, shamt3;
   wire [15:0] layer0, layer1, layer2, layer3, layer4;
   wire [15:0] layer0_shifted, layer1_shifted, layer2_shifted, layer3_shifted;
 
@@ -102,19 +88,14 @@ module shift16(
     .a(layer4), .rev(!left), .z(s)
   );
 
-  assign shamt0 = {16{shamt[0]}};
-  assign shamt1 = {16{shamt[1]}};
-  assign shamt2 = {16{shamt[2]}};
-  assign shamt3 = {16{shamt[3]}};
+  assign layer0_shifted = {layer0[14:0], {1{fill_sign}}};
+  assign layer1_shifted = {layer1[13:0], {2{fill_sign}}};
+  assign layer2_shifted = {layer2[11:0], {4{fill_sign}}};
+  assign layer3_shifted = {layer3[7:0], {8{fill_sign}}};
 
-  assign layer0_shifted = {layer0[15:1], {1{fill_sign}}};
-  assign layer1_shifted = {layer1[15:2], {2{fill_sign}}};
-  assign layer2_shifted = {layer2[15:4], {4{fill_sign}}};
-  assign layer3_shifted = {layer3[15:8], {8{fill_sign}}};
-
-  assign layer1 = (layer0_shifted & shamt0) | (layer0 & ~shamt0);
-  assign layer2 = (layer1_shifted & shamt1) | (layer1 & ~shamt1);
-  assign layer3 = (layer2_shifted & shamt2) | (layer2 & ~shamt2);
-  assign layer4 = (layer3_shifted & shamt3) | (layer3 & ~shamt3);
+  assign layer1 = shamt[0] ? layer0_shifted : layer0;
+  assign layer2 = shamt[1] ? layer1_shifted : layer1;
+  assign layer3 = shamt[2] ? layer2_shifted : layer2;
+  assign layer4 = shamt[3] ? layer3_shifted : layer3;
 
 endmodule

@@ -1,1 +1,1 @@
-Info (10281): Verilog HDL Declaration information at test.v(52): object "CIN" differs only in case from object "cin" in the same scope File: /home/bscholar/Documents/ECSE318/hw2/p1/test.v Line: 52
+Warning (10273): Verilog HDL warning at testFreecell.v(34): extended using "x" or "z" File: /home/bscholar/Documents/ECSE318/hw2/p2/testFreecell.v Line: 34

@@ -47,21 +47,12 @@ module alu(
   );
 
 
-  always @ (mod_op or shift_out or add_out or logic_out or compare_out) begin 
+  always @ (mod_sel or shift_out or add_out or logic_out or compare_out) begin 
     casez(mod_sel)
-      2'b00: begin 
-        C <= add_out;
-
-      end
-      2'b01: begin 
-        C <= logic_out;
-      end
-      2'b10: begin 
-        C <= shift_out;
-      end
-      2'b11: begin 
-        C <= compare_out;
-      end
+      2'b00: C <= add_out;
+      2'b01: C <= logic_out;
+      2'b10: C <= shift_out;
+      2'b11: C <= compare_out;
 
     endcase
   end

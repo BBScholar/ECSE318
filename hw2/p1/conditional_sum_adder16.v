@@ -1,17 +1,6 @@
 `define W 16
 
-module full_adder( 
-  a, b, c, s, cout
-);
-  input a, b, c;
-  output s, cout;
 
-  wire a, b, c, s, cout;
-
-  assign s = a ^ b ^ c;
-  assign cout = (a&b) | (a&c) | (b&c);
-
-endmodule
 
 module conditional_sum_adder1(
   a, b, s0, s1, c0, c1

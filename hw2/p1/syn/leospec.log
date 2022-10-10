@@ -18,29 +18,219 @@ Library version = 3.0 Release : Patch (a) : 09/13/04
 Delays assume: Process=typical Temp= 27.0 C  Voltage=5.00 V  
 Info: setting encoding to auto
 Info, Command 'load_library' finished successfully
+-- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/full_adder.v'...
+-- Loading module 'full_adder'
+-- Compiling root module 'full_adder'
+Info, Command 'read' finished successfully
+-- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v'...
+-- Loading module 'full_adder'
+Warning, replacing full_adder in HDL library work.
+-- Loading module 'conditional_sum_adder1'
+-- Loading module 'conditional_sum_adder2'
+-- Loading module 'conditional_sum_adder2_with_cin'
+-- Loading module 'conditional_sum_adder4'
+-- Loading module 'conditional_sum_adder4_with_cin'
+-- Loading module 'conditional_sum_adder8'
+-- Loading module 'conditional_sum_adder8_with_cin'
+-- Loading module 'conditional_sum_adder16_with_cin'
+-- Compiling root module 'conditional_sum_adder16_with_cin'
+-- Compiling module conditional_sum_adder8_with_cin
+-- Compiling module conditional_sum_adder4_with_cin
+-- Compiling module conditional_sum_adder2_with_cin
+-- Compiling module full_adder
+-- Info, replacing full_adder(INTERFACE)
+-- Compiling module conditional_sum_adder1
+-- Compiling module conditional_sum_adder2
+-- Compiling module conditional_sum_adder4
+-- Compiling module conditional_sum_adder8
+Info, Command 'read' finished successfully
+-- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/adder.v'...
+-- Loading module 'adder16'
+-- Compiling root module 'adder16'
+Info, Command 'read' finished successfully
+-- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/logic.v'...
+-- Loading module 'logic16'
+-- Compiling root module 'logic16'
+"/home/bscholar/Documents/ECSE318/hw2/p1/logic.v",line 17: Info, case choices are mutually exclusive; inferring parallel case.
+Info, Command 'read' finished successfully
 -- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/shift.v'...
--- Loading module 'shift16'
 -- Loading module 'data_reverser'
 -- Loading module 'conditional_data_reverser'
--- Loading module 'mux2x1'
--- Compiling root module 'mux2x1'
+-- Loading module 'shift16'
+-- Compiling root module 'shift16'
+-- Compiling module conditional_data_reverser
+-- Compiling module data_reverser
+Info, Command 'read' finished successfully
+-- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/comparator.v'...
+"/home/bscholar/Documents/ECSE318/hw2/p1/comparator.v", line 25: Warning, system function call assumed 0 for synthesis
+"/home/bscholar/Documents/ECSE318/hw2/p1/comparator.v", line 25: Warning, system function call assumed 0 for synthesis
+-- Loading module 'comparator16'
+-- Compiling root module 'comparator16'
+Info, Command 'read' finished successfully
+-- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/alu.v'...
+-- Loading module 'alu'
+"/home/bscholar/Documents/ECSE318/hw2/p1/alu.v",line 21: Warning, add_cout is never used.
+-- Compiling root module 'alu'
+"/home/bscholar/Documents/ECSE318/hw2/p1/alu.v",line 51: Info, case choices are mutually exclusive; inferring parallel case.
 Info, Command 'read' finished successfully
 -- Boundary optimization.
--- Start pre-optimization for design .work.mux2x1.INTERFACE
+-- Boundary optimization.
+-- Boundary optimization.
+-- Boundary optimization.
+-- Boundary optimization.
+-- Boundary optimization.
+-- Boundary optimization.
+-- Start pre-optimization for design .work.full_adder.INTERFACE
+-- Start pre-optimization for design .work.full_adder.INTERFACE_unfold_2423
+-- Start pre-optimization for design .work.full_adder.INTERFACE_unfold_2424
+-- Start pre-optimization for design .work.conditional_sum_adder1.INTERFACE
+-- Start pre-optimization for design .work.conditional_sum_adder2_with_cin.INTERFACE
+-- Start pre-optimization for design .work.conditional_sum_adder2.INTERFACE
+-- Start pre-optimization for design .work.conditional_sum_adder4_with_cin.INTERFACE
+-- Start pre-optimization for design .work.conditional_sum_adder4.INTERFACE
+-- Start pre-optimization for design .work.conditional_sum_adder8_with_cin.INTERFACE
+-- Start pre-optimization for design .work.full_adder.INTERFACE_unfold_2423_1
+-- Start pre-optimization for design .work.full_adder.INTERFACE_unfold_2424_1
+-- Start pre-optimization for design .work.conditional_sum_adder1.INTERFACE_unfold_2406
+-- Start pre-optimization for design .work.conditional_sum_adder2.INTERFACE_unfold_2408
+-- Start pre-optimization for design .work.conditional_sum_adder4.INTERFACE_unfold_2412
+-- Start pre-optimization for design .work.conditional_sum_adder8.INTERFACE_unfold_3087
+-- Start pre-optimization for design .work.conditional_sum_adder16_with_cin.INTERFACE_unfold_1238
+-- Start pre-optimization for design .work.adder16.INTERFACE_unfold_1073
+-- Start pre-optimization for design .work.conditional_data_reverser.INTERFACE
+-- Start pre-optimization for design .work.shift16.INTERFACE_unfold_1103
+-- Start pre-optimization for design .work.logic16.INTERFACE
+-- Start pre-optimization for design .work.comparator16.INTERFACE_unfold_1240
+-- Start pre-optimization for design .work.alu.INTERFACE
 Info, Command 'pre_optimize' finished successfully
--- Start pre-optimization for design .work.mux2x1.INTERFACE
+-- Start pre-optimization for design .work.full_adder.INTERFACE
+-- Start pre-optimization for design .work.full_adder.INTERFACE_unfold_2423
+-- Start pre-optimization for design .work.full_adder.INTERFACE_unfold_2424
+-- Start pre-optimization for design .work.conditional_sum_adder1.INTERFACE
+-- Start pre-optimization for design .work.conditional_sum_adder2_with_cin.INTERFACE
+-- Start pre-optimization for design .work.conditional_sum_adder2.INTERFACE
+-- Start pre-optimization for design .work.conditional_sum_adder4_with_cin.INTERFACE
+-- Start pre-optimization for design .work.conditional_sum_adder4.INTERFACE
+-- Start pre-optimization for design .work.conditional_sum_adder8_with_cin.INTERFACE
+-- Start pre-optimization for design .work.full_adder.INTERFACE_unfold_2423_1
+-- Start pre-optimization for design .work.full_adder.INTERFACE_unfold_2424_1
+-- Start pre-optimization for design .work.conditional_sum_adder1.INTERFACE_unfold_2406
+-- Start pre-optimization for design .work.conditional_sum_adder2.INTERFACE_unfold_2408
+-- Start pre-optimization for design .work.conditional_sum_adder4.INTERFACE_unfold_2412
+-- Start pre-optimization for design .work.conditional_sum_adder8.INTERFACE_unfold_3087
+-- Start pre-optimization for design .work.conditional_sum_adder16_with_cin.INTERFACE_unfold_1238
+-- Start pre-optimization for design .work.adder16.INTERFACE_unfold_1073
+-- Start pre-optimization for design .work.conditional_data_reverser.INTERFACE
+-- Start pre-optimization for design .work.shift16.INTERFACE_unfold_1103
+-- Start pre-optimization for design .work.logic16.INTERFACE
+-- Start pre-optimization for design .work.comparator16.INTERFACE_unfold_1240
+-- Start pre-optimization for design .work.alu.INTERFACE
 Info, Command 'pre_optimize' finished successfully
 Info: The target technology was not selected, ami05_typ was automatically selected for you.
--- Optimizing netlist .work.mux2x1.INTERFACE
+Info, Instances dissolved by autodissolve in View .work.conditional_sum_adder1.INTERFACE
+"/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v", line 25: adder0 (full_adder)
+"/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v", line 30: adder1 (full_adder)
+Info, Instances dissolved by autodissolve in View .work.conditional_sum_adder2_with_cin.INTERFACE
+"/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v", line 83: zero_adder (full_adder)
+"/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v", line 88: csa_h (conditional_sum_adder1)
+Info, Instances dissolved by autodissolve in View .work.conditional_sum_adder2.INTERFACE
+"/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v", line 52: csa_l (conditional_sum_adder1)
+"/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v", line 57: csa_h (conditional_sum_adder1)
+Info, Instances dissolved by autodissolve in View .work.conditional_sum_adder4_with_cin.INTERFACE
+"/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v", line 144: csa_l (conditional_sum_adder2_with_cin)
+"/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v", line 149: csa_h (conditional_sum_adder2)
+Info, Instances dissolved by autodissolve in View .work.conditional_sum_adder4.INTERFACE
+"/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v", line 113: csa_l (conditional_sum_adder2)
+"/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v", line 118: csa_h (conditional_sum_adder2)
+Info, Instances dissolved by autodissolve in View .work.conditional_sum_adder1.INTERFACE_unfold_2406
+"/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v", line 25: adder0 (full_adder)
+"/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v", line 30: adder1 (full_adder)
+Info, Instances dissolved by autodissolve in View .work.conditional_sum_adder2.INTERFACE_unfold_2408
+"/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v", line 52: csa_l (conditional_sum_adder1)
+"/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v", line 57: csa_h (conditional_sum_adder1)
+Info, Instances dissolved by autodissolve in View .work.conditional_sum_adder4.INTERFACE_unfold_2412
+"/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v", line 113: csa_l (conditional_sum_adder2)
+"/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v", line 118: csa_h (conditional_sum_adder2)
+Info, Instances dissolved by autodissolve in View .work.conditional_sum_adder8.INTERFACE_unfold_3087
+"/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v", line 181: csa_h (conditional_sum_adder4)
+Info, Instances dissolved by autodissolve in View .work.conditional_sum_adder16_with_cin.INTERFACE_unfold_1238
+"/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v", line 237: csa_l (conditional_sum_adder8_with_cin)
+Info, Instances dissolved by autodissolve in View .work.adder16.INTERFACE_unfold_1073
+"/home/bscholar/Documents/ECSE318/hw2/p1/adder.v", line 65: adder (conditional_sum_adder16_with_cin)
+Info, Instances dissolved by autodissolve in View .work.shift16.INTERFACE_unfold_1103
+"/home/bscholar/Documents/ECSE318/hw2/p1/shift.v", line 83: in_rev (conditional_data_reverser)
+"/home/bscholar/Documents/ECSE318/hw2/p1/shift.v", line 87: out_rev (conditional_data_reverser)
+Info, Instances dissolved by autodissolve in View .work.alu.INTERFACE
+"/home/bscholar/Documents/ECSE318/hw2/p1/alu.v", line 44: compare (comparator16)
+-- Optimizing netlist .work.conditional_sum_adder4.INTERFACE
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Optimizing netlist .work.conditional_sum_adder8.INTERFACE_unfold_3087
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Optimizing netlist .work.conditional_sum_adder4_with_cin.INTERFACE
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+-- Optimizing netlist .work.adder16.INTERFACE_unfold_1073
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+Re-checking DRC after adjustments
+-- Optimizing netlist .work.shift16.INTERFACE_unfold_1103
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Optimizing netlist .work.logic16.INTERFACE
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Optimizing netlist .work.alu.INTERFACE
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Final Design Rule Check..
+Re-checking DRC after adjustments
+Re-checking DRC after adjustments
+Re-checking DRC after adjustments
+Info, Command 'optimize' finished successfully
+Info: The target technology was not selected, ami05_typ was automatically selected for you.
+Info, Instances dissolved by autodissolve in View .work.conditional_sum_adder8.INTERFACE_unfold_3087
+"/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v", line 176: csa_l (conditional_sum_adder4)
+Info, Instances dissolved by autodissolve in View .work.adder16.INTERFACE_unfold_1073
+"/home/bscholar/Documents/ECSE318/hw2/p1/adder.v", line 65: adder_csa_h (conditional_sum_adder8)
+"/home/bscholar/Documents/ECSE318/hw2/p1/adder.v", line 65: adder_csa_l_csa_l (conditional_sum_adder4_with_cin)
+"/home/bscholar/Documents/ECSE318/hw2/p1/adder.v", line 65: adder_csa_l_csa_h (conditional_sum_adder4)
+Info, Instances dissolved by autodissolve in View .work.alu.INTERFACE
+"/home/bscholar/Documents/ECSE318/hw2/p1/alu.v", line 28: adder (adder16)
+"/home/bscholar/Documents/ECSE318/hw2/p1/alu.v", line 34: shift (shift16)
+"/home/bscholar/Documents/ECSE318/hw2/p1/alu.v", line 39: logic (logic16)
+-- Optimizing netlist .work.alu.INTERFACE
 -- Matching combinational logic..
 -- Matching non-combinational logic..
 -- Covering..
 -- CPU Time used :   00:00 Mapping
 -- Final Design Rule Check..
+Re-checking DRC after adjustments
 Info, Command 'optimize' finished successfully
-Info: The target technology was not selected, ami05_typ was automatically selected for you.
-.work.shift16.INTERFACE not found
-.work.shift16.INTERFACE not found
+-- Start timing optimization for design .work.alu.INTERFACE
+No critical paths to optimize at this level
+Info, Command 'optimize_timing' finished successfully
 Info: setting edif_write_arrays to FALSE
 FALSE
 -- Writing file Proc.v
@@ -54,20 +244,565 @@ CriticalPath
                         Critical Path Report
 
 Critical path #1, (unconstrained path)
-NAME                               GATE              ARRIVAL              LOAD
-------------------------------------------------------------------------------
-sel/                                           0.00  0.00 up             0.03
-ix7/Y                              mux21_ni    0.68  0.68 dn             0.00
-z/                                             0.00  0.68 dn             0.00
-data arrival time                                    0.68
+NAME                                             GATE              ARRIVAL              LOAD
+--------------------------------------------------------------------------------------------
+alu_code(2)/                                                 0.00  0.00 up             0.10
+adder_ix103/A1                                   ao21        0.00  0.00 up             0.00
+adder_ix103/Y                                    ao21        0.49  0.49 up             0.02
+adder_subtraction                       (net)                0.00  0.49 up   (fan)     1.00
+adder_ix196/A                                    inv02       0.00  0.49 up             0.00
+adder_ix196/Y                                    inv02       0.40  0.90 dn             0.12
+adder_nx197                             (net)                0.00  0.90 dn   (fan)     5.00
+ix590/A                                          inv02       0.00  0.90 dn             0.00
+ix590/Y                                          inv02       0.72  1.62 up             0.25
+nx591                                   (net)                0.00  1.62 up   (fan)     7.00
+adder_ix107/A0                                   xnor2       0.00  1.62 up             0.00
+adder_ix107/Y                                    xnor2       0.71  2.32 dn             0.05
+adder_b_source(0)                       (net)                0.00  2.32 dn   (fan)     2.00
+adder_adder_csa_l_csa_l_ix162/A1                 xnor2       0.00  2.32 dn             0.00
+adder_adder_csa_l_csa_l_ix162/Y                  xnor2       0.41  2.74 up             0.06
+adder_adder_csa_l_csa_l_nx161           (net)                0.00  2.74 up   (fan)     2.00
+adder_adder_csa_l_csa_l_ix1/A                    inv02       0.00  2.74 up             0.00
+adder_adder_csa_l_csa_l_ix1/Y                    inv02       0.18  2.92 dn             0.01
+adder_adder_csa_l_csa_l_nx0             (net)                0.00  2.92 dn   (fan)     1.00
+adder_adder_csa_l_csa_l_ix167/B1                 aoi22       0.00  2.92 dn             0.00
+adder_adder_csa_l_csa_l_ix167/Y                  aoi22       0.51  3.43 up             0.06
+adder_adder_csa_l_csa_l_nx166           (net)                0.00  3.43 up   (fan)     2.00
+adder_adder_csa_l_csa_l_ix25/A1                  nor02_2x    0.00  3.43 up             0.00
+adder_adder_csa_l_csa_l_ix25/Y                   nor02_2x    0.26  3.69 dn             0.01
+adder_adder_csa_l_csa_l_nx24            (net)                0.00  3.69 dn   (fan)     1.00
+adder_adder_csa_l_csa_l_ix31/B0                  ao21        0.00  3.69 dn             0.00
+adder_adder_csa_l_csa_l_ix31/Y                   ao21        0.89  4.58 dn             0.09
+adder_adder_csa_l_csa_l_nx30            (net)                0.00  4.58 dn   (fan)     3.00
+adder_adder_csa_l_csa_l_ix188/S0                 mux21_ni    0.00  4.58 dn             0.00
+adder_adder_csa_l_csa_l_ix188/Y                  mux21_ni    0.91  5.49 up             0.03
+adder_adder_csa_l_csa_l_nx187           (net)                0.00  5.49 up   (fan)     1.00
+adder_adder_csa_l_csa_l_ix59/A1                  nor02_2x    0.00  5.49 up             0.00
+adder_adder_csa_l_csa_l_ix59/Y                   nor02_2x    0.20  5.69 dn             0.01
+adder_adder_csa_l_csa_l_nx58            (net)                0.00  5.69 dn   (fan)     1.00
+adder_adder_csa_l_csa_l_ix63/B0                  ao21        0.00  5.69 dn             0.00
+adder_adder_csa_l_csa_l_ix63/Y                   ao21        1.14  6.84 dn             0.14
+adder_adder_csa_l_b0c                   (net)                0.00  6.84 dn   (fan)     5.00
+adder_ix39/S0                                    mux21_ni    0.00  6.84 dn             0.00
+adder_ix39/Y                                     mux21_ni    0.95  7.78 up             0.02
+adder_nx38                              (net)                0.00  7.78 up   (fan)     2.00
+adder_ix178/A                                    buf02       0.00  7.78 up             0.00
+adder_ix178/Y                                    buf02       0.78  8.56 up             0.19
+adder_nx179                             (net)                0.00  8.56 up   (fan)     7.00
+adder_ix211/S0                                   mux21_ni    0.00  8.56 up             0.00
+adder_ix211/Y                                    mux21_ni    1.17  9.73 dn             0.05
+add_out(15)                             (net)                0.00  9.73 dn   (fan)     2.00
+adder_ix144/A1                                   xnor2       0.00  9.73 dn             0.00
+adder_ix144/Y                                    xnor2       0.27  10.00 up             0.02
+adder_nx143                             (net)                0.00  10.00 up   (fan)     1.00
+adder_ix219/A2                                   nor03       0.00  10.00 up             0.00
+adder_ix219/Y                                    nor03       0.36  10.36 dn             0.01
+add_vout                                (net)                0.00  10.36 dn   (fan)     1.00
+ix259/A1                                         and02       0.00  10.36 dn             0.00
+ix259/Y                                          and02       0.44  10.80 dn             0.00
+overflow                                (net)                0.00  10.80 dn   (fan)     1.00
+overflow/                                                    0.00  10.80 dn             0.00
+data arrival time                                                  10.80
 
-data required time                                not specified
-------------------------------------------------------------------------------
-data required time                                not specified
-data arrival time                                    0.68
-                                                  ----------
-                                               unconstrained path
-------------------------------------------------------------------------------
+data required time                                              not specified
+--------------------------------------------------------------------------------------------
+data required time                                              not specified
+data arrival time                                                  10.80
+                                                                ----------
+                                                             unconstrained path
+--------------------------------------------------------------------------------------------
+
+
+
+Critical path #2, (unconstrained path)
+NAME                                             GATE              ARRIVAL              LOAD
+--------------------------------------------------------------------------------------------
+alu_code(0)/                                                 0.00  0.00 up             0.50
+adder_ix103/A0                                   ao21        0.00  0.00 up             0.00
+adder_ix103/Y                                    ao21        0.46  0.46 up             0.02
+adder_subtraction                       (net)                0.00  0.46 up   (fan)     1.00
+adder_ix196/A                                    inv02       0.00  0.46 up             0.00
+adder_ix196/Y                                    inv02       0.40  0.86 dn             0.12
+adder_nx197                             (net)                0.00  0.86 dn   (fan)     5.00
+ix590/A                                          inv02       0.00  0.86 dn             0.00
+ix590/Y                                          inv02       0.72  1.58 up             0.25
+nx591                                   (net)                0.00  1.58 up   (fan)     7.00
+adder_ix107/A0                                   xnor2       0.00  1.58 up             0.00
+adder_ix107/Y                                    xnor2       0.71  2.29 dn             0.05
+adder_b_source(0)                       (net)                0.00  2.29 dn   (fan)     2.00
+adder_adder_csa_l_csa_l_ix162/A1                 xnor2       0.00  2.29 dn             0.00
+adder_adder_csa_l_csa_l_ix162/Y                  xnor2       0.41  2.70 up             0.06
+adder_adder_csa_l_csa_l_nx161           (net)                0.00  2.70 up   (fan)     2.00
+adder_adder_csa_l_csa_l_ix1/A                    inv02       0.00  2.70 up             0.00
+adder_adder_csa_l_csa_l_ix1/Y                    inv02       0.18  2.88 dn             0.01
+adder_adder_csa_l_csa_l_nx0             (net)                0.00  2.88 dn   (fan)     1.00
+adder_adder_csa_l_csa_l_ix167/B1                 aoi22       0.00  2.88 dn             0.00
+adder_adder_csa_l_csa_l_ix167/Y                  aoi22       0.51  3.39 up             0.06
+adder_adder_csa_l_csa_l_nx166           (net)                0.00  3.39 up   (fan)     2.00
+adder_adder_csa_l_csa_l_ix25/A1                  nor02_2x    0.00  3.39 up             0.00
+adder_adder_csa_l_csa_l_ix25/Y                   nor02_2x    0.26  3.65 dn             0.01
+adder_adder_csa_l_csa_l_nx24            (net)                0.00  3.65 dn   (fan)     1.00
+adder_adder_csa_l_csa_l_ix31/B0                  ao21        0.00  3.65 dn             0.00
+adder_adder_csa_l_csa_l_ix31/Y                   ao21        0.89  4.54 dn             0.09
+adder_adder_csa_l_csa_l_nx30            (net)                0.00  4.54 dn   (fan)     3.00
+adder_adder_csa_l_csa_l_ix188/S0                 mux21_ni    0.00  4.54 dn             0.00
+adder_adder_csa_l_csa_l_ix188/Y                  mux21_ni    0.91  5.45 up             0.03
+adder_adder_csa_l_csa_l_nx187           (net)                0.00  5.45 up   (fan)     1.00
+adder_adder_csa_l_csa_l_ix59/A1                  nor02_2x    0.00  5.45 up             0.00
+adder_adder_csa_l_csa_l_ix59/Y                   nor02_2x    0.20  5.66 dn             0.01
+adder_adder_csa_l_csa_l_nx58            (net)                0.00  5.66 dn   (fan)     1.00
+adder_adder_csa_l_csa_l_ix63/B0                  ao21        0.00  5.66 dn             0.00
+adder_adder_csa_l_csa_l_ix63/Y                   ao21        1.14  6.80 dn             0.14
+adder_adder_csa_l_b0c                   (net)                0.00  6.80 dn   (fan)     5.00
+adder_ix39/S0                                    mux21_ni    0.00  6.80 dn             0.00
+adder_ix39/Y                                     mux21_ni    0.95  7.75 up             0.02
+adder_nx38                              (net)                0.00  7.75 up   (fan)     2.00
+adder_ix178/A                                    buf02       0.00  7.75 up             0.00
+adder_ix178/Y                                    buf02       0.78  8.52 up             0.19
+adder_nx179                             (net)                0.00  8.52 up   (fan)     7.00
+adder_ix211/S0                                   mux21_ni    0.00  8.52 up             0.00
+adder_ix211/Y                                    mux21_ni    1.17  9.69 dn             0.05
+add_out(15)                             (net)                0.00  9.69 dn   (fan)     2.00
+adder_ix144/A1                                   xnor2       0.00  9.69 dn             0.00
+adder_ix144/Y                                    xnor2       0.27  9.96 up             0.02
+adder_nx143                             (net)                0.00  9.96 up   (fan)     1.00
+adder_ix219/A2                                   nor03       0.00  9.96 up             0.00
+adder_ix219/Y                                    nor03       0.36  10.32 dn             0.01
+add_vout                                (net)                0.00  10.32 dn   (fan)     1.00
+ix259/A1                                         and02       0.00  10.32 dn             0.00
+ix259/Y                                          and02       0.44  10.76 dn             0.00
+overflow                                (net)                0.00  10.76 dn   (fan)     1.00
+overflow/                                                    0.00  10.76 dn             0.00
+data arrival time                                                  10.76
+
+data required time                                              not specified
+--------------------------------------------------------------------------------------------
+data required time                                              not specified
+data arrival time                                                  10.76
+                                                                ----------
+                                                             unconstrained path
+--------------------------------------------------------------------------------------------
 
 
 Info, Command 'report_delay' finished successfully
+
+
+
+                        Critical Path Report
+Critical path report: Cannot report critical paths thru node shift, not in network
+
+There are no paths that violate user specified options or constraints
+Info, Command 'report_delay' finished successfully
+
+--------------------------------------------------------------------------------
+Nets                          | cap | route_cap | fanout_load | trans | fanout |
+--------------------------------------------------------------------------------
+A(15)                         | 0.272 | 0.000   | 10.000      | 0.000 |10      |
+A(14)                         | 0.214 | 0.000   | 9.000       | 0.000 |9       |
+A(13)                         | 0.243 | 0.000   | 10.000      | 0.000 |10      |
+A(12)                         | 0.244 | 0.000   | 10.000      | 0.000 |10      |
+A(11)                         | 0.241 | 0.000   | 10.000      | 0.000 |10      |
+A(10)                         | 0.242 | 0.000   | 10.000      | 0.000 |10      |
+A(9)                          | 0.241 | 0.000   | 10.000      | 0.000 |10      |
+A(8)                          | 0.242 | 0.000   | 10.000      | 0.000 |10      |
+A(7)                          | 0.247 | 0.000   | 10.000      | 0.000 |10      |
+A(6)                          | 0.248 | 0.000   | 10.000      | 0.000 |10      |
+A(5)                          | 0.247 | 0.000   | 10.000      | 0.000 |10      |
+A(4)                          | 0.248 | 0.000   | 10.000      | 0.000 |10      |
+A(3)                          | 0.209 | 0.000   | 8.000       | 0.000 |8       |
+A(2)                          | 0.222 | 0.000   | 9.000       | 0.000 |9       |
+A(1)                          | 0.203 | 0.000   | 8.000       | 0.000 |8       |
+A(0)                          | 0.198 | 0.000   | 8.000       | 0.000 |8       |
+B(15)                         | 0.116 | 0.000   | 4.000       | 0.000 |4       |
+B(14)                         | 0.116 | 0.000   | 4.000       | 0.000 |4       |
+B(13)                         | 0.116 | 0.000   | 4.000       | 0.000 |4       |
+B(12)                         | 0.116 | 0.000   | 4.000       | 0.000 |4       |
+B(11)                         | 0.116 | 0.000   | 4.000       | 0.000 |4       |
+B(10)                         | 0.116 | 0.000   | 4.000       | 0.000 |4       |
+B(9)                          | 0.116 | 0.000   | 4.000       | 0.000 |4       |
+B(8)                          | 0.116 | 0.000   | 4.000       | 0.000 |4       |
+B(7)                          | 0.116 | 0.000   | 4.000       | 0.000 |4       |
+B(6)                          | 0.116 | 0.000   | 4.000       | 0.000 |4       |
+B(5)                          | 0.116 | 0.000   | 4.000       | 0.000 |4       |
+B(4)                          | 0.116 | 0.000   | 4.000       | 0.000 |4       |
+B(3)                          | 0.360 | 0.000   | 16.000      | 0.000 |16      |
+B(2)                          | 0.255 | 0.000   | 9.000       | 0.000 |9       |
+B(1)                          | 0.182 | 0.000   | 6.000       | 0.000 |6       |
+B(0)                          | 0.153 | 0.000   | 5.000       | 0.000 |5       |
+alu_code(4)                   | 0.060 | 0.000   | 3.000       | 0.000 |3       |
+alu_code(3)                   | 0.081 | 0.000   | 4.000       | 0.000 |4       |
+alu_code(2)                   | 0.104 | 0.000   | 7.000       | 0.000 |7       |
+alu_code(1)                   | 0.168 | 0.000   | 8.000       | 0.000 |8       |
+alu_code(0)                   | 0.497 | 0.000   | 25.000      | 0.000 |25      |
+C(15)                         | 0.000 | 0.000   | 0.000       | 0.248 |0       |
+C(14)                         | 0.000 | 0.000   | 0.000       | 0.248 |0       |
+C(13)                         | 0.000 | 0.000   | 0.000       | 0.248 |0       |
+C(12)                         | 0.000 | 0.000   | 0.000       | 0.248 |0       |
+C(11)                         | 0.000 | 0.000   | 0.000       | 0.248 |0       |
+C(10)                         | 0.000 | 0.000   | 0.000       | 0.248 |0       |
+C(9)                          | 0.000 | 0.000   | 0.000       | 0.248 |0       |
+C(8)                          | 0.000 | 0.000   | 0.000       | 0.248 |0       |
+C(7)                          | 0.000 | 0.000   | 0.000       | 0.248 |0       |
+C(6)                          | 0.000 | 0.000   | 0.000       | 0.248 |0       |
+C(5)                          | 0.000 | 0.000   | 0.000       | 0.248 |0       |
+C(4)                          | 0.000 | 0.000   | 0.000       | 0.248 |0       |
+C(3)                          | 0.000 | 0.000   | 0.000       | 0.248 |0       |
+C(2)                          | 0.000 | 0.000   | 0.000       | 0.248 |0       |
+C(1)                          | 0.000 | 0.000   | 0.000       | 0.248 |0       |
+C(0)                          | 0.000 | 0.000   | 0.000       | 0.423 |0       |
+overflow                      | 0.000 | 0.000   | 0.000       | 0.201 |0       |
+add_vout                      | 0.015 | 0.000   | 1.000       | 0.888 |1       |
+logic_out(15)                 | 0.012 | 0.000   | 1.000       | 1.266 |1       |
+logic_out(14)                 | 0.012 | 0.000   | 1.000       | 1.266 |1       |
+logic_out(13)                 | 0.012 | 0.000   | 1.000       | 1.266 |1       |
+logic_out(12)                 | 0.012 | 0.000   | 1.000       | 1.266 |1       |
+logic_out(11)                 | 0.012 | 0.000   | 1.000       | 1.266 |1       |
+logic_out(10)                 | 0.012 | 0.000   | 1.000       | 1.266 |1       |
+logic_out(9)                  | 0.012 | 0.000   | 1.000       | 1.266 |1       |
+logic_out(8)                  | 0.012 | 0.000   | 1.000       | 1.266 |1       |
+logic_out(7)                  | 0.012 | 0.000   | 1.000       | 1.266 |1       |
+logic_out(6)                  | 0.012 | 0.000   | 1.000       | 1.266 |1       |
+logic_out(5)                  | 0.012 | 0.000   | 1.000       | 1.266 |1       |
+logic_out(4)                  | 0.012 | 0.000   | 1.000       | 1.266 |1       |
+logic_out(3)                  | 0.012 | 0.000   | 1.000       | 1.266 |1       |
+logic_out(2)                  | 0.012 | 0.000   | 1.000       | 1.266 |1       |
+logic_out(1)                  | 0.012 | 0.000   | 1.000       | 1.266 |1       |
+logic_out(0)                  | 0.012 | 0.000   | 1.000       | 1.266 |1       |
+add_out(15)                   | 0.051 | 0.000   | 2.000       | 0.800 |2       |
+add_out(14)                   | 0.012 | 0.000   | 1.000       | 0.378 |1       |
+add_out(13)                   | 0.012 | 0.000   | 1.000       | 0.378 |1       |
+add_out(12)                   | 0.012 | 0.000   | 1.000       | 0.378 |1       |
+add_out(11)                   | 0.012 | 0.000   | 1.000       | 0.378 |1       |
+add_out(10)                   | 0.012 | 0.000   | 1.000       | 0.378 |1       |
+add_out(9)                    | 0.012 | 0.000   | 1.000       | 0.378 |1       |
+add_out(8)                    | 0.012 | 0.000   | 1.000       | 0.378 |1       |
+add_out(7)                    | 0.012 | 0.000   | 1.000       | 0.378 |1       |
+add_out(6)                    | 0.012 | 0.000   | 1.000       | 0.378 |1       |
+add_out(5)                    | 0.012 | 0.000   | 1.000       | 0.378 |1       |
+add_out(4)                    | 0.012 | 0.000   | 1.000       | 0.378 |1       |
+add_out(3)                    | 0.012 | 0.000   | 1.000       | 0.852 |1       |
+add_out(2)                    | 0.012 | 0.000   | 1.000       | 0.900 |1       |
+add_out(1)                    | 0.012 | 0.000   | 1.000       | 0.318 |1       |
+add_out(0)                    | 0.012 | 0.000   | 1.000       | 0.318 |1       |
+shift_out(15)                 | 0.012 | 0.000   | 1.000       | 0.373 |1       |
+shift_out(14)                 | 0.012 | 0.000   | 1.000       | 0.373 |1       |
+shift_out(13)                 | 0.012 | 0.000   | 1.000       | 0.378 |1       |
+shift_out(12)                 | 0.012 | 0.000   | 1.000       | 0.378 |1       |
+shift_out(11)                 | 0.012 | 0.000   | 1.000       | 0.373 |1       |
+shift_out(10)                 | 0.012 | 0.000   | 1.000       | 0.373 |1       |
+shift_out(9)                  | 0.012 | 0.000   | 1.000       | 0.373 |1       |
+shift_out(8)                  | 0.012 | 0.000   | 1.000       | 0.373 |1       |
+shift_out(7)                  | 0.012 | 0.000   | 1.000       | 0.855 |1       |
+shift_out(6)                  | 0.012 | 0.000   | 1.000       | 0.855 |1       |
+shift_out(5)                  | 0.012 | 0.000   | 1.000       | 0.855 |1       |
+shift_out(4)                  | 0.012 | 0.000   | 1.000       | 0.855 |1       |
+shift_out(3)                  | 0.012 | 0.000   | 1.000       | 0.855 |1       |
+shift_out(2)                  | 0.012 | 0.000   | 1.000       | 0.855 |1       |
+shift_out(1)                  | 0.012 | 0.000   | 1.000       | 0.855 |1       |
+shift_out(0)                  | 0.013 | 0.000   | 1.000       | 0.504 |1       |
+nx12                          | 0.032 | 0.000   | 1.000       | 1.043 |1       |
+nx26                          | 0.031 | 0.000   | 1.000       | 1.040 |1       |
+nx42                          | 0.029 | 0.000   | 1.000       | 1.034 |1       |
+nx56                          | 0.030 | 0.000   | 1.000       | 1.037 |1       |
+nx62                          | 0.015 | 0.000   | 1.000       | 0.922 |1       |
+nx70                          | 0.015 | 0.000   | 1.000       | 0.411 |1       |
+nx76                          | 0.014 | 0.000   | 1.000       | 0.414 |1       |
+nx100                         | 0.032 | 0.000   | 2.000       | 0.574 |2       |
+nx114                         | 0.014 | 0.000   | 1.000       | 0.414 |1       |
+nx124                         | 0.014 | 0.000   | 1.000       | 0.414 |1       |
+nx134                         | 0.014 | 0.000   | 1.000       | 0.414 |1       |
+nx144                         | 0.014 | 0.000   | 1.000       | 0.414 |1       |
+nx154                         | 0.014 | 0.000   | 1.000       | 0.414 |1       |
+nx164                         | 0.014 | 0.000   | 1.000       | 0.414 |1       |
+nx174                         | 0.014 | 0.000   | 1.000       | 0.414 |1       |
+nx184                         | 0.014 | 0.000   | 1.000       | 0.414 |1       |
+nx194                         | 0.014 | 0.000   | 1.000       | 0.414 |1       |
+nx204                         | 0.014 | 0.000   | 1.000       | 0.414 |1       |
+nx214                         | 0.014 | 0.000   | 1.000       | 0.414 |1       |
+nx224                         | 0.014 | 0.000   | 1.000       | 0.414 |1       |
+nx234                         | 0.014 | 0.000   | 1.000       | 0.414 |1       |
+nx244                         | 0.014 | 0.000   | 1.000       | 0.414 |1       |
+nx254                         | 0.014 | 0.000   | 1.000       | 0.414 |1       |
+nx373                         | 0.019 | 0.000   | 1.000       | 0.969 |1       |
+nx378                         | 0.024 | 0.000   | 1.000       | 1.225 |1       |
+nx382                         | 0.012 | 0.000   | 1.000       | 0.886 |1       |
+nx385                         | 0.019 | 0.000   | 1.000       | 0.951 |1       |
+nx387                         | 0.022 | 0.000   | 1.000       | 0.973 |1       |
+nx389                         | 0.022 | 0.000   | 1.000       | 0.973 |1       |
+nx391                         | 0.024 | 0.000   | 1.000       | 0.988 |1       |
+nx394                         | 0.019 | 0.000   | 1.000       | 0.951 |1       |
+nx396                         | 0.022 | 0.000   | 1.000       | 0.973 |1       |
+nx398                         | 0.022 | 0.000   | 1.000       | 0.973 |1       |
+nx400                         | 0.024 | 0.000   | 1.000       | 0.988 |1       |
+nx403                         | 0.019 | 0.000   | 1.000       | 0.951 |1       |
+nx405                         | 0.022 | 0.000   | 1.000       | 0.973 |1       |
+nx407                         | 0.022 | 0.000   | 1.000       | 0.973 |1       |
+nx409                         | 0.024 | 0.000   | 1.000       | 0.988 |1       |
+nx412                         | 0.019 | 0.000   | 1.000       | 0.951 |1       |
+nx414                         | 0.022 | 0.000   | 1.000       | 0.973 |1       |
+nx416                         | 0.022 | 0.000   | 1.000       | 0.973 |1       |
+nx418                         | 0.024 | 0.000   | 1.000       | 0.988 |1       |
+nx422                         | 0.033 | 0.000   | 2.000       | 0.601 |2       |
+nx459                         | 0.060 | 0.000   | 3.000       | 0.854 |3       |
+nx461                         | 0.106 | 0.000   | 7.000       | 0.928 |7       |
+nx463                         | 0.105 | 0.000   | 7.000       | 0.924 |7       |
+nx465                         | 0.030 | 0.000   | 2.000       | 0.586 |2       |
+nx467                         | 0.060 | 0.000   | 3.000       | 0.644 |3       |
+nx469                         | 0.105 | 0.000   | 7.000       | 0.924 |7       |
+nx471                         | 0.105 | 0.000   | 7.000       | 0.924 |7       |
+nx473                         | 0.030 | 0.000   | 2.000       | 0.586 |2       |
+nx475                         | 0.060 | 0.000   | 3.000       | 0.727 |3       |
+nx477                         | 0.090 | 0.000   | 6.000       | 0.859 |6       |
+nx479                         | 0.105 | 0.000   | 7.000       | 0.924 |7       |
+nx481                         | 0.045 | 0.000   | 3.000       | 0.659 |3       |
+nx483                         | 0.063 | 0.000   | 2.000       | 0.456 |2       |
+adder_b_sign                  | 0.078 | 0.000   | 2.000       | 1.383 |2       |
+adder_subtraction             | 0.020 | 0.000   | 1.000       | 0.457 |1       |
+adder_b_source(14)            | 0.061 | 0.000   | 3.000       | 1.260 |3       |
+adder_b_source(13)            | 0.085 | 0.000   | 4.000       | 1.434 |4       |
+adder_b_source(12)            | 0.088 | 0.000   | 4.000       | 1.456 |4       |
+adder_b_source(11)            | 0.085 | 0.000   | 4.000       | 1.434 |4       |
+adder_b_source(10)            | 0.088 | 0.000   | 4.000       | 1.456 |4       |
+adder_b_source(9)             | 0.085 | 0.000   | 4.000       | 1.434 |4       |
+adder_b_source(8)             | 0.088 | 0.000   | 4.000       | 1.456 |4       |
+adder_b_source(7)             | 0.085 | 0.000   | 4.000       | 1.434 |4       |
+adder_b_source(6)             | 0.088 | 0.000   | 4.000       | 1.456 |4       |
+adder_b_source(5)             | 0.085 | 0.000   | 4.000       | 1.434 |4       |
+adder_b_source(4)             | 0.088 | 0.000   | 4.000       | 1.456 |4       |
+adder_b_source(3)             | 0.048 | 0.000   | 2.000       | 1.165 |2       |
+adder_b_source(2)             | 0.061 | 0.000   | 3.000       | 1.260 |3       |
+adder_b_source(1)             | 0.054 | 0.000   | 2.000       | 1.209 |2       |
+adder_b_source(0)             | 0.054 | 0.000   | 2.000       | 1.209 |2       |
+adder_adder_b1s1(7)           | 0.014 | 0.000   | 1.000       | 0.866 |1       |
+adder_adder_b1s1(6)           | 0.014 | 0.000   | 1.000       | 0.394 |1       |
+adder_adder_b1s1(5)           | 0.014 | 0.000   | 1.000       | 0.866 |1       |
+adder_adder_b1s1(4)           | 0.014 | 0.000   | 1.000       | 0.914 |1       |
+adder_adder_b1s1(3)           | 0.014 | 0.000   | 1.000       | 0.866 |1       |
+adder_adder_b1s1(2)           | 0.014 | 0.000   | 1.000       | 0.914 |1       |
+adder_adder_b1s1(1)           | 0.014 | 0.000   | 1.000       | 0.337 |1       |
+adder_adder_b1s1(0)           | 0.034 | 0.000   | 2.000       | 1.147 |2       |
+adder_adder_b1s0(7)           | 0.019 | 0.000   | 1.000       | 0.902 |1       |
+adder_adder_b1s0(6)           | 0.019 | 0.000   | 1.000       | 0.446 |1       |
+adder_adder_b1s0(5)           | 0.019 | 0.000   | 1.000       | 0.902 |1       |
+adder_adder_b1s0(4)           | 0.019 | 0.000   | 1.000       | 0.951 |1       |
+adder_adder_b1s0(3)           | 0.019 | 0.000   | 1.000       | 0.902 |1       |
+adder_adder_b1s0(2)           | 0.019 | 0.000   | 1.000       | 0.384 |1       |
+adder_adder_b1s0(1)           | 0.019 | 0.000   | 1.000       | 0.384 |1       |
+adder_adder_b1s0(0)           | 0.019 | 0.000   | 1.000       | 0.533 |1       |
+adder_adder_csa_l_b1s1(3)     | 0.014 | 0.000   | 1.000       | 0.866 |1       |
+adder_adder_csa_l_b1s1(2)     | 0.014 | 0.000   | 1.000       | 0.914 |1       |
+adder_adder_csa_l_b1s1(1)     | 0.014 | 0.000   | 1.000       | 0.337 |1       |
+adder_adder_csa_l_b1s1(0)     | 0.034 | 0.000   | 2.000       | 1.147 |2       |
+adder_adder_csa_l_b1s0(3)     | 0.019 | 0.000   | 1.000       | 0.902 |1       |
+adder_adder_csa_l_b1s0(2)     | 0.019 | 0.000   | 1.000       | 0.384 |1       |
+adder_adder_csa_l_b1s0(1)     | 0.019 | 0.000   | 1.000       | 0.384 |1       |
+adder_adder_csa_l_b1s0(0)     | 0.019 | 0.000   | 1.000       | 0.533 |1       |
+adder_adder_csa_l_b1c1        | 0.014 | 0.000   | 1.000       | 0.400 |1       |
+adder_adder_csa_l_b1c0        | 0.019 | 0.000   | 1.000       | 0.454 |1       |
+adder_adder_csa_l_b0c         | 0.135 | 0.000   | 5.000       | 1.663 |5       |
+adder_nx38                    | 0.024 | 0.000   | 2.000       | 0.508 |2       |
+adder_nx98                    | 0.045 | 0.000   | 2.000       | 0.942 |2       |
+adder_nx202                   | 0.022 | 0.000   | 1.000       | 0.413 |1       |
+adder_nx69                    | 0.039 | 0.000   | 1.000       | 0.614 |1       |
+adder_nx75                    | 0.039 | 0.000   | 1.000       | 0.566 |1       |
+adder_nx77                    | 0.044 | 0.000   | 2.000       | 0.654 |2       |
+adder_nx83                    | 0.039 | 0.000   | 1.000       | 0.566 |1       |
+adder_nx87                    | 0.039 | 0.000   | 1.000       | 0.566 |1       |
+adder_nx91                    | 0.039 | 0.000   | 1.000       | 0.566 |1       |
+adder_nx95                    | 0.039 | 0.000   | 1.000       | 0.566 |1       |
+adder_nx99                    | 0.039 | 0.000   | 1.000       | 0.566 |1       |
+adder_nx103                   | 0.039 | 0.000   | 1.000       | 0.566 |1       |
+adder_nx107                   | 0.039 | 0.000   | 1.000       | 0.566 |1       |
+adder_nx111                   | 0.039 | 0.000   | 1.000       | 0.566 |1       |
+adder_nx115                   | 0.039 | 0.000   | 1.000       | 0.566 |1       |
+adder_nx119                   | 0.039 | 0.000   | 1.000       | 0.566 |1       |
+adder_nx123                   | 0.039 | 0.000   | 1.000       | 0.566 |1       |
+adder_nx127                   | 0.039 | 0.000   | 1.000       | 0.566 |1       |
+adder_nx131                   | 0.039 | 0.000   | 1.000       | 0.566 |1       |
+adder_nx135                   | 0.039 | 0.000   | 1.000       | 0.566 |1       |
+adder_nx139                   | 0.024 | 0.000   | 1.000       | 0.695 |1       |
+adder_nx143                   | 0.024 | 0.000   | 1.000       | 0.988 |1       |
+adder_cin                     | 0.012 | 0.000   | 1.000       | 0.499 |1       |
+adder_nx179                   | 0.189 | 0.000   | 7.000       | 1.012 |7       |
+adder_nx181                   | 0.027 | 0.000   | 1.000       | 0.304 |1       |
+adder_nx183                   | 0.168 | 0.000   | 7.000       | 1.189 |7       |
+adder_nx185                   | 0.168 | 0.000   | 7.000       | 1.189 |7       |
+adder_nx191                   | 0.040 | 0.000   | 2.000       | 0.635 |2       |
+adder_nx197                   | 0.116 | 0.000   | 5.000       | 0.970 |5       |
+adder_adder_csa_h_b0c1        | 0.012 | 0.000   | 1.000       | 0.378 |1       |
+adder_adder_csa_h_b0c0        | 0.012 | 0.000   | 1.000       | 0.378 |1       |
+adder_adder_csa_h_nx54        | 0.014 | 0.000   | 1.000       | 0.481 |1       |
+adder_adder_csa_h_nx64        | 0.012 | 0.000   | 1.000       | 0.906 |1       |
+adder_adder_csa_h_nx66        | 0.030 | 0.000   | 2.000       | 1.032 |2       |
+adder_adder_csa_h_nx116       | 0.014 | 0.000   | 1.000       | 0.481 |1       |
+adder_adder_csa_h_nx87        | 0.078 | 0.000   | 2.000       | 1.411 |2       |
+adder_adder_csa_h_nx89        | 0.081 | 0.000   | 3.000       | 0.722 |3       |
+adder_adder_csa_h_nx93        | 0.042 | 0.000   | 2.000       | 1.121 |2       |
+adder_adder_csa_h_nx95        | 0.072 | 0.000   | 2.000       | 1.375 |2       |
+adder_adder_csa_h_nx97        | 0.055 | 0.000   | 3.000       | 0.626 |3       |
+adder_adder_csa_h_nx99        | 0.036 | 0.000   | 2.000       | 1.077 |2       |
+adder_adder_csa_h_nx101       | 0.063 | 0.000   | 2.000       | 0.748 |2       |
+adder_adder_csa_h_nx107       | 0.072 | 0.000   | 2.000       | 1.375 |2       |
+adder_adder_csa_h_nx109       | 0.054 | 0.000   | 2.000       | 0.622 |2       |
+adder_adder_csa_h_nx113       | 0.024 | 0.000   | 1.000       | 0.529 |1       |
+adder_adder_csa_h_nx117       | 0.050 | 0.000   | 2.000       | 1.180 |2       |
+adder_adder_csa_h_nx119       | 0.066 | 0.000   | 2.000       | 0.958 |2       |
+adder_adder_csa_h_nx121       | 0.019 | 0.000   | 1.000       | 0.502 |1       |
+adder_adder_csa_h_nx125       | 0.042 | 0.000   | 2.000       | 0.703 |2       |
+adder_adder_csa_h_nx127       | 0.033 | 0.000   | 2.000       | 1.055 |2       |
+adder_adder_csa_h_nx129       | 0.072 | 0.000   | 2.000       | 1.339 |2       |
+adder_adder_csa_h_nx131       | 0.039 | 0.000   | 1.000       | 0.614 |1       |
+adder_adder_csa_h_nx133       | 0.033 | 0.000   | 2.000       | 1.055 |2       |
+adder_adder_csa_h_nx135       | 0.036 | 0.000   | 2.000       | 0.638 |2       |
+adder_adder_csa_h_nx147       | 0.122 | 0.000   | 5.000       | 0.711 |5       |
+adder_adder_csa_h_nx149       | 0.122 | 0.000   | 5.000       | 0.711 |5       |
+adder_adder_csa_h_nx151       | 0.066 | 0.000   | 2.000       | 0.469 |2       |
+adder_adder_csa_h_csa_l_nx40  | 0.012 | 0.000   | 1.000       | 0.906 |1       |
+adder_adder_csa_h_csa_l_nx74  | 0.033 | 0.000   | 2.000       | 1.014 |2       |
+adder_adder_csa_h_csa_l_nx88  | 0.033 | 0.000   | 2.000       | 1.030 |2       |
+adder_adder_csa_h_csa_l_nx188 | 0.081 | 0.000   | 3.000       | 0.722 |3       |
+adder_adder_csa_h_csa_l_nx191 | 0.072 | 0.000   | 2.000       | 1.375 |2       |
+adder_adder_csa_h_csa_l_nx193 | 0.055 | 0.000   | 3.000       | 0.626 |3       |
+adder_adder_csa_h_csa_l_nx195 | 0.063 | 0.000   | 2.000       | 0.748 |2       |
+adder_adder_csa_h_csa_l_nx198 | 0.072 | 0.000   | 2.000       | 1.375 |2       |
+adder_adder_csa_h_csa_l_nx200 | 0.079 | 0.000   | 3.000       | 0.715 |3       |
+adder_adder_csa_h_csa_l_nx203 | 0.024 | 0.000   | 1.000       | 0.529 |1       |
+adder_adder_csa_h_csa_l_nx206 | 0.039 | 0.000   | 2.000       | 1.099 |2       |
+adder_adder_csa_h_csa_l_nx208 | 0.072 | 0.000   | 2.000       | 1.375 |2       |
+adder_adder_csa_h_csa_l_nx210 | 0.059 | 0.000   | 3.000       | 0.640 |3       |
+adder_adder_csa_h_csa_l_nx212 | 0.039 | 0.000   | 2.000       | 1.099 |2       |
+adder_adder_csa_h_csa_l_nx214 | 0.063 | 0.000   | 2.000       | 0.748 |2       |
+adder_adder_csa_h_csa_l_nx220 | 0.019 | 0.000   | 1.000       | 0.502 |1       |
+adder_adder_csa_h_csa_l_nx223 | 0.012 | 0.000   | 1.000       | 0.378 |1       |
+adder_adder_csa_h_csa_l_nx227 | 0.021 | 0.000   | 1.000       | 0.512 |1       |
+adder_adder_csa_h_csa_l_nx230 | 0.024 | 0.000   | 1.000       | 0.529 |1       |
+adder_adder_csa_h_csa_l_nx238 | 0.091 | 0.000   | 3.000       | 0.574 |3       |
+adder_adder_csa_l_csa_l_nx0   | 0.015 | 0.000   | 1.000       | 0.514 |1       |
+adder_adder_csa_l_csa_l_nx24  | 0.014 | 0.000   | 1.000       | 0.481 |1       |
+adder_adder_csa_l_csa_l_nx30  | 0.091 | 0.000   | 3.000       | 1.201 |3       |
+adder_adder_csa_l_csa_l_nx58  | 0.014 | 0.000   | 1.000       | 0.481 |1       |
+adder_adder_csa_l_csa_l_nx161 | 0.059 | 0.000   | 2.000       | 1.245 |2       |
+adder_adder_csa_l_csa_l_nx164 | 0.060 | 0.000   | 2.000       | 1.252 |2       |
+adder_adder_csa_l_csa_l_nx166 | 0.064 | 0.000   | 2.000       | 1.332 |2       |
+adder_adder_csa_l_csa_l_nx170 | 0.036 | 0.000   | 1.000       | 1.159 |1       |
+adder_adder_csa_l_csa_l_nx172 | 0.073 | 0.000   | 3.000       | 0.693 |3       |
+adder_adder_csa_l_csa_l_nx177 | 0.021 | 0.000   | 1.000       | 0.966 |1       |
+adder_adder_csa_l_csa_l_nx179 | 0.096 | 0.000   | 3.000       | 1.514 |3       |
+adder_adder_csa_l_csa_l_nx181 | 0.018 | 0.000   | 1.000       | 0.944 |1       |
+adder_adder_csa_l_csa_l_nx183 | 0.053 | 0.000   | 2.000       | 0.692 |2       |
+adder_adder_csa_l_csa_l_nx187 | 0.025 | 0.000   | 1.000       | 0.519 |1       |
+adder_adder_csa_l_csa_h_nx40  | 0.012 | 0.000   | 1.000       | 0.906 |1       |
+adder_adder_csa_l_csa_h_nx74  | 0.033 | 0.000   | 2.000       | 1.014 |2       |
+adder_adder_csa_l_csa_h_nx88  | 0.033 | 0.000   | 2.000       | 1.030 |2       |
+adder_adder_csa_l_csa_h_nx188 | 0.081 | 0.000   | 3.000       | 0.722 |3       |
+adder_adder_csa_l_csa_h_nx191 | 0.072 | 0.000   | 2.000       | 1.375 |2       |
+adder_adder_csa_l_csa_h_nx193 | 0.055 | 0.000   | 3.000       | 0.626 |3       |
+adder_adder_csa_l_csa_h_nx195 | 0.063 | 0.000   | 2.000       | 0.748 |2       |
+adder_adder_csa_l_csa_h_nx198 | 0.072 | 0.000   | 2.000       | 1.375 |2       |
+adder_adder_csa_l_csa_h_nx200 | 0.079 | 0.000   | 3.000       | 0.715 |3       |
+adder_adder_csa_l_csa_h_nx203 | 0.024 | 0.000   | 1.000       | 0.529 |1       |
+adder_adder_csa_l_csa_h_nx206 | 0.039 | 0.000   | 2.000       | 1.099 |2       |
+adder_adder_csa_l_csa_h_nx208 | 0.072 | 0.000   | 2.000       | 1.375 |2       |
+adder_adder_csa_l_csa_h_nx210 | 0.059 | 0.000   | 3.000       | 0.640 |3       |
+adder_adder_csa_l_csa_h_nx212 | 0.039 | 0.000   | 2.000       | 1.099 |2       |
+adder_adder_csa_l_csa_h_nx214 | 0.063 | 0.000   | 2.000       | 0.748 |2       |
+adder_adder_csa_l_csa_h_nx220 | 0.019 | 0.000   | 1.000       | 0.502 |1       |
+adder_adder_csa_l_csa_h_nx223 | 0.012 | 0.000   | 1.000       | 0.378 |1       |
+adder_adder_csa_l_csa_h_nx227 | 0.021 | 0.000   | 1.000       | 0.512 |1       |
+adder_adder_csa_l_csa_h_nx230 | 0.024 | 0.000   | 1.000       | 0.529 |1       |
+adder_adder_csa_l_csa_h_nx238 | 0.091 | 0.000   | 3.000       | 0.574 |3       |
+shift_nx8                     | 0.030 | 0.000   | 2.000       | 0.586 |2       |
+shift_nx10                    | 0.015 | 0.000   | 1.000       | 0.514 |1       |
+shift_nx88                    | 0.014 | 0.000   | 1.000       | 0.917 |1       |
+shift_nx120                   | 0.014 | 0.000   | 1.000       | 0.917 |1       |
+shift_nx138                   | 0.012 | 0.000   | 1.000       | 0.552 |1       |
+shift_nx142                   | 0.012 | 0.000   | 1.000       | 0.552 |1       |
+shift_nx150                   | 0.096 | 0.000   | 4.000       | 0.933 |4       |
+shift_nx250                   | 0.014 | 0.000   | 1.000       | 0.576 |1       |
+shift_nx258                   | 0.014 | 0.000   | 1.000       | 0.576 |1       |
+shift_nx266                   | 0.014 | 0.000   | 1.000       | 0.576 |1       |
+shift_nx274                   | 0.014 | 0.000   | 1.000       | 0.576 |1       |
+shift_nx298                   | 0.014 | 0.000   | 1.000       | 0.576 |1       |
+shift_nx306                   | 0.014 | 0.000   | 1.000       | 0.576 |1       |
+shift_nx153                   | 0.020 | 0.000   | 1.000       | 1.065 |1       |
+shift_nx155                   | 0.012 | 0.000   | 1.000       | 0.886 |1       |
+shift_nx159                   | 0.036 | 0.000   | 3.000       | 0.615 |3       |
+shift_nx163                   | 0.015 | 0.000   | 1.000       | 0.514 |1       |
+shift_nx169                   | 0.015 | 0.000   | 1.000       | 0.514 |1       |
+shift_nx173                   | 0.015 | 0.000   | 1.000       | 0.514 |1       |
+shift_nx177                   | 0.015 | 0.000   | 1.000       | 0.514 |1       |
+shift_nx181                   | 0.015 | 0.000   | 1.000       | 0.514 |1       |
+shift_nx185                   | 0.015 | 0.000   | 1.000       | 0.514 |1       |
+shift_nx189                   | 0.015 | 0.000   | 1.000       | 0.514 |1       |
+shift_nx195                   | 0.008 | 0.000   | 1.000       | 1.114 |1       |
+shift_nx205                   | 0.094 | 0.000   | 5.000       | 1.286 |5       |
+shift_nx209                   | 0.008 | 0.000   | 1.000       | 1.114 |1       |
+shift_nx213                   | 0.008 | 0.000   | 1.000       | 1.114 |1       |
+shift_nx219                   | 0.008 | 0.000   | 1.000       | 1.114 |1       |
+shift_nx225                   | 0.026 | 0.000   | 1.000       | 0.958 |1       |
+shift_nx227                   | 0.068 | 0.000   | 3.000       | 0.776 |3       |
+shift_nx233                   | 0.026 | 0.000   | 1.000       | 0.958 |1       |
+shift_nx237                   | 0.008 | 0.000   | 1.000       | 0.335 |1       |
+shift_nx239                   | 0.014 | 0.000   | 1.000       | 0.866 |1       |
+shift_nx241                   | 0.047 | 0.000   | 2.000       | 0.797 |2       |
+shift_nx247                   | 0.008 | 0.000   | 1.000       | 0.335 |1       |
+shift_nx249                   | 0.014 | 0.000   | 1.000       | 0.866 |1       |
+shift_nx256                   | 0.045 | 0.000   | 2.000       | 0.380 |2       |
+shift_nx259                   | 0.084 | 0.000   | 7.000       | 0.832 |7       |
+shift_nx261                   | 0.036 | 0.000   | 3.000       | 0.615 |3       |
+shift_nx267                   | 0.096 | 0.000   | 4.000       | 0.595 |4       |
+shift_nx269                   | 0.096 | 0.000   | 4.000       | 0.595 |4       |
+logic_nx16                    | 0.020 | 0.000   | 1.000       | 0.507 |1       |
+logic_nx631                   | 0.023 | 0.000   | 1.000       | 0.981 |1       |
+logic_nx633                   | 0.020 | 0.000   | 1.000       | 0.432 |1       |
+logic_nx635                   | 0.014 | 0.000   | 1.000       | 0.914 |1       |
+logic_nx639                   | 0.033 | 0.000   | 1.000       | 0.601 |1       |
+logic_nx641                   | 0.019 | 0.000   | 1.000       | 0.898 |1       |
+logic_nx645                   | 0.023 | 0.000   | 1.000       | 0.981 |1       |
+logic_nx647                   | 0.019 | 0.000   | 1.000       | 0.898 |1       |
+logic_nx650                   | 0.023 | 0.000   | 1.000       | 0.981 |1       |
+logic_nx652                   | 0.019 | 0.000   | 1.000       | 0.898 |1       |
+logic_nx655                   | 0.023 | 0.000   | 1.000       | 0.981 |1       |
+logic_nx657                   | 0.019 | 0.000   | 1.000       | 0.898 |1       |
+logic_nx660                   | 0.023 | 0.000   | 1.000       | 0.981 |1       |
+logic_nx662                   | 0.019 | 0.000   | 1.000       | 0.898 |1       |
+logic_nx665                   | 0.023 | 0.000   | 1.000       | 0.981 |1       |
+logic_nx667                   | 0.019 | 0.000   | 1.000       | 0.898 |1       |
+logic_nx670                   | 0.023 | 0.000   | 1.000       | 0.981 |1       |
+logic_nx672                   | 0.019 | 0.000   | 1.000       | 0.898 |1       |
+logic_nx675                   | 0.023 | 0.000   | 1.000       | 0.981 |1       |
+logic_nx677                   | 0.019 | 0.000   | 1.000       | 0.898 |1       |
+logic_nx680                   | 0.023 | 0.000   | 1.000       | 0.981 |1       |
+logic_nx682                   | 0.019 | 0.000   | 1.000       | 0.898 |1       |
+logic_nx685                   | 0.023 | 0.000   | 1.000       | 0.981 |1       |
+logic_nx687                   | 0.019 | 0.000   | 1.000       | 0.898 |1       |
+logic_nx690                   | 0.023 | 0.000   | 1.000       | 0.981 |1       |
+logic_nx692                   | 0.019 | 0.000   | 1.000       | 0.898 |1       |
+logic_nx695                   | 0.023 | 0.000   | 1.000       | 0.981 |1       |
+logic_nx697                   | 0.019 | 0.000   | 1.000       | 0.898 |1       |
+logic_nx700                   | 0.023 | 0.000   | 1.000       | 0.981 |1       |
+logic_nx702                   | 0.019 | 0.000   | 1.000       | 0.898 |1       |
+logic_nx705                   | 0.023 | 0.000   | 1.000       | 0.981 |1       |
+logic_nx707                   | 0.019 | 0.000   | 1.000       | 0.898 |1       |
+logic_nx710                   | 0.023 | 0.000   | 1.000       | 0.981 |1       |
+logic_nx712                   | 0.019 | 0.000   | 1.000       | 0.898 |1       |
+logic_nx715                   | 0.023 | 0.000   | 1.000       | 0.981 |1       |
+logic_nx717                   | 0.019 | 0.000   | 1.000       | 0.898 |1       |
+logic_nx724                   | 0.060 | 0.000   | 3.000       | 0.727 |3       |
+logic_nx726                   | 0.105 | 0.000   | 7.000       | 0.924 |7       |
+logic_nx728                   | 0.105 | 0.000   | 7.000       | 0.924 |7       |
+logic_nx730                   | 0.030 | 0.000   | 2.000       | 0.586 |2       |
+logic_nx732                   | 0.060 | 0.000   | 3.000       | 0.727 |3       |
+logic_nx734                   | 0.161 | 0.000   | 7.000       | 1.159 |7       |
+logic_nx736                   | 0.161 | 0.000   | 7.000       | 1.159 |7       |
+logic_nx738                   | 0.046 | 0.000   | 2.000       | 0.664 |2       |
+logic_nx740                   | 0.060 | 0.000   | 3.000       | 0.856 |3       |
+logic_nx742                   | 0.175 | 0.000   | 7.000       | 1.218 |7       |
+logic_nx744                   | 0.175 | 0.000   | 7.000       | 1.218 |7       |
+logic_nx746                   | 0.050 | 0.000   | 2.000       | 0.683 |2       |
+nx591                         | 0.252 | 0.000   | 7.000       | 1.543 |7       |
+nx593                         | 0.252 | 0.000   | 7.000       | 1.543 |7       |
+nx595                         | 0.072 | 0.000   | 2.000       | 0.780 |2       |
+nx597                         | 0.091 | 0.000   | 3.000       | 0.574 |3       |
+nx599                         | 0.091 | 0.000   | 3.000       | 0.574 |3       |
+--------------------------------------------------------------------------------

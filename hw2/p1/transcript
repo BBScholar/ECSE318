@@ -1,4 +1,4 @@
-# vsim -do {run -all} -c work.adder_tb 
+# vsim -do {run -all} -c work.alu_tb 
 # //  QuestaSim-64 6.5f Jun 16 2010 Linux 5.15.0-48-generic
 # //
 # //  Copyright 1991-2010 Mentor Graphics Corporation
@@ -9,7 +9,8 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-# Loading work.adder_tb
+# Loading work.alu_tb
+# Loading work.alu
 # Loading work.adder16
 # Loading work.conditional_sum_adder16_with_cin
 # Loading work.conditional_sum_adder8_with_cin
@@ -20,41 +21,20 @@
 # Loading work.conditional_sum_adder2
 # Loading work.conditional_sum_adder4
 # Loading work.conditional_sum_adder8
+# Loading work.shift16
+# Loading work.conditional_data_reverser
+# Loading work.data_reverser
+# Loading work.logic16
+# Loading work.comparator16
 # run -all 
-# A	B	cin	coe	  f | C   	v	cout
-# 0000	0001	0	0	000 | 0001	0	0
-# 000f	000f	1	0	000 | 001f	0	0
-# 7f00	0300	0	0	000 | 8200	1	0
-# ff00	0100	1	0	000 | 0001	0	1
-# 8100	8000	1	1	000 | 0101	1	0
+# A	B	op | 	c	v
+# 0001	0003	10000 | 0008	0
+# 0001	0003	10010 | 0008	0
+# 8000	0003	10001 | 1000	0
+# 8000	0003	10011 | f000	0
 # 
-# 0000	0001	0	0	001 | 0001	0	0
-# 000f	000f	1	0	001 | 001f	0	0
-# 7f00	0300	0	0	001 | 8200	0	0
-# ff00	0100	1	0	001 | 0001	0	1
-# 8100	8000	1	1	001 | 0101	0	0
-# 
-# 0000	0001	0	0	010 | ffff	0	0
-# 000f	000f	1	0	010 | 0000	0	1
-# 7f00	0300	0	0	010 | 7c00	0	1
-# ff00	0100	1	0	010 | fe00	0	1
-# 8100	8000	1	1	010 | 0100	0	0
-# 
-# 0000	0001	0	0	011 | ffff	0	0
-# 000f	000f	1	0	011 | 0000	0	1
-# 7f00	0300	0	0	011 | 7c00	0	1
-# ff00	0100	1	0	011 | fe00	0	1
-# 8100	8000	1	1	011 | 0100	0	0
-# 
-# 0000	0001	0	0	100 | 0001	0	0
-# 000f	000f	1	0	100 | 0011	0	0
-# 7f00	0300	0	0	100 | 7f01	0	0
-# ff00	0100	1	0	100 | ff02	0	0
-# 8100	8000	1	1	100 | 8102	0	0
-# 
-# 0000	0001	0	0	101 | ffff	0	0
-# 000f	000f	1	0	101 | 000e	0	1
-# 7f00	0300	0	0	101 | 7eff	0	1
-# ff00	0100	1	0	101 | feff	0	1
-# 8100	8000	1	1	101 | 80ff	0	0
+# ff00	00ff	01000 | 0000	0
+# ff00	00ff	01001 | ffff	0
+# ff00	00ff	01010 | ffff	0
+# ff00	00ff	01100 | 00ff	0
 # 
