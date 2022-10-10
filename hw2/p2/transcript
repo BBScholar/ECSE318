@@ -1,0 +1,949 @@
+# //  QuestaSim-64 6.5f Jun 16 2010 Linux 5.15.0-48-generic
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+vsim -voptargs=+acc work.testFreecell
+# vsim -voptargs=+acc work.testFreecell 
+# Loading work.testFreecell
+# Loading work.freecellPlayer
+# Loading work.decoder2to4
+# Loading work.decoder3to8
+# Loading work.freecell_logic
+# Loading work.order_validator
+# Loading work.card_stack
+do p2.do
+run -all
+#                    0  0000 1100 0
+#                   20  0001 1100 0
+#                   30  0010 1100 0
+#                   40  0011 1000 0
+#                   50  0011 0110 0
+#                   60  1000 0110 0
+#                   70  0111 0100 0
+#                   80  0011 0100 0
+#                   90  0011 1000 0
+#                  100  0011 0001 0
+#                  110  0011 1100 0
+#                  120  0101 1100 0
+#                  130  0011 1001 0
+#                  140  0001 1010 0
+#                  150  0001 0011 0
+#                  160  1010 0011 0
+#                  170  1000 0001 0
+#                  180  1001 0001 0
+#                  190  0101 1100 0
+#                  200  0111 0110 0
+#                  210  0111 0101 0
+#                  220  0111 1000 0
+#                  230  0001 1100 0
+#                  240  0111 0001 0
+#                  250  1000 0111 0
+#                  260  0100 1000 0
+#                  270  0100 1001 0
+#                  280  0100 0111 0
+#                  290  0000 1100 0
+#                  300  0100 1100 0
+#                  310  1001 0111 0
+#                  320  1000 0111 0
+#                  330  0000 0111 0
+#                  340  0000 0001 0
+#                  350  0001 1000 0
+#                  360  0001 0111 0
+#                  370  1000 0111 0
+#                  380  0000 1000 0
+#                  390  0000 0011 0
+#                  400  0000 1100 0
+#                  410  0010 1001 0
+#                  420  0010 1100 0
+#                  430  0010 0110 0
+#                  440  1000 0000 0
+#                  450  1100 0011 0
+#                  460  0010 0000 0
+#                  470  0010 1000 0
+#                  480  0000 1010 0
+#                  490  0000 0010 0
+#                  500  1010 0010 0
+#                  510  0001 1010 0
+#                  520  0111 1010 0
+#                  530  0001 1011 0
+#                  540  0001 0010 0
+#                  550  0001 0011 0
+#                  560  1000 0010 0
+#                  570  1010 0010 0
+#                  580  1010 0001 0
+#                  590  0001 1100 0
+#                  600  0101 1000 0
+#                  610  0101 0011 0
+#                  620  0101 1100 0
+#                  630  1000 0011 0
+#                  640  1011 1100 0
+#                  650  0100 1100 0
+#                  660  1000 1100 0
+#                  670  0101 0001 0
+#                  680  0100 0001 0
+#                  700  0110 0000 0
+#                  710  0110 0011 0
+#                  720  0000 0011 0
+#                  730  0101 0011 0
+#                  740  1001 0101 0
+#                  750  0100 0101 0
+#                  760  0110 1000 0
+#                  770  0110 1001 0
+#                  780  0110 0001 0
+#                  790  1001 0001 0
+#                  800  1000 0001 0
+#                  810  0110 0100 0
+#                  820  0110 0001 0
+#                  830  0110 0100 0
+#                  840  0110 1100 0
+#                  860  0111 1100 0
+#                  880  0011 1100 0
+#                  900  0010 1100 0
+#                  910  0011 1100 0
+#                  920  0111 1100 0
+#                  930  0001 1100 0
+#                  940  0010 1100 0
+#                  950  0011 1100 0
+#                  960  0010 1100 0
+#                  980  0111 1100 0
+#                  990  0001 1100 0
+#                 1000  0111 1100 0
+#                 1010  0011 1100 0
+#                 1020  0001 1100 0
+#                 1030  0111 1100 0
+#                 1040  0001 1100 0
+#                 1050  0010 1100 0
+#                 1060  0011 1100 0
+#                 1070  0111 1100 0
+#                 1080  0001 1100 0
+#                 1090  0010 1100 0
+#                 1100  0011 1100 0
+#                 1110  0111 1100 0
+#                 1120  0001 1100 0
+#                 1130  0011 1100 0
+#                 1140  0111 1100 0
+#                 1150  0100 1100 0
+#                 1160  0101 1100 0
+#                 1170  0001 1100 0
+#                 1180  0011 1100 0
+#                 1190  0100 1100 0
+#                 1200  0101 1100 0
+# ** Note: $finish    : testFreecell.v(175)
+#    Time: 1210 fs  Iteration: 0  Instance: :testFreecell
+# 1
+# Break in Module testFreecell at testFreecell.v line 175
+vlog -work /home/bscholar/Documents/ECSE318/hw2/p2/work -refresh
+# QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+# -- Refreshing module card_stack
+# -- Refreshing module decoder2to4
+# -- Refreshing module decoder3to8
+# -- Refreshing module freecell_logic
+# -- Refreshing module freecellPlayer
+# -- Refreshing module mux2x1
+# -- Refreshing module mux8x1
+# -- Refreshing module order_validator
+# -- Refreshing module stack_tb
+# -- Refreshing module testFreecell
+vcom -work /home/bscholar/Documents/ECSE318/hw2/p2/work -refresh
+# QuestaSim-64 vcom 6.5f Compiler 2010.06 Jun 16 2010
+# ** Warning: (vcom-1900) -refresh cannot be used with -qhpro_syminfo or -qspro_syminfo; ignoring syminfo option.
+# -- Skipping module card_stack
+# -- Skipping module decoder2to4
+# -- Skipping module decoder3to8
+# -- Skipping module freecell_logic
+# -- Skipping module freecellPlayer
+# -- Skipping module mux2x1
+# -- Skipping module mux8x1
+# -- Skipping module order_validator
+# -- Skipping module stack_tb
+# -- Skipping module testFreecell
+vsim -voptargs=+acc work.testFreecell
+# vsim -voptargs=+acc work.testFreecell 
+# Loading work.testFreecell
+# Loading work.freecellPlayer
+# Loading work.decoder2to4
+# Loading work.decoder3to8
+# Loading work.freecell_logic
+# Loading work.order_validator
+# Loading work.card_stack
+do p2.do
+run -all
+#                    0  0000 1100 0
+#                   20  0001 1100 0
+#                   30  0010 1100 0
+#                   40  0011 1000 0
+#                   50  0011 0110 0
+#                   60  1000 0110 0
+#                   70  0111 0100 0
+#                   80  0011 0100 0
+#                   90  0011 1000 0
+#                  100  0011 0001 0
+#                  110  0011 1100 0
+#                  120  0101 1100 0
+#                  130  0011 1001 0
+#                  140  0001 1010 0
+#                  150  0001 0011 0
+#                  160  1010 0011 0
+#                  170  1000 0001 0
+#                  180  1001 0001 0
+#                  190  0101 1100 0
+#                  200  0111 0110 0
+#                  210  0111 0101 0
+#                  220  0111 1000 0
+#                  230  0001 1100 0
+#                  240  0111 0001 0
+#                  250  1000 0111 0
+#                  260  0100 1000 0
+#                  270  0100 1001 0
+#                  280  0100 0111 0
+#                  290  0000 1100 0
+#                  300  0100 1100 0
+#                  310  1001 0111 0
+#                  320  1000 0111 0
+#                  330  0000 0111 0
+#                  340  0000 0001 0
+#                  350  0001 1000 0
+#                  360  0001 0111 0
+#                  370  1000 0111 0
+#                  380  0000 1000 0
+#                  390  0000 0011 0
+#                  400  0000 1100 0
+#                  410  0010 1001 0
+#                  420  0010 1100 0
+#                  430  0010 0110 0
+#                  440  1000 0000 0
+#                  450  1100 0011 0
+#                  460  0010 0000 0
+#                  470  0010 1000 0
+#                  480  0000 1010 0
+#                  490  0000 0010 0
+#                  500  1010 0010 0
+#                  510  0001 1010 0
+#                  520  0111 1010 0
+#                  530  0001 1011 0
+#                  540  0001 0010 0
+#                  550  0001 0011 0
+#                  560  1000 0010 0
+#                  570  1010 0010 0
+#                  580  1010 0001 0
+#                  590  0001 1100 0
+#                  600  0101 1000 0
+#                  610  0101 0011 0
+#                  620  0101 1100 0
+#                  630  1000 0011 0
+#                  640  1011 1100 0
+#                  650  0100 1100 0
+#                  660  1000 1100 0
+#                  670  0101 0001 0
+#                  680  0100 0001 0
+#                  700  0110 0000 0
+#                  710  0110 0011 0
+#                  720  0000 0011 0
+#                  730  0101 0011 0
+#                  740  1001 0101 0
+#                  750  0100 0101 0
+#                  760  0110 1000 0
+#                  770  0110 1001 0
+#                  780  0110 0001 0
+#                  790  1001 0001 0
+#                  800  1000 0001 0
+#                  810  0110 0100 0
+#                  820  0110 0001 0
+#                  830  0110 0100 0
+#                  840  0110 1100 0
+#                  860  0111 1100 0
+#                  880  0011 1100 0
+#                  900  0010 1100 0
+#                  910  0011 1100 0
+#                  920  0111 1100 0
+#                  930  0001 1100 0
+#                  940  0010 1100 0
+#                  950  0011 1100 0
+#                  960  0010 1100 0
+#                  980  0111 1100 0
+#                  990  0001 1100 0
+#                 1000  0111 1100 0
+#                 1010  0011 1100 0
+#                 1020  0001 1100 0
+#                 1030  0111 1100 0
+#                 1040  0001 1100 0
+#                 1050  0010 1100 0
+#                 1060  0011 1100 0
+#                 1070  0111 1100 0
+#                 1080  0001 1100 0
+#                 1090  0010 1100 0
+#                 1100  0011 1100 0
+#                 1110  0111 1100 0
+#                 1120  0001 1100 0
+#                 1130  0011 1100 0
+#                 1140  0111 1100 0
+#                 1150  0100 1100 0
+#                 1160  0101 1100 0
+#                 1170  0001 1100 0
+#                 1180  0011 1100 0
+#                 1190  0100 1100 0
+#                 1200  0101 1100 0
+# ** Note: $finish    : testFreecell.v(175)
+#    Time: 1210 fs  Iteration: 0  Instance: :testFreecell
+# 1
+# Break in Module testFreecell at testFreecell.v line 175
+add wave -r {sim/:testFreecell:fc:tab_gen[0]:tableau:*}
+restart
+run -all
+#                    0  0000 1100 0
+#                   20  0001 1100 0
+#                   30  0010 1100 0
+#                   40  0011 1000 0
+#                   50  0011 0110 0
+#                   60  1000 0110 0
+#                   70  0111 0100 0
+#                   80  0011 0100 0
+#                   90  0011 1000 0
+#                  100  0011 0001 0
+#                  110  0011 1100 0
+#                  120  0101 1100 0
+#                  130  0011 1001 0
+#                  140  0001 1010 0
+#                  150  0001 0011 0
+#                  160  1010 0011 0
+#                  170  1000 0001 0
+#                  180  1001 0001 0
+#                  190  0101 1100 0
+#                  200  0111 0110 0
+#                  210  0111 0101 0
+#                  220  0111 1000 0
+#                  230  0001 1100 0
+#                  240  0111 0001 0
+#                  250  1000 0111 0
+#                  260  0100 1000 0
+#                  270  0100 1001 0
+#                  280  0100 0111 0
+#                  290  0000 1100 0
+#                  300  0100 1100 0
+#                  310  1001 0111 0
+#                  320  1000 0111 0
+#                  330  0000 0111 0
+#                  340  0000 0001 0
+#                  350  0001 1000 0
+#                  360  0001 0111 0
+#                  370  1000 0111 0
+#                  380  0000 1000 0
+#                  390  0000 0011 0
+#                  400  0000 1100 0
+#                  410  0010 1001 0
+#                  420  0010 1100 0
+#                  430  0010 0110 0
+#                  440  1000 0000 0
+#                  450  1100 0011 0
+#                  460  0010 0000 0
+#                  470  0010 1000 0
+#                  480  0000 1010 0
+#                  490  0000 0010 0
+#                  500  1010 0010 0
+#                  510  0001 1010 0
+#                  520  0111 1010 0
+#                  530  0001 1011 0
+#                  540  0001 0010 0
+#                  550  0001 0011 0
+#                  560  1000 0010 0
+#                  570  1010 0010 0
+#                  580  1010 0001 0
+#                  590  0001 1100 0
+#                  600  0101 1000 0
+#                  610  0101 0011 0
+#                  620  0101 1100 0
+#                  630  1000 0011 0
+#                  640  1011 1100 0
+#                  650  0100 1100 0
+#                  660  1000 1100 0
+#                  670  0101 0001 0
+#                  680  0100 0001 0
+#                  700  0110 0000 0
+#                  710  0110 0011 0
+#                  720  0000 0011 0
+#                  730  0101 0011 0
+#                  740  1001 0101 0
+#                  750  0100 0101 0
+#                  760  0110 1000 0
+#                  770  0110 1001 0
+#                  780  0110 0001 0
+#                  790  1001 0001 0
+#                  800  1000 0001 0
+#                  810  0110 0100 0
+#                  820  0110 0001 0
+#                  830  0110 0100 0
+#                  840  0110 1100 0
+#                  860  0111 1100 0
+#                  880  0011 1100 0
+#                  900  0010 1100 0
+#                  910  0011 1100 0
+#                  920  0111 1100 0
+#                  930  0001 1100 0
+#                  940  0010 1100 0
+#                  950  0011 1100 0
+#                  960  0010 1100 0
+#                  980  0111 1100 0
+#                  990  0001 1100 0
+#                 1000  0111 1100 0
+#                 1010  0011 1100 0
+#                 1020  0001 1100 0
+#                 1030  0111 1100 0
+#                 1040  0001 1100 0
+#                 1050  0010 1100 0
+#                 1060  0011 1100 0
+#                 1070  0111 1100 0
+#                 1080  0001 1100 0
+#                 1090  0010 1100 0
+#                 1100  0011 1100 0
+#                 1110  0111 1100 0
+#                 1120  0001 1100 0
+#                 1130  0011 1100 0
+#                 1140  0111 1100 0
+#                 1150  0100 1100 0
+#                 1160  0101 1100 0
+#                 1170  0001 1100 0
+#                 1180  0011 1100 0
+#                 1190  0100 1100 0
+#                 1200  0101 1100 0
+# ** Note: $finish    : testFreecell.v(175)
+#    Time: 1210 fs  Iteration: 0  Instance: :testFreecell
+# 1
+# Break in Module testFreecell at testFreecell.v line 175
+restart
+do p2.do
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+run -continue
+# Break in NamedBeginStat init at card_stack.v line 48
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+vsim -voptargs=+acc work.testFreecell
+# vsim -voptargs=+acc work.testFreecell 
+# Loading work.testFreecell
+# Loading work.freecellPlayer
+# Loading work.decoder2to4
+# Loading work.decoder3to8
+# Loading work.freecell_logic
+# Loading work.order_validator
+# Loading work.card_stack
+do p2.do
+run -continue
+# Break in NamedBeginStat init at card_stack.v line 48
+step
+step
+step
+step
+step
+step
+step
+step
+step
+vsim -voptargs=+acc work.testFreecell
+# vsim -voptargs=+acc work.testFreecell 
+# Loading work.testFreecell
+# Loading work.freecellPlayer
+# Loading work.decoder2to4
+# Loading work.decoder3to8
+# Loading work.freecell_logic
+# Loading work.order_validator
+# Loading work.card_stack
+run -continue
+# Break in NamedBeginStat init at card_stack.v line 45
+step
+step
+step
+step
+vsim -voptargs=+acc work.testFreecell
+# vsim -voptargs=+acc work.testFreecell 
+# Loading work.testFreecell
+# Loading work.freecellPlayer
+# Loading work.decoder2to4
+# Loading work.decoder3to8
+# Loading work.freecell_logic
+# Loading work.order_validator
+# Loading work.card_stack
+run -continue
+# Break in NamedBeginStat init at card_stack.v line 45
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+vsim -voptargs=+acc work.testFreecell
+# vsim -voptargs=+acc work.testFreecell 
+# Loading work.testFreecell
+# Loading work.freecellPlayer
+# Loading work.decoder2to4
+# Loading work.decoder3to8
+# Loading work.freecell_logic
+# Loading work.order_validator
+# Loading work.card_stack
+run -continue
+# Break in NamedBeginStat init at card_stack.v line 45
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+vsim -voptargs=+acc work.testFreecell
+# vsim -voptargs=+acc work.testFreecell 
+# Loading work.testFreecell
+# Loading work.freecellPlayer
+# Loading work.decoder2to4
+# Loading work.decoder3to8
+# Loading work.freecell_logic
+# Loading work.order_validator
+# Loading work.card_stack
+run -continue
+# Break in NamedBeginStat init at card_stack.v line 53
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+vsim -voptargs=+acc work.testFreecell
+# vsim -voptargs=+acc work.testFreecell 
+# Loading work.testFreecell
+# Loading work.freecellPlayer
+# Loading work.decoder2to4
+# Loading work.decoder3to8
+# Loading work.freecell_logic
+# Loading work.order_validator
+# Loading work.card_stack
+run -continue
+# Break in NamedBeginStat init at card_stack.v line 53
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+vsim -voptargs=+acc work.testFreecell
+# vsim -voptargs=+acc work.testFreecell 
+# Loading work.testFreecell
+# Loading work.freecellPlayer
+# Loading work.decoder2to4
+# Loading work.decoder3to8
+# Loading work.freecell_logic
+# Loading work.order_validator
+# Loading work.card_stack
+run -continue
+step
+#                    0  0000 1100 0
+# Next activity is in 5 fs.
+run -continue
+run -continue
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+# Next activity is in 5 fs.
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+vsim -voptargs=+acc work.testFreecell
+# vsim -voptargs=+acc work.testFreecell 
+# Loading work.testFreecell
+# Loading work.freecellPlayer
+# Loading work.decoder2to4
+# Loading work.decoder3to8
+# Loading work.freecell_logic
+# Loading work.order_validator
+# Loading work.card_stack
+vsim -voptargs=+acc work.testFreecell
+# vsim -voptargs=+acc work.testFreecell 
+# Loading work.testFreecell
+# Loading work.freecellPlayer
+# Loading work.decoder2to4
+# Loading work.decoder3to8
+# Loading work.freecell_logic
+# Loading work.order_validator
+# Loading work.card_stack
+run -continue
+restart
+run -continue
+# Break in NamedBeginStat init at card_stack.v line 53
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+restart
+do p2.do
+run -all
+# Break in NamedBeginStat init at card_stack.v line 53
+run -all
+#                    0  0000 1100 0
+#                   20  0001 1100 0
+#                   30  0010 1100 0
+#                   40  0011 1000 0
+#                   50  0011 0110 0
+#                   60  1000 0110 0
+#                   70  0111 0100 0
+#                   80  0011 0100 0
+#                   90  0011 1000 0
+#                  100  0011 0001 0
+#                  110  0011 1100 0
+#                  120  0101 1100 0
+#                  130  0011 1001 0
+#                  140  0001 1010 0
+#                  150  0001 0011 0
+#                  160  1010 0011 0
+#                  170  1000 0001 0
+#                  180  1001 0001 0
+#                  190  0101 1100 0
+#                  200  0111 0110 0
+#                  210  0111 0101 0
+#                  220  0111 1000 0
+#                  230  0001 1100 0
+#                  240  0111 0001 0
+#                  250  1000 0111 0
+#                  260  0100 1000 0
+#                  270  0100 1001 0
+#                  280  0100 0111 0
+#                  290  0000 1100 0
+#                  300  0100 1100 0
+#                  310  1001 0111 0
+#                  320  1000 0111 0
+#                  330  0000 0111 0
+#                  340  0000 0001 0
+#                  350  0001 1000 0
+#                  360  0001 0111 0
+#                  370  1000 0111 0
+#                  380  0000 1000 0
+#                  390  0000 0011 0
+#                  400  0000 1100 0
+#                  410  0010 1001 0
+#                  420  0010 1100 0
+#                  430  0010 0110 0
+#                  440  1000 0000 0
+#                  450  1100 0011 0
+#                  460  0010 0000 0
+#                  470  0010 1000 0
+#                  480  0000 1010 0
+#                  490  0000 0010 0
+#                  500  1010 0010 0
+#                  510  0001 1010 0
+#                  520  0111 1010 0
+#                  530  0001 1011 0
+#                  540  0001 0010 0
+#                  550  0001 0011 0
+#                  560  1000 0010 0
+#                  570  1010 0010 0
+#                  580  1010 0001 0
+#                  590  0001 1100 0
+#                  600  0101 1000 0
+#                  610  0101 0011 0
+#                  620  0101 1100 0
+#                  630  1000 0011 0
+#                  640  1011 1100 0
+#                  650  0100 1100 0
+#                  660  1000 1100 0
+#                  670  0101 0001 0
+#                  680  0100 0001 0
+#                  700  0110 0000 0
+#                  710  0110 0011 0
+#                  720  0000 0011 0
+#                  730  0101 0011 0
+#                  740  1001 0101 0
+#                  750  0100 0101 0
+#                  760  0110 1000 0
+#                  770  0110 1001 0
+#                  780  0110 0001 0
+#                  790  1001 0001 0
+#                  800  1000 0001 0
+#                  810  0110 0100 0
+#                  820  0110 0001 0
+#                  830  0110 0100 0
+#                  840  0110 1100 0
+#                  860  0111 1100 0
+#                  880  0011 1100 0
+#                  900  0010 1100 0
+#                  910  0011 1100 0
+#                  920  0111 1100 0
+#                  930  0001 1100 0
+#                  940  0010 1100 0
+#                  950  0011 1100 0
+#                  960  0010 1100 0
+#                  980  0111 1100 0
+#                  990  0001 1100 0
+#                 1000  0111 1100 0
+#                 1010  0011 1100 0
+#                 1020  0001 1100 0
+#                 1030  0111 1100 0
+#                 1040  0001 1100 0
+#                 1050  0010 1100 0
+#                 1060  0011 1100 0
+#                 1070  0111 1100 0
+#                 1080  0001 1100 0
+#                 1090  0010 1100 0
+#                 1100  0011 1100 0
+#                 1110  0111 1100 0
+#                 1120  0001 1100 0
+#                 1130  0011 1100 0
+#                 1140  0111 1100 0
+#                 1150  0100 1100 0
+#                 1160  0101 1100 0
+#                 1170  0001 1100 0
+#                 1180  0011 1100 0
+#                 1190  0100 1100 0
+#                 1200  0101 1100 0
+#                 1205  0101 1100 1
+# ** Note: $finish    : testFreecell.v(175)
+#    Time: 1210 fs  Iteration: 0  Instance: :testFreecell
+# 1
+# Break in Module testFreecell at testFreecell.v line 175

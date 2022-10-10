@@ -1,0 +1,49 @@
+# Current time Sat Oct  8 14:51:24 2022
+# QuestaSim Stack Trace
+# Program = vsim
+# Id = "6.5f"
+# Version = "2010.06"
+# Date = "Jun 16 2010"
+# Platform = linux_x86_64
+# 0    0x0000000000653420: '<unknown (@0x653420)>'
+# 1    0x0000000000656664: '<unknown (@0x656664)>'
+# 2    0x0000000000656f74: '<unknown (@0x656f74)>'
+# 3    0x000000000065789f: '<unknown (@0x65789f)>'
+# 4    0x0000000000657e78: '<unknown (@0x657e78)>'
+# 5    0x00000000006581ed: '<unknown (@0x6581ed)>'
+# 6    0x0000000000658abc: '<unknown (@0x658abc)>'
+# 7    0x00007f13ab4de65d: 'freecellPlayer.v:142'
+# 8    0x000000000055820a: '<unknown (@0x55820a)>'
+# 9    0x000000000065a41d: '<unknown (@0x65a41d)>'
+# 10   0x000000000065a452: '<unknown (@0x65a452)>'
+# 11   0x000000000065a555: '<unknown (@0x65a555)>'
+# 12   0x000000000065a62c: '<unknown (@0x65a62c)>'
+# 13   0x0000000000692961: '<unknown (@0x692961)>'
+# 14   0x0000000000694153: '<unknown (@0x694153)>'
+# 15   0x00000000008b528f: '<unknown (@0x8b528f)>'
+# 16   0x0000000000ac506b: '<unknown (@0xac506b)>'
+# 17   0x0000000000ac68f9: '<unknown (@0xac68f9)>'
+# 18   0x0000000000aec813: '<unknown (@0xaec813)>'
+# 19   0x0000000000af036d: '<unknown (@0xaf036d)>'
+# 20   0x0000000000ac8966: '<unknown (@0xac8966)>'
+# 21   0x0000000000acbae2: '<unknown (@0xacbae2)>'
+# 22   0x0000000000ac68f9: '<unknown (@0xac68f9)>'
+# 23   0x0000000000aec813: '<unknown (@0xaec813)>'
+# 24   0x0000000000af059a: '<unknown (@0xaf059a)>'
+# 25   0x0000000000ac7023: '<unknown (@0xac7023)>'
+# 26   0x0000000000ace809: '<unknown (@0xace809)>'
+# 27   0x0000000000ac68f9: '<unknown (@0xac68f9)>'
+# 28   0x0000000000ac7ec4: '<unknown (@0xac7ec4)>'
+# 29   0x0000000000ac8295: '<unknown (@0xac8295)>'
+# 30   0x0000000000ac8cf8: '<unknown (@0xac8cf8)>'
+# 31   0x000000000099af75: '<unknown (@0x99af75)>'
+# 32   0x0000000000afdf81: '<unknown (@0xafdf81)>'
+# 33   0x0000000000b2d22f: '<unknown (@0xb2d22f)>'
+# 34   0x0000000000b0d69a: '<unknown (@0xb0d69a)>'
+# 35   0x0000000000b0da17: '<unknown (@0xb0da17)>'
+# 36   0x0000000000a8dba6: '<unknown (@0xa8dba6)>'
+# 37   0x000000000076b7d0: '<unknown (@0x76b7d0)>'
+# 38   0x00000000006ce4b8: '<unknown (@0x6ce4b8)>'
+# End of Stack Trace
+
+
