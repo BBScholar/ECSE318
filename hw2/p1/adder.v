@@ -1,7 +1,4 @@
 
-// questions:
-// should increment and decrement be signed?
-
 module adder16(
   A, B, CODE, cin, coe,
   C, cout, vout
@@ -14,9 +11,6 @@ module adder16(
   wire [2:0] CODE;
   wire cin, coe, cout, vout;
   
-  // TODO: check this
-  // assign cout = vout & !coe;
-
   // internal nets
   wire [15:0] one;
   wire [15:0] b_source, b_selected;
@@ -40,11 +34,9 @@ module adder16(
 
 
   // signed overflow detection
-  // TOOO: possbile to base off of xored b?
   wire a_sign, b_sign, c_sign;
 
   assign a_sign = A[15];
-  /* assign b_sign = B[15]; */
   assign b_sign = b_source[15];
   assign c_sign = C[15];
 
@@ -59,10 +51,16 @@ module adder16(
   assign b_source = b_selected ^ {16{subtraction}};
 
   // calculate carry in
-  /* assign cin_int = cin ^ subtraction; */
   assign cin_int = cin | subtraction;
-
-  conditional_sum_adder16_with_cin adder (
+  
+  // FAST ADDER
+  /* conditional_sum_adder16_with_cin adder ( */
+  /*   .a(A), .b(b_source), .cin(cin_int), */
+  /*   .cout(cout_int), .s(C) */
+  /* ); */
+  
+  // SLOW ADDER
+  prop_adder16 adder(
     .a(A), .b(b_source), .cin(cin_int),
     .cout(cout_int), .s(C)
   );

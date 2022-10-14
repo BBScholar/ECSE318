@@ -1,5 +1,5 @@
 # vsim -do {run -all} -c work.alu_tb 
-# //  QuestaSim-64 6.5f Jun 16 2010 Linux 5.15.0-48-generic
+# //  QuestaSim-64 6.5f Jun 16 2010 Linux 5.15.0-50-generic
 # //
 # //  Copyright 1991-2010 Mentor Graphics Corporation
 # //              All Rights Reserved.
@@ -12,15 +12,11 @@
 # Loading work.alu_tb
 # Loading work.alu
 # Loading work.adder16
-# Loading work.conditional_sum_adder16_with_cin
-# Loading work.conditional_sum_adder8_with_cin
-# Loading work.conditional_sum_adder4_with_cin
-# Loading work.conditional_sum_adder2_with_cin
+# Loading work.prop_adder16
+# Loading work.prop_adder8
+# Loading work.prop_adder4
+# Loading work.prop_adder2
 # Loading work.full_adder
-# Loading work.conditional_sum_adder1
-# Loading work.conditional_sum_adder2
-# Loading work.conditional_sum_adder4
-# Loading work.conditional_sum_adder8
 # Loading work.shift16
 # Loading work.conditional_data_reverser
 # Loading work.data_reverser
@@ -28,13 +24,44 @@
 # Loading work.comparator16
 # run -all 
 # A	B	op | 	c	v
+# 7fff	7fff	00000 | fffe	1
+# Testing shifter
 # 0001	0003	10000 | 0008	0
 # 0001	0003	10010 | 0008	0
 # 8000	0003	10001 | 1000	0
 # 8000	0003	10011 | f000	0
-# 
+# 4000	0003	10011 | 0800	0
+# Testing logical operations
 # ff00	00ff	01000 | 0000	0
 # ff00	00ff	01001 | ffff	0
 # ff00	00ff	01010 | ffff	0
 # ff00	00ff	01100 | 00ff	0
+# Testing comparator
+# 00c8	0064	11000 | 0000	0
+# 00c8	0064	11001 | 0000	0
+# 00c8	0064	11010 | 0001	0
+# 00c8	0064	11011 | 0001	0
+# 00c8	0064	11100 | 0000	0
+# 00c8	0064	11101 | 0001	0
+# 
+# ffdf	000f	11000 | 0001	0
+# ffdf	000f	11001 | 0001	0
+# ffdf	000f	11010 | 0000	0
+# ffdf	000f	11011 | 0000	0
+# ffdf	000f	11100 | 0000	0
+# ffdf	000f	11101 | 0001	0
+# 
+# 0064	0064	11000 | 0001	0
+# 0064	0064	11001 | 0000	0
+# 0064	0064	11010 | 0001	0
+# 0064	0064	11011 | 0000	0
+# 0064	0064	11100 | 0001	0
+# 0064	0064	11101 | 0000	0
+# 
+# ffdf	ffd4	11000 | 0000	0
+# ffdf	ffd4	11001 | 0000	0
+# ffdf	ffd4	11010 | 0001	0
+# ffdf	ffd4	11011 | 0001	0
+# ffdf	ffd4	11100 | 0000	0
+# ffdf	ffd4	11101 | 0001	0
 # 

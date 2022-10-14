@@ -1,5 +1,4 @@
-/mgc/Leonardo/bin/Linux/spectrum 
--------------------------------------------------
+spectrum: Setting EXEMPLAR to /mgc/Leonardo ...
 LeonardoSpectrum Level 3 - 2009a.6 (Release Production Release, compiled Aug 17 2009 at 17:56:52)
 Copyright 1990-2009 Mentor Graphics.  All rights reserved.
 Portions copyright 1991-2009 Compuware Corporation
@@ -12,17 +11,16 @@ News :
   * Enter "help" to get an overview of all commands
   * Enter <command> -help  to get usage of each command
 
-Session history will be logged to file '/home/bscholar/Documents/ECSE318/hw2/p1/syn/leospec.his'
-Reading library file `/mgc/Leonardo/lib/ami05_typ.syn`...
+LEONARDO{1}: Reading library file `/mgc/Leonardo/lib/ami05_typ.syn`...
 Library version = 3.0 Release : Patch (a) : 09/13/04
 Delays assume: Process=typical Temp= 27.0 C  Voltage=5.00 V  
 Info: setting encoding to auto
 Info, Command 'load_library' finished successfully
--- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/full_adder.v'...
+LEONARDO{2}: LEONARDO{3}: LEONARDO{3}: LEONARDO{4}: LEONARDO{4}: -- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/full_adder.v'...
 -- Loading module 'full_adder'
 -- Compiling root module 'full_adder'
 Info, Command 'read' finished successfully
--- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/prop_adder.v'...
+LEONARDO{5}: -- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/prop_adder.v'...
 -- Loading module 'prop_adder2'
 -- Loading module 'prop_adder4'
 -- Loading module 'prop_adder8'
@@ -32,7 +30,7 @@ Info, Command 'read' finished successfully
 -- Compiling module prop_adder4
 -- Compiling module prop_adder2
 Info, Command 'read' finished successfully
--- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v'...
+LEONARDO{6}: -- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v'...
 -- Loading module 'conditional_sum_adder1'
 -- Loading module 'conditional_sum_adder2'
 -- Loading module 'conditional_sum_adder2_with_cin'
@@ -50,16 +48,16 @@ Info, Command 'read' finished successfully
 -- Compiling module conditional_sum_adder4
 -- Compiling module conditional_sum_adder8
 Info, Command 'read' finished successfully
--- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/adder.v'...
+LEONARDO{7}: -- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/adder.v'...
 -- Loading module 'adder16'
 -- Compiling root module 'adder16'
 Info, Command 'read' finished successfully
--- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/logic.v'...
+LEONARDO{8}: -- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/logic.v'...
 -- Loading module 'logic16'
 -- Compiling root module 'logic16'
 "/home/bscholar/Documents/ECSE318/hw2/p1/logic.v",line 17: Info, case choices are mutually exclusive; inferring parallel case.
 Info, Command 'read' finished successfully
--- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/shift.v'...
+LEONARDO{9}: -- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/shift.v'...
 -- Loading module 'data_reverser'
 -- Loading module 'conditional_data_reverser'
 -- Loading module 'shift16'
@@ -67,19 +65,19 @@ Info, Command 'read' finished successfully
 -- Compiling module conditional_data_reverser
 -- Compiling module data_reverser
 Info, Command 'read' finished successfully
--- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/comparator.v'...
+LEONARDO{10}: -- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/comparator.v'...
 "/home/bscholar/Documents/ECSE318/hw2/p1/comparator.v", line 25: Warning, system function call assumed 0 for synthesis
 "/home/bscholar/Documents/ECSE318/hw2/p1/comparator.v", line 25: Warning, system function call assumed 0 for synthesis
 -- Loading module 'comparator16'
 -- Compiling root module 'comparator16'
 Info, Command 'read' finished successfully
--- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/alu.v'...
+LEONARDO{11}: -- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/alu.v'...
 -- Loading module 'alu'
 "/home/bscholar/Documents/ECSE318/hw2/p1/alu.v",line 19: Warning, add_cout is never used.
 -- Compiling root module 'alu'
 "/home/bscholar/Documents/ECSE318/hw2/p1/alu.v",line 49: Info, case choices are mutually exclusive; inferring parallel case.
 Info, Command 'read' finished successfully
--- Boundary optimization.
+LEONARDO{12}: LEONARDO{13}: LEONARDO{14}: LEONARDO{14}: -- Boundary optimization.
 -- Boundary optimization.
 -- Boundary optimization.
 -- Boundary optimization.
@@ -109,7 +107,7 @@ Info, Command 'read' finished successfully
 -- Start pre-optimization for design .work.comparator16.INTERFACE_unfold_1240
 -- Start pre-optimization for design .work.alu.INTERFACE
 Info, Command 'pre_optimize' finished successfully
--- Start pre-optimization for design .work.full_adder.INTERFACE
+LEONARDO{15}: -- Start pre-optimization for design .work.full_adder.INTERFACE
 -- Start pre-optimization for design .work.full_adder.INTERFACE_unfold_2423
 -- Start pre-optimization for design .work.full_adder.INTERFACE_unfold_2424
 -- Start pre-optimization for design .work.conditional_sum_adder1.INTERFACE
@@ -132,7 +130,7 @@ Info, Command 'pre_optimize' finished successfully
 -- Start pre-optimization for design .work.comparator16.INTERFACE_unfold_1240
 -- Start pre-optimization for design .work.alu.INTERFACE
 Info, Command 'pre_optimize' finished successfully
-Info: The target technology was not selected, ami05_typ was automatically selected for you.
+LEONARDO{16}: Info: The target technology was not selected, ami05_typ was automatically selected for you.
 Info, Instances dissolved by autodissolve in View .work.conditional_sum_adder1.INTERFACE
 "/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v", line 14: adder0 (full_adder)
 "/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v", line 19: adder1 (full_adder)
@@ -215,7 +213,7 @@ Re-checking DRC after adjustments
 Re-checking DRC after adjustments
 Re-checking DRC after adjustments
 Info, Command 'optimize' finished successfully
-Info: The target technology was not selected, ami05_typ was automatically selected for you.
+LEONARDO{17}: LEONARDO{17}: Info: The target technology was not selected, ami05_typ was automatically selected for you.
 Info, Instances dissolved by autodissolve in View .work.conditional_sum_adder8.INTERFACE_unfold_3087
 "/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v", line 165: csa_l (conditional_sum_adder4)
 Info, Instances dissolved by autodissolve in View .work.adder16.INTERFACE_unfold_1073
@@ -234,17 +232,17 @@ Info, Instances dissolved by autodissolve in View .work.alu.INTERFACE
 -- Final Design Rule Check..
 Re-checking DRC after adjustments
 Info, Command 'optimize' finished successfully
--- Start timing optimization for design .work.alu.INTERFACE
+LEONARDO{18}: -- Start timing optimization for design .work.alu.INTERFACE
 No critical paths to optimize at this level
 Info, Command 'optimize_timing' finished successfully
-Info: setting edif_write_arrays to FALSE
+LEONARDO{19}: Info: setting edif_write_arrays to FALSE
 FALSE
--- Writing file Proc.v
+LEONARDO{20}: LEONARDO{20}: LEONARDO{21}: LEONARDO{22}: -- Writing file Proc.v
 Info, Command 'write' finished successfully
--- Writing file Proc.sdf
+LEONARDO{23}: LEONARDO{24}: -- Writing file Proc.sdf
 Info, Command 'write' finished successfully
-CriticalPath
-
+LEONARDO{25}: CriticalPath
+LEONARDO{26}: 
 
 
                         Critical Path Report
@@ -391,3 +389,4 @@ data arrival time                                                  10.76
 
 
 Info, Command 'report_delay' finished successfully
+LEONARDO{27}: LEONARDO{28}: LEONARDO{29}: LEONARDO{29}: // End >>> /home/saab/318Exm/vending/ <<<

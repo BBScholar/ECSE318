@@ -1,7 +1,7 @@
 #
 #
 # /mgc/Leonardo/bin/Linux/spectrum 
-# Fri Oct  7 07:22:12 2022
+# Thu Oct 13 17:31:49 2022
 read  /mgc/Leonardo/lib/ami05_typ.syn
 
 #read /mgc/Leonardo/lib/tsmc035_typ.syn
@@ -14,11 +14,13 @@ read  /mgc/Leonardo/lib/ami05_typ.syn
 
 read /home/bscholar/Documents/ECSE318/hw2/p1/full_adder.v
 
-read /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v 
+read /home/bscholar/Documents/ECSE318/hw2/p1/prop_adder.v
+
+read /home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v
 
 read /home/bscholar/Documents/ECSE318/hw2/p1/adder.v
 
-read /home/bscholar/Documents/ECSE318/hw2/p1/logic.v 
+read /home/bscholar/Documents/ECSE318/hw2/p1/logic.v
 
 read /home/bscholar/Documents/ECSE318/hw2/p1/shift.v
 
@@ -62,9 +64,9 @@ set report_file_name CriticalPath
 
 report_delay -num_paths 2 -show_schematic 2 -critical_paths -show_nets -show_input_pins
 
-report_delay -num_paths 2 -show_schematic 2 -show_nets -show_input_pins -longest_path -through shift
+# report_delay -num_paths 2 -show_schematic 2 -show_nets -show_input_pins -longest_path
 
-report_net -all_nets
+# report_net -all_nets
 
 
 

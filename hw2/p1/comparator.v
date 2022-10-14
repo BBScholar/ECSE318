@@ -21,18 +21,16 @@ module comparator16(
   assign eq = (a == b);
   assign neq = !eq;
   
-  // TODO: check this
-  assign gt = ($signed(a) > $signed(b)); 
+  assign gt = ($signed(a) > $signed(b)); // I think this ensures signed comparison
   assign gte = gt | eq;
 
-  assign lt = !gte;
-  assign lte = !gt;
+  assign lt = !gte; // !gt & !eq
+  assign lte = !gt; // !(a > b) = a <= b
 
   assign s = {15'b0, result};
 
-  assign values = {lte, lt, gte, gt, eq, neq, 2'b00};
-
   assign result = values[op];
+  assign values = {2'b00, neq, eq, gt, gte, lt, lte};
 
   /* always @ (a or b or op or lte or lt or gte or gt or eq or neq) begin  */
   /*   casez(op) */

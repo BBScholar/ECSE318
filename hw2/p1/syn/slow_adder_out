@@ -1,0 +1,441 @@
+spectrum: Setting EXEMPLAR to /mgc/Leonardo ...
+LeonardoSpectrum Level 3 - 2009a.6 (Release Production Release, compiled Aug 17 2009 at 17:56:52)
+Copyright 1990-2009 Mentor Graphics.  All rights reserved.
+Portions copyright 1991-2009 Compuware Corporation
+
+Checking Security ...
+
+   *** Welcome to Interactive LeonardoSpectrum Level 3 Version 2009a.6 ***
+
+News :
+  * Enter "help" to get an overview of all commands
+  * Enter <command> -help  to get usage of each command
+
+LEONARDO{1}: Reading library file `/mgc/Leonardo/lib/ami05_typ.syn`...
+Library version = 3.0 Release : Patch (a) : 09/13/04
+Delays assume: Process=typical Temp= 27.0 C  Voltage=5.00 V  
+Info: setting encoding to auto
+Info, Command 'load_library' finished successfully
+LEONARDO{2}: LEONARDO{3}: LEONARDO{3}: LEONARDO{4}: LEONARDO{4}: -- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/full_adder.v'...
+-- Loading module 'full_adder'
+-- Compiling root module 'full_adder'
+Info, Command 'read' finished successfully
+LEONARDO{5}: -- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/prop_adder.v'...
+-- Loading module 'prop_adder2'
+-- Loading module 'prop_adder4'
+-- Loading module 'prop_adder8'
+-- Loading module 'prop_adder16'
+-- Compiling root module 'prop_adder16'
+-- Compiling module prop_adder8
+-- Compiling module prop_adder4
+-- Compiling module prop_adder2
+Info, Command 'read' finished successfully
+LEONARDO{6}: -- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/conditional_sum_adder16.v'...
+-- Loading module 'conditional_sum_adder1'
+-- Loading module 'conditional_sum_adder2'
+-- Loading module 'conditional_sum_adder2_with_cin'
+-- Loading module 'conditional_sum_adder4'
+-- Loading module 'conditional_sum_adder4_with_cin'
+-- Loading module 'conditional_sum_adder8'
+-- Loading module 'conditional_sum_adder8_with_cin'
+-- Loading module 'conditional_sum_adder16_with_cin'
+-- Compiling root module 'conditional_sum_adder16_with_cin'
+-- Compiling module conditional_sum_adder8_with_cin
+-- Compiling module conditional_sum_adder4_with_cin
+-- Compiling module conditional_sum_adder2_with_cin
+-- Compiling module conditional_sum_adder1
+-- Compiling module conditional_sum_adder2
+-- Compiling module conditional_sum_adder4
+-- Compiling module conditional_sum_adder8
+Info, Command 'read' finished successfully
+LEONARDO{7}: -- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/adder.v'...
+-- Loading module 'adder16'
+-- Compiling root module 'adder16'
+Info, Command 'read' finished successfully
+LEONARDO{8}: -- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/logic.v'...
+-- Loading module 'logic16'
+-- Compiling root module 'logic16'
+"/home/bscholar/Documents/ECSE318/hw2/p1/logic.v",line 17: Info, case choices are mutually exclusive; inferring parallel case.
+Info, Command 'read' finished successfully
+LEONARDO{9}: -- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/shift.v'...
+-- Loading module 'data_reverser'
+-- Loading module 'conditional_data_reverser'
+-- Loading module 'shift16'
+-- Compiling root module 'shift16'
+-- Compiling module conditional_data_reverser
+-- Compiling module data_reverser
+Info, Command 'read' finished successfully
+LEONARDO{10}: -- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/comparator.v'...
+"/home/bscholar/Documents/ECSE318/hw2/p1/comparator.v", line 25: Warning, system function call assumed 0 for synthesis
+"/home/bscholar/Documents/ECSE318/hw2/p1/comparator.v", line 25: Warning, system function call assumed 0 for synthesis
+-- Loading module 'comparator16'
+-- Compiling root module 'comparator16'
+Info, Command 'read' finished successfully
+LEONARDO{11}: -- Reading file '/home/bscholar/Documents/ECSE318/hw2/p1/alu.v'...
+-- Loading module 'alu'
+"/home/bscholar/Documents/ECSE318/hw2/p1/alu.v",line 19: Warning, add_cout is never used.
+-- Compiling root module 'alu'
+"/home/bscholar/Documents/ECSE318/hw2/p1/alu.v",line 49: Info, case choices are mutually exclusive; inferring parallel case.
+Info, Command 'read' finished successfully
+LEONARDO{12}: LEONARDO{13}: LEONARDO{14}: LEONARDO{14}: -- Boundary optimization.
+-- Boundary optimization.
+-- Boundary optimization.
+-- Boundary optimization.
+-- Boundary optimization.
+-- Boundary optimization.
+-- Start pre-optimization for design .work.full_adder.INTERFACE
+-- Start pre-optimization for design .work.prop_adder2.INTERFACE
+-- Start pre-optimization for design .work.prop_adder4.INTERFACE
+-- Start pre-optimization for design .work.prop_adder8.INTERFACE
+-- Start pre-optimization for design .work.full_adder.INTERFACE_unfold_1468
+-- Start pre-optimization for design .work.prop_adder2.INTERFACE_unfold_1470
+-- Start pre-optimization for design .work.prop_adder4.INTERFACE_unfold_1474
+-- Start pre-optimization for design .work.prop_adder8.INTERFACE_unfold_1489
+-- Start pre-optimization for design .work.prop_adder16.INTERFACE_unfold_1238
+-- Start pre-optimization for design .work.adder16.INTERFACE_unfold_1073
+-- Start pre-optimization for design .work.conditional_data_reverser.INTERFACE
+-- Start pre-optimization for design .work.shift16.INTERFACE_unfold_1103
+-- Start pre-optimization for design .work.logic16.INTERFACE
+-- Start pre-optimization for design .work.comparator16.INTERFACE_unfold_1240
+-- Start pre-optimization for design .work.alu.INTERFACE
+Info, Command 'pre_optimize' finished successfully
+LEONARDO{15}: -- Start pre-optimization for design .work.full_adder.INTERFACE
+-- Start pre-optimization for design .work.prop_adder2.INTERFACE
+-- Start pre-optimization for design .work.prop_adder4.INTERFACE
+-- Start pre-optimization for design .work.prop_adder8.INTERFACE
+-- Start pre-optimization for design .work.full_adder.INTERFACE_unfold_1468
+-- Start pre-optimization for design .work.prop_adder2.INTERFACE_unfold_1470
+-- Start pre-optimization for design .work.prop_adder4.INTERFACE_unfold_1474
+-- Start pre-optimization for design .work.prop_adder8.INTERFACE_unfold_1489
+-- Start pre-optimization for design .work.prop_adder16.INTERFACE_unfold_1238
+-- Start pre-optimization for design .work.adder16.INTERFACE_unfold_1073
+-- Start pre-optimization for design .work.conditional_data_reverser.INTERFACE
+-- Start pre-optimization for design .work.shift16.INTERFACE_unfold_1103
+-- Start pre-optimization for design .work.logic16.INTERFACE
+-- Start pre-optimization for design .work.comparator16.INTERFACE_unfold_1240
+-- Start pre-optimization for design .work.alu.INTERFACE
+Info, Command 'pre_optimize' finished successfully
+LEONARDO{16}: Info: The target technology was not selected, ami05_typ was automatically selected for you.
+Info, Instances dissolved by autodissolve in View .work.prop_adder2.INTERFACE
+"/home/bscholar/Documents/ECSE318/hw2/p1/prop_adder.v", line 17: add1 (full_adder)
+"/home/bscholar/Documents/ECSE318/hw2/p1/prop_adder.v", line 22: add2 (full_adder)
+Info, Instances dissolved by autodissolve in View .work.prop_adder4.INTERFACE
+"/home/bscholar/Documents/ECSE318/hw2/p1/prop_adder.v", line 42: add1 (prop_adder2)
+"/home/bscholar/Documents/ECSE318/hw2/p1/prop_adder.v", line 47: add2 (prop_adder2)
+Info, Instances dissolved by autodissolve in View .work.prop_adder8.INTERFACE
+"/home/bscholar/Documents/ECSE318/hw2/p1/prop_adder.v", line 67: add1 (prop_adder4)
+"/home/bscholar/Documents/ECSE318/hw2/p1/prop_adder.v", line 72: add2 (prop_adder4)
+Info, Instances dissolved by autodissolve in View .work.prop_adder2.INTERFACE_unfold_1470
+"/home/bscholar/Documents/ECSE318/hw2/p1/prop_adder.v", line 17: add1 (full_adder)
+"/home/bscholar/Documents/ECSE318/hw2/p1/prop_adder.v", line 22: add2 (full_adder)
+Info, Instances dissolved by autodissolve in View .work.prop_adder4.INTERFACE_unfold_1474
+"/home/bscholar/Documents/ECSE318/hw2/p1/prop_adder.v", line 42: add1 (prop_adder2)
+"/home/bscholar/Documents/ECSE318/hw2/p1/prop_adder.v", line 47: add2 (prop_adder2)
+Info, Instances dissolved by autodissolve in View .work.prop_adder8.INTERFACE_unfold_1489
+"/home/bscholar/Documents/ECSE318/hw2/p1/prop_adder.v", line 67: add1 (prop_adder4)
+"/home/bscholar/Documents/ECSE318/hw2/p1/prop_adder.v", line 72: add2 (prop_adder4)
+Info, Instances dissolved by autodissolve in View .work.adder16.INTERFACE_unfold_1073
+"/home/bscholar/Documents/ECSE318/hw2/p1/adder.v", line 69: adder (prop_adder16)
+Info, Instances dissolved by autodissolve in View .work.shift16.INTERFACE_unfold_1103
+"/home/bscholar/Documents/ECSE318/hw2/p1/shift.v", line 83: in_rev (conditional_data_reverser)
+"/home/bscholar/Documents/ECSE318/hw2/p1/shift.v", line 87: out_rev (conditional_data_reverser)
+Info, Instances dissolved by autodissolve in View .work.alu.INTERFACE
+"/home/bscholar/Documents/ECSE318/hw2/p1/alu.v", line 42: compare (comparator16)
+-- Optimizing netlist .work.prop_adder8.INTERFACE
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+-- Optimizing netlist .work.prop_adder8.INTERFACE_unfold_1489
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+-- Optimizing netlist .work.adder16.INTERFACE_unfold_1073
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+Re-checking DRC after adjustments
+-- Optimizing netlist .work.shift16.INTERFACE_unfold_1103
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Optimizing netlist .work.logic16.INTERFACE
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Optimizing netlist .work.alu.INTERFACE
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Final Design Rule Check..
+Re-checking DRC after adjustments
+Re-checking DRC after adjustments
+Re-checking DRC after adjustments
+Info, Command 'optimize' finished successfully
+LEONARDO{17}: LEONARDO{17}: Info: The target technology was not selected, ami05_typ was automatically selected for you.
+Info, Instances dissolved by autodissolve in View .work.adder16.INTERFACE_unfold_1073
+"/home/bscholar/Documents/ECSE318/hw2/p1/adder.v", line 69: adder_add1 (prop_adder8)
+"/home/bscholar/Documents/ECSE318/hw2/p1/adder.v", line 69: adder_add2 (prop_adder8)
+Info, Instances dissolved by autodissolve in View .work.alu.INTERFACE
+"/home/bscholar/Documents/ECSE318/hw2/p1/alu.v", line 26: adder (adder16)
+"/home/bscholar/Documents/ECSE318/hw2/p1/alu.v", line 32: shift (shift16)
+"/home/bscholar/Documents/ECSE318/hw2/p1/alu.v", line 37: logic (logic16)
+-- Optimizing netlist .work.alu.INTERFACE
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+-- Final Design Rule Check..
+Re-checking DRC after adjustments
+Info, Command 'optimize' finished successfully
+LEONARDO{18}: -- Start timing optimization for design .work.alu.INTERFACE
+No critical paths to optimize at this level
+Info, Command 'optimize_timing' finished successfully
+LEONARDO{19}: Info: setting edif_write_arrays to FALSE
+FALSE
+LEONARDO{20}: LEONARDO{20}: LEONARDO{21}: LEONARDO{22}: -- Writing file Proc.v
+Info, Command 'write' finished successfully
+LEONARDO{23}: LEONARDO{24}: -- Writing file Proc.sdf
+Info, Command 'write' finished successfully
+LEONARDO{25}: CriticalPath
+LEONARDO{26}: 
+
+
+                        Critical Path Report
+
+Critical path #1, (unconstrained path)
+NAME                                      GATE              ARRIVAL              LOAD
+-------------------------------------------------------------------------------------
+alu_code(2)/                                          0.00  0.00 up             0.10
+adder_ix9/A1                              ao21        0.00  0.00 up             0.00
+adder_ix9/Y                               ao21        0.49  0.49 up             0.02
+adder_subtraction                (net)                0.00  0.49 up   (fan)     1.00
+adder_ix145/A                             inv02       0.00  0.49 up             0.00
+adder_ix145/Y                             inv02       0.40  0.90 dn             0.12
+adder_nx146                      (net)                0.00  0.90 dn   (fan)     5.00
+ix590/A                                   inv02       0.00  0.90 dn             0.00
+ix590/Y                                   inv02       0.72  1.62 up             0.25
+nx591                            (net)                0.00  1.62 up   (fan)     7.00
+adder_ix11/A0                             xnor2       0.00  1.62 up             0.00
+adder_ix11/Y                              xnor2       0.71  2.32 dn             0.05
+adder_b_source(0)                (net)                0.00  2.32 dn   (fan)     2.00
+adder_adder_add1_ix232/A1                 xnor2       0.00  2.32 dn             0.00
+adder_adder_add1_ix232/Y                  xnor2       0.41  2.74 up             0.06
+adder_adder_add1_nx231           (net)                0.00  2.74 up   (fan)     2.00
+adder_adder_add1_ix43/A                   inv02       0.00  2.74 up             0.00
+adder_adder_add1_ix43/Y                   inv02       0.18  2.92 dn             0.01
+adder_adder_add1_nx42            (net)                0.00  2.92 dn   (fan)     1.00
+adder_adder_add1_ix217/B1                 aoi22       0.00  2.92 dn             0.00
+adder_adder_add1_ix217/Y                  aoi22       0.50  3.41 up             0.06
+adder_adder_add1_nx216           (net)                0.00  3.41 up   (fan)     2.00
+adder_adder_add1_ix53/A0                  nor02_2x    0.00  3.41 up             0.00
+adder_adder_add1_ix53/Y                   nor02_2x    0.35  3.76 dn             0.01
+adder_adder_add1_nx52            (net)                0.00  3.76 dn   (fan)     1.00
+adder_adder_add1_ix55/B0                  ao21        0.00  3.76 dn             0.00
+adder_adder_add1_ix55/Y                   ao21        0.66  4.42 dn             0.05
+adder_adder_add1_nx54            (net)                0.00  4.42 dn   (fan)     2.00
+adder_adder_add1_ix213/B0                 aoi22       0.00  4.42 dn             0.00
+adder_adder_add1_ix213/Y                  aoi22       0.53  4.95 up             0.06
+adder_adder_add1_nx212           (net)                0.00  4.95 up   (fan)     2.00
+adder_adder_add1_ix61/A0                  nor02_2x    0.00  4.95 up             0.00
+adder_adder_add1_ix61/Y                   nor02_2x    0.35  5.30 dn             0.01
+adder_adder_add1_nx60            (net)                0.00  5.30 dn   (fan)     1.00
+adder_adder_add1_ix63/B0                  ao21        0.00  5.30 dn             0.00
+adder_adder_add1_ix63/Y                   ao21        0.66  5.95 dn             0.05
+adder_adder_add1_nx62            (net)                0.00  5.95 dn   (fan)     2.00
+adder_adder_add1_ix209/B0                 aoi22       0.00  5.95 dn             0.00
+adder_adder_add1_ix209/Y                  aoi22       0.53  6.48 up             0.06
+adder_adder_add1_nx208           (net)                0.00  6.48 up   (fan)     2.00
+adder_adder_add1_ix69/A0                  nor02_2x    0.00  6.48 up             0.00
+adder_adder_add1_ix69/Y                   nor02_2x    0.35  6.83 dn             0.01
+adder_adder_add1_nx68            (net)                0.00  6.83 dn   (fan)     1.00
+adder_adder_add1_ix71/B0                  ao21        0.00  6.83 dn             0.00
+adder_adder_add1_ix71/Y                   ao21        0.66  7.49 dn             0.05
+adder_adder_add1_nx70            (net)                0.00  7.49 dn   (fan)     2.00
+adder_adder_add1_ix205/B0                 aoi22       0.00  7.49 dn             0.00
+adder_adder_add1_ix205/Y                  aoi22       0.53  8.01 up             0.06
+adder_adder_add1_nx204           (net)                0.00  8.01 up   (fan)     2.00
+adder_adder_add1_ix77/A0                  nor02_2x    0.00  8.01 up             0.00
+adder_adder_add1_ix77/Y                   nor02_2x    0.35  8.36 dn             0.01
+adder_adder_add1_nx76            (net)                0.00  8.36 dn   (fan)     1.00
+adder_adder_add1_ix79/B0                  ao21        0.00  8.36 dn             0.00
+adder_adder_add1_ix79/Y                   ao21        0.66  9.02 dn             0.05
+adder_adder_carry                (net)                0.00  9.02 dn   (fan)     2.00
+adder_adder_add2_ix106/B0                 aoi22       0.00  9.02 dn             0.00
+adder_adder_add2_ix106/Y                  aoi22       0.53  9.55 up             0.06
+adder_adder_add2_nx105           (net)                0.00  9.55 up   (fan)     2.00
+adder_adder_add2_ix47/A0                  nor02_2x    0.00  9.55 up             0.00
+adder_adder_add2_ix47/Y                   nor02_2x    0.35  9.90 dn             0.01
+adder_adder_add2_nx46            (net)                0.00  9.90 dn   (fan)     1.00
+adder_adder_add2_ix49/B0                  ao21        0.00  9.90 dn             0.00
+adder_adder_add2_ix49/Y                   ao21        0.66  10.55 dn             0.05
+adder_adder_add2_nx48            (net)                0.00  10.55 dn   (fan)     2.00
+adder_adder_add2_ix117/B0                 aoi22       0.00  10.55 dn             0.00
+adder_adder_add2_ix117/Y                  aoi22       0.53  11.08 up             0.06
+adder_adder_add2_nx116           (net)                0.00  11.08 up   (fan)     2.00
+adder_adder_add2_ix55/A0                  nor02_2x    0.00  11.08 up             0.00
+adder_adder_add2_ix55/Y                   nor02_2x    0.35  11.43 dn             0.01
+adder_adder_add2_nx54            (net)                0.00  11.43 dn   (fan)     1.00
+adder_adder_add2_ix57/B0                  ao21        0.00  11.43 dn             0.00
+adder_adder_add2_ix57/Y                   ao21        0.66  12.09 dn             0.05
+adder_adder_add2_nx56            (net)                0.00  12.09 dn   (fan)     2.00
+adder_adder_add2_ix128/B0                 aoi22       0.00  12.09 dn             0.00
+adder_adder_add2_ix128/Y                  aoi22       0.53  12.62 up             0.06
+adder_adder_add2_nx127           (net)                0.00  12.62 up   (fan)     2.00
+adder_adder_add2_ix63/A0                  nor02_2x    0.00  12.62 up             0.00
+adder_adder_add2_ix63/Y                   nor02_2x    0.35  12.96 dn             0.01
+adder_adder_add2_nx62            (net)                0.00  12.96 dn   (fan)     1.00
+adder_adder_add2_ix65/B0                  ao21        0.00  12.96 dn             0.00
+adder_adder_add2_ix65/Y                   ao21        0.66  13.62 dn             0.05
+adder_adder_add2_nx64            (net)                0.00  13.62 dn   (fan)     2.00
+adder_adder_add2_ix139/B0                 aoi22       0.00  13.62 dn             0.00
+adder_adder_add2_ix139/Y                  aoi22       0.42  14.04 up             0.04
+adder_adder_add2_nx138           (net)                0.00  14.04 up   (fan)     1.00
+adder_adder_add2_ix75/A0                  xnor2       0.00  14.04 up             0.00
+adder_adder_add2_ix75/Y                   xnor2       0.63  14.67 dn             0.05
+add_out(15)                      (net)                0.00  14.67 dn   (fan)     2.00
+adder_ix118/A1                            xnor2       0.00  14.67 dn             0.00
+adder_ix118/Y                             xnor2       0.29  14.96 up             0.02
+adder_nx117                      (net)                0.00  14.96 up   (fan)     1.00
+adder_ix115/A2                            nor03       0.00  14.96 up             0.00
+adder_ix115/Y                             nor03       0.37  15.32 dn             0.01
+add_vout                         (net)                0.00  15.32 dn   (fan)     1.00
+ix259/A1                                  and02       0.00  15.32 dn             0.00
+ix259/Y                                   and02       0.44  15.77 dn             0.00
+overflow                         (net)                0.00  15.77 dn   (fan)     1.00
+overflow/                                             0.00  15.77 dn             0.00
+data arrival time                                           15.77
+
+data required time                                       not specified
+-------------------------------------------------------------------------------------
+data required time                                       not specified
+data arrival time                                           15.77
+                                                         ----------
+                                                      unconstrained path
+-------------------------------------------------------------------------------------
+
+
+
+Critical path #2, (unconstrained path)
+NAME                                      GATE              ARRIVAL              LOAD
+-------------------------------------------------------------------------------------
+alu_code(0)/                                          0.00  0.00 up             1.03
+adder_ix9/A0                              ao21        0.00  0.00 up             0.00
+adder_ix9/Y                               ao21        0.46  0.46 up             0.02
+adder_subtraction                (net)                0.00  0.46 up   (fan)     1.00
+adder_ix145/A                             inv02       0.00  0.46 up             0.00
+adder_ix145/Y                             inv02       0.40  0.86 dn             0.12
+adder_nx146                      (net)                0.00  0.86 dn   (fan)     5.00
+ix590/A                                   inv02       0.00  0.86 dn             0.00
+ix590/Y                                   inv02       0.72  1.58 up             0.25
+nx591                            (net)                0.00  1.58 up   (fan)     7.00
+adder_ix11/A0                             xnor2       0.00  1.58 up             0.00
+adder_ix11/Y                              xnor2       0.71  2.29 dn             0.05
+adder_b_source(0)                (net)                0.00  2.29 dn   (fan)     2.00
+adder_adder_add1_ix232/A1                 xnor2       0.00  2.29 dn             0.00
+adder_adder_add1_ix232/Y                  xnor2       0.41  2.70 up             0.06
+adder_adder_add1_nx231           (net)                0.00  2.70 up   (fan)     2.00
+adder_adder_add1_ix43/A                   inv02       0.00  2.70 up             0.00
+adder_adder_add1_ix43/Y                   inv02       0.18  2.88 dn             0.01
+adder_adder_add1_nx42            (net)                0.00  2.88 dn   (fan)     1.00
+adder_adder_add1_ix217/B1                 aoi22       0.00  2.88 dn             0.00
+adder_adder_add1_ix217/Y                  aoi22       0.50  3.38 up             0.06
+adder_adder_add1_nx216           (net)                0.00  3.38 up   (fan)     2.00
+adder_adder_add1_ix53/A0                  nor02_2x    0.00  3.38 up             0.00
+adder_adder_add1_ix53/Y                   nor02_2x    0.35  3.72 dn             0.01
+adder_adder_add1_nx52            (net)                0.00  3.72 dn   (fan)     1.00
+adder_adder_add1_ix55/B0                  ao21        0.00  3.72 dn             0.00
+adder_adder_add1_ix55/Y                   ao21        0.66  4.38 dn             0.05
+adder_adder_add1_nx54            (net)                0.00  4.38 dn   (fan)     2.00
+adder_adder_add1_ix213/B0                 aoi22       0.00  4.38 dn             0.00
+adder_adder_add1_ix213/Y                  aoi22       0.53  4.91 up             0.06
+adder_adder_add1_nx212           (net)                0.00  4.91 up   (fan)     2.00
+adder_adder_add1_ix61/A0                  nor02_2x    0.00  4.91 up             0.00
+adder_adder_add1_ix61/Y                   nor02_2x    0.35  5.26 dn             0.01
+adder_adder_add1_nx60            (net)                0.00  5.26 dn   (fan)     1.00
+adder_adder_add1_ix63/B0                  ao21        0.00  5.26 dn             0.00
+adder_adder_add1_ix63/Y                   ao21        0.66  5.92 dn             0.05
+adder_adder_add1_nx62            (net)                0.00  5.92 dn   (fan)     2.00
+adder_adder_add1_ix209/B0                 aoi22       0.00  5.92 dn             0.00
+adder_adder_add1_ix209/Y                  aoi22       0.53  6.44 up             0.06
+adder_adder_add1_nx208           (net)                0.00  6.44 up   (fan)     2.00
+adder_adder_add1_ix69/A0                  nor02_2x    0.00  6.44 up             0.00
+adder_adder_add1_ix69/Y                   nor02_2x    0.35  6.79 dn             0.01
+adder_adder_add1_nx68            (net)                0.00  6.79 dn   (fan)     1.00
+adder_adder_add1_ix71/B0                  ao21        0.00  6.79 dn             0.00
+adder_adder_add1_ix71/Y                   ao21        0.66  7.45 dn             0.05
+adder_adder_add1_nx70            (net)                0.00  7.45 dn   (fan)     2.00
+adder_adder_add1_ix205/B0                 aoi22       0.00  7.45 dn             0.00
+adder_adder_add1_ix205/Y                  aoi22       0.53  7.98 up             0.06
+adder_adder_add1_nx204           (net)                0.00  7.98 up   (fan)     2.00
+adder_adder_add1_ix77/A0                  nor02_2x    0.00  7.98 up             0.00
+adder_adder_add1_ix77/Y                   nor02_2x    0.35  8.33 dn             0.01
+adder_adder_add1_nx76            (net)                0.00  8.33 dn   (fan)     1.00
+adder_adder_add1_ix79/B0                  ao21        0.00  8.33 dn             0.00
+adder_adder_add1_ix79/Y                   ao21        0.66  8.98 dn             0.05
+adder_adder_carry                (net)                0.00  8.98 dn   (fan)     2.00
+adder_adder_add2_ix106/B0                 aoi22       0.00  8.98 dn             0.00
+adder_adder_add2_ix106/Y                  aoi22       0.53  9.51 up             0.06
+adder_adder_add2_nx105           (net)                0.00  9.51 up   (fan)     2.00
+adder_adder_add2_ix47/A0                  nor02_2x    0.00  9.51 up             0.00
+adder_adder_add2_ix47/Y                   nor02_2x    0.35  9.86 dn             0.01
+adder_adder_add2_nx46            (net)                0.00  9.86 dn   (fan)     1.00
+adder_adder_add2_ix49/B0                  ao21        0.00  9.86 dn             0.00
+adder_adder_add2_ix49/Y                   ao21        0.66  10.52 dn             0.05
+adder_adder_add2_nx48            (net)                0.00  10.52 dn   (fan)     2.00
+adder_adder_add2_ix117/B0                 aoi22       0.00  10.52 dn             0.00
+adder_adder_add2_ix117/Y                  aoi22       0.53  11.04 up             0.06
+adder_adder_add2_nx116           (net)                0.00  11.04 up   (fan)     2.00
+adder_adder_add2_ix55/A0                  nor02_2x    0.00  11.04 up             0.00
+adder_adder_add2_ix55/Y                   nor02_2x    0.35  11.39 dn             0.01
+adder_adder_add2_nx54            (net)                0.00  11.39 dn   (fan)     1.00
+adder_adder_add2_ix57/B0                  ao21        0.00  11.39 dn             0.00
+adder_adder_add2_ix57/Y                   ao21        0.66  12.05 dn             0.05
+adder_adder_add2_nx56            (net)                0.00  12.05 dn   (fan)     2.00
+adder_adder_add2_ix128/B0                 aoi22       0.00  12.05 dn             0.00
+adder_adder_add2_ix128/Y                  aoi22       0.53  12.58 up             0.06
+adder_adder_add2_nx127           (net)                0.00  12.58 up   (fan)     2.00
+adder_adder_add2_ix63/A0                  nor02_2x    0.00  12.58 up             0.00
+adder_adder_add2_ix63/Y                   nor02_2x    0.35  12.93 dn             0.01
+adder_adder_add2_nx62            (net)                0.00  12.93 dn   (fan)     1.00
+adder_adder_add2_ix65/B0                  ao21        0.00  12.93 dn             0.00
+adder_adder_add2_ix65/Y                   ao21        0.66  13.58 dn             0.05
+adder_adder_add2_nx64            (net)                0.00  13.58 dn   (fan)     2.00
+adder_adder_add2_ix139/B0                 aoi22       0.00  13.58 dn             0.00
+adder_adder_add2_ix139/Y                  aoi22       0.42  14.01 up             0.04
+adder_adder_add2_nx138           (net)                0.00  14.01 up   (fan)     1.00
+adder_adder_add2_ix75/A0                  xnor2       0.00  14.01 up             0.00
+adder_adder_add2_ix75/Y                   xnor2       0.63  14.63 dn             0.05
+add_out(15)                      (net)                0.00  14.63 dn   (fan)     2.00
+adder_ix118/A1                            xnor2       0.00  14.63 dn             0.00
+adder_ix118/Y                             xnor2       0.29  14.92 up             0.02
+adder_nx117                      (net)                0.00  14.92 up   (fan)     1.00
+adder_ix115/A2                            nor03       0.00  14.92 up             0.00
+adder_ix115/Y                             nor03       0.37  15.29 dn             0.01
+add_vout                         (net)                0.00  15.29 dn   (fan)     1.00
+ix259/A1                                  and02       0.00  15.29 dn             0.00
+ix259/Y                                   and02       0.44  15.73 dn             0.00
+overflow                         (net)                0.00  15.73 dn   (fan)     1.00
+overflow/                                             0.00  15.73 dn             0.00
+data arrival time                                           15.73
+
+data required time                                       not specified
+-------------------------------------------------------------------------------------
+data required time                                       not specified
+data arrival time                                           15.73
+                                                         ----------
+                                                      unconstrained path
+-------------------------------------------------------------------------------------
+
+
+Info, Command 'report_delay' finished successfully
+LEONARDO{27}: LEONARDO{28}: LEONARDO{29}: LEONARDO{29}: // End >>> /home/saab/318Exm/vending/ <<<

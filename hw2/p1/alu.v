@@ -1,6 +1,4 @@
 
-
-
 module alu( 
   A, B, alu_code, C, overflow
 );
@@ -21,10 +19,9 @@ module alu(
   wire add_vout, add_cout;
   
   assign {mod_sel, mod_op} = alu_code;
-  assign overflow = (mod_sel == 2'b00) & add_vout;
+  /* assign overflow = (mod_sel == 2'b00) & add_vout; */
+  assign overflow = add_vout;
 
-
-  // TODO: check if cin should be 0
   adder16 adder(
     .A(A), .B(B), .CODE(mod_op), .cin(1'b0), .coe(1'b1),
     .C(add_out), .vout(add_vout), .cout(add_cout)
@@ -53,7 +50,6 @@ module alu(
       2'b01: C <= logic_out;
       2'b10: C <= shift_out;
       2'b11: C <= compare_out;
-
     endcase
   end
 

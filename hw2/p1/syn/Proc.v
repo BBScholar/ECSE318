@@ -1,6 +1,6 @@
 //
 // Verilog description for cell alu, 
-// Fri Oct  7 07:22:13 2022
+// Thu Oct 13 17:31:50 2022
 //
 // LeonardoSpectrum Level 3, 2009a.6 
 //
@@ -88,15 +88,28 @@ module alu ( A, B, alu_code, C, overflow ) ;
          adder_adder_csa_l_csa_h_nx212, adder_adder_csa_l_csa_h_nx214, 
          adder_adder_csa_l_csa_h_nx220, adder_adder_csa_l_csa_h_nx223, 
          adder_adder_csa_l_csa_h_nx227, adder_adder_csa_l_csa_h_nx230, 
-         adder_adder_csa_l_csa_h_nx238, shift_nx8, shift_nx10, shift_nx88, 
-         shift_nx120, shift_nx138, shift_nx142, shift_nx150, shift_nx250, 
-         shift_nx258, shift_nx266, shift_nx274, shift_nx298, shift_nx306, 
-         shift_nx153, shift_nx155, shift_nx159, shift_nx163, shift_nx169, 
-         shift_nx173, shift_nx177, shift_nx181, shift_nx185, shift_nx189, 
-         shift_nx195, shift_nx205, shift_nx209, shift_nx213, shift_nx219, 
-         shift_nx225, shift_nx227, shift_nx233, shift_nx237, shift_nx239, 
-         shift_nx241, shift_nx247, shift_nx249, shift_nx256, shift_nx259, 
-         shift_nx261, shift_nx267, shift_nx269, logic_nx16, logic_nx631, 
+         adder_adder_csa_l_csa_h_nx238, shift_nx2, shift_nx4, shift_nx6, 
+         shift_nx14, shift_nx22, shift_nx30, shift_nx36, shift_nx42, shift_nx52, 
+         shift_nx56, shift_nx64, shift_nx76, shift_nx80, shift_nx90, shift_nx102, 
+         shift_nx106, shift_nx112, shift_nx120, shift_nx132, shift_nx136, 
+         shift_nx148, shift_nx160, shift_nx164, shift_nx168, shift_nx172, 
+         shift_nx182, shift_nx194, shift_nx198, shift_nx210, shift_nx222, 
+         shift_nx226, shift_nx230, shift_nx242, shift_nx254, shift_nx258, 
+         shift_nx270, shift_nx278, shift_nx282, shift_nx286, shift_nx294, 
+         shift_nx304, shift_nx310, shift_nx316, shift_nx328, shift_nx338, 
+         shift_nx342, shift_nx350, shift_nx362, shift_nx366, shift_nx376, 
+         shift_nx388, shift_nx392, shift_nx404, shift_nx412, shift_nx416, 
+         shift_nx424, shift_nx432, shift_nx438, shift_nx448, shift_nx456, 
+         shift_nx466, shift_nx474, shift_nx482, shift_nx490, shift_nx496, 
+         shift_nx506, shift_nx514, shift_nx524, shift_nx532, shift_nx540, 
+         shift_nx548, shift_nx564, shift_nx572, shift_nx588, shift_nx596, 
+         shift_nx612, shift_nx620, shift_nx636, shift_nx642, shift_nx650, 
+         shift_nx658, shift_nx666, shift_nx674, shift_nx682, shift_nx690, 
+         shift_nx698, shift_nx151, shift_nx155, shift_nx159, shift_nx171, 
+         shift_nx177, shift_nx237, shift_nx265, shift_nx281, shift_nx297, 
+         shift_nx303, shift_nx309, shift_nx315, shift_nx348, shift_nx351, 
+         shift_nx353, shift_nx355, shift_nx357, shift_nx359, shift_nx361, 
+         shift_nx369, shift_nx371, shift_nx373, logic_nx16, logic_nx631, 
          logic_nx633, logic_nx635, logic_nx639, logic_nx641, logic_nx645, 
          logic_nx647, logic_nx650, logic_nx652, logic_nx655, logic_nx657, 
          logic_nx660, logic_nx662, logic_nx665, logic_nx667, logic_nx670, 
@@ -508,100 +521,238 @@ module alu ( A, B, alu_code, C, overflow ) ;
          adder_adder_csa_l_csa_h_nx191), .A1 (adder_adder_csa_l_csa_h_nx188)) ;
     xor2 adder_adder_csa_l_csa_h_ix105 (.Y (adder_adder_csa_l_b1s0_2), .A0 (
          adder_adder_csa_l_csa_h_nx198), .A1 (nx599)) ;
-    inv02 shift_ix41 (.Y (shift_out_0), .A (shift_nx153)) ;
-    oai21 shift_ix154 (.Y (shift_nx153), .A0 (alu_code[0]), .A1 (shift_nx256), .B0 (
-          A[0])) ;
-    nor04 shift_ix156 (.Y (shift_nx155), .A0 (B[3]), .A1 (B[2]), .A2 (B[1]), .A3 (
-          B[0])) ;
-    aoi21 shift_ix73 (.Y (shift_out_1), .A0 (shift_nx259), .A1 (shift_nx10), .B0 (
-          shift_nx163)) ;
-    inv02 shift_ix160 (.Y (shift_nx159), .A (alu_code[0])) ;
-    inv02 shift_ix164 (.Y (shift_nx163), .A (A[1])) ;
-    aoi21 shift_ix105 (.Y (shift_out_2), .A0 (shift_nx259), .A1 (shift_nx8), .B0 (
-          shift_nx169)) ;
-    inv02 shift_ix170 (.Y (shift_nx169), .A (A[2])) ;
-    aoi21 shift_ix137 (.Y (shift_out_3), .A0 (shift_nx259), .A1 (shift_nx8), .B0 (
-          shift_nx173)) ;
-    inv02 shift_ix174 (.Y (shift_nx173), .A (A[3])) ;
-    aoi21 shift_ix173 (.Y (shift_out_4), .A0 (shift_nx259), .A1 (B[3]), .B0 (
-          shift_nx177)) ;
-    inv02 shift_ix178 (.Y (shift_nx177), .A (A[4])) ;
-    aoi21 shift_ix197 (.Y (shift_out_5), .A0 (shift_nx259), .A1 (B[3]), .B0 (
-          shift_nx181)) ;
-    inv02 shift_ix182 (.Y (shift_nx181), .A (A[5])) ;
-    aoi21 shift_ix221 (.Y (shift_out_6), .A0 (shift_nx259), .A1 (B[3]), .B0 (
-          shift_nx185)) ;
-    inv02 shift_ix186 (.Y (shift_nx185), .A (A[6])) ;
-    aoi21 shift_ix245 (.Y (shift_out_7), .A0 (shift_nx259), .A1 (B[3]), .B0 (
-          shift_nx189)) ;
-    inv02 shift_ix190 (.Y (shift_nx189), .A (A[7])) ;
-    ao21 shift_ix253 (.Y (shift_out_8), .A0 (shift_nx261), .A1 (A[8]), .B0 (
-         shift_nx250)) ;
-    aoi221 shift_ix196 (.Y (shift_nx195), .A0 (A[7]), .A1 (shift_nx150), .B0 (
-           A[8]), .B1 (shift_nx269), .C0 (shift_nx267)) ;
-    nor02_2x shift_ix151 (.Y (shift_nx150), .A0 (B[3]), .A1 (alu_code[0])) ;
-    nand03 shift_ix206 (.Y (shift_nx205), .A0 (alu_code[0]), .A1 (A[15]), .A2 (
+    ao21 shift_ix297 (.Y (shift_out_0), .A0 (shift_nx357), .A1 (shift_nx42), .B0 (
+         shift_nx294)) ;
+    inv02 shift_ix152 (.Y (shift_nx151), .A (alu_code[0])) ;
+    ao21 shift_ix43 (.Y (shift_nx42), .A0 (shift_nx361), .A1 (shift_nx36), .B0 (
+         shift_nx369)) ;
+    inv02 shift_ix156 (.Y (shift_nx155), .A (B[3])) ;
+    ao21 shift_ix37 (.Y (shift_nx36), .A0 (shift_nx159), .A1 (shift_nx30), .B0 (
+         shift_nx373)) ;
+    inv02 shift_ix160 (.Y (shift_nx159), .A (B[2])) ;
+    mux21_ni shift_ix31 (.Y (shift_nx30), .A0 (shift_nx22), .A1 (shift_nx2), .S0 (
+             B[1])) ;
+    mux21_ni shift_ix23 (.Y (shift_nx22), .A0 (shift_nx14), .A1 (shift_nx2), .S0 (
+             B[0])) ;
+    mux21_ni shift_ix15 (.Y (shift_nx14), .A0 (A[0]), .A1 (A[15]), .S0 (
+             alu_code[0])) ;
+    nand03 shift_ix172 (.Y (shift_nx171), .A0 (alu_code[0]), .A1 (A[15]), .A2 (
            alu_code[1])) ;
-    ao21 shift_ix261 (.Y (shift_out_9), .A0 (shift_nx261), .A1 (A[9]), .B0 (
-         shift_nx258)) ;
-    aoi221 shift_ix210 (.Y (shift_nx209), .A0 (A[6]), .A1 (shift_nx150), .B0 (
-           A[9]), .B1 (shift_nx269), .C0 (shift_nx267)) ;
-    ao21 shift_ix269 (.Y (shift_out_10), .A0 (shift_nx261), .A1 (A[10]), .B0 (
-         shift_nx266)) ;
-    aoi221 shift_ix214 (.Y (shift_nx213), .A0 (A[5]), .A1 (shift_nx150), .B0 (
-           A[10]), .B1 (shift_nx269), .C0 (shift_nx267)) ;
-    ao21 shift_ix277 (.Y (shift_out_11), .A0 (shift_nx159), .A1 (A[11]), .B0 (
-         shift_nx274)) ;
-    aoi221 shift_ix220 (.Y (shift_nx219), .A0 (A[4]), .A1 (shift_nx150), .B0 (
-           A[11]), .B1 (shift_nx269), .C0 (shift_nx267)) ;
-    mux21_ni shift_ix285 (.Y (shift_out_12), .A0 (A[12]), .A1 (shift_nx120), .S0 (
+    aoi221 shift_ix178 (.Y (shift_nx177), .A0 (shift_nx168), .A1 (shift_nx353), 
+           .B0 (B[3]), .B1 (shift_nx286), .C0 (shift_nx112)) ;
+    mux21_ni shift_ix169 (.Y (shift_nx168), .A0 (shift_nx136), .A1 (shift_nx164)
+             , .S0 (B[1])) ;
+    mux21_ni shift_ix137 (.Y (shift_nx136), .A0 (shift_nx120), .A1 (shift_nx132)
+             , .S0 (B[0])) ;
+    mux21_ni shift_ix121 (.Y (shift_nx120), .A0 (A[11]), .A1 (A[4]), .S0 (
              alu_code[0])) ;
-    oai32 shift_ix121 (.Y (shift_nx120), .A0 (B[3]), .A1 (B[2]), .A2 (
-          shift_nx225), .B0 (shift_nx205), .B1 (shift_nx227)) ;
-    mux21 shift_ix226 (.Y (shift_nx225), .A0 (A[3]), .A1 (A[12]), .S0 (
-          alu_code[0])) ;
-    nor02_2x shift_ix228 (.Y (shift_nx227), .A0 (B[3]), .A1 (B[2])) ;
-    mux21_ni shift_ix293 (.Y (shift_out_13), .A0 (A[13]), .A1 (shift_nx88), .S0 (
+    mux21_ni shift_ix133 (.Y (shift_nx132), .A0 (A[10]), .A1 (A[5]), .S0 (
              alu_code[0])) ;
-    oai32 shift_ix89 (.Y (shift_nx88), .A0 (B[3]), .A1 (B[2]), .A2 (shift_nx233)
-          , .B0 (shift_nx205), .B1 (shift_nx227)) ;
-    mux21 shift_ix234 (.Y (shift_nx233), .A0 (A[2]), .A1 (A[13]), .S0 (
-          alu_code[0])) ;
-    ao21 shift_ix301 (.Y (shift_out_14), .A0 (shift_nx159), .A1 (A[14]), .B0 (
-         shift_nx298)) ;
-    mux21_ni shift_ix238 (.Y (shift_nx237), .A0 (shift_nx205), .A1 (shift_nx239)
-             , .S0 (shift_nx241)) ;
-    mux21 shift_ix240 (.Y (shift_nx239), .A0 (A[1]), .A1 (A[14]), .S0 (
-          alu_code[0])) ;
-    nor03_2x shift_ix242 (.Y (shift_nx241), .A0 (B[3]), .A1 (B[2]), .A2 (B[1])
+    mux21_ni shift_ix165 (.Y (shift_nx164), .A0 (shift_nx148), .A1 (shift_nx160)
+             , .S0 (B[0])) ;
+    mux21_ni shift_ix149 (.Y (shift_nx148), .A0 (A[9]), .A1 (A[6]), .S0 (
+             alu_code[0])) ;
+    mux21_ni shift_ix161 (.Y (shift_nx160), .A0 (A[8]), .A1 (A[7]), .S0 (
+             alu_code[0])) ;
+    mux21_ni shift_ix287 (.Y (shift_nx286), .A0 (shift_nx230), .A1 (shift_nx282)
+             , .S0 (B[2])) ;
+    mux21_ni shift_ix231 (.Y (shift_nx230), .A0 (shift_nx198), .A1 (shift_nx226)
+             , .S0 (B[1])) ;
+    mux21_ni shift_ix199 (.Y (shift_nx198), .A0 (shift_nx182), .A1 (shift_nx194)
+             , .S0 (B[0])) ;
+    mux21_ni shift_ix183 (.Y (shift_nx182), .A0 (A[7]), .A1 (A[8]), .S0 (
+             alu_code[0])) ;
+    mux21_ni shift_ix195 (.Y (shift_nx194), .A0 (A[6]), .A1 (A[9]), .S0 (
+             alu_code[0])) ;
+    mux21_ni shift_ix227 (.Y (shift_nx226), .A0 (shift_nx210), .A1 (shift_nx222)
+             , .S0 (B[0])) ;
+    mux21_ni shift_ix211 (.Y (shift_nx210), .A0 (A[5]), .A1 (A[10]), .S0 (
+             alu_code[0])) ;
+    mux21_ni shift_ix223 (.Y (shift_nx222), .A0 (A[4]), .A1 (A[11]), .S0 (
+             alu_code[0])) ;
+    mux21_ni shift_ix283 (.Y (shift_nx282), .A0 (shift_nx258), .A1 (shift_nx278)
+             , .S0 (B[1])) ;
+    mux21_ni shift_ix259 (.Y (shift_nx258), .A0 (shift_nx242), .A1 (shift_nx254)
+             , .S0 (B[0])) ;
+    mux21_ni shift_ix243 (.Y (shift_nx242), .A0 (A[3]), .A1 (A[12]), .S0 (
+             alu_code[0])) ;
+    mux21_ni shift_ix255 (.Y (shift_nx254), .A0 (A[2]), .A1 (A[13]), .S0 (
+             alu_code[0])) ;
+    mux21_ni shift_ix279 (.Y (shift_nx278), .A0 (shift_nx270), .A1 (shift_nx14)
+             , .S0 (B[0])) ;
+    mux21_ni shift_ix271 (.Y (shift_nx270), .A0 (A[1]), .A1 (A[14]), .S0 (
+             alu_code[0])) ;
+    ao32 shift_ix113 (.Y (shift_nx112), .A0 (shift_nx106), .A1 (B[1]), .A2 (
+         shift_nx348), .B0 (shift_nx56), .B1 (shift_nx80)) ;
+    mux21_ni shift_ix107 (.Y (shift_nx106), .A0 (shift_nx90), .A1 (shift_nx102)
+             , .S0 (B[0])) ;
+    mux21_ni shift_ix91 (.Y (shift_nx90), .A0 (A[13]), .A1 (A[2]), .S0 (
+             alu_code[0])) ;
+    mux21_ni shift_ix103 (.Y (shift_nx102), .A0 (A[12]), .A1 (A[3]), .S0 (
+             alu_code[0])) ;
+    nor02_2x shift_ix53 (.Y (shift_nx52), .A0 (B[3]), .A1 (B[2])) ;
+    nor03_2x shift_ix57 (.Y (shift_nx56), .A0 (B[1]), .A1 (B[3]), .A2 (B[2])) ;
+    mux21_ni shift_ix81 (.Y (shift_nx80), .A0 (shift_nx64), .A1 (shift_nx76), .S0 (
+             B[0])) ;
+    mux21_ni shift_ix65 (.Y (shift_nx64), .A0 (A[15]), .A1 (A[0]), .S0 (
+             alu_code[0])) ;
+    mux21_ni shift_ix77 (.Y (shift_nx76), .A0 (A[14]), .A1 (A[1]), .S0 (
+             alu_code[0])) ;
+    ao21 shift_ix427 (.Y (shift_out_1), .A0 (shift_nx357), .A1 (shift_nx316), .B0 (
+         shift_nx424)) ;
+    ao21 shift_ix317 (.Y (shift_nx316), .A0 (shift_nx361), .A1 (shift_nx310), .B0 (
+         shift_nx369)) ;
+    ao21 shift_ix311 (.Y (shift_nx310), .A0 (shift_nx159), .A1 (shift_nx304), .B0 (
+         shift_nx373)) ;
+    mux21_ni shift_ix305 (.Y (shift_nx304), .A0 (shift_nx278), .A1 (shift_nx2), 
+             .S0 (B[1])) ;
+    aoi221 shift_ix238 (.Y (shift_nx237), .A0 (shift_nx366), .A1 (shift_nx353), 
+           .B0 (B[3]), .B1 (shift_nx416), .C0 (shift_nx342)) ;
+    mux21_ni shift_ix367 (.Y (shift_nx366), .A0 (shift_nx350), .A1 (shift_nx362)
+             , .S0 (B[1])) ;
+    mux21_ni shift_ix351 (.Y (shift_nx350), .A0 (shift_nx132), .A1 (shift_nx148)
+             , .S0 (B[0])) ;
+    mux21_ni shift_ix363 (.Y (shift_nx362), .A0 (shift_nx160), .A1 (shift_nx182)
+             , .S0 (B[0])) ;
+    mux21_ni shift_ix417 (.Y (shift_nx416), .A0 (shift_nx392), .A1 (shift_nx412)
+             , .S0 (B[2])) ;
+    mux21_ni shift_ix393 (.Y (shift_nx392), .A0 (shift_nx376), .A1 (shift_nx388)
+             , .S0 (B[1])) ;
+    mux21_ni shift_ix377 (.Y (shift_nx376), .A0 (shift_nx194), .A1 (shift_nx210)
+             , .S0 (B[0])) ;
+    mux21_ni shift_ix389 (.Y (shift_nx388), .A0 (shift_nx222), .A1 (shift_nx242)
+             , .S0 (B[0])) ;
+    mux21_ni shift_ix413 (.Y (shift_nx412), .A0 (shift_nx404), .A1 (shift_nx22)
+             , .S0 (B[1])) ;
+    mux21_ni shift_ix405 (.Y (shift_nx404), .A0 (shift_nx254), .A1 (shift_nx270)
+             , .S0 (B[0])) ;
+    ao32 shift_ix343 (.Y (shift_nx342), .A0 (shift_nx338), .A1 (B[1]), .A2 (
+         shift_nx348), .B0 (shift_nx56), .B1 (shift_nx328)) ;
+    mux21_ni shift_ix339 (.Y (shift_nx338), .A0 (shift_nx102), .A1 (shift_nx120)
+             , .S0 (B[0])) ;
+    mux21_ni shift_ix329 (.Y (shift_nx328), .A0 (shift_nx76), .A1 (shift_nx90), 
+             .S0 (B[0])) ;
+    ao21 shift_ix485 (.Y (shift_out_2), .A0 (shift_nx357), .A1 (shift_nx438), .B0 (
+         shift_nx482)) ;
+    ao21 shift_ix439 (.Y (shift_nx438), .A0 (shift_nx361), .A1 (shift_nx432), .B0 (
+         shift_nx369)) ;
+    ao21 shift_ix433 (.Y (shift_nx432), .A0 (shift_nx159), .A1 (shift_nx412), .B0 (
+         shift_nx373)) ;
+    aoi221 shift_ix266 (.Y (shift_nx265), .A0 (shift_nx456), .A1 (shift_nx353), 
+           .B0 (B[3]), .B1 (shift_nx474), .C0 (shift_nx448)) ;
+    mux21_ni shift_ix457 (.Y (shift_nx456), .A0 (shift_nx164), .A1 (shift_nx198)
+             , .S0 (B[1])) ;
+    mux21_ni shift_ix475 (.Y (shift_nx474), .A0 (shift_nx466), .A1 (shift_nx304)
+             , .S0 (B[2])) ;
+    mux21_ni shift_ix467 (.Y (shift_nx466), .A0 (shift_nx226), .A1 (shift_nx258)
+             , .S0 (B[1])) ;
+    ao32 shift_ix449 (.Y (shift_nx448), .A0 (shift_nx136), .A1 (B[1]), .A2 (
+         shift_nx348), .B0 (shift_nx106), .B1 (shift_nx56)) ;
+    ao21 shift_ix543 (.Y (shift_out_3), .A0 (shift_nx357), .A1 (shift_nx496), .B0 (
+         shift_nx540)) ;
+    ao21 shift_ix497 (.Y (shift_nx496), .A0 (shift_nx361), .A1 (shift_nx490), .B0 (
+         shift_nx369)) ;
+    ao21 shift_ix491 (.Y (shift_nx490), .A0 (shift_nx159), .A1 (shift_nx282), .B0 (
+         shift_nx373)) ;
+    aoi221 shift_ix282 (.Y (shift_nx281), .A0 (shift_nx514), .A1 (shift_nx353), 
+           .B0 (B[3]), .B1 (shift_nx532), .C0 (shift_nx506)) ;
+    mux21_ni shift_ix515 (.Y (shift_nx514), .A0 (shift_nx362), .A1 (shift_nx376)
+             , .S0 (B[1])) ;
+    mux21_ni shift_ix533 (.Y (shift_nx532), .A0 (shift_nx524), .A1 (shift_nx30)
+             , .S0 (B[2])) ;
+    mux21_ni shift_ix525 (.Y (shift_nx524), .A0 (shift_nx388), .A1 (shift_nx404)
+             , .S0 (B[1])) ;
+    ao32 shift_ix507 (.Y (shift_nx506), .A0 (shift_nx350), .A1 (B[1]), .A2 (
+         shift_nx348), .B0 (shift_nx338), .B1 (shift_nx56)) ;
+    ao21 shift_ix567 (.Y (shift_out_4), .A0 (shift_nx359), .A1 (shift_nx548), .B0 (
+         shift_nx564)) ;
+    ao21 shift_ix549 (.Y (shift_nx548), .A0 (shift_nx361), .A1 (shift_nx532), .B0 (
+         shift_nx369)) ;
+    aoi222 shift_ix298 (.Y (shift_nx297), .A0 (shift_nx168), .A1 (shift_nx348), 
+           .B0 (shift_nx230), .B1 (shift_nx353), .C0 (B[3]), .C1 (shift_nx490)
+           ) ;
+    ao21 shift_ix591 (.Y (shift_out_5), .A0 (shift_nx359), .A1 (shift_nx572), .B0 (
+         shift_nx588)) ;
+    ao21 shift_ix573 (.Y (shift_nx572), .A0 (shift_nx361), .A1 (shift_nx474), .B0 (
+         shift_nx369)) ;
+    aoi222 shift_ix304 (.Y (shift_nx303), .A0 (shift_nx366), .A1 (shift_nx348), 
+           .B0 (shift_nx392), .B1 (shift_nx353), .C0 (B[3]), .C1 (shift_nx432)
+           ) ;
+    ao21 shift_ix615 (.Y (shift_out_6), .A0 (shift_nx359), .A1 (shift_nx596), .B0 (
+         shift_nx612)) ;
+    ao21 shift_ix597 (.Y (shift_nx596), .A0 (shift_nx155), .A1 (shift_nx416), .B0 (
+         shift_nx369)) ;
+    aoi222 shift_ix310 (.Y (shift_nx309), .A0 (shift_nx456), .A1 (shift_nx348), 
+           .B0 (shift_nx466), .B1 (shift_nx353), .C0 (B[3]), .C1 (shift_nx310)
+           ) ;
+    ao21 shift_ix639 (.Y (shift_out_7), .A0 (shift_nx151), .A1 (shift_nx620), .B0 (
+         shift_nx636)) ;
+    ao21 shift_ix621 (.Y (shift_nx620), .A0 (shift_nx155), .A1 (shift_nx286), .B0 (
+         shift_nx371)) ;
+    aoi222 shift_ix316 (.Y (shift_nx315), .A0 (shift_nx514), .A1 (shift_nx351), 
+           .B0 (shift_nx524), .B1 (shift_nx355), .C0 (B[3]), .C1 (shift_nx36)) ;
+    ao21 shift_ix647 (.Y (shift_out_8), .A0 (alu_code[0]), .A1 (shift_nx620), .B0 (
+         shift_nx642)) ;
+    nor02_2x shift_ix643 (.Y (shift_nx642), .A0 (alu_code[0]), .A1 (shift_nx315)
              ) ;
-    ao21 shift_ix309 (.Y (shift_out_15), .A0 (shift_nx159), .A1 (A[15]), .B0 (
-         shift_nx306)) ;
-    mux21_ni shift_ix248 (.Y (shift_nx247), .A0 (shift_nx205), .A1 (shift_nx249)
-             , .S0 (shift_nx256)) ;
-    mux21 shift_ix250 (.Y (shift_nx249), .A0 (A[0]), .A1 (A[15]), .S0 (
-          alu_code[0])) ;
-    inv02 shift_ix11 (.Y (shift_nx10), .A (shift_nx241)) ;
-    inv02 shift_ix9 (.Y (shift_nx8), .A (shift_nx227)) ;
-    buf02 shift_ix255 (.Y (shift_nx256), .A (shift_nx155)) ;
-    inv02 shift_ix257 (.Y (shift_nx259), .A (alu_code[0])) ;
-    inv02 shift_ix260 (.Y (shift_nx261), .A (alu_code[0])) ;
-    nor02ii shift_ix251 (.Y (shift_nx250), .A0 (shift_nx195), .A1 (alu_code[0])
+    ao21 shift_ix655 (.Y (shift_out_9), .A0 (alu_code[0]), .A1 (shift_nx596), .B0 (
+         shift_nx650)) ;
+    nor02_2x shift_ix651 (.Y (shift_nx650), .A0 (alu_code[0]), .A1 (shift_nx309)
+             ) ;
+    ao21 shift_ix663 (.Y (shift_out_10), .A0 (alu_code[0]), .A1 (shift_nx572), .B0 (
+         shift_nx658)) ;
+    nor02_2x shift_ix659 (.Y (shift_nx658), .A0 (alu_code[0]), .A1 (shift_nx303)
+             ) ;
+    ao21 shift_ix671 (.Y (shift_out_11), .A0 (alu_code[0]), .A1 (shift_nx548), .B0 (
+         shift_nx666)) ;
+    nor02_2x shift_ix667 (.Y (shift_nx666), .A0 (alu_code[0]), .A1 (shift_nx297)
+             ) ;
+    ao21 shift_ix679 (.Y (shift_out_12), .A0 (alu_code[0]), .A1 (shift_nx496), .B0 (
+         shift_nx674)) ;
+    nor02_2x shift_ix675 (.Y (shift_nx674), .A0 (alu_code[0]), .A1 (shift_nx281)
+             ) ;
+    ao21 shift_ix687 (.Y (shift_out_13), .A0 (alu_code[0]), .A1 (shift_nx438), .B0 (
+         shift_nx682)) ;
+    nor02_2x shift_ix683 (.Y (shift_nx682), .A0 (alu_code[0]), .A1 (shift_nx265)
+             ) ;
+    ao21 shift_ix695 (.Y (shift_out_14), .A0 (alu_code[0]), .A1 (shift_nx316), .B0 (
+         shift_nx690)) ;
+    nor02_2x shift_ix691 (.Y (shift_nx690), .A0 (alu_code[0]), .A1 (shift_nx237)
+             ) ;
+    ao21 shift_ix703 (.Y (shift_out_15), .A0 (alu_code[0]), .A1 (shift_nx42), .B0 (
+         shift_nx698)) ;
+    nor02_2x shift_ix699 (.Y (shift_nx698), .A0 (alu_code[0]), .A1 (shift_nx177)
+             ) ;
+    inv02 shift_ix3 (.Y (shift_nx2), .A (shift_nx171)) ;
+    buf02 shift_ix347 (.Y (shift_nx348), .A (shift_nx52)) ;
+    buf02 shift_ix349 (.Y (shift_nx351), .A (shift_nx52)) ;
+    buf02 shift_ix352 (.Y (shift_nx353), .A (shift_nx172)) ;
+    buf02 shift_ix354 (.Y (shift_nx355), .A (shift_nx172)) ;
+    inv02 shift_ix356 (.Y (shift_nx357), .A (alu_code[0])) ;
+    inv02 shift_ix358 (.Y (shift_nx359), .A (alu_code[0])) ;
+    inv02 shift_ix360 (.Y (shift_nx361), .A (B[3])) ;
+    nor02ii shift_ix7 (.Y (shift_nx6), .A0 (shift_nx171), .A1 (B[2])) ;
+    nor02ii shift_ix5 (.Y (shift_nx4), .A0 (shift_nx171), .A1 (B[3])) ;
+    nor02ii shift_ix295 (.Y (shift_nx294), .A0 (shift_nx177), .A1 (alu_code[0])
             ) ;
-    nor02ii shift_ix143 (.Y (shift_nx142), .A0 (B[3]), .A1 (alu_code[0])) ;
-    nor02ii shift_ix139 (.Y (shift_nx138), .A0 (shift_nx205), .A1 (B[3])) ;
-    nor02ii shift_ix259 (.Y (shift_nx258), .A0 (shift_nx209), .A1 (alu_code[0])
+    nor02ii shift_ix173 (.Y (shift_nx172), .A0 (B[3]), .A1 (B[2])) ;
+    nor02ii shift_ix425 (.Y (shift_nx424), .A0 (shift_nx237), .A1 (alu_code[0])
             ) ;
-    nor02ii shift_ix267 (.Y (shift_nx266), .A0 (shift_nx213), .A1 (alu_code[0])
+    nor02ii shift_ix483 (.Y (shift_nx482), .A0 (shift_nx265), .A1 (alu_code[0])
             ) ;
-    nor02ii shift_ix275 (.Y (shift_nx274), .A0 (shift_nx219), .A1 (alu_code[0])
+    nor02ii shift_ix541 (.Y (shift_nx540), .A0 (shift_nx281), .A1 (alu_code[0])
             ) ;
-    nor02ii shift_ix299 (.Y (shift_nx298), .A0 (shift_nx237), .A1 (alu_code[0])
+    nor02ii shift_ix565 (.Y (shift_nx564), .A0 (shift_nx297), .A1 (alu_code[0])
             ) ;
-    nor02ii shift_ix307 (.Y (shift_nx306), .A0 (shift_nx247), .A1 (alu_code[0])
+    nor02ii shift_ix589 (.Y (shift_nx588), .A0 (shift_nx303), .A1 (alu_code[0])
             ) ;
-    buf02 shift_ix266 (.Y (shift_nx267), .A (shift_nx138)) ;
-    buf02 shift_ix268 (.Y (shift_nx269), .A (shift_nx142)) ;
+    nor02ii shift_ix613 (.Y (shift_nx612), .A0 (shift_nx309), .A1 (alu_code[0])
+            ) ;
+    nor02ii shift_ix637 (.Y (shift_nx636), .A0 (shift_nx315), .A1 (alu_code[0])
+            ) ;
+    buf02 shift_ix368 (.Y (shift_nx369), .A (shift_nx4)) ;
+    buf02 shift_ix370 (.Y (shift_nx371), .A (shift_nx4)) ;
+    buf02 shift_ix372 (.Y (shift_nx373), .A (shift_nx6)) ;
     oai221 logic_ix37 (.Y (logic_out_0), .A0 (logic_nx631), .A1 (logic_nx734), .B0 (
            A[0]), .B1 (logic_nx742), .C0 (logic_nx641)) ;
     xnor2 logic_ix632 (.Y (logic_nx631), .A0 (A[0]), .A1 (B[0])) ;
@@ -782,6 +933,54 @@ module oai221 ( Y, A0, A1, B0, B1, C0 ) ;
 endmodule
 
 
+module aoi222 ( Y, A0, A1, B0, B1, C0, C1 ) ;
+
+    output Y ;
+    input A0 ;
+    input A1 ;
+    input B0 ;
+    input B1 ;
+    input C0 ;
+    input C1 ;
+
+    wire NOT_A1, NOT_B1, nx4, NOT_C1, nx8, NOT_A0, nx12, nx14, nx16, NOT_B0, 
+         nx20, nx22, nx24, nx26, nx28, nx30, nx32, NOT_C0, nx36, nx38, nx40, 
+         nx42, nx44, nx46, nx48, nx50, nx52, nx54;
+
+
+
+    assign NOT_A1 = ~A1 ;
+    assign NOT_B1 = ~B1 ;
+    and (nx4, NOT_A1, NOT_B1) ;
+    assign NOT_C1 = ~C1 ;
+    and (nx8, nx4, NOT_C1) ;
+    assign NOT_A0 = ~A0 ;
+    and (nx12, NOT_A0, NOT_B1) ;
+    and (nx14, nx12, NOT_C1) ;
+    or (nx16, nx8, nx14) ;
+    assign NOT_B0 = ~B0 ;
+    and (nx20, NOT_A1, NOT_B0) ;
+    and (nx22, nx20, NOT_C1) ;
+    or (nx24, nx16, nx22) ;
+    and (nx26, NOT_A0, NOT_B0) ;
+    and (nx28, nx26, NOT_C1) ;
+    or (nx30, nx24, nx28) ;
+    and (nx32, NOT_A1, NOT_B1) ;
+    assign NOT_C0 = ~C0 ;
+    and (nx36, nx32, NOT_C0) ;
+    or (nx38, nx30, nx36) ;
+    and (nx40, NOT_A0, NOT_B1) ;
+    and (nx42, nx40, NOT_C0) ;
+    or (nx44, nx38, nx42) ;
+    and (nx46, NOT_A1, NOT_B0) ;
+    and (nx48, nx46, NOT_C0) ;
+    or (nx50, nx44, nx48) ;
+    and (nx52, NOT_A0, NOT_B0) ;
+    and (nx54, nx52, NOT_C0) ;
+    or (Y, nx50, nx54) ;
+endmodule
+
+
 module nor03_2x ( Y, A0, A1, A2 ) ;
 
     output Y ;
@@ -801,22 +1000,23 @@ module nor03_2x ( Y, A0, A1, A2 ) ;
 endmodule
 
 
-module nand03 ( Y, A0, A1, A2 ) ;
+module ao32 ( Y, A0, A1, A2, B0, B1 ) ;
 
     output Y ;
     input A0 ;
     input A1 ;
     input A2 ;
+    input B0 ;
+    input B1 ;
 
-    wire NOT_A2, NOT_A1, nx4, NOT_A0;
+    wire nx0, nx2, nx4;
 
 
 
-    assign NOT_A2 = ~A2 ;
-    assign NOT_A1 = ~A1 ;
-    or (nx4, NOT_A2, NOT_A1) ;
-    assign NOT_A0 = ~A0 ;
-    or (Y, nx4, NOT_A0) ;
+    and (nx0, A0, A1) ;
+    and (nx2, nx0, A2) ;
+    and (nx4, B0, B1) ;
+    or (Y, nx2, nx4) ;
 endmodule
 
 
@@ -853,23 +1053,22 @@ module aoi221 ( Y, A0, A1, B0, B1, C0 ) ;
 endmodule
 
 
-module aoi21 ( Y, A0, A1, B0 ) ;
+module nand03 ( Y, A0, A1, A2 ) ;
 
     output Y ;
     input A0 ;
     input A1 ;
-    input B0 ;
+    input A2 ;
 
-    wire NOT_A1, NOT_B0, nx4, NOT_A0, nx8;
+    wire NOT_A2, NOT_A1, nx4, NOT_A0;
 
 
 
+    assign NOT_A2 = ~A2 ;
     assign NOT_A1 = ~A1 ;
-    assign NOT_B0 = ~B0 ;
-    and (nx4, NOT_A1, NOT_B0) ;
+    or (nx4, NOT_A2, NOT_A1) ;
     assign NOT_A0 = ~A0 ;
-    and (nx8, NOT_A0, NOT_B0) ;
-    or (Y, nx4, nx8) ;
+    or (Y, nx4, NOT_A0) ;
 endmodule
 
 
