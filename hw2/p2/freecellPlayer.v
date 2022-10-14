@@ -11,8 +11,7 @@ module freecellPlayer(clock, source, dest, win);
   input [3:0] source, dest;
   output win;
 
-  // set initial starting state
-
+  // local nets
   wire src_tab, src_free, src_home;
   wire dest_tab, dest_free, dest_home;
 
@@ -22,6 +21,30 @@ module freecellPlayer(clock, source, dest, win);
 
   reg [5:0] src_card, dest_card;
 
+  wire invalid, valid;
+  reg src_empty, dest_full, dest_empty;
+
+  wire [5:0] tab_src_card, free_src_card;
+  wire tab_src_empty, free_src_empty;
+  
+  wire [5:0] tab_dest_card, free_dest_card, home_dest_card;
+  wire tab_dest_full, free_dest_full, home_dest_full;
+  wire tab_dest_empty, free_dest_empty, home_dest_empty;
+
+  wire [5:0] tab_top_cards [0:7];
+  wire [7:0] tab_push, tab_pop, tab_empty, tab_full;
+  wire [TAB_COUNT_BITS - 1:0] tab_num_cards[0:7];
+
+  wire [5:0] free_top_cards[0:3];
+  wire [3:0] free_push, free_pop, free_empty, free_full;
+  wire free_num_cards[0:3];
+
+  wire [5:0] home_top_cards[0:3];
+  wire [3:0] home_push, home_empty, home_full;
+  wire [HOME_COUNT_BITS - 1:0] home_num_cards[0:3];
+
+
+
   assign src_tab = !source[3];
   assign src_free = !src_tab & !source[2];
   assign src_home = !src_tab & source[2];
@@ -29,6 +52,33 @@ module freecellPlayer(clock, source, dest, win);
   assign dest_tab = !dest[3];
   assign dest_free = !dest_tab & !dest[2];
   assign dest_home = !dest_tab & dest[2];
+
+  assign win = &home_full;
+
+  assign tab_src_card = tab_top_cards[source[2:0]];
+  assign free_src_card = free_top_cards[source[1:0]];
+
+  assign tab_src_empty = tab_empty[source[2:0]];
+  assign free_src_empty = free_empty[source[1:0]];
+
+  assign tab_dest_full = tab_full[dest[2:0]];
+  assign free_dest_full = free_full[dest[1:0]];
+  assign home_dest_full = home_full[src_card[5:4]];
+
+  assign tab_dest_empty = tab_empty[dest[2:0]];
+  assign free_dest_empty = free_empty[dest[1:0]];
+  assign home_dest_empty = home_empty[src_card[5:4]];
+
+  assign tab_dest_card = tab_top_cards[dest[2:0]];
+  assign free_dest_card = free_top_cards[dest[1:0]];
+  assign home_dest_card = home_top_cards[src_card[5:4]];
+
+  assign tab_push = {8{valid}} & {8{dest_tab}} & tab_dest_decoded;
+  assign free_push = {4{valid}} & {4{dest_free}} & free_dest_decoded;
+  assign home_push = {4{valid}} & {4{dest_home}} & home_dest_decoded;
+
+  assign tab_pop = {8{valid}} & {8{src_tab}} & tab_src_decoded;
+  assign free_pop = {4{valid}} & {4{src_free}} & free_src_decoded;
 
   decoder2to4 free_src_dec(
     .a(source[1:0]), .b(free_src_decoded)
@@ -51,65 +101,12 @@ module freecellPlayer(clock, source, dest, win);
     .a(dest[2:0]), .b(tab_dest_decoded)
   );
 
-  wire invalid, valid;
-  reg src_empty, dest_full, dest_empty;
-
-
   freecell_logic invalid_detect(
     .source(source), .dest(dest),
     .src_empty(src_empty), .dest_full(dest_full), .dest_empty(dest_empty),
     .src_card(src_card), .dest_card(dest_card),
     .invalid(invalid), .valid(valid)
   );
-
-  wire [5:0] tab_src_card, free_src_card;
-  wire tab_src_empty, free_src_empty;
-  
-  wire [5:0] tab_dest_card, free_dest_card, home_dest_card;
-  wire tab_dest_full, free_dest_full, home_dest_full;
-  wire tab_dest_empty, free_dest_empty, home_dest_empty;
-
-  wire [5:0] tab_top_cards [0:7];
-  wire [7:0] tab_push, tab_pop, tab_empty, tab_full;
-  wire [TAB_COUNT_BITS - 1:0] tab_num_cards[0:7];
-
-  wire [5:0] free_top_cards[0:3];
-  wire [3:0] free_push, free_pop, free_empty, free_full;
-  wire free_num_cards[0:3];
-
-  wire [5:0] home_top_cards[0:3];
-  wire [3:0] home_push, home_empty, home_full;
-  wire [HOME_COUNT_BITS - 1:0] home_num_cards[0:3];
-
-  assign win = &home_full;
-
-  assign tab_src_card = tab_top_cards[source[2:0]];
-  assign free_src_card = free_top_cards[source[1:0]];
-
-  assign tab_src_empty = tab_empty[source[2:0]];
-  assign free_src_empty = free_empty[source[1:0]];
-
-  assign tab_dest_full = tab_full[dest[2:0]];
-  assign free_dest_full = free_full[dest[1:0]];
-  assign home_dest_full = home_full[src_card[5:4]];
-
-  assign tab_dest_empty = tab_empty[dest[2:0]];
-  assign free_dest_empty = free_empty[dest[1:0]];
-  assign home_dest_empty = home_empty[src_card[5:4]];
-
-  assign tab_dest_card = tab_top_cards[dest[2:0]];
-  assign free_dest_card = free_top_cards[dest[1:0]];
-  assign home_dest_card = home_top_cards[src_card[5:4]];
-
-
-  assign tab_push = {8{valid}} & {8{dest_tab}} & tab_dest_decoded;
-  assign free_push = {4{valid}} & {4{dest_free}} & free_dest_decoded;
-  // assign home_push = {4{valid}} & {4{src_home}} & free_home_dest_decoded;
-  assign home_push = {4{valid}} & {4{dest_home}} & home_dest_decoded;
-
-  assign tab_pop = {8{valid}} & {8{src_tab}} & tab_src_decoded;
-  assign free_pop = {4{valid}} & {4{src_free}} & free_src_decoded;
-
 
   // source mux (invalid will be handled elsewhere)
   // not sure if these should be blocking or non-blocking assigns
@@ -175,7 +172,6 @@ module freecellPlayer(clock, source, dest, win);
 
   endgenerate
 
-
 /* S4 S5 SJ H4 DQ D5 H5 CJ */
 /* DJ S10 C7 SA HJ DK D3 D4 */
 /* D10 H8 C9 CQ SQ C3 HQ H10 */
@@ -219,7 +215,6 @@ module freecell_logic(
   assign illegal_source = (source[3:2] == 2'b11);
   assign order_invalid = !order_valid;
   assign src_dest_eq = source == dest; // not really invalid, just for convinience
-
 
   assign invalid = illegal_source | order_invalid | src_empty | dest_full | src_dest_eq;
   assign valid = !invalid;
