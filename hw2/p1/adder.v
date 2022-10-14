@@ -54,16 +54,16 @@ module adder16(
   assign cin_int = cin | subtraction;
   
   // FAST ADDER
-  /* conditional_sum_adder16_with_cin adder ( */
-  /*   .a(A), .b(b_source), .cin(cin_int), */
-  /*   .cout(cout_int), .s(C) */
-  /* ); */
-  
-  // SLOW ADDER
-  prop_adder16 adder(
+  conditional_sum_adder16_with_cin adder (
     .a(A), .b(b_source), .cin(cin_int),
     .cout(cout_int), .s(C)
   );
+  
+  // SLOW ADDER
+  /* prop_adder16 adder( */
+  /*   .a(A), .b(b_source), .cin(cin_int), */
+  /*   .cout(cout_int), .s(C) */
+  /* ); */
 
   
 

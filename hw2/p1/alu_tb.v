@@ -22,8 +22,14 @@ module alu_tb;
 
     // adder/subtractor is already tested in adder_tb.v
     // test getting overflow flag
+    $display("Testing overflow flag of add/subtract");
     a <= {1'b0, {15{1'b1}}};
     b <= {1'b0, {15{1'b1}}};
+    op <= 5'b0;
+    #10;
+
+    a <= {1'b0, {15{1'b1}}};
+    b <= 16'b0;
     op <= 5'b0;
     #10;
     
