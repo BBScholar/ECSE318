@@ -1,0 +1,19 @@
+# //  QuestaSim-64 6.5f Jun 16 2010 Linux 5.15.0-50-generic
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+vcom -reportprogress 300 -work work /home/bscholar/Documents/ECSE318/hw3/shift_reg.vhdl
+# QuestaSim-64 vcom 6.5f Compiler 2010.06 Jun 16 2010
+# -- Loading package standard
+# -- Compiling entity shift_register
+# ** Error: /home/bscholar/Documents/ECSE318/hw3/shift_reg.vhdl(7): (vcom-1136) Unknown identifier "std_logic".
+# ** Error: /home/bscholar/Documents/ECSE318/hw3/shift_reg.vhdl(8): (vcom-1136) Unknown identifier "std_logic_vector".
+# ** Error: /home/bscholar/Documents/ECSE318/hw3/shift_reg.vhdl(9): (vcom-1136) Unknown identifier "std_logic".
+# ** Error: /home/bscholar/Documents/ECSE318/hw3/shift_reg.vhdl(10): (vcom-1136) Unknown identifier "std_logic_vector".
+# ** Error: /home/bscholar/Documents/ECSE318/hw3/shift_reg.vhdl(11): near ")": expecting "IDENTIFIER"
