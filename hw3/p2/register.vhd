@@ -15,12 +15,10 @@ architecture rtl of reg1 is
 begin 
 
   dff : process(clk, clear, d) begin 
-    if rising_edge(clk) then 
-      if clear = '1' then 
-        q <= '0';
-      else
-        q <= d; 
-      end if;
+    if rising_edge(clear) then
+      q <= '0';
+    elsif rising_edge(clk) then 
+      q <= d;
     end if;
   end process;
 

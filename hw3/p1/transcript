@@ -1,0 +1,48 @@
+# //  QuestaSim-64 6.5f Jun 16 2010 Linux 5.15.0-50-generic
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+vsim -voptargs=+acc work.tb
+# vsim -voptargs=+acc work.tb 
+# Loading work.tb
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.multiplier(rtl)
+# Loading work.csa_module(rtl)
+# Loading work.full_adder(rtl)
+# Loading work.prop_adder(rtl)
+add wave -r sim/:tb:mult:*
+run -all
+# x=2, y=4 => p=2
+# x=15, y=3 => p=46
+# x=15, y=15 => p=236
+# 1
+# Break in Module tb at tb.v line 32
+vsim -voptargs=+acc work.tb
+# vsim -voptargs=+acc work.tb 
+# Loading work.tb
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.multiplier(rtl)
+# Loading work.csa_module(rtl)
+# Loading work.full_adder(rtl)
+# Loading work.prop_adder(rtl)
+add wave -r sim/:tb:mult:*
+run -all
+# x=2, y=4 => p=8
+# x=15, y=3 => p=45
+# x=15, y=15 => p=225
+# 1
+# Break in Module tb at tb.v line 32

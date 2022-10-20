@@ -1,0 +1,28 @@
+# vsim -do {run -all} -c work.tb 
+# //  QuestaSim-64 6.5f Jun 16 2010 Linux 5.15.0-50-generic
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading work.tb
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.both_fsm(rtl)
+# Loading work.state_machine(struct)
+# Loading work.dff(behav)
+# Loading work.state_machine(behav)
+# run -all 
+# w=1, e=1 => out1=x, out2=x | out_diff=x
+# w=1, e=1 => out1=0, out2=0 | out_diff=0
+# w=0, e=0 => out1=0, out2=0 | out_diff=0
+# w=0, e=0 => out1=1, out2=1 | out_diff=0
+# w=0, e=1 => out1=1, out2=1 | out_diff=0
+# w=0, e=1 => out1=0, out2=0 | out_diff=0
+# w=0, e=0 => out1=0, out2=0 | out_diff=0
+# w=0, e=1 => out1=0, out2=0 | out_diff=0
+# w=0, e=0 => out1=0, out2=0 | out_diff=0

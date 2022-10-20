@@ -17,33 +17,30 @@ architecture rtl of multiplier is
 
   signal carry, sum : arr;
   signal final_sum_in : std_ulogic_vector(W - 1 downto 0);
-  signal final_carry : std_ulogic_vector(W downto 0);
 begin
   carry(0) <= std_ulogic_vector(to_unsigned(0, W));
   sum(0) <= std_ulogic_vector(to_unsigned(0, W));
+
   final_sum_in <= '0' & sum(W)(W-1 downto 1);
-  final_carry(0) <= '0';
 
   gen: for i in 0 to W - 1 generate
+
     gen_block: block 
       signal a, c : std_ulogic_vector(W - 1 downto 0);
     begin 
       a <= y and (W - 1 downto 0 => x(i));
-      c <= '0' & sum(i + 1)(W - 1 downto 1);
+      c <= '0' & sum(i)(W - 1 downto 1);
 
       csa : entity work.csa_module(rtl)
         generic map(W=>W)
         port map(a=>a, b=>carry(i), c=>c, sout=>sum(i + 1), cout=>carry(i + 1));
-
-      fa : entity work.full_adder(rtl)
-        port map(a=>final_sum_in(i), b=>carry(W)(i), c=>final_carry(i), s=>p(W + i), cout=>final_carry(i + 1));
-
     end block gen_block;
   
     p(i) <= sum(i + 1)(0);
-
   end generate;
+
+  prop : entity work.prop_adder
+    generic map(W=>W)
+    port map(a=>final_sum_in, b=>carry(W), cin=>'0', s=>p(2 * W - 1 downto W));
   
-
-
 end architecture rtl;
