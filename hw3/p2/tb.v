@@ -13,7 +13,6 @@ module tb;
 
   wire r
 
-  
   serial_adder #(.W(8)) adder(
 
   );
