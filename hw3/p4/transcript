@@ -1,0 +1,22 @@
+# vsim -do {run -all} -c work.barrel_tb 
+# //  QuestaSim-64 6.5f Jun 16 2010 Linux 5.15.0-52-generic
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading work.barrel_tb
+# Loading work.barrel_shift2
+# Loading work.conditional_data_reverser
+# Loading work.data_reverser
+# run -all 
+# 00000001, 011, 000 => 00001000
+# 00000001, 011, 001 => 00001000
+# 10000000, 011, 010 => 00010000
+# 10000000, 011, 011 => 11110000
+# 11110000, 010, 100 => 11000011
+# 00001111, 010, 110 => 11000011

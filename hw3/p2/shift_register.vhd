@@ -14,7 +14,7 @@ entity shift_register is
 end shift_register;
 
 architecture rtl of shift_register is 
-  signal internal_reg : std_ulogic_vector(W - 1 downto 0);
+  signal internal_reg : std_ulogic_vector(W - 1 downto 0) := (others => '0');
 begin
 
   shift_out <= internal_reg(0);

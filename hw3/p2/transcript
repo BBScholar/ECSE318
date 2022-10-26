@@ -1,0 +1,134 @@
+# //  QuestaSim-64 6.5f Jun 16 2010 Linux 5.15.0-52-generic
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Window cannot be closed because the modal window "Quit Vsim" is still open.
+# Window cannot be closed because the modal window "Quit Vsim" is still open.
+ic_std(body)
+# Loading work.serial_adder(rtl)
+# Loading work.shift_register(rtl)
+# Loading work.full_adder(rtl)
+# Loading work.reg1(rtl)
+do wave.do
+run
+run -all
+# 7 + 3 = 0
+# 1
+# Break in NamedBeginStat testing at tb.v line 56
+vsim -voptargs=+acc work.tb
+# vsim -voptargs=+acc work.tb 
+# Loading work.tb
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.serial_adder(rtl)
+# Loading work.shift_register(rtl)
+# Loading work.full_adder(rtl)
+# Loading work.reg1(rtl)
+add wave sim/:tb:adder:*
+do wave.do
+run -all
+# 7 + 3 = X
+# 1
+# Break in NamedBeginStat testing at tb.v line 57
+vsim -voptargs=+acc work.tb
+# vsim -voptargs=+acc work.tb 
+# Loading work.tb
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.serial_adder(rtl)
+# Loading work.shift_register(rtl)
+# Loading work.full_adder(rtl)
+# Loading work.reg1(rtl)
+do wave.do
+run -all
+# 7 + 3 = X
+# 1
+# Break in NamedBeginStat testing at tb.v line 58
+vsim -voptargs=+acc work.tb
+# vsim -voptargs=+acc work.tb 
+# Loading work.tb
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.serial_adder(rtl)
+# Loading work.shift_register(rtl)
+# Loading work.full_adder(rtl)
+# Loading work.reg1(rtl)
+do wave.do
+run -all
+# 7 + 3 = 0
+# 1
+# Break in NamedBeginStat testing at tb.v line 58
+add wave sim/:tb:adder:sr_c:*
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/bscholar/Documents/ECSE318/hw3/p2/wave.do
+restart
+run -all
+# 7 + 3 = 0
+# 1
+# Break in NamedBeginStat testing at tb.v line 58
+vsim -voptargs=+acc work.tb
+# vsim -voptargs=+acc work.tb 
+# Loading work.tb
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.serial_adder(rtl)
+# Loading work.shift_register(rtl)
+# Loading work.full_adder(rtl)
+# Loading work.reg1(rtl)
+do work.do
+# Cannot open macro file: work.do
+do wave.do
+run -all
+# 7 + 3 = 0
+# 1
+# Break in NamedBeginStat testing at tb.v line 59
+vsim -voptargs=+acc work.tb
+# vsim -voptargs=+acc work.tb 
+# Loading work.tb
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.serial_adder(rtl)
+# Loading work.shift_register(rtl)
+# Loading work.full_adder(rtl)
+# Loading work.reg1(rtl)
+do wave.do
+run -all
+# 7 + 3 = 0
+# 1
+# Break in NamedBeginStat testing at tb.v line 59
+vsim -voptargs=+acc work.tb
+# vsim -voptargs=+acc work.tb 
+# Loading work.tb
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.serial_adder(rtl)
+# Loading work.shift_register(rtl)
+# Loading work.full_adder(rtl)
+# Loading work.reg1(rtl)
+do wave.do
+vsim -voptargs=+acc work.tb
+# vsim -voptargs=+acc work.tb 
+# Loading work.tb
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.serial_adder(rtl)
+# Loading work.shift_register(rtl)
+# Loading work.full_adder(rtl)
+# Loading work.reg1(rtl)
+do wave.do
+run -all
+# 7 + 3 = X
+# 1
+# Break in NamedBeginStat testing at tb.v line 58

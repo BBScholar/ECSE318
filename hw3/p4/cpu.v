@@ -68,8 +68,9 @@ module cpu(
   always @ (posedge clk) begin 
     if(set_psr) begin 
     
+    end else if(clear_psr) begin 
+    
     end
-
   end
 
 
@@ -91,7 +92,7 @@ module cpu(
 
   // instruction decode
 
-  assign {opcode, CC, src_type, dest_type, src_addr, shamt, } = instruction;
+  assign {opcode, CC, src_type, dest_type, src_addr, shamt} = instruction;
 
   always @ (opcode) begin 
     casez(opcode)
@@ -129,9 +130,6 @@ module cpu(
   wire [W-1:0] alu_out, alu_cout;
 
   always @ (*) begin 
-    casez()
-        
-    endcase
   end
 
   always @ (alu_out) begin 

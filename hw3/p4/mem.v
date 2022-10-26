@@ -4,20 +4,34 @@ module memory #(
   parameter W = 32,
   parameter A = 12
 )(
-  addr, write, data_in, data_out
+  clk, addr, write, data_in, data_out
 );
-  
-  input addr, data_in, write;
-  output data_out;
-  
-  wire write;
-  wire [A-1:0] addr;
-  wire [W-1:0] data_in;
-  reg [W-1:0] data_out;
 
+  localparam MAX_MEM = 2**A;
 
+  input clk, write;
+  input [W-1:0] data_in;
+  input [A - 1:0] addr;
+
+  output wire [W-1:0] data_out;
   
-  reg [W-1:0] data[0:2**A - 1];
+  // internal register
+  reg [W-1:0] data[0:MAX_MEM - 1];
+
+  assign data_out = data[addr];
+
+  always @ (clk) begin 
+    if(write)
+      data[addr] <= data_in;
+  end
+
+  initial begin : init 
+    integer i;
+    for(i = 0; i < MAX_MEM; i = i + 1) begin 
+      data[i] <= 32'b0;
+    end
+
+  end
 
 
 endmodule

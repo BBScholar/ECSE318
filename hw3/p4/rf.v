@@ -18,12 +18,12 @@ module register_file(
 
   reg [W - 1:0] registers[0:NUM_REG - 1];
 
-  set_regs: initial begin 
-    integer i;
-    for(i = 0; i < NUM_REG; i++) begin 
-      registers[i] = {W{1'b0}};
-    end
-  end
+  /* initial begin : init */
+  /*   integer i; */
+  /*   for(i = 0; i < NUM_REG; i = i + 1) begin  */
+  /*     registers[i] = {W{1'b0}}; */
+  /*   end */
+  /* end */
 
   assign src_out = registers[src_sel];
   assign dest_out = registers[dest_sel];
@@ -34,7 +34,4 @@ module register_file(
     end
   end
 
-
-
-
-endmodule;
+endmodule
