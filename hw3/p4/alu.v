@@ -1,7 +1,7 @@
 
 
 module alu #(parameter W = 32)(
-  a, b, shamt, s, op, cout
+  a, b, s, op, cout
 );
 
   input [W-1:0] a, b;

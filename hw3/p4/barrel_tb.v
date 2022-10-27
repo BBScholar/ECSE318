@@ -11,7 +11,7 @@ module barrel_tb;
 
   wire [W-1:0] data_out;
 
-  barrel_shift2 #(.W(W)) shifter(
+  barrel_shift #(.W(W)) shifter(
     .data_in(data_in), .shamt(shamt), .op(op),
     .data_out(data_out)
   );

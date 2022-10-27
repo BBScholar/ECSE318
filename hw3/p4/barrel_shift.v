@@ -1,4 +1,3 @@
-/*
 
 module data_reverser #(parameter W = 32)(
   input [W-1:0] x, 
@@ -13,7 +12,7 @@ generate
 
   for(i = 0; i < W/2; i = i + 1) begin : gen
     assign y[i] = x[W - 1 - i];
-    assign y[W - 1 - i] = y[i];
+    assign y[W - 1 - i] = x[i];
   end
 
 endgenerate
@@ -27,7 +26,8 @@ module conditional_data_reverser #(parameter W = 32) (
 );
 
   wire [W-1:0] reversed;
-  data_reverser rev_mod(
+
+  data_reverser #(.W(W)) rev_mod(
     .x(x), .y(reversed)
   );
 
@@ -35,61 +35,57 @@ module conditional_data_reverser #(parameter W = 32) (
 
 endmodule
 
-
-
-module barrel_shifter #(
-  parameter W = 32
-)(
-  data, shamt, op, z
+module barrel_shift #(parameter W = 32)(
+  data_in, data_out, shamt, op 
 );
-
   localparam SHAMT_W = $clog2(W);
-  
-  input [W - 1:0] data;
+
+  input [W-1:0] data_in;
   input [SHAMT_W-1:0] shamt;
   input [2:0] op;
 
-  output wire [W - 1:0] z;
+  output wire [W-1:0] data_out;
+  
+  // internal nets
+  wire [W - 1:0] layers[0:SHAMT_W];
 
-  wire [W-1:0] layers[0:SHAMT_W];
-
+  wire rotate, right, arithmetic;
   wire sign, fill_sign;
-  wire right, rotate, arithmetic;
 
   assign {rotate, right, arithmetic} = op;
-  assign sign = data[W - 1];
-  assign fill_sign = (arithmetic & right & sign);
+  assign sign = data_in[W - 1];
+  assign fill_sign = arithmetic & right & sign;
 
-
-  conditional_data_reverser #(.W(W)) rev_in(
-    .x(data), .rev(right), .y(layers[0])
+  conditional_data_reverser #(.W(W)) reverser1(
+    .x(data_in), .rev(right), .y(layers[0])
   );
 
-  conditional_data_reverser #(.W(W)) rev_out(
-    .x(layers[SHAMT_W]), .rev(right), .y(z)
+  conditional_data_reverser #(.W(W)) reverser2(
+    .x(layers[SHAMT_W]), .rev(right), .y(data_out)
   );
 
   genvar i, j;
   generate
-    for(i = 0; i < SHAMT_W; i = i + 1) begin : gen_outer
-      for(j = 0; j < W; j = j + 1) begin : gen_inner
+    for(i = 0; i < SHAMT_W; i = i + 1) begin : layer_gen
+      for(j = 0; j < W; j = j + 1) begin : mux_gen 
+        localparam LAYER_SHIFT = 2 ** i;
+        localparam NORMAL_IDX = j - LAYER_SHIFT;
+        localparam ROTATE_IDX = W + NORMAL_IDX;
+
         wire temp;
 
-
-        localparam V = j - 2**i;
-
-        if(j >= 2**i) begin 
-          assign temp = layers[i][V];
-        end else begin
-          assign temp = rotate ? layers[i][W + V] : fill_sign;
+        if(j >= LAYER_SHIFT) begin 
+          assign temp = layers[i][j - LAYER_SHIFT];
+        end else begin 
+          assign temp = rotate ? layers[i][W + NORMAL_IDX] : fill_sign;
         end
 
-
         assign layers[i + 1][j] = shamt[i] ? temp : layers[i][j];
+
       end
     end
+
   endgenerate
 
 
 endmodule
-*/
