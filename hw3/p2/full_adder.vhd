@@ -13,5 +13,5 @@ end full_adder;
 architecture rtl of full_adder is 
 begin
   s <= a XOR b XOR c;
-  cout <= (a AND b) OR (a AND c) OR (b and C);
+  cout <= (a AND b) OR (a AND c) OR (b and c);
 end rtl;

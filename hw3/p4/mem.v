@@ -27,6 +27,7 @@ module memory #(
 
   initial begin : init 
     integer i;
+    $readmemb("")
     for(i = 0; i < MAX_MEM; i = i + 1) begin 
       data[i] <= 32'b0;
     end

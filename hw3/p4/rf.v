@@ -4,8 +4,9 @@ module register_file(
   clk, write,
   src_sel, dest_sel, 
   dest_in,
-  src_out, dest_out,
+  src_out, dest_out
 );
+
   localparam W = 32;
   localparam NUM_REG = 16;
   localparam SEL_SIZE = $clog2(NUM_REG);

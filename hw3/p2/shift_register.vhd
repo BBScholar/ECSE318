@@ -16,7 +16,6 @@ end shift_register;
 architecture rtl of shift_register is 
   signal internal_reg : std_ulogic_vector(W - 1 downto 0) := (others => '0');
 begin
-
   shift_out <= internal_reg(0);
 
   shift_proc : process(clk, shift_in)
@@ -27,3 +26,16 @@ begin
   end process;
 
 end architecture rtl;
+
+architecture struct of shift_register is 
+  signal internal_reg : std_ulogic_vector(W downto 0);
+begin
+  internal_reg(0) <= shift_in;
+  shift_out <= internal_reg(W);
+
+  reg_gen : for i in 0 to W - 1 generate
+    dff : entity work.reg1(struct)
+      port map(clk=>clk, clear=>'0', d=>internal_reg(i), q=>internal_reg(i + 1));
+  end generate;
+
+end architecture struct;

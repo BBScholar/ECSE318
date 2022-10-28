@@ -18,7 +18,7 @@ module tb;
   serial_adder #(.W(8)) adder(
     .clk(clk),
     .a(a[0]), .b(b[0]), .clear(clear),
-    .result(res_out), .cout(cout)
+    .result(res_out)
   );
 
   task serial_adder_test;
@@ -30,8 +30,8 @@ module tb;
       clear = 1'b1;
       #1 
       clear = 1'b0;
-      #80;
-      #80;
+      #160;
+      #160;
       $display("%0d + %0d = %0d", x, y, result);
     end
 
@@ -46,11 +46,12 @@ module tb;
 
   initial begin : testing
     // clear out the registers
-    #10;
+    a <= 8'b0;
+    b <= 8'b0;
+    #1
     clear = 1'b1;
+    #10
     clear = 1'b0;
-    a <= 1'b0;
-    b <= 1'b0;
 
     #200;
 

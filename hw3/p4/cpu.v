@@ -4,7 +4,7 @@
 // logical or arithmetic shift
 
 module cpu #(
-  parameter PC_INITIAL = 12'h1
+  parameter PC_INITIAL = 12'h10
 )
 (
   input clk, 
