@@ -4,7 +4,7 @@
 // logical or arithmetic shift
 
 module cpu #(
-  parameter PC_INITIAL = 12'h10
+  parameter PC_INITIAL = 12'h0F
 )
 (
   input clk, 
@@ -39,7 +39,7 @@ module cpu #(
   // instruction decode nets
   wire [3:0] opcode, CC;
   wire src_type, dest_type;
-  wire [11:0] src_addr, dest_addr, shamt;
+  wire [11:0] src_addr, dest_addr;
 
   // control lines
   wire alu_use_imm;
@@ -48,7 +48,7 @@ module cpu #(
   reg set_psr, clear_psr, clear_psr_carry;
   reg load_imm;
   reg branch_op; 
-  reg shift_right;
+  /* reg shift_right; */
   reg shift_rotate;
   reg [1:0] alu_op;
 
@@ -66,7 +66,7 @@ module cpu #(
     end
   end  // state initialization
 
-  assign branch_vector_sel = PSR_branch_vector[CC];
+  assign branch_vector_sel = PSR_branch_vector[CC[2:0]];
   assign branch_destination = dest_addr;
 
   initial begin 
@@ -84,7 +84,6 @@ module cpu #(
   assign PSR_branch_vector[6] = !PSR[0];
   assign PSR_branch_vector[7] = !PSR[3];
 
-  wire [A-1:0] immediate;
   wire [W-1:0] immediate_ext;
 
   wire [W - 1:0] alu_b_selected;
@@ -117,12 +116,18 @@ module cpu #(
 
   // instruction decode
 
-  assign {opcode, CC, src_type, dest_type, src_addr, dest_addr} = instruction;
-  assign shamt = src_addr[5:0];
-  assign immediate = src_addr;
-  assign immediate_ext = {20'b0, src_addr};
+  assign {opcode, CC, src_addr, dest_addr} = instruction;
+  /* assign shamt = src_addr[5:0]; */
+  /* assign immediate = src_addr; */
+  /* assign immediate_ext = {20'b0, src_addr}; */
+  assign src_type = instruction[27];
+  assign dest_type = instruction[26];
 
-  always @ (opcode) begin 
+  sign_extend #(.IW(12), .OW(32)) imm_extender(
+    .data_in(src_addr), .data_out(immediate_ext)
+  );
+
+  always @ (opcode, dest_type, src_type) begin 
     casez(opcode)
       4'b0000: begin // NOP
         halt <= 1'b0;
@@ -131,7 +136,7 @@ module cpu #(
         clear_psr_carry <= 1'b0;
         clear_psr <= 1'b0;
         branch_op <= 1'b0;
-        shift_right <= 1'b0;
+        /* shift_right <= 1'b0; */
         shift_rotate <= 1'b0;
         store_op <= 1'b0;
         writeback_sel <= 2'b00;
@@ -144,12 +149,12 @@ module cpu #(
         clear_psr_carry <= 1'b1;
         clear_psr <= 1'b0;
         branch_op <= 1'b0;
-        shift_right <= 1'b0;
+        /* shift_right <= 1'b0; */
         shift_rotate <= 1'b0;
         store_op <= 1'b0;
-        if(src_type) begin 
+        if(src_type) begin  // src_type = 1 chooses immediate
           writeback_sel <= 2'b10;
-        end else begin 
+        end else begin  // else choose mem read data
           writeback_sel <= 2'b11;
         end
         alu_op <= 2'b00;
@@ -161,7 +166,7 @@ module cpu #(
         clear_psr_carry <= 1'b0;
         clear_psr <= 1'b1;
         branch_op <= 1'b0;
-        shift_right <= 1'b0;
+        /* shift_right <= 1'b0; */
         shift_rotate <= 1'b0;
         store_op <= 1'b1;
         writeback_sel <= 2'b00;
@@ -174,7 +179,7 @@ module cpu #(
         clear_psr_carry <= 1'b0;
         clear_psr <= 1'b0;
         branch_op <= 1'b1;
-        shift_right <= 1'b0;
+        /* shift_right <= 1'b0; */
         shift_rotate <= 1'b0;
         store_op <= 1'b0;
         writeback_sel <= 2'b00;
@@ -187,7 +192,7 @@ module cpu #(
         clear_psr_carry <= 1'b1;
         clear_psr <= 1'b0;
         branch_op <= 1'b0;
-        shift_right <= 1'b0;
+        /* shift_right <= 1'b0; */
         shift_rotate <= 1'b0;
         store_op <= 1'b0;
         writeback_sel <= 2'b00;
@@ -200,7 +205,7 @@ module cpu #(
         clear_psr_carry <= 1'b0;
         clear_psr <= 1'b0;
         branch_op <= 1'b0;
-        shift_right <= 1'b0;
+        /* shift_right <= 1'b0; */
         shift_rotate <= 1'b0;
         store_op <= 1'b0;
         writeback_sel <= 2'b00;
@@ -213,7 +218,7 @@ module cpu #(
         clear_psr_carry <= 1'b1;
         clear_psr <= 1'b0;
         branch_op <= 1'b0;
-        shift_right <= 1'b0;
+        /* shift_right <= 1'b0; */
         shift_rotate <= 1'b1;
         store_op <= 1'b0;
         writeback_sel <= 2'b01;
@@ -226,9 +231,9 @@ module cpu #(
         clear_psr_carry <= 1'b1;
         clear_psr <= 1'b0;
         branch_op <= 1'b0;
-        shift_right <= 1'b0; // TODO: set passively?
+        /* shift_right <= 1'b0; // TODO: set passively? */
         shift_rotate <= 1'b0;
-        store_op <= 1'b1;
+        store_op <= 1'b0;
         writeback_sel <= 2'b01; //from barrel
         alu_op <= 2'b00;
       end
@@ -239,20 +244,33 @@ module cpu #(
         clear_psr_carry <= 1'b1;
         clear_psr <= 1'b0;
         branch_op <= 1'b0;
-        shift_right <= 1'b0;
+        /* shift_right <= 1'b0; */
         shift_rotate <= 1'b0;
         store_op <= 1'b0;
         writeback_sel <= 2'b00;
         alu_op <= 2'b10; // complement operation
       end
-      default: begin // HLT and everything else
+      4'b1000 : begin  // HALT
         halt <= 1'b1;
         rf_write <= 1'b0;
         set_psr <= 1'b0;
         clear_psr_carry <= 1'b0;
         clear_psr <= 1'b0;
         branch_op <= 1'b0;
-        shift_right <= 1'b0;
+        /* shift_right <= 1'b0; */
+        shift_rotate <= 1'b0;
+        store_op <= 1'b0;
+        writeback_sel <= 2'b00;
+        alu_op <= 2'b00;
+      end
+      default : begin 
+        halt <= 1'b0;
+        rf_write <= 1'b0;
+        set_psr <= 1'b0;
+        clear_psr_carry <= 1'b0;
+        clear_psr <= 1'b0;
+        branch_op <= 1'b0;
+        /* shift_right <= 1'b0; */
         shift_rotate <= 1'b0;
         store_op <= 1'b0;
         writeback_sel <= 2'b00;
@@ -281,7 +299,32 @@ module cpu #(
     .a(dest_out), .b(alu_b_selected), .op(alu_op),
     .cout(alu_cout), .s(alu_out)
   );
+  
+  // generate inputs to shifter based off off immediate
+  reg shift_right;
+  reg [4:0] shamt;
+  
 
+  // some jankiness to comply with assignment's specs on shifting (+-16)
+  always @ (src_addr) begin 
+    if($signed(src_addr) >= 0) begin 
+      if($signed(src_addr) > 16) begin 
+        shamt <= 5'd16;
+      end else begin 
+        shamt <= src_addr[4:0];
+      end
+      shift_right <= 1'b1;
+    end else begin 
+      if($signed(src_addr) < -16) begin 
+        shamt <= 5'd16; 
+      end else begin 
+        shamt <= (~src_addr[4:0] + 5'b1);
+      end
+      shift_right <= 1'b0;
+    end
+  end
+  
+  // barrel shifter
   barrel_shift #(.W(W)) shifter(
     .data_in(dest_out), .shamt(shamt), .op({shift_rotate, shift_right, 1'b0}),
     .data_out(shift_out)
@@ -310,6 +353,10 @@ module cpu #(
     end else if(clear_psr) begin 
       PSR <= 5'b0; 
     end
+  end
+
+  always @ (halt) begin 
+    if(halt) $finish();
   end
 
 

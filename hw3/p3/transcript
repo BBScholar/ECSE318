@@ -1,5 +1,5 @@
 # vsim -do {run -all} -c work.tb 
-# //  QuestaSim-64 6.5f Jun 16 2010 Linux 5.15.0-50-generic
+# //  QuestaSim-64 6.5f Jun 16 2010 Linux 5.15.0-52-generic
 # //
 # //  Copyright 1991-2010 Mentor Graphics Corporation
 # //              All Rights Reserved.

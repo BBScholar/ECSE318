@@ -15,150 +15,15 @@ vsim -voptargs=+acc work.tb
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
 # Loading work.serial_adder(rtl)
-# Loading work.shift_register(rtl)
+# Loading work.shift_register(struct)
+# Loading work.reg1(struct)
 # Loading work.full_adder(rtl)
-# Loading work.reg1(rtl)
 do wave.do
+# ** Error: (vish-4014) No objects found matching ':tb:res_out'.
+# Executing ONERROR command at macro ./wave.do line 8
 run -all
-# 7 + 3 = 0
+# 3 + 7 = 10, cout=0
+# 255 + 255 = 254, cout=1
+# 100 + 97 = 197, cout=0
 # 1
-# Break in NamedBeginStat testing at tb.v line 59
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/bscholar/Documents/ECSE318/hw3/p2/wave.do
-vsim -voptargs=+acc work.tb2
-# vsim -voptargs=+acc work.tb2 
-# Loading work.tb2
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.serial_adder(rtl)
-# Loading work.shift_register(struct)
-# Loading work.reg1(struct)
-# Loading work.full_adder(rtl)
-add wave \
-{sim/:tb2:adder:sr_a:internal_reg } 
-add wave \
-{sim/:tb2:adder:sr_b:internal_reg } 
-add wave \
-{sim/:tb2:adder:sr_c:internal_reg } 
-run -all
-# Break key hit 
-# Simulation stop requested.
-vlog -work /home/bscholar/Documents/ECSE318/hw3/p2/work -refresh
-# QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
-# -- Skipping entity full_adder
-# -- Skipping entity reg1
-# -- Skipping entity serial_adder
-# -- Skipping entity shift_register
-# -- Refreshing module tb
-# -- Refreshing module tb2
-vcom -work /home/bscholar/Documents/ECSE318/hw3/p2/work -refresh
-# QuestaSim-64 vcom 6.5f Compiler 2010.06 Jun 16 2010
-# ** Warning: (vcom-1900) -refresh cannot be used with -qhpro_syminfo or -qspro_syminfo; ignoring syminfo option.
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity full_adder
-# -- Compiling architecture rtl of full_adder
-# -- Compiling entity reg1
-# -- Compiling architecture struct of reg1
-# -- Compiling architecture rtl of reg1
-# -- Loading entity reg1
-# -- Loading package numeric_std
-# -- Compiling entity serial_adder
-# -- Compiling architecture rtl of serial_adder
-# -- Loading entity shift_register
-# -- Loading entity full_adder
-# -- Loading entity reg1
-# -- Compiling entity shift_register
-# -- Compiling architecture struct of shift_register
-# -- Compiling architecture rtl of shift_register
-# -- Loading entity shift_register
-# -- Skipping module tb
-# -- Skipping module tb2
-vsim -voptargs=+acc work.tb2
-# vsim -voptargs=+acc work.tb2 
-# Loading work.tb2
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.serial_adder(rtl)
-# Loading work.shift_register(struct)
-# Loading work.reg1(struct)
-# Loading work.full_adder(rtl)
-add wave -r :*
-run -all
-# 3 + 7 = 0
-# 1
-# Break in Module tb2 at tb2.v line 47
-vsim -voptargs=+acc work.tb2
-# vsim -voptargs=+acc work.tb2 
-# Loading work.tb2
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.serial_adder(rtl)
-# Loading work.shift_register(struct)
-# Loading work.reg1(struct)
-# Loading work.full_adder(rtl)
-add wave \
-{sim/:tb2:adder:sr_a:internal_reg } 
-add wave \
-{sim/:tb2:adder:sr_a:internal_reg } 
-add wave \
-{sim/:tb2:adder:sr_b:internal_reg } 
-add wave sim/:tb2:adder:sr_c:*
-add wave \
-{sim/:tb2:adder:carry_reg:q } 
-add wave sim/:tb2:*
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/bscholar/Documents/ECSE318/hw3/p2/wave2.do
-run -al
-# 3 + 7 = 10
-# 1
-# Break in Module tb2 at tb2.v line 52
-vlog -work /home/bscholar/Documents/ECSE318/hw3/p2/work -refresh
-# QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
-# -- Skipping entity full_adder
-# -- Skipping entity reg1
-# -- Skipping entity serial_adder
-# -- Skipping entity shift_register
-# -- Refreshing module tb
-# -- Refreshing module tb2
-vcom -work /home/bscholar/Documents/ECSE318/hw3/p2/work -refresh
-# QuestaSim-64 vcom 6.5f Compiler 2010.06 Jun 16 2010
-# ** Warning: (vcom-1900) -refresh cannot be used with -qhpro_syminfo or -qspro_syminfo; ignoring syminfo option.
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Compiling entity full_adder
-# -- Compiling architecture rtl of full_adder
-# -- Compiling entity reg1
-# -- Compiling architecture struct of reg1
-# -- Compiling architecture rtl of reg1
-# -- Loading entity reg1
-# -- Loading package numeric_std
-# -- Compiling entity serial_adder
-# -- Compiling architecture rtl of serial_adder
-# -- Loading entity shift_register
-# -- Loading entity full_adder
-# -- Loading entity reg1
-# -- Compiling entity shift_register
-# -- Compiling architecture struct of shift_register
-# -- Compiling architecture rtl of shift_register
-# -- Loading entity shift_register
-# -- Skipping module tb
-# -- Skipping module tb2
-vsim -voptargs=+acc work.tb2
-# vsim -voptargs=+acc work.tb2 
-# Loading work.tb2
-# Loading std.standard
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.serial_adder(rtl)
-# Loading work.shift_register(struct)
-# Loading work.reg1(struct)
-# Loading work.full_adder(rtl)
-do wave2.do
-run -all
-# 3 + 7 = 10
-# 255 + 255 = 254
-# 100 + 97 = 197
-# 1
-# Break in Module tb2 at tb2.v line 55
+# Break in Module tb at tb.v line 56

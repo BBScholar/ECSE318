@@ -1,4 +1,4 @@
-# //  QuestaSim-64 6.5f Jun 16 2010 Linux 5.15.0-50-generic
+# //  QuestaSim-64 6.5f Jun 16 2010 Linux 5.15.0-52-generic
 # //
 # //  Copyright 1991-2010 Mentor Graphics Corporation
 # //              All Rights Reserved.
@@ -20,13 +20,41 @@ vsim -voptargs=+acc work.tb
 # Loading work.csa_module(rtl)
 # Loading work.full_adder(rtl)
 # Loading work.prop_adder(rtl)
-add wave -r sim/:tb:mult:*
+add wave -r sim/:tb:*
 run -all
-# x=2, y=4 => p=2
-# x=15, y=3 => p=46
-# x=15, y=15 => p=236
+# x=2, y=4 => p=8
+# x=15, y=3 => p=45
+# x=15, y=15 => p=225
 # 1
 # Break in Module tb at tb.v line 32
+vlog -work /home/bscholar/Documents/ECSE318/hw3/p1/work -refresh
+# QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+# -- Skipping entity csa_module
+# -- Skipping entity full_adder
+# -- Skipping entity multiplier
+# -- Skipping entity prop_adder
+# -- Refreshing module tb
+vcom -work /home/bscholar/Documents/ECSE318/hw3/p1/work -refresh
+# QuestaSim-64 vcom 6.5f Compiler 2010.06 Jun 16 2010
+# ** Warning: (vcom-1900) -refresh cannot be used with -qhpro_syminfo or -qspro_syminfo; ignoring syminfo option.
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity csa_module
+# -- Compiling architecture rtl of csa_module
+# -- Loading entity full_adder
+# -- Compiling entity full_adder
+# -- Compiling architecture rtl of full_adder
+# -- Loading package numeric_std
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity multiplier
+# -- Compiling architecture rtl of multiplier
+# -- Loading entity csa_module
+# -- Loading entity prop_adder
+# -- Compiling entity prop_adder
+# -- Compiling architecture rtl of prop_adder
+# -- Loading entity full_adder
+# -- Skipping module tb
 vsim -voptargs=+acc work.tb
 # vsim -voptargs=+acc work.tb 
 # Loading work.tb
@@ -39,10 +67,23 @@ vsim -voptargs=+acc work.tb
 # Loading work.csa_module(rtl)
 # Loading work.full_adder(rtl)
 # Loading work.prop_adder(rtl)
-add wave -r sim/:tb:mult:*
+vsim -voptargs=+acc work.tb
+# vsim -voptargs=+acc work.tb 
+# Loading work.tb
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.multiplier(rtl)
+# Loading work.csa_module(rtl)
+# Loading work.full_adder(rtl)
+# Loading work.prop_adder(rtl)
+add wave sim/:tb:*
+add wave sim/:tb:mult:*
 run -all
 # x=2, y=4 => p=8
 # x=15, y=3 => p=45
 # x=15, y=15 => p=225
 # 1
-# Break in Module tb at tb.v line 32
+# Break in Module tb at tb.v line 31

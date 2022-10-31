@@ -7,7 +7,6 @@ module tb;
 
   //outputs
   wire [7:0] p;
-  wire co;
 
   // modules 
   multiplier #(.W(4)) mult(

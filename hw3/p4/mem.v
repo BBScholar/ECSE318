@@ -21,16 +21,26 @@ module memory #(
   assign data_out = data[addr];
 
   always @ (clk) begin 
-    if(write)
+    if(write) begin
       data[addr] <= data_in;
+      $display("Wrote %0d to memory location %0d",  data_in, addr);
+    end
   end
 
   initial begin : init 
     integer i;
-    $readmemb("")
-    for(i = 0; i < MAX_MEM; i = i + 1) begin 
-      data[i] <= 32'b0;
-    end
+    // uncomment for problem 4
+    /* $readmemb("p4.txt", data); */
+    /* data[0] = 32'd6; */
+  
+    // uncomment for problem 5
+    /* $readmemb("p5.txt", data); */
+    /* data[0] = {{31{1'b1}}, 1'b0}; */
+
+    // uncommend for problem 6
+    $readmemb("p6.txt",data);
+    data[0] = 32'd4;
+    data[1] = 32'd12;
 
   end
 

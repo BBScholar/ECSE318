@@ -14,8 +14,8 @@ module soc;
   wire [31:0] cpu_to_mem_data, mem_to_cpu_data;
 
   cpu cpu(
-    .clk(clk), .mem_write(mem_write),
-    .to_mem(cpu_to_mem_data), .from_data(mem_to_cpu_data)
+    .clk(clk), .mem_addr(mem_addr), .mem_write(mem_write),
+    .to_mem(cpu_to_mem_data), .from_mem(mem_to_cpu_data)
   );
 
   memory mem(
