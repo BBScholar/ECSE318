@@ -66,6 +66,11 @@ module cpu #(
     end
   end  // state initialization
 
+  // for sanity purposes
+  always @ (halt) begin 
+    if(halt) $finish();
+  end
+
   assign branch_vector_sel = PSR_branch_vector[CC[2:0]];
   assign branch_destination = dest_addr;
 
@@ -85,12 +90,11 @@ module cpu #(
   assign PSR_branch_vector[7] = !PSR[3];
 
   wire [W-1:0] immediate_ext;
-
   wire [W - 1:0] alu_b_selected;
 
   // memory manager 
   reg store_op;
-
+  
   always @ (clk, pc, dest_addr, src_addr, store_op, alu_b_selected) begin 
     if(clk) begin 
       mem_addr <= pc;
@@ -117,16 +121,15 @@ module cpu #(
   // instruction decode
 
   assign {opcode, CC, src_addr, dest_addr} = instruction;
-  /* assign shamt = src_addr[5:0]; */
-  /* assign immediate = src_addr; */
-  /* assign immediate_ext = {20'b0, src_addr}; */
   assign src_type = instruction[27];
   assign dest_type = instruction[26];
-
+  
+  // sign extend immediate
   sign_extend #(.IW(12), .OW(32)) imm_extender(
     .data_in(src_addr), .data_out(immediate_ext)
   );
-
+  
+  // control logic
   always @ (opcode, dest_type, src_type) begin 
     casez(opcode)
       4'b0000: begin // NOP
@@ -136,7 +139,6 @@ module cpu #(
         clear_psr_carry <= 1'b0;
         clear_psr <= 1'b0;
         branch_op <= 1'b0;
-        /* shift_right <= 1'b0; */
         shift_rotate <= 1'b0;
         store_op <= 1'b0;
         writeback_sel <= 2'b00;
@@ -149,7 +151,6 @@ module cpu #(
         clear_psr_carry <= 1'b1;
         clear_psr <= 1'b0;
         branch_op <= 1'b0;
-        /* shift_right <= 1'b0; */
         shift_rotate <= 1'b0;
         store_op <= 1'b0;
         if(src_type) begin  // src_type = 1 chooses immediate
@@ -166,7 +167,6 @@ module cpu #(
         clear_psr_carry <= 1'b0;
         clear_psr <= 1'b1;
         branch_op <= 1'b0;
-        /* shift_right <= 1'b0; */
         shift_rotate <= 1'b0;
         store_op <= 1'b1;
         writeback_sel <= 2'b00;
@@ -179,7 +179,6 @@ module cpu #(
         clear_psr_carry <= 1'b0;
         clear_psr <= 1'b0;
         branch_op <= 1'b1;
-        /* shift_right <= 1'b0; */
         shift_rotate <= 1'b0;
         store_op <= 1'b0;
         writeback_sel <= 2'b00;
@@ -192,7 +191,6 @@ module cpu #(
         clear_psr_carry <= 1'b1;
         clear_psr <= 1'b0;
         branch_op <= 1'b0;
-        /* shift_right <= 1'b0; */
         shift_rotate <= 1'b0;
         store_op <= 1'b0;
         writeback_sel <= 2'b00;
@@ -205,7 +203,6 @@ module cpu #(
         clear_psr_carry <= 1'b0;
         clear_psr <= 1'b0;
         branch_op <= 1'b0;
-        /* shift_right <= 1'b0; */
         shift_rotate <= 1'b0;
         store_op <= 1'b0;
         writeback_sel <= 2'b00;
@@ -218,7 +215,6 @@ module cpu #(
         clear_psr_carry <= 1'b1;
         clear_psr <= 1'b0;
         branch_op <= 1'b0;
-        /* shift_right <= 1'b0; */
         shift_rotate <= 1'b1;
         store_op <= 1'b0;
         writeback_sel <= 2'b01;
@@ -231,7 +227,6 @@ module cpu #(
         clear_psr_carry <= 1'b1;
         clear_psr <= 1'b0;
         branch_op <= 1'b0;
-        /* shift_right <= 1'b0; // TODO: set passively? */
         shift_rotate <= 1'b0;
         store_op <= 1'b0;
         writeback_sel <= 2'b01; //from barrel
@@ -244,7 +239,6 @@ module cpu #(
         clear_psr_carry <= 1'b1;
         clear_psr <= 1'b0;
         branch_op <= 1'b0;
-        /* shift_right <= 1'b0; */
         shift_rotate <= 1'b0;
         store_op <= 1'b0;
         writeback_sel <= 2'b00;
@@ -257,7 +251,6 @@ module cpu #(
         clear_psr_carry <= 1'b0;
         clear_psr <= 1'b0;
         branch_op <= 1'b0;
-        /* shift_right <= 1'b0; */
         shift_rotate <= 1'b0;
         store_op <= 1'b0;
         writeback_sel <= 2'b00;
@@ -270,7 +263,6 @@ module cpu #(
         clear_psr_carry <= 1'b0;
         clear_psr <= 1'b0;
         branch_op <= 1'b0;
-        /* shift_right <= 1'b0; */
         shift_rotate <= 1'b0;
         store_op <= 1'b0;
         writeback_sel <= 2'b00;
@@ -304,7 +296,6 @@ module cpu #(
   reg shift_right;
   reg [4:0] shamt;
   
-
   // some jankiness to comply with assignment's specs on shifting (+-16)
   always @ (src_addr) begin 
     if($signed(src_addr) >= 0) begin 
@@ -329,7 +320,8 @@ module cpu #(
     .data_in(dest_out), .shamt(shamt), .op({shift_rotate, shift_right, 1'b0}),
     .data_out(shift_out)
   );
-
+  
+  // registerfile writeback selection
   always @ (alu_out, shift_out, from_mem, writeback_sel, immediate_ext) begin
     casez(writeback_sel)
       2'b00: writeback_selected <= alu_out;
@@ -338,7 +330,8 @@ module cpu #(
       2'b11: writeback_selected <= from_mem;
     endcase
   end
-
+  
+  // PSR update block
   always @ (posedge clk) begin 
     if(set_psr) begin 
       if(clear_psr_carry) begin 
@@ -353,10 +346,6 @@ module cpu #(
     end else if(clear_psr) begin 
       PSR <= 5'b0; 
     end
-  end
-
-  always @ (halt) begin 
-    if(halt) $finish();
   end
 
 

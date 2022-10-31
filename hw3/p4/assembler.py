@@ -4,6 +4,7 @@ ld r0,0
 cmp r0,r0
 add r0,#1
 str 1,r0
+hlt
 """
 
 src5 = """
@@ -53,7 +54,7 @@ str 2,r2
 hlt
 """
 
-src = src6
+src = src4
 
 ops = ["NOP", "LD", "STR", "BRA", "XOR", "ADD", "ROT", "SHF", "HLT", "CMP"]
 

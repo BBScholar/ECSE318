@@ -23,7 +23,7 @@ module memory #(
   always @ (clk) begin 
     if(write) begin
       data[addr] <= data_in;
-      $display("Wrote %0d to memory location %0d",  data_in, addr);
+      $display("Wrote %0d to memory location %0d",  $signed(data_in), addr);
     end
   end
 
@@ -35,7 +35,7 @@ module memory #(
   
     // uncomment for problem 5
     /* $readmemb("p5.txt", data); */
-    /* data[0] = {{31{1'b1}}, 1'b0}; */
+    /* data[0] = {{30{1'b1}}, 2'b0}; */
 
     // uncommend for problem 6
     $readmemb("p6.txt",data);
