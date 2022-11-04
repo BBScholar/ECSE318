@@ -1,0 +1,205 @@
+# //  QuestaSim-64 6.5f Jun 16 2010 Linux 5.15.0-52-generic
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+vsim -voptargs=+acc work.SSP
+# vsim -voptargs=+acc work.SSP 
+# Loading work.SSP
+# Loading work.fifo
+# Loading work.RxTx
+# Loading work.TX
+# Loading work.RX
+add wave sim/:SSP:*
+vsim -voptargs=+acc work.ssp_test1
+# vsim -voptargs=+acc work.ssp_test1 
+# Loading work.ssp_test1
+# Loading work.SSP
+# Loading work.fifo
+# Loading work.RxTx
+# Loading work.TX
+# Loading work.RX
+add wave -r sim/:ssp_test1:*
+run -all
+# x
+# 1
+# Break in Module ssp_test1 at ssp_test.v line 37
+vlog -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+# -- Refreshing module fifo
+# -- Refreshing module RX
+# -- Refreshing module RxTx
+# -- Refreshing module rxtx
+# -- Refreshing module SSP
+# -- Refreshing module ssp_test1
+# -- Refreshing module ssp_test2
+# -- Refreshing module TX
+# -- Refreshing module tx_tb
+vcom -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vcom 6.5f Compiler 2010.06 Jun 16 2010
+# ** Warning: (vcom-1900) -refresh cannot be used with -qhpro_syminfo or -qspro_syminfo; ignoring syminfo option.
+# -- Skipping module fifo
+# -- Skipping module RX
+# -- Skipping module rxtx
+# -- Skipping module RxTx
+# -- Skipping module SSP
+# -- Skipping module ssp_test1
+# -- Skipping module ssp_test2
+# -- Skipping module TX
+# -- Skipping module tx_tb
+vsim -voptargs=+acc work.tx_tb
+# vsim -voptargs=+acc work.tx_tb 
+# Loading work.tx_tb
+# Loading work.TX
+vlog -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+# -- Refreshing module fifo
+# -- Refreshing module RX
+# -- Refreshing module RxTx
+# -- Refreshing module rxtx
+# -- Refreshing module SSP
+# -- Refreshing module ssp_test1
+# -- Refreshing module ssp_test2
+# -- Refreshing module TX
+# -- Refreshing module tx_tb
+vcom -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vcom 6.5f Compiler 2010.06 Jun 16 2010
+# ** Warning: (vcom-1900) -refresh cannot be used with -qhpro_syminfo or -qspro_syminfo; ignoring syminfo option.
+# -- Skipping module fifo
+# -- Skipping module RX
+# -- Skipping module rxtx
+# -- Skipping module RxTx
+# -- Skipping module SSP
+# -- Skipping module ssp_test1
+# -- Skipping module ssp_test2
+# -- Skipping module TX
+# -- Skipping module tx_tb
+vsim -voptargs=+acc work.tx_tb
+# vsim -voptargs=+acc work.tx_tb 
+# Loading work.tx_tb
+# Loading work.TX
+run -all
+# $0b => $0b 32  X
+# $0b => $0b 32  0
+# $0b => $0b 32  1
+# $0b => $0b 32  0
+# 1
+# Break in Module tx_tb at tx_tb.v line 37
+restart
+add wave sim/:tx_tb:*
+run -all
+# $0b => $0b 32  X
+# $0b => $0b 32  0
+# $0b => $0b 32  1
+# $0b => $0b 32  0
+# 1
+# Break in Module tx_tb at tx_tb.v line 37
+vsim -voptargs=+acc work.tx_tb
+# vsim -voptargs=+acc work.tx_tb 
+# Loading work.tx_tb
+# Loading work.TX
+add wave sim/:tx_tb:*
+run -all
+# $0b => $0b 32  X
+# $0b => $0b 32  0
+# $0b => $0b 32  1
+# $0b => $0b 32  0
+# 1
+# Break in Module tx_tb at tx_tb.v line 37
+vsim -voptargs=+acc work.tx_tb
+# vsim -voptargs=+acc work.tx_tb 
+# Loading work.tx_tb
+# Loading work.TX
+add wave sim/:tx_tb:*
+run -all
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# 1
+# Break in Module tx_tb at tx_tb.v line 37
+vsim -voptargs=+acc work.tx_tb
+# vsim -voptargs=+acc work.tx_tb 
+# Loading work.tx_tb
+# Loading work.TX
+add wave sim/:tx_tb:*
+run -all
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# 1
+# Break in Module tx_tb at tx_tb.v line 37
+restart
+add wave sim/:tx_tb:*
+add wave sim/:tx_tb:tx:*
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/bscholar/Documents/ECSE318/hw4/p3/tx.do
+run
+run
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+# 1
+# Break in Module tx_tb at tx_tb.v line 37
+run
+# $0b => $0b 32 16
+vsim -voptargs=+acc work.tx_tb
+# vsim -voptargs=+acc work.tx_tb 
+# Loading work.tx_tb
+# Loading work.TX
+add wave sim/:tx_tb:*
+add wave sim/:tx_tb:tx:*
+run
+run
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+# 1
+# Break in Module tx_tb at tx_tb.v line 37
+run
+# $0b => $0b 32 16
+run
+# $0b => $0b 32 32
+run
+# $0b => $0b 32 64
