@@ -203,3 +203,806 @@ run
 # $0b => $0b 32 32
 run
 # $0b => $0b 32 64
+vlog -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+# -- Refreshing module fifo
+# -- Refreshing module RX
+# -- Refreshing module rxtx
+# -- Refreshing module RxTx
+# -- Refreshing module SSP
+# -- Refreshing module ssp_test1
+# -- Refreshing module ssp_test2
+# -- Refreshing module TX
+# -- Refreshing module tx_tb
+vcom -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vcom 6.5f Compiler 2010.06 Jun 16 2010
+# ** Warning: (vcom-1900) -refresh cannot be used with -qhpro_syminfo or -qspro_syminfo; ignoring syminfo option.
+# -- Skipping module fifo
+# -- Skipping module RX
+# -- Skipping module RxTx
+# -- Skipping module rxtx
+# -- Skipping module SSP
+# -- Skipping module ssp_test1
+# -- Skipping module ssp_test2
+# -- Skipping module TX
+# -- Skipping module tx_tb
+vsim -voptargs=+acc work.tx_tb
+# vsim -voptargs=+acc work.tx_tb 
+# Loading work.tx_tb
+# Loading work.TX
+do rx.do
+# Cannot open macro file: rx.do
+do tx.do
+run
+run
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+# 1
+# Break in Module tx_tb at tx_tb.v line 37
+run
+# $0b => $0b 32 16
+run
+# $0b => $0b 32 32
+vlog -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+# -- Refreshing module fifo
+# -- Refreshing module RX
+# -- Refreshing module RxTx
+# -- Refreshing module rxtx
+# -- Refreshing module SSP
+# -- Refreshing module ssp_test1
+# -- Refreshing module ssp_test2
+# -- Refreshing module TX
+# -- Refreshing module tx_tb
+vcom -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vcom 6.5f Compiler 2010.06 Jun 16 2010
+# ** Warning: (vcom-1900) -refresh cannot be used with -qhpro_syminfo or -qspro_syminfo; ignoring syminfo option.
+# -- Skipping module fifo
+# -- Skipping module RX
+# -- Skipping module rxtx
+# -- Skipping module RxTx
+# -- Skipping module SSP
+# -- Skipping module ssp_test1
+# -- Skipping module ssp_test2
+# -- Skipping module TX
+# -- Skipping module tx_tb
+vsim -voptargs=+acc work.tx_tb
+# vsim -voptargs=+acc work.tx_tb 
+# Loading work.tx_tb
+# Loading work.TX
+do tx.do
+run
+run
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+# 1
+# Break in Module tx_tb at tx_tb.v line 37
+run
+# $0b => $0b 32  0
+run
+vsim -voptargs=+acc work.tx_tb
+# vsim -voptargs=+acc work.tx_tb 
+# Loading work.tx_tb
+# Loading work.TX
+do tx.do
+run
+run
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+# 1
+# Break in Module tx_tb at tx_tb.v line 37
+run
+# $0b => $0b 32 16
+run
+# $0b => $0b 32 32
+vlog -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+# -- Refreshing module fifo
+# -- Refreshing module RX
+# -- Refreshing module RxTx
+# -- Refreshing module rxtx
+# -- Refreshing module SSP
+# -- Refreshing module ssp_test1
+# -- Refreshing module ssp_test2
+# -- Refreshing module TX
+# -- Refreshing module tx_tb
+vcom -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vcom 6.5f Compiler 2010.06 Jun 16 2010
+# ** Warning: (vcom-1900) -refresh cannot be used with -qhpro_syminfo or -qspro_syminfo; ignoring syminfo option.
+# -- Skipping module fifo
+# -- Skipping module RX
+# -- Skipping module rxtx
+# -- Skipping module RxTx
+# -- Skipping module SSP
+# -- Skipping module ssp_test1
+# -- Skipping module ssp_test2
+# -- Skipping module TX
+# -- Skipping module tx_tb
+vsim -voptargs=+acc work.tx_tb
+# vsim -voptargs=+acc work.tx_tb 
+# Loading work.tx_tb
+# Loading work.TX
+do tx.do
+run
+run
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+# 1
+# Break in Module tx_tb at tx_tb.v line 37
+run
+# $0b => $0b 32 16
+run
+# $0b => $0b 32 32
+vsim -voptargs=+acc work.tx_tb
+# vsim -voptargs=+acc work.tx_tb 
+# Loading work.tx_tb
+# Loading work.TX
+do tx.do
+add wave \
+{sim/:tx_tb:i } 
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/bscholar/Documents/ECSE318/hw4/p3/tx.do
+run
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32 16
+vlog -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+# -- Refreshing module fifo
+# -- Refreshing module RX
+# -- Refreshing module RxTx
+# -- Refreshing module rxtx
+# -- Refreshing module SSP
+# -- Refreshing module ssp_test1
+# -- Refreshing module ssp_test2
+# -- Refreshing module TX
+# -- Refreshing module tx_tb
+vcom -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vcom 6.5f Compiler 2010.06 Jun 16 2010
+# ** Warning: (vcom-1900) -refresh cannot be used with -qhpro_syminfo or -qspro_syminfo; ignoring syminfo option.
+# -- Skipping module fifo
+# -- Skipping module RX
+# -- Skipping module rxtx
+# -- Skipping module RxTx
+# -- Skipping module SSP
+# -- Skipping module ssp_test1
+# -- Skipping module ssp_test2
+# -- Skipping module TX
+# -- Skipping module tx_tb
+vlog -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+# -- Refreshing module fifo
+# -- Refreshing module RX
+# -- Refreshing module rxtx
+# -- Refreshing module RxTx
+# -- Refreshing module SSP
+# -- Refreshing module ssp_test1
+# -- Refreshing module ssp_test2
+# -- Refreshing module TX
+# -- Refreshing module tx_tb
+vcom -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vcom 6.5f Compiler 2010.06 Jun 16 2010
+# ** Warning: (vcom-1900) -refresh cannot be used with -qhpro_syminfo or -qspro_syminfo; ignoring syminfo option.
+# -- Skipping module fifo
+# -- Skipping module RX
+# -- Skipping module RxTx
+# -- Skipping module rxtx
+# -- Skipping module SSP
+# -- Skipping module ssp_test1
+# -- Skipping module ssp_test2
+# -- Skipping module TX
+# -- Skipping module tx_tb
+vsim -voptargs=+acc work.tx_tb
+# vsim -voptargs=+acc work.tx_tb 
+# Loading work.tx_tb
+# Loading work.TX
+do tx.do
+run
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+run
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32  X
+# $0b => $0b 32 16
+run
+# $0b => $0b 32 32
+# $0b => $0b 32 64
+# $0b => $0b 32128
+# $0b => $0b 32  1
+# $0b => $0b 32  2
+vsim -voptargs=+acc work.tx_tb
+# vsim -voptargs=+acc work.tx_tb 
+# Loading work.tx_tb
+# Loading work.TX
+do tx.do
+run
+# $0b => $0b 33  X
+# $0b => $0b 33  X
+# $0b => $0b 33  X
+# $0b => $0b 33  X
+# $0b => $0b 33  X
+run
+# $0b => $0b 33  X
+# $0b => $0b 33  X
+# $0b => $0b 33  X
+# $0b => $0b 33  X
+# $0b => $0b 33 16
+run
+# $0b => $0b 33 33
+# $0b => $0b 33 66
+# $0b => $0b 33132
+# $0b => $0b 33  8
+# $0b => $0b 33 16
+add wave \
+{sim/:tx_tb:tx_empty } 
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/bscholar/Documents/ECSE318/hw4/p3/tx.do
+vlog -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+# -- Refreshing module fifo
+# -- Refreshing module RX
+# -- Refreshing module RxTx
+# -- Refreshing module rxtx
+# -- Refreshing module SSP
+# -- Refreshing module ssp_test1
+# -- Refreshing module ssp_test2
+# -- Refreshing module TX
+# -- Refreshing module tx_tb
+vcom -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vcom 6.5f Compiler 2010.06 Jun 16 2010
+# ** Warning: (vcom-1900) -refresh cannot be used with -qhpro_syminfo or -qspro_syminfo; ignoring syminfo option.
+# -- Skipping module fifo
+# -- Skipping module RX
+# -- Skipping module rxtx
+# -- Skipping module RxTx
+# -- Skipping module SSP
+# -- Skipping module ssp_test1
+# -- Skipping module ssp_test2
+# -- Skipping module TX
+# -- Skipping module tx_tb
+vsim -voptargs=+acc work.tx_tb
+# vsim -voptargs=+acc work.tx_tb 
+# Loading work.tx_tb
+# Loading work.TX
+do tx.do
+run
+# $0b => $0b 33  X
+# $0b => $0b 33  X
+# $0b => $0b 33  X
+# $0b => $0b 33  X
+# $0b => $0b 33  X
+run
+# $0b => $0b 33  X
+# $0b => $0b 33  X
+# $0b => $0b 33  X
+# $0b => $0b 33  X
+# $0b => $0b170  X
+# $0b => $0b170 16
+run
+# $0b => $0b170 33
+# $0b => $0b170 67
+# $0b => $0b170134
+# $0b => $0b170 13
+# $0b => $0b170 26
+run
+# $0b => $0b170 53
+# $0b => $0b170106
+# $0b => $0b170213
+# $0b => $0b170170
+# $0b => $0b170 85
+# pickrect: no current page 
+# Error attempted to pushdown all children on .main_pane.cs.12 mode is tabbed children are paneframes 1 
+vsim -voptargs=+acc work.tx_tb
+# vsim -voptargs=+acc work.tx_tb 
+# Loading work.tx_tb
+# Loading work.TX
+do tx.do
+# ** Error: (vish-4014) No objects found matching ':tx_tb:tx:send_bit'.
+# Executing ONERROR command at macro ./tx.do line 28
+run
+# 100001 => 0x
+# 100001 => 0xx
+# 100001 => 0xx0
+# 100001 => 0xx00
+# 100001 => 0xx000
+run
+# 100001 => 0xx0001
+# 100001 => 0xx00010
+# 100001 => x000100
+# 100001 => x0001000
+# 10101010 => x0001000
+# 10101010 => 10000
+run
+# 10101010 => 100001
+# 10101010 => 1000011
+# 10101010 => 10000110
+# 10101010 => 1101
+# 10101010 => 11010
+run
+# 10101010 => 110101
+# 10101010 => 1101010
+# 10101010 => 11010101
+# 10101010 => 10101010
+# 10101010 => 1010100
+run
+# 10101010 => 10101000
+# 10101010 => 1010000
+# 10101010 => 10100000
+# 10101010 => 1000000
+# 10101010 => 10000000
+run
+# 10101010 => 0
+run
+vsim -voptargs=+acc work.ssp_test1
+# vsim -voptargs=+acc work.ssp_test1 
+# Loading work.ssp_test1
+# Loading work.SSP
+# Loading work.fifo
+# Loading work.RxTx
+# Loading work.TX
+# Loading work.RX
+add wave sim/:ssp_test1:*
+run
+# x
+run
+run
+add wave sim/:ssp_test1:ssp1:*
+run
+run
+run
+restart
+add wave sim/:ssp_test1:ssp1:rxtx:tx:*
+run
+# x
+run
+run
+run
+run
+run
+vlog -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+# -- Refreshing module fifo
+# -- Refreshing module RX
+# -- Refreshing module rxtx
+# -- Refreshing module RxTx
+# -- Refreshing module SSP
+# -- Refreshing module ssp_test1
+# -- Refreshing module ssp_test2
+# -- Refreshing module TX
+# -- Refreshing module tx_tb
+vcom -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vcom 6.5f Compiler 2010.06 Jun 16 2010
+# ** Warning: (vcom-1900) -refresh cannot be used with -qhpro_syminfo or -qspro_syminfo; ignoring syminfo option.
+# -- Skipping module fifo
+# -- Skipping module RX
+# -- Skipping module RxTx
+# -- Skipping module rxtx
+# -- Skipping module SSP
+# -- Skipping module ssp_test1
+# -- Skipping module ssp_test2
+# -- Skipping module TX
+# -- Skipping module tx_tb
+vsim -voptargs=+acc work.ssp_test1
+# vsim -voptargs=+acc work.ssp_test1 
+# Loading work.ssp_test1
+# Loading work.SSP
+# Loading work.fifo
+# Loading work.RxTx
+# Loading work.TX
+# Loading work.RX
+add wave sim/:ssp_test1:ssp1:rxtx:tx:*
+run
+# x
+run
+run
+run
+run
+run
+run
+# 1
+# Break in Module ssp_test1 at ssp_test.v line 37
+vlog -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+# -- Refreshing module fifo
+# -- Refreshing module RX
+# -- Refreshing module RxTx
+# -- Refreshing module rxtx
+# -- Refreshing module SSP
+# -- Refreshing module ssp_test1
+# -- Refreshing module ssp_test2
+# -- Refreshing module TX
+# -- Refreshing module tx_tb
+vcom -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vcom 6.5f Compiler 2010.06 Jun 16 2010
+# ** Warning: (vcom-1900) -refresh cannot be used with -qhpro_syminfo or -qspro_syminfo; ignoring syminfo option.
+# -- Skipping module fifo
+# -- Skipping module RX
+# -- Skipping module rxtx
+# -- Skipping module RxTx
+# -- Skipping module SSP
+# -- Skipping module ssp_test1
+# -- Skipping module ssp_test2
+# -- Skipping module TX
+# -- Skipping module tx_tb
+vsim -voptargs=+acc work.ssp_test1
+# vsim -voptargs=+acc work.ssp_test1 
+# Loading work.ssp_test1
+# Loading work.SSP
+# Loading work.fifo
+# Loading work.RxTx
+# Loading work.TX
+# Loading work.RX
+add wave -r sim/:ssp_test1:*
+run -all
+# x
+# 1
+# Break in Module ssp_test1 at ssp_test.v line 39
+run
+run
+run
+run
+run
+run
+run
+run
+vlog -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+# -- Refreshing module fifo
+# -- Refreshing module RX
+# -- Refreshing module RxTx
+# -- Refreshing module rxtx
+# -- Refreshing module SSP
+# -- Refreshing module ssp_test1
+# -- Refreshing module ssp_test2
+# -- Refreshing module TX
+# -- Refreshing module tx_tb
+vcom -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vcom 6.5f Compiler 2010.06 Jun 16 2010
+# ** Warning: (vcom-1900) -refresh cannot be used with -qhpro_syminfo or -qspro_syminfo; ignoring syminfo option.
+# -- Skipping module fifo
+# -- Skipping module RX
+# -- Skipping module rxtx
+# -- Skipping module RxTx
+# -- Skipping module SSP
+# -- Skipping module ssp_test1
+# -- Skipping module ssp_test2
+# -- Skipping module TX
+# -- Skipping module tx_tb
+vsim -voptargs=+acc work.ssp_test1
+# vsim -voptargs=+acc work.ssp_test1 
+# Loading work.ssp_test1
+# Loading work.SSP
+# Loading work.fifo
+# Loading work.RxTx
+# Loading work.TX
+# Loading work.RX
+add wave -r sim/:ssp_test1:*
+run
+# x
+run
+run
+run
+run
+run
+run
+vsim -voptargs=+acc work.ssp_test1
+# vsim -voptargs=+acc work.ssp_test1 
+# Loading work.ssp_test1
+# Loading work.SSP
+# Loading work.fifo
+# Loading work.RxTx
+# Loading work.TX
+# Loading work.RX
+vlog -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+# -- Refreshing module fifo
+# -- Refreshing module RX
+# -- Refreshing module RxTx
+# -- Refreshing module rxtx
+# -- Refreshing module SSP
+# -- Refreshing module ssp_test1
+# -- Refreshing module ssp_test2
+# -- Refreshing module TX
+# -- Refreshing module tx_tb
+vcom -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vcom 6.5f Compiler 2010.06 Jun 16 2010
+# ** Warning: (vcom-1900) -refresh cannot be used with -qhpro_syminfo or -qspro_syminfo; ignoring syminfo option.
+# -- Skipping module fifo
+# -- Skipping module RX
+# -- Skipping module rxtx
+# -- Skipping module RxTx
+# -- Skipping module SSP
+# -- Skipping module ssp_test1
+# -- Skipping module ssp_test2
+# -- Skipping module TX
+# -- Skipping module tx_tb
+vsim -voptargs=+acc work.ssp_test1
+# vsim -voptargs=+acc work.ssp_test1 
+# Loading work.ssp_test1
+# Loading work.SSP
+# Loading work.fifo
+# Loading work.RxTx
+# Loading work.TX
+# Loading work.RX
+vsim -voptargs=+acc work.ssp_test2
+# vsim -voptargs=+acc work.ssp_test2 
+# Loading work.ssp_test2
+# Loading work.SSP
+# Loading work.fifo
+# Loading work.RxTx
+# Loading work.TX
+# Loading work.RX
+# Warning in wave window restart: (vish-4014) No objects found matching ':ssp_test1:ssp1:rxtx:tx:SSPFSSOUT'. 
+add wave -r sim/:ssp_test2:*
+run
+run
+run
+vlog -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+# -- Refreshing module fifo
+# -- Refreshing module RX
+# -- Refreshing module rxtx
+# -- Refreshing module RxTx
+# -- Refreshing module SSP
+# -- Refreshing module ssp_test1
+# -- Refreshing module ssp_test2
+# -- Refreshing module TX
+# -- Refreshing module tx_tb
+vcom -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vcom 6.5f Compiler 2010.06 Jun 16 2010
+# ** Warning: (vcom-1900) -refresh cannot be used with -qhpro_syminfo or -qspro_syminfo; ignoring syminfo option.
+# -- Skipping module fifo
+# -- Skipping module RX
+# -- Skipping module RxTx
+# -- Skipping module rxtx
+# -- Skipping module SSP
+# -- Skipping module ssp_test1
+# -- Skipping module ssp_test2
+# -- Skipping module TX
+# -- Skipping module tx_tb
+vsim -voptargs=+acc work.ssp_test2
+# vsim -voptargs=+acc work.ssp_test2 
+# Loading work.ssp_test2
+# Loading work.SSP
+# Loading work.fifo
+# Loading work.RxTx
+# Loading work.TX
+# Loading work.RX
+add wave -r sim/:ssp_test2:*
+run
+run
+run
+run
+vlog -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+# -- Refreshing module fifo
+# -- Refreshing module RX
+# -- Refreshing module rxtx
+# -- Refreshing module RxTx
+# -- Refreshing module SSP
+# -- Refreshing module ssp_test1
+# -- Refreshing module ssp_test2
+# -- Refreshing module TX
+# -- Refreshing module tx_tb
+vcom -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vcom 6.5f Compiler 2010.06 Jun 16 2010
+# ** Warning: (vcom-1900) -refresh cannot be used with -qhpro_syminfo or -qspro_syminfo; ignoring syminfo option.
+# -- Skipping module fifo
+# -- Skipping module RX
+# -- Skipping module RxTx
+# -- Skipping module rxtx
+# -- Skipping module SSP
+# -- Skipping module ssp_test1
+# -- Skipping module ssp_test2
+# -- Skipping module TX
+# -- Skipping module tx_tb
+vsim -voptargs=+acc work.ssp_test1
+# vsim -voptargs=+acc work.ssp_test1 
+# Loading work.ssp_test1
+# Loading work.SSP
+# Loading work.fifo
+# Loading work.RxTx
+# Loading work.TX
+# Loading work.RX
+add wave -r sim/:ssp_test1:*
+run
+# x
+run
+run
+run
+run
+run
+run
+run
+run
+# 1
+# Break in Module ssp_test1 at ssp_test.v line 47
+run
+run
+run
+run
+restart
+# Loading work.ssp_test1
+# Loading work.SSP
+# Loading work.fifo
+# Loading work.RxTx
+# Loading work.TX
+# Loading work.RX
+# Warning in wave window restart: (vish-4014) No objects found matching ':ssp_test1:ssptxd'. 
+# Warning in wave window restart: (vish-4014) No objects found matching ':ssp_test1:sspfssout'. 
+# Warning in wave window restart: (vish-4014) No objects found matching ':ssp_test1:sspclkout'. 
+vlog -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vlog 6.5f Compiler 2010.06 Jun 16 2010
+# -- Refreshing module fifo
+# -- Refreshing module RX
+# -- Refreshing module RxTx
+# -- Refreshing module rxtx
+# -- Refreshing module SSP
+# -- Refreshing module ssp_test1
+# -- Refreshing module ssp_test2
+# -- Refreshing module TX
+# -- Refreshing module tx_tb
+vcom -work /home/bscholar/Documents/ECSE318/hw4/p3/work -refresh
+# QuestaSim-64 vcom 6.5f Compiler 2010.06 Jun 16 2010
+# ** Warning: (vcom-1900) -refresh cannot be used with -qhpro_syminfo or -qspro_syminfo; ignoring syminfo option.
+# -- Skipping module fifo
+# -- Skipping module RX
+# -- Skipping module rxtx
+# -- Skipping module RxTx
+# -- Skipping module SSP
+# -- Skipping module ssp_test1
+# -- Skipping module ssp_test2
+# -- Skipping module TX
+# -- Skipping module tx_tb
+vsim -voptargs=+acc work.ssp_test1
+# vsim -voptargs=+acc work.ssp_test1 
+# Loading work.ssp_test1
+# Loading work.SSP
+# Loading work.fifo
+# Loading work.RxTx
+# Loading work.TX
+# Loading work.RX
+run
+# x
+run
+run
+run
+run
+run
+run
+run
+run
+# 1
+# Break in Module ssp_test1 at ssp_test.v line 46
+run
+run
+run
+run
+run
+run
+run
+# 57
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# Loading work.ssp_test1
+# Loading work.SSP
+# Loading work.fifo
+# Loading work.RxTx
+# Loading work.TX
+# Loading work.RX
+add wave -r sim/:ssp_test1:*
+run
+# x
+run
+run
+run
+run
+run
+run
+run
+run
+# 1
+# Break in Module ssp_test1 at ssp_test.v line 46
+run
+run

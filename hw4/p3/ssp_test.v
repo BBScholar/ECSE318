@@ -2,8 +2,16 @@ module ssp_test1;
 	reg clock, clear_b, pwrite, psel, sspclkin, sspfssin, ssprxd;
 	reg [7:0] data_in;
 	
-	wire sspoe_b, ssptxd, sspfssout, sspclkout, ssptxintr, ssprxintr;
+	wire sspoe_b, ssptxintr, ssprxintr;
 	wire [7:0] data_out;
+
+  wire tx, rx;
+  wire clk_out, clk_in;
+  wire fss_out, fss_in;
+
+  buf(rx, tx);
+  buf(clk_in, clk_out);
+  buf(fss_in, fss_out);
 
 	initial 
 	begin
@@ -34,6 +42,7 @@ module ssp_test1;
 		#40 	data_in = 8'b10110001; //8'bB1
 		#40 	data_in = 8'b01010101; //8'b55
   
+    #200;
     $finish();
 	end
 	
@@ -42,7 +51,13 @@ module ssp_test1;
 
 // serial output from SSP is looped back to the serial input.
 
-	SSP ssp1 (.PCLK(clock), .CLEAR_B(clear_b), .PSEL(psel), .PWRITE(pwrite), .SSPCLKIN(sspclkin), .SSPFSSIN(sspfssin), .SSPRXD(ssprxd), .PWDATA(data_in), .PRDATA(data_out), .SSPCLKOUT(sspclkout), .SSPFSSOUT(sspfssout), .SSPTXD(ssptxd), .SSPOE_B(sspoe_b), .SSPTXINTR(ssptxintr), .SSPRXINTR(ssprxintr));
+	SSP ssp1 (
+  .PCLK(clock), .CLEAR_B(clear_b), .PSEL(psel), .PWRITE(pwrite), .SSPCLKIN(clk_in),
+  .SSPFSSIN(fss_in), .SSPRXD(rx), .PWDATA(data_in), .PRDATA(data_out), .SSPCLKOUT(clk_out),
+  .SSPFSSOUT(fss_out), .SSPTXD(tx), .SSPOE_B(sspoe_b), .SSPTXINTR(ssptxintr), .SSPRXINTR(ssprxintr)
+  );
+
+  initial $monitor("%0h", data_out);
 
 endmodule
 
@@ -50,7 +65,15 @@ module ssp_test2;
 	reg clock, clear_b, pwrite, psel;
 	reg [7:0] data_in;
 	wire [7:0] data_out;
-	wire sspoe_b, tx_to_rx, clk_wire, fss_wire, ssptxintr, ssprxintr, oe_b;
+	wire ssptxintr, ssprxintr, oe_b;
+
+  wire tx, rx;
+  wire clk_out, clk_in;
+  wire fss_out, fss_in;
+
+  buf(rx, tx);
+  buf(clk_in, clk_out);
+  buf(fss_in, fss_out);
 
 	initial 
 	begin
@@ -88,7 +111,11 @@ module ssp_test2;
 
 // serial output from SSP is looped back to the serial input.
 
-	SSP ssp2 (.PCLK(clock), .CLEAR_B(clear_b), .PSEL(psel), .PWRITE(pwrite), .SSPCLKIN(clk_wire), .SSPFSSIN(fss_wire), .SSPRXD(tx_to_rx), .PWDATA(data_in), .PRDATA(data_out), .SSPCLKOUT(clk_wire), .SSPFSSOUT(fss_wire), .SSPTXD(tx_to_rx), .SSPOE_B(oe_b), .SSPTXINTR(ssptxintr), .SSPRXINTR(ssprxintr));
+	SSP ssp2 (
+    .PCLK(clock), .CLEAR_B(clear_b), .PSEL(psel), .PWRITE(pwrite), .SSPCLKIN(clk_in),
+    .SSPFSSIN(fss_in), .SSPRXD(rx), .PWDATA(data_in), .PRDATA(data_out), .SSPCLKOUT(clk_out),
+    .SSPFSSOUT(fss_out), .SSPTXD(tx), .SSPOE_B(oe_b), .SSPTXINTR(ssptxintr), .SSPRXINTR(ssprxintr)
+  );
 
 endmodule
 

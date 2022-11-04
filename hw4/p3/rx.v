@@ -50,7 +50,7 @@ module RX(
         end 
         STATE_RX: begin 
           cycle_counter <= cycle_counter - 1; 
-          rx_data_int <= {rx_data_int[7:1], SSPRXD};
+          rx_data_int <= {rx_data_int[6:0], SSPRXD};
         end
       endcase
     end

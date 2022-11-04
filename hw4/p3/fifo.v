@@ -25,15 +25,21 @@ module fifo #(
   always @ (posedge clk) begin 
     if(!clear_b) begin 
       counter <= 'b0;
+    end else if(push & pop) begin 
+      for(i = 0; i < D - 1; i = i + 1) begin 
+        internal_data[i] <= internal_data[i + 1];
+      end 
+      internal_data[D - 1] <= data_in;
     end else if(push & !full) begin 
       counter <= counter + 1;
       internal_data[counter] <= data_in;
     end else if(pop & !empty) begin 
       counter <= counter - 1;
       
-      for(i = 0; i < 3; i = i + 1) begin 
+      for(i = 0; i < D - 1; i = i + 1) begin 
         internal_data[i] <= internal_data[i + 1];
       end
+      internal_data[D - 1] <= 'b0;
 
     end 
   end

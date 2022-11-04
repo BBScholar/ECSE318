@@ -27,8 +27,10 @@ add wave -noupdate -format Literal :tx_tb:tx:cycle_counter
 add wave -noupdate -format Literal :tx_tb:tx:send_data
 add wave -noupdate -format Logic :tx_tb:tx:send_bit
 add wave -noupdate -format Logic :tx_tb:tx:tx_has_data
+add wave -noupdate -format Literal :tx_tb:i
+add wave -noupdate -format Logic :tx_tb:tx_empty
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {5 fs} 0}
+WaveRestoreCursors {{Cursor 1} {227 fs} 0}
 configure wave -namecolwidth 305
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
@@ -43,4 +45,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits fs
 update
-WaveRestoreZoom {0 fs} {144 fs}
+WaveRestoreZoom {0 fs} {315 fs}

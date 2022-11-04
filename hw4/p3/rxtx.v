@@ -14,7 +14,7 @@ module RxTx(
   input SSPCLKIN, SSPFSSIN, SSPRXD,
   output rx_done
 );
-  
+
   // generate output clk
   always @ (posedge pclk, negedge pclear_b) begin 
     if(!pclear_b)  SSPCLKOUT = 0; 
@@ -22,7 +22,7 @@ module RxTx(
   end
 
   TX tx(
-    .pclear_b(pclear_b), .SSPCLKOUT(SSPFSSOUT),
+    .pclear_b(pclear_b), .SSPCLKOUT(SSPCLKOUT),
     .tx_empty(tx_empty),
     .tx_data(tx_data),
     .SSPTXD(SSPTXD), .SSPFSSOUT(SSPFSSOUT),
