@@ -5,8 +5,8 @@ module RxTx(
   // tx 
   input [7:0] tx_data,
   input tx_empty,
-  output reg SSPOE_B, SSPCLKOUT,
-  output SSPTXD, SSPFSSOUT,
+  output reg SSPCLKOUT,
+  output SSPTXD, SSPFSSOUT, SSPOE_B,
   output tx_done,
 
   // rx
@@ -26,7 +26,7 @@ module RxTx(
     .tx_empty(tx_empty),
     .tx_data(tx_data),
     .SSPTXD(SSPTXD), .SSPFSSOUT(SSPFSSOUT),
-    .tx_done(tx_done)
+    .tx_done(tx_done), .SSPOE_B(SSPOE_B)
   );
 
   RX rx(

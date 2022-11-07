@@ -7,6 +7,7 @@ module SSP(
 );
 
   wire tx_done, rx_done;
+  wire tx_done_sync, rx_done_sync;
   wire [7:0] fifo_to_tx, rx_to_fifo;
 
   wire tx_full, tx_empty;
@@ -21,16 +22,24 @@ module SSP(
 
   fifo tx_fifo(
     .clk(PCLK), .clear_b(CLEAR_B),
-    .push(tx_fifo_push), .pop(tx_done), 
+    .push(tx_fifo_push), .pop(tx_done_sync), 
     .data_in(PWDATA), .data_out(fifo_to_tx),
     .full(tx_full), .empty(tx_empty)
   );
 
   fifo rx_fifo(
     .clk(PCLK), .clear_b(CLEAR_B),
-    .push(rx_done), .pop(rx_fifo_pop), 
+    .push(rx_done_sync), .pop(rx_fifo_pop), 
     .data_in(rx_to_fifo), .data_out(PRDATA),
     .full(rx_full), .empty(rx_empty)
+  );
+
+  sync rx_sync(
+    .d(rx_done), .clk(PCLK), .q(rx_done_sync)
+  );
+
+  sync tx_sync(
+    .d(tx_done), .clk(PCLK), .q(tx_done_sync)
   );
 
   RxTx rxtx(

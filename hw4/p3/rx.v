@@ -23,8 +23,10 @@ module RX(
     state <= next_state;
   end
 
-  always @ (state, SSPFSSIN, rx_done) begin 
-    if(state == STATE_IDLE) begin 
+  always @ (pclear_b, state, SSPFSSIN, rx_done) begin 
+    if(!pclear_b) begin 
+      next_state <= STATE_IDLE;   
+    end else if(state == STATE_IDLE) begin 
       if(SSPFSSIN) begin 
         next_state <= STATE_RX;
       end else begin 
@@ -44,9 +46,13 @@ module RX(
       casez(state)
         STATE_IDLE: begin 
           cycle_counter <= 3'b111;
-          rx_data_int <= rx_data_int;
           /* rx_data_int <= 'b0; */
           /* rx_data_int <= rx_data_int; */
+          if(SSPFSSIN) begin 
+            rx_data_int <= {rx_data_int[6:0], SSPRXD};
+          end else begin 
+            rx_data_int <= rx_data_int;
+          end
         end 
         STATE_RX: begin 
           cycle_counter <= cycle_counter - 1; 

@@ -3,9 +3,13 @@ module TX(
   input pclear_b, SSPCLKOUT,
   input tx_empty,
   input [7:0] tx_data,
-  output tx_done,
+  output tx_done, SSPOE_B,
   output reg SSPFSSOUT, SSPTXD
 );
+
+  localparam STATE_IDLE = 2'd0;
+  localparam STATE_FRAME = 2'd1;
+  localparam STATE_TX = 2'd2;
   
   // module state
   reg [1:0] state, next_state;
@@ -17,12 +21,9 @@ module TX(
 
   // assignments
   assign tx_done = cycle_counter == 4'b0;
-  /* assign SSPTXD = send_data[7]; */
   assign tx_has_data = !tx_empty;
 
-  localparam STATE_IDLE = 2'd0;
-  localparam STATE_FRAME = 2'd1;
-  localparam STATE_TX = 2'd2;
+  assign SSPOE_B = !(state == STATE_TX);
 
   always @ (posedge SSPCLKOUT) begin 
     state <= next_state;
@@ -65,22 +66,26 @@ module TX(
     endcase
   end
 
-  always @ (state, tx_done, tx_has_data) begin 
-    casez(state)
-      STATE_IDLE: begin 
-        if(tx_has_data) next_state  <= STATE_FRAME;
-        else next_state <= STATE_IDLE;
-      end
-      STATE_FRAME : begin 
-        next_state <= STATE_TX;
-      end
-      STATE_TX : begin 
-        if(!tx_done) next_state <= STATE_TX; 
-        else if(tx_done & tx_has_data) next_state <= STATE_TX;
-        else next_state <= STATE_IDLE;
-      end
-      default : next_state <= STATE_IDLE;
-    endcase
+  always @ (state, tx_done, tx_has_data, pclear_b) begin 
+    if(!pclear_b) begin 
+      next_state <= STATE_IDLE; 
+    end else begin
+      casez(state)
+        STATE_IDLE: begin 
+          if(tx_has_data) next_state  <= STATE_FRAME;
+          else next_state <= STATE_IDLE;
+        end
+        STATE_FRAME : begin 
+          next_state <= STATE_TX;
+        end
+        STATE_TX : begin 
+          if(!tx_done) next_state <= STATE_TX; 
+          else if(tx_done & tx_has_data) next_state <= STATE_TX;
+          else next_state <= STATE_IDLE;
+        end
+        default : next_state <= STATE_IDLE;
+      endcase
+    end
   end
 
 endmodule
