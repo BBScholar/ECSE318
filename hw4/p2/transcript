@@ -1,0 +1,39 @@
+# //  QuestaSim-64 6.5f Jun 16 2010 Linux 5.15.0-52-generic
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+vsim -voptargs=+acc work.cache
+# vsim -voptargs=+acc work.cache 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.cache(behav)
+# Loading work.tri_state_buffer(behav)
+# Loading work.cache_controller(behav)
+# Loading work.ram(behav)
+# Modified modelsim.ini
+# Modified modelsim.ini
+# Modified modelsim.ini
+# Modified modelsim.ini
+# Modified modelsim.ini
+# Modified modelsim.ini
+add wave -r sim/:cache:*
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 0  Instance: :cache:data_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 0  Instance: :cache:tag_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 1  Instance: :cache:data_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 1  Instance: :cache:tag_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 3  Instance: :cache:data_ram
+run
+run

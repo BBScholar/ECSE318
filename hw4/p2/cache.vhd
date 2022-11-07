@@ -1,6 +1,8 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
+use work.all;
+
 
 entity cache is 
   port(
@@ -9,11 +11,11 @@ entity cache is
     pstrobe, prw : in std_ulogic;
     paddress : in std_ulogic_vector(15 downto 0);
     pready : out std_ulogic;
-    pdata : inout std_ulogic_vector(31 downto 0);
+    pdata : inout std_logic_vector(31 downto 0);
   
     sysstrobe, sysrw : out std_ulogic;
     sysaddress : out std_ulogic_vector(15 downto 0); 
-    sysdata : inout std_ulogic_vector(31 downto 0)
+    sysdata : inout std_logic_vector(31 downto 0)
   );
 end entity cache;
 
@@ -38,42 +40,89 @@ architecture behav of cache is
   signal input_tag : tag_t;
   
   -- ram control signals
-  signal tag_rw, data_rw : std_ulogic;
-  signal selected_tag : tag_t;
-  signal selected_data : data_t;
+  signal current_tag: tag_t;
+  signal current_data : data_t;
+
+  -- tag ram 
+  signal tag_write : std_ulogic;
 
   -- tag comparison 
-  signal tags_eq : boolean;
+  signal tag_match : std_ulogic;
 
+  -- data lines and write flags
+  signal p_tx, p_rx, sys_tx, sys_rx, dram_in, dram_out: data_t;
+  signal p_write, sys_write, dram_write: std_ulogic;
+  signal pdata_sel, dram_sel : std_ulogic;
 
-  -- busses 
-  signal addr_bus : addr_t;
-  signal data_bus : data_t;
+  -- control ku
 
 begin 
   input_tag <= paddress(15 downto 10);
   input_index <= paddress(9 downto 2);
+  
+  -- forward address to system 
+  sysaddress <= paddress;
 
+  -- pdata tx mux
+  with pdata_sel select 
+    p_tx <= sys_rx when '1',
+            dram_out when others;
 
-  controller : entity work.cache_controller(behav)
+  -- dram in mux 
+  with dram_sel select 
+    dram_in <= sys_rx when '1',
+               p_rx when others;
+
+  -- tristate buffers
+  p_tristate_buf : entity work.tri_state_buffer(behav)
+    generic map(W=>32)
     port map(
-      clk=>clk, prw=>prw, pstrobe=>pstrobe, pready=>pready, sysrw=>sysrw, sysstrobe=>sysstrobe
+      io_data=>pdata, write_data=>p_tx, 
+      write=>p_write, read_data=>p_rx
     );
 
-  proc : process(clk, pstrobe, paddress) begin 
-  end process;
+  sys_trisate_buf : entity work.tri_state_buffer(behav)
+    generic map(W=>32)
+    port map(
+      io_data=>sysdata, write_data=>sys_tx,
+      write=>sys_write, read_data=>sys_rx
+    );
 
+  -- state machine 
+  controller : entity work.cache_controller(behav)
+    port map(
+      clk=>clk, prw=>prw, pstrobe=>pstrobe, pready=>pready,
+      sysrw=>sysrw, sysstrobe=>sysstrobe,
+      tag_match=>tag_match,
+      pdata_sel=>pdata_sel, p_write=>p_write,
+      sys_write => sys_write,
+      dram_sel =>dram_sel, dram_write=>dram_write,
+      tag_write=>tag_write
+    );
+  
+  -- tag ram entity
   tag_ram : entity work.ram(behav)
     generic map(W=>tag_t'length, SELECT_LINES=>index_t'length)
     port map(
-      clk=>clk, rw=>tag_rw, data_io=>selected_tag, addr=>input_index
+      clk=>clk, write=>tag_write, addr=>input_index, data_in=>input_tag,
+      data_out=>current_tag
     );
 
+  -- tag comparator
+  tag_compare : process(current_tag, input_tag) begin 
+    if current_tag = input_tag then 
+      tag_match <= '1';
+    else 
+      tag_match <= '0';
+    end if;
+  end process;
+  
+  -- data ram
   data_ram : entity work.ram(behav)
     generic map(W =>data_t'length, SELECT_LINES=>index_t'length)
     port map(
-      clk=>clk, rw=>data_rw, data_io=>selected_data, addr=>input_index
+      clk=>clk, write=>dram_write, addr=>input_index,
+      data_in=>dram_in, data_out=>dram_out
     );
-
 
 end architecture behav;
