@@ -1,7 +1,7 @@
 
 module TX(
   input pclear_b, SSPCLKOUT,
-  input tx_empty,
+  input tx_empty, tx_has_one,
   input [7:0] tx_data,
   output tx_done, SSPOE_B,
   output reg SSPFSSOUT, SSPTXD
@@ -56,7 +56,7 @@ module TX(
         end
 
         // some condition
-        if(tx_has_data & cycle_counter == 3'b1) begin 
+        if(!tx_has_one & tx_has_data & cycle_counter == 3'b1) begin 
           SSPFSSOUT <= 1'b1;
         end else begin 
           SSPFSSOUT <= 1'b0;
@@ -66,7 +66,7 @@ module TX(
     endcase
   end
 
-  always @ (state, tx_done, tx_has_data, pclear_b) begin 
+  always @ (state, tx_done, tx_has_data, tx_has_one, pclear_b) begin 
     if(!pclear_b) begin 
       next_state <= STATE_IDLE; 
     end else begin
@@ -80,7 +80,7 @@ module TX(
         end
         STATE_TX : begin 
           if(!tx_done) next_state <= STATE_TX; 
-          else if(tx_done & tx_has_data) next_state <= STATE_TX;
+          else if(tx_done & tx_has_data & !tx_has_one) next_state <= STATE_TX;
           else next_state <= STATE_IDLE;
         end
         default : next_state <= STATE_IDLE;

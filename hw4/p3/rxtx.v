@@ -4,7 +4,7 @@ module RxTx(
   
   // tx 
   input [7:0] tx_data,
-  input tx_empty,
+  input tx_empty, tx_has_one,
   output reg SSPCLKOUT,
   output SSPTXD, SSPFSSOUT, SSPOE_B,
   output tx_done,
@@ -23,7 +23,7 @@ module RxTx(
 
   TX tx(
     .pclear_b(pclear_b), .SSPCLKOUT(SSPCLKOUT),
-    .tx_empty(tx_empty),
+    .tx_empty(tx_empty), .tx_has_one(tx_has_one),
     .tx_data(tx_data),
     .SSPTXD(SSPTXD), .SSPFSSOUT(SSPFSSOUT),
     .tx_done(tx_done), .SSPOE_B(SSPOE_B)

@@ -28,7 +28,8 @@ module ssp_test1;
     			data_in = 8'b11111111; //8'hFF, dummy data. should not enter into SSP.
 		#1;
 				clear_b = 1'b1;
-		#50 	psel = 1'b1;
+
+		#100 psel = 1'b1;
 				pwrite = 1'b1;
 				data_in = 8'b00110101; //8'h35
 		#40 	data_in = 8'b10101110; //8'hAE
@@ -42,12 +43,16 @@ module ssp_test1;
 		#40 	data_in = 8'b10110001; //8'bB1
 		#40 	data_in = 8'b01010101; //8'b55
   
-    #200;
-    $finish();
+    #2000;
+    /* $finish(); */
+    $stop();
 	end
 	
 	always 
 		#20 clock = ~clock;
+
+  always @ (posedge clock) begin 
+  end
 
 // serial output from SSP is looped back to the serial input.
 
@@ -103,8 +108,16 @@ module ssp_test2;
 		#40 	psel = 1'b0;
 		#3600 	pwrite = 1'b0;
     			psel = 1'b1;
-    	#40 $finish();
+    	/* #40 $finish(); */
+
+    $stop();
 	end
+
+  always @ (posedge clock) begin 
+    if(psel & !pwrite) begin 
+      $display("Reading %02h", data_out);
+    end
+  end
 	
 	always 
 		#20	clock = ~clock;

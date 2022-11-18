@@ -3,7 +3,7 @@ module RX(
   input pclear_b,
   input SSPCLKIN, SSPFSSIN, SSPRXD,
   output [7:0] rx_data,
-  output rx_done
+  output reg rx_done
 );
 
   localparam STATE_IDLE = 2'd0;
@@ -15,51 +15,52 @@ module RX(
   reg [2:0] cycle_counter;
   reg [7:0] rx_data_int;
 
+  // nets 
+  wire cycle_counter_zero;
+
   // assignments
-  assign rx_done = cycle_counter == 0;
+  assign  cycle_counter_zero = cycle_counter == 0;
   assign rx_data = rx_data_int;
 
   always @ (posedge SSPCLKIN) begin 
-    state <= next_state;
+    if(!pclear_b) state <= STATE_IDLE;
+    else state <= next_state;
   end
 
-  always @ (pclear_b, state, SSPFSSIN, rx_done) begin 
-    if(!pclear_b) begin 
-      next_state <= STATE_IDLE;   
-    end else if(state == STATE_IDLE) begin 
-      if(SSPFSSIN) begin 
-        next_state <= STATE_RX;
-      end else begin 
-        next_state <= STATE_IDLE;
+  always @ (state, SSPFSSIN, cycle_counter_zero) begin 
+    case(state)
+      STATE_IDLE: begin 
+        if(SSPFSSIN) next_state <= STATE_RX;
+        else next_state <= STATE_IDLE;
       end
-    end else if(state == STATE_RX) begin 
-      if(!rx_done) next_state <= STATE_RX;
-      else if(rx_done & !SSPFSSIN) next_state <= STATE_IDLE;
-      else next_state <= STATE_RX;
-    end else next_state <= STATE_IDLE;
+      STATE_RX : begin 
+        if(!cycle_counter_zero) begin 
+          next_state <= STATE_RX;
+        end else if(SSPFSSIN & cycle_counter_zero) begin 
+          next_state <= STATE_RX;
+        end else if(!SSPFSSIN & cycle_counter_zero) begin 
+          next_state <= STATE_IDLE;
+        end
+      end 
+      default: next_state <= STATE_IDLE;
+    endcase
   end
 
-  always @ (posedge SSPCLKIN, negedge pclear_b) begin 
-    if(!pclear_b) begin 
-      rx_data_int <= 'b0;
-    end else begin 
-      casez(state)
-        STATE_IDLE: begin 
-          cycle_counter <= 3'b111;
-          /* rx_data_int <= 'b0; */
-          /* rx_data_int <= rx_data_int; */
-          if(SSPFSSIN) begin 
-            rx_data_int <= {rx_data_int[6:0], SSPRXD};
-          end else begin 
-            rx_data_int <= rx_data_int;
-          end
-        end 
-        STATE_RX: begin 
-          cycle_counter <= cycle_counter - 1; 
-          rx_data_int <= {rx_data_int[6:0], SSPRXD};
-        end
-      endcase
-    end
+  always @ (posedge SSPCLKIN) begin 
+    case(state) 
+      STATE_IDLE: begin 
+        cycle_counter <= 3'b111;
+        rx_data_int <= 8'b0;
+        rx_done <= 1'b0;
+      end
+      STATE_RX : begin 
+        cycle_counter <= cycle_counter - 1;
+        rx_data_int <= {rx_data_int[6:0], SSPRXD};
+
+        if(cycle_counter_zero) rx_done <= 1'b1;
+        else rx_done <= 1'b0;
+      end
+    endcase
   end
 
 endmodule
