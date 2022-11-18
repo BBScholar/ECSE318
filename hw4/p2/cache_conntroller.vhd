@@ -34,13 +34,13 @@ begin
 
   wait_done <= '1' when counter = 0 else '0';
 
-  switch_state_proc : process(clk, next_state) begin 
+  switch_state_proc : process(clk) begin 
     if rising_edge(clk) then 
       state <= next_state;   
     end if;
   end process;
 
-  counter_proc : process(clk, state, counter) begin 
+  counter_proc : process(clk) begin 
     if rising_edge(clk) then 
       case state is 
         when write_wait | read_wait =>
@@ -52,7 +52,6 @@ begin
   end process;
 
   next_state_proc : process(state, pstrobe, prw, tag_match, wait_done) begin 
-
     case state is 
       when idle =>
         if pstrobe = '1' then 

@@ -14,7 +14,7 @@ architecture struct of DFF is
 begin 
   
   d_proc : process(clk, clear, d) begin 
-    if rising_edge(clear) then 
+    if falling_edge(clear) then 
       q <= (others=>'0');
     elsif rising_edge(clk) then
       q <= d;

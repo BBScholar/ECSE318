@@ -8,8 +8,9 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-vsim -voptargs=+acc work.cache
-# vsim -voptargs=+acc work.cache 
+vsim -novopt work.tb
+# vsim -novopt work.tb 
+# Loading work.tb
 # Loading std.standard
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
@@ -17,23 +18,323 @@ vsim -voptargs=+acc work.cache
 # Loading work.tri_state_buffer(behav)
 # Loading work.cache_controller(behav)
 # Loading work.ram(behav)
-# Modified modelsim.ini
-# Modified modelsim.ini
-# Modified modelsim.ini
-# Modified modelsim.ini
-# Modified modelsim.ini
-# Modified modelsim.ini
-add wave -r sim/:cache:*
 run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 fs  Iteration: 0  Instance: :cache:data_ram
+#    Time: 0 fs  Iteration: 0  Instance: :tb:cache:data_ram
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 fs  Iteration: 0  Instance: :cache:tag_ram
+#    Time: 0 fs  Iteration: 0  Instance: :tb:cache:tag_ram
+# pstrobe | prw | paddress | pdata | pready | sysstrobe | sysrw | sysaddress | sysdata
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 fs  Iteration: 1  Instance: :cache:data_ram
+#    Time: 0 fs  Iteration: 1  Instance: :tb:cache:data_ram
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 fs  Iteration: 1  Instance: :cache:tag_ram
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 fs  Iteration: 3  Instance: :cache:data_ram
+#    Time: 0 fs  Iteration: 1  Instance: :tb:cache:tag_ram
+# 0 0 0000 xxxxxxxx 0 0 0 0000 zzzzzzzz
+run
+# 1 1 0012 zzzzzzzz 0 0 0 0012 zzzzzzzz
+# 0 1 0012 zzzzzzzz 0 1 1 0012 00000001
+# 0 1 0012 zzzzzzzz 0 0 1 0012 00000001
+run
+# 0 1 0012 00000001 1 0 1 0012 00000001
+# data 1 read from address 0x0012
+# 1 0 0012 00000045 0 0 0 0012 zzzzzzzz
+# 0 0 0012 00000045 0 1 0 0012 xxxxxxxx
+# 0 0 0012 00000045 0 0 0 0012 xxxxxxxx
+run
+# 0 0 0012 00000045 1 0 0 0012 xxxxxxxx
+# data 69 wrote to address 0x0012
+# 1 0 0015 0000002a 0 0 0 0015 zzzzzzzz
+# 0 0 0015 0000002a 0 1 0 0015 xxxxxxxx
+run
+# 0 0 0015 0000002a 0 0 0 0015 xxxxxxxx
+# 0 0 0015 0000002a 1 0 0 0015 xxxxxxxx
+run
+# data 42 wrote to address 0x0015
+# 0 0 0015 xxxxxxxx 0 0 0 0015 zzzzzzzz
+# 0 1 0012 zzzzzzzz 0 0 0 0012 zzzzzzzz
 run
 run
+run
+run
+run
+run
+run
+run
+vsim -voptargs=+acc work.tb
+# vsim -voptargs=+acc work.tb 
+# Loading work.tb
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.cache(behav)
+# Loading work.tri_state_buffer(behav)
+# Loading work.cache_controller(behav)
+# Loading work.ram(behav)
+add wave sim/:tb:cache:*
+add wave sim/:tb:*
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 0  Instance: :tb:cache:data_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 0  Instance: :tb:cache:tag_ram
+# pstrobe | prw | paddress | pdata | pready | sysstrobe | sysrw | sysaddress | sysdata
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 1  Instance: :tb:cache:data_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 1  Instance: :tb:cache:tag_ram
+# 0 0 0000 xxxxxxxx 0 0 0 0000 zzzzzzzz
+run
+# 1 1 0012 zzzzzzzz 0 0 0 0012 zzzzzzzz
+# 0 1 0012 zzzzzzzz 0 1 1 0012 00000001
+# 0 1 0012 zzzzzzzz 0 0 1 0012 00000001
+run
+# 0 1 0012 00000001 1 0 1 0012 00000001
+# data 1 read from address 0x0012
+# 1 0 0012 00000045 0 0 0 0012 zzzzzzzz
+# 0 0 0012 00000045 0 1 0 0012 xxxxxxxx
+# 0 0 0012 00000045 0 0 0 0012 xxxxxxxx
+run
+# 0 0 0012 00000045 1 0 0 0012 xxxxxxxx
+# data 69 wrote to address 0x0012
+# 1 0 0015 0000002a 0 0 0 0015 zzzzzzzz
+# 0 0 0015 0000002a 0 1 0 0015 xxxxxxxx
+run
+# 0 0 0015 0000002a 0 0 0 0015 xxxxxxxx
+# 0 0 0015 0000002a 1 0 0 0015 xxxxxxxx
+run -continue
+run
+# data 42 wrote to address 0x0015
+# 0 0 0015 xxxxxxxx 0 0 0 0015 zzzzzzzz
+# 0 1 0012 zzzzzzzz 0 0 0 0012 zzzzzzzz
+vsim -voptargs=+acc work.tb
+# vsim -voptargs=+acc work.tb 
+# Loading work.tb
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.cache(behav)
+# Loading work.tri_state_buffer(behav)
+# Loading work.cache_controller(behav)
+# Loading work.ram(behav)
+add wave -r sim/:tb:*
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 0  Instance: :tb:cache:data_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 0  Instance: :tb:cache:tag_ram
+# pstrobe | prw | paddress | pdata | pready | sysstrobe | sysrw | sysaddress | sysdata
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 1  Instance: :tb:cache:data_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 1  Instance: :tb:cache:tag_ram
+# 0 0 0000 xxxxxxxx 0 0 0 0000 zzzzzzzz
+run
+# 1 1 0012 zzzzzzzz 0 0 0 0012 zzzzzzzz
+# 0 1 0012 zzzzzzzz 0 1 1 0012 00000001
+# 0 1 0012 zzzzzzzz 0 0 1 0012 00000001
+run
+# 0 1 0012 00000001 1 0 1 0012 00000001
+# data 1 read from address 0x0012
+# 1 0 0012 00000045 0 0 0 0012 zzzzzzzz
+# 0 0 0012 00000045 0 1 0 0012 xxxxxxxx
+# 0 0 0012 00000045 0 0 0 0012 xxxxxxxx
+run
+# 0 0 0012 00000045 1 0 0 0012 xxxxxxxx
+# data 69 wrote to address 0x0012
+# 1 0 0015 0000002a 0 0 0 0015 zzzzzzzz
+# 0 0 0015 0000002a 0 1 0 0015 xxxxxxxx
+run
+# 0 0 0015 0000002a 0 0 0 0015 xxxxxxxx
+# 0 0 0015 0000002a 1 0 0 0015 xxxxxxxx
+run
+# data 42 wrote to address 0x0015
+# 0 0 0015 xxxxxxxx 0 0 0 0015 zzzzzzzz
+# 0 1 0012 zzzzzzzz 0 0 0 0012 zzzzzzzz
+# 1 1 0012 zzzzzzzz 0 0 0 0012 zzzzzzzz
+# 0 1 0012 00000045 1 0 0 0012 zzzzzzzz
+# data 69 read from address 0x0012
+# 0 1 0012 zzzzzzzz 0 0 0 0012 zzzzzzzz
+# 0 0 0055 00000006 0 0 0 0055 zzzzzzzz
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim -voptargs=+acc work.tb
+# vsim -voptargs=+acc work.tb 
+# Loading work.tb
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.cache(behav)
+# Loading work.tri_state_buffer(behav)
+# Loading work.cache_controller(behav)
+# Loading work.ram(behav)
+add wave -r sim/:tb:*
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 0  Instance: :tb:cache:data_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 0  Instance: :tb:cache:tag_ram
+# pstrobe | prw | paddress | pdata | pready | sysstrobe | sysrw | sysaddress | sysdata
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 1  Instance: :tb:cache:data_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 1  Instance: :tb:cache:tag_ram
+# 0 0 0000 xxxxxxxx 0 0 0 0000 zzzzzzzz
+run
+# 1 1 0012 zzzzzzzz 0 0 0 0012 zzzzzzzz
+# 0 1 0012 zzzzzzzz 0 1 1 0012 00000001
+# 0 1 0012 zzzzzzzz 0 0 1 0012 00000001
+run
+# 0 1 0012 00000001 1 0 1 0012 00000001
+# data 1 read from address 0x0012
+# 0 1 0012 zzzzzzzz 0 0 0 0012 zzzzzzzz
+# 1 0 0012 00000045 0 0 0 0012 zzzzzzzz
+# 0 0 0012 00000045 0 1 0 0012 xxxxxxxx
+# 0 0 0012 00000045 0 0 0 0012 xxxxxxxx
+run
+# 0 0 0012 00000045 1 0 0 0012 xxxxxxxx
+# data 69 wrote to address 0x0012
+# 0 0 0015 0000002a 0 0 0 0015 zzzzzzzz
+# 1 0 0015 0000002a 0 0 0 0015 zzzzzzzz
+# 0 0 0015 0000002a 0 1 0 0015 xxxxxxxx
+run
+# 0 0 0015 0000002a 0 0 0 0015 xxxxxxxx
+# 0 0 0015 0000002a 1 0 0 0015 xxxxxxxx
+run
+# data 42 wrote to address 0x0015
+# 0 0 0015 xxxxxxxx 0 0 0 0015 zzzzzzzz
+# 0 0 0012 xxxxxxxx 0 0 0 0012 zzzzzzzz
+# 1 1 0012 zzzzzzzz 0 0 0 0012 zzzzzzzz
+# 0 1 0012 00000045 1 0 0 0012 zzzzzzzz
+# data 69 read from address 0x0012
+# 0 1 0012 zzzzzzzz 0 0 0 0012 zzzzzzzz
+# 0 1 0055 zzzzzzzz 0 0 0 0055 zzzzzzzz
+run
+# 1 0 0055 00000006 0 0 0 0055 zzzzzzzz
+# 0 0 0055 00000006 0 1 0 0055 xxxxxxxx
+# 0 0 0055 00000006 0 0 0 0055 xxxxxxxx
+run
+# 0 0 0055 00000006 1 0 0 0055 xxxxxxxx
+# data 6 wrote to address 0x0055
+# 0 0 0055 xxxxxxxx 0 0 0 0055 zzzzzzzz
+# 0 0 0022 xxxxxxxx 0 0 0 0022 zzzzzzzz
+# 1 1 0022 zzzzzzzz 0 0 0 0022 zzzzzzzz
+# 0 1 0022 zzzzzzzz 0 1 1 0022 00000025
+# 0 1 0022 zzzzzzzz 0 0 1 0022 00000025
+run
+# 0 1 0022 00000025 1 0 1 0022 00000025
+# data 37 read from address 0x0022
+# 0 1 0022 zzzzzzzz 0 0 0 0022 zzzzzzzz
+run
+# 0 1 0075 zzzzzzzz 0 0 0 0075 zzzzzzzz
+# 1 0 0075 00000042 0 0 0 0075 zzzzzzzz
+# 0 0 0075 00000042 0 1 0 0075 xxxxxxxx
+# 0 0 0075 00000042 0 0 0 0075 xxxxxxxx
+run
+# 0 0 0075 00000042 1 0 0 0075 xxxxxxxx
+# data 66 wrote to address 0x0075
+# 0 0 0075 xxxxxxxx 0 0 0 0075 zzzzzzzz
+# 0 0 0042 xxxxxxxx 0 0 0 0042 zzzzzzzz
+# 1 1 0042 zzzzzzzz 0 0 0 0042 zzzzzzzz
+# 0 1 0042 zzzzzzzz 0 1 1 0042 001e847b
+run
+# 0 1 0042 zzzzzzzz 0 0 1 0042 001e847b
+# 0 1 0042 001e847b 1 0 1 0042 001e847b
+vsim -voptargs=+acc work.tb
+# vsim -voptargs=+acc work.tb 
+# Loading work.tb
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.cache(behav)
+# Loading work.tri_state_buffer(behav)
+# Loading work.cache_controller(behav)
+# Loading work.ram(behav)
+add wave -r sim/:tb:*
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 0  Instance: :tb:cache:data_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 0  Instance: :tb:cache:tag_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 1  Instance: :tb:cache:data_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 1  Instance: :tb:cache:tag_ram
+run
+run
+# data 1 read from address 0x0012
+run
+# data 69 wrote to address 0x0012
+run
+run
+# data 42 wrote to address 0x0015
+# data 69 read from address 0x0012
+run
+run
+# data 6 wrote to address 0x0055
+run
+# data 37 read from address 0x0022
+run
+run
+# data 66 wrote to address 0x0075
+run
+run
+# data 1999995 read from address 0x0042
+# data 66 read from address 0x0075
+run
+run
+# data 8 read from address 0x0059
+# data 37 read from address 0x0022
+# Break in Module tb at tb.v line 114
+vsim -voptargs=+acc work.tb
+# vsim -voptargs=+acc work.tb 
+# Loading work.tb
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.cache(behav)
+# Loading work.tri_state_buffer(behav)
+# Loading work.cache_controller(behav)
+# Loading work.ram(behav)
+add wave -r sim/:tb:*
+run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 0  Instance: :tb:cache:data_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 0  Instance: :tb:cache:tag_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 1  Instance: :tb:cache:data_ram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 fs  Iteration: 1  Instance: :tb:cache:tag_ram
+# data 1 read from address 0x0012
+# data 69 wrote to address 0x0012
+# data 42 wrote to address 0x0015
+# data 69 read from address 0x0012
+# data 6 wrote to address 0x0055
+# data 37 read from address 0x0022
+# data 66 wrote to address 0x0075
+# data 1999995 read from address 0x0042
+# data 66 read from address 0x0075
+# data 8 read from address 0x0059
+# data 37 read from address 0x0022
+# Break in Module tb at tb.v line 114
+# Window cannot be closed because the modal window "Quit Vsim" is still open.

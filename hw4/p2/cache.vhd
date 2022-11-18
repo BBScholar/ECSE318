@@ -25,15 +25,6 @@ architecture behav of cache is
   subtype tag_t is std_ulogic_vector(5 downto 0);
   subtype index_t is std_ulogic_vector(7 downto 0);
 
-  type block_t is record
-    valid : std_ulogic;
-    tag : tag_t;
-    data : data_t;
-  end record;
-  type cache_blocks_t is array (0 to 2 ** index_t'length - 1 ) of block_t;
-
-  signal cache_blocks : cache_blocks_t;
-
   -- input derivatives
   signal input_addr : addr_t;
   signal input_index : index_t;
@@ -53,8 +44,6 @@ architecture behav of cache is
   signal p_tx, p_rx, sys_tx, sys_rx, dram_in, dram_out: data_t;
   signal p_write, sys_write, dram_write: std_ulogic;
   signal pdata_sel, dram_sel : std_ulogic;
-
-  -- control ku
 
 begin 
   input_tag <= paddress(15 downto 10);
@@ -109,13 +98,7 @@ begin
     );
 
   -- tag comparator
-  tag_compare : process(current_tag, input_tag) begin 
-    if current_tag = input_tag then 
-      tag_match <= '1';
-    else 
-      tag_match <= '0';
-    end if;
-  end process;
+  tag_match <= '1' when current_tag = input_tag else '0';
   
   -- data ram
   data_ram : entity work.ram(behav)

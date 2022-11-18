@@ -1,0 +1,52 @@
+# //  QuestaSim-64 6.5f Jun 16 2010 Linux 5.15.0-52-generic
+# //
+# //  Copyright 1991-2010 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+vsim -voptargs=+acc work.tb
+# vsim -voptargs=+acc work.tb 
+# Loading work.tb
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.both(struct)
+# Loading work.handshake(struct)
+# Loading work.dff(struct)
+# Loading work.handshake(behav)
+do fsm.do
+run -all
+# Time = 0 | R=0, A=0, RESET=1 => E_s=x, E_b=0, diff=x
+# Time = 1 | R=0, A=0, RESET=0 => E_s=0, E_b=0, diff=0
+# Time = 2 | R=0, A=0, RESET=1 => E_s=0, E_b=0, diff=0
+# Time = 59 | R=1, A=0, RESET=1 => E_s=0, E_b=0, diff=0
+# Time = 79 | R=1, A=1, RESET=1 => E_s=0, E_b=0, diff=0
+# Time = 99 | R=0, A=1, RESET=1 => E_s=0, E_b=0, diff=0
+# Time = 119 | R=0, A=0, RESET=1 => E_s=0, E_b=0, diff=0
+# Time = 149 | R=0, A=1, RESET=1 => E_s=0, E_b=0, diff=0
+# Time = 150 | R=0, A=1, RESET=1 => E_s=1, E_b=1, diff=0
+# Time = 169 | R=1, A=1, RESET=1 => E_s=1, E_b=1, diff=0
+# Time = 189 | R=0, A=0, RESET=1 => E_s=1, E_b=1, diff=0
+# Time = 229 | R=1, A=0, RESET=1 => E_s=1, E_b=1, diff=0
+# Time = 249 | R=1, A=1, RESET=1 => E_s=1, E_b=1, diff=0
+# Time = 269 | R=0, A=1, RESET=1 => E_s=1, E_b=1, diff=0
+# Time = 289 | R=0, A=0, RESET=1 => E_s=1, E_b=1, diff=0
+# Time = 329 | R=0, A=0, RESET=0 => E_s=0, E_b=0, diff=0
+# Time = 349 | R=0, A=0, RESET=1 => E_s=0, E_b=0, diff=0
+# Time = 419 | R=1, A=0, RESET=1 => E_s=0, E_b=0, diff=0
+# Time = 439 | R=1, A=1, RESET=1 => E_s=0, E_b=0, diff=0
+# Time = 459 | R=0, A=1, RESET=1 => E_s=0, E_b=0, diff=0
+# Time = 479 | R=0, A=0, RESET=1 => E_s=0, E_b=0, diff=0
+# Time = 519 | R=1, A=1, RESET=1 => E_s=0, E_b=0, diff=0
+# Time = 530 | R=1, A=1, RESET=1 => E_s=1, E_b=1, diff=0
+# Time = 539 | R=0, A=0, RESET=1 => E_s=1, E_b=1, diff=0
+# Time = 559 | R=0, A=0, RESET=0 => E_s=0, E_b=0, diff=0
+# Time = 579 | R=0, A=0, RESET=1 => E_s=0, E_b=0, diff=0
+# Time = 599 | R=1, A=0, RESET=1 => E_s=0, E_b=0, diff=0
+# Time = 619 | R=0, A=0, RESET=1 => E_s=0, E_b=0, diff=0
+# Time = 630 | R=0, A=0, RESET=1 => E_s=1, E_b=1, diff=0
+# Break in Module tb at tb.v line 109
