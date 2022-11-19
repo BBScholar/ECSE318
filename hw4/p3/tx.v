@@ -13,8 +13,8 @@ module TX(
   
   // module state
   reg [1:0] state, next_state;
-  reg [4:0] cycle_counter;
-  reg [6:0] send_data;
+  reg [2:0] cycle_counter;
+  reg [7:0] send_data;
   
   // nets
   wire tx_has_data;
@@ -29,39 +29,29 @@ module TX(
     state <= next_state;
   end
 
+  always @ (state, cycle_counter) begin 
+    if(state == STATE_TX && cycle_counter == 3'b111) begin 
+      SSPFSSOUT <= 1'b1; 
+    end else begin 
+      SSPFSSOUT <= 1'b0;
+    end
+  end
+
   always @ (posedge SSPCLKOUT) begin 
-    casez(state)
-      STATE_IDLE : begin 
-        cycle_counter <= 4'd7;
-        SSPTXD <= 1'b0;
-        /* send_data <= tx_data; */
-        // some condition
-        if(tx_has_data) SSPFSSOUT <= 1'b1;
-        else SSPFSSOUT <= 1'b0;
-      end
-      STATE_FRAME : begin 
+    casez(state) 
+      STATE_IDLE: begin 
+        send_data <= tx_data;
+        cycle_counter <= 3'b111;
         SSPFSSOUT <= 1'b0;
-        {SSPTXD, send_data} <= tx_data;
-      end
+      end 
       STATE_TX : begin 
-        /* SSPTXD <= send_bit; */
-
-        if(tx_done & tx_has_data) begin 
-          {SSPTXD, send_data} <= tx_data;
-          cycle_counter <= 4'd7;
-        end else begin
-          SSPTXD <= send_data[6];
+        SSPTXD <= send_data[7];
+        cycle_counter <= cycle_counter - 1;
+        if(!tx_done) begin 
           send_data <= send_data << 1;
-          cycle_counter <= cycle_counter - 1;
-        end
-
-        // some condition
-        if(!tx_has_one & tx_has_data & cycle_counter == 3'b1) begin 
-          SSPFSSOUT <= 1'b1;
         end else begin 
-          SSPFSSOUT <= 1'b0;
+          send_data <= tx_data; 
         end
-
       end
     endcase
   end
@@ -72,18 +62,18 @@ module TX(
     end else begin
       casez(state)
         STATE_IDLE: begin 
-          if(tx_has_data) next_state  <= STATE_FRAME;
+          if(tx_has_data) next_state <= STATE_TX;
           else next_state <= STATE_IDLE;
-        end
-        STATE_FRAME : begin 
-          next_state <= STATE_TX;
         end
         STATE_TX : begin 
-          if(!tx_done) next_state <= STATE_TX; 
-          else if(tx_done & tx_has_data & !tx_has_one) next_state <= STATE_TX;
-          else next_state <= STATE_IDLE;
+          if(!tx_done) begin 
+            next_state <= STATE_TX;
+          end else if(tx_done & tx_has_data) begin // !tx_has_one
+            next_state <= STATE_TX;
+          end else begin // tx_done & (!tx_has_data | tx_has_one)
+            next_state <= STATE_IDLE;
+          end
         end
-        default : next_state <= STATE_IDLE;
       endcase
     end
   end

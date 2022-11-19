@@ -26,6 +26,9 @@ module fifo #(
   always @ (posedge clk) begin 
     if(!clear_b) begin 
       counter <= 'b0;
+      for(i = 0; i < D; i = i + 1) begin 
+        internal_data[i] <= 'b0;
+      end
     end else if(push & pop) begin 
       for(i = 0; i < D - 1; i = i + 1) begin 
         internal_data[i] <= internal_data[i + 1];

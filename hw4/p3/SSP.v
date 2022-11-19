@@ -57,4 +57,9 @@ module SSP(
   always @ (posedge tx_done_sync) $display("Sent data: %08b", fifo_to_tx); 
   always @ (posedge rx_done_sync) $display("Recieved data: %08b", rx_to_fifo);
 
+  always @ (posedge PCLK) begin 
+    if(PSEL & PWRITE) $display("%08b added to TX fifo.", PWDATA);
+    if(PSEL & !PWRITE) $display("%08b read from RX fifo", PRDATA);
+  end
+
 endmodule
