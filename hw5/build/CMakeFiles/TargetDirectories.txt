@@ -1,0 +1,4 @@
+/home/bscholar/Documents/ECSE318/hw5/build/CMakeFiles/rebuild_cache.dir
+/home/bscholar/Documents/ECSE318/hw5/build/CMakeFiles/edit_cache.dir
+/home/bscholar/Documents/ECSE318/hw5/build/CMakeFiles/verilog_parser.dir
+/home/bscholar/Documents/ECSE318/hw5/build/CMakeFiles/verilog_sim.dir

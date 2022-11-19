@@ -7,7 +7,7 @@ module fifo #(
 (
   input clk, push, pop, clear_b,
   input [W - 1:0] data_in,
-  output full, empty, has_one,
+  output full, empty,
   output [W - 1:0] data_out
 );
   localparam CNT_BITS = $clog2(D) + 1;
@@ -19,7 +19,6 @@ module fifo #(
 
   assign empty = counter == 0;
   assign full = counter == D;
-  assign has_one = counter == 1;
 
   assign data_out = internal_data[0];
 

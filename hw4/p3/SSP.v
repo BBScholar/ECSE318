@@ -10,8 +10,8 @@ module SSP(
   wire tx_done_sync, rx_done_sync;
   wire [7:0] fifo_to_tx, rx_to_fifo;
 
-  wire tx_full, tx_empty, tx_has_one;
-  wire rx_full, rx_empty, rx_has_one;
+  wire tx_full, tx_empty;
+  wire rx_full, rx_empty;
   wire tx_fifo_push, rx_fifo_pop;
 
   assign SSPTXINTR = tx_full;
@@ -24,14 +24,14 @@ module SSP(
     .clk(PCLK), .clear_b(CLEAR_B),
     .push(tx_fifo_push), .pop(tx_done_sync), 
     .data_in(PWDATA), .data_out(fifo_to_tx),
-    .full(tx_full), .empty(tx_empty), .has_one(tx_has_one)
+    .full(tx_full), .empty(tx_empty)
   );
 
   fifo rx_fifo(
     .clk(PCLK), .clear_b(CLEAR_B),
     .push(rx_done_sync), .pop(rx_fifo_pop), 
     .data_in(rx_to_fifo), .data_out(PRDATA),
-    .full(rx_full), .empty(rx_empty), .has_one(rx_has_one)
+    .full(rx_full), .empty(rx_empty)
   );
 
   sync rx_sync(
@@ -46,8 +46,7 @@ module SSP(
       .pclk(PCLK), .pclear_b(CLEAR_B),
       .tx_data(fifo_to_tx), .rx_data(rx_to_fifo),
       .tx_done(tx_done), .rx_done(rx_done),
-      .tx_empty(tx_empty), .tx_has_one(tx_has_one),
-
+      .tx_empty(tx_empty),
       .SSPOE_B(SSPOE_B), .SSPCLKOUT(SSPCLKOUT),
       .SSPTXD(SSPTXD), .SSPFSSOUT(SSPFSSOUT),
       .SSPCLKIN(SSPCLKIN), .SSPFSSIN(SSPFSSIN), .SSPRXD(SSPRXD)

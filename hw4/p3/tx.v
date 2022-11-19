@@ -1,7 +1,7 @@
 
 module TX(
   input pclear_b, SSPCLKOUT,
-  input tx_empty, tx_has_one,
+  input tx_empty,
   input [7:0] tx_data,
   output tx_done, SSPOE_B,
   output reg SSPFSSOUT, SSPTXD
@@ -56,7 +56,7 @@ module TX(
     endcase
   end
 
-  always @ (state, tx_done, tx_has_data, tx_has_one, pclear_b) begin 
+  always @ (state, tx_done, tx_has_data, pclear_b) begin 
     if(!pclear_b) begin 
       next_state <= STATE_IDLE; 
     end else begin

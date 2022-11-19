@@ -168,6 +168,8 @@ module ssp_test3;
 		#40 	data_in = 8'b01010001; //8'h51
 		#40 	data_in = 8'b00100100; //8'h24
 
+    #40;
+
     psel = 1'b0;
     pwrite = 1'b0;
 
