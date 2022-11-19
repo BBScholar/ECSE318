@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/verilog_parser.dir/src/parser.cpp.o  -o verilog_parser 
+/usr/bin/c++     CMakeFiles/verilog_parser.dir/src/parser.cpp.o CMakeFiles/verilog_parser.dir/src/gate.cpp.o  -o verilog_parser 
