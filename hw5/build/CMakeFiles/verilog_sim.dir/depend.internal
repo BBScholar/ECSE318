@@ -10,5 +10,6 @@ CMakeFiles/verilog_sim.dir/src/sim.cpp.o
  /home/bscholar/Documents/ECSE318/hw5/src/sim.cpp
 CMakeFiles/verilog_sim.dir/src/simulator.cpp.o
  ../include/gate.h
+ ../include/lut.h
  ../include/simulator.h
  /home/bscholar/Documents/ECSE318/hw5/src/simulator.cpp

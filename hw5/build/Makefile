@@ -247,6 +247,33 @@ src/simulator.cpp.s:
 	$(MAKE) -f CMakeFiles/verilog_sim.dir/build.make CMakeFiles/verilog_sim.dir/src/simulator.cpp.s
 .PHONY : src/simulator.cpp.s
 
+src/top.o: src/top.cpp.o
+
+.PHONY : src/top.o
+
+# target to build an object file
+src/top.cpp.o:
+	$(MAKE) -f CMakeFiles/verilog_parser.dir/build.make CMakeFiles/verilog_parser.dir/src/top.cpp.o
+.PHONY : src/top.cpp.o
+
+src/top.i: src/top.cpp.i
+
+.PHONY : src/top.i
+
+# target to preprocess a source file
+src/top.cpp.i:
+	$(MAKE) -f CMakeFiles/verilog_parser.dir/build.make CMakeFiles/verilog_parser.dir/src/top.cpp.i
+.PHONY : src/top.cpp.i
+
+src/top.s: src/top.cpp.s
+
+.PHONY : src/top.s
+
+# target to generate assembly for a file
+src/top.cpp.s:
+	$(MAKE) -f CMakeFiles/verilog_parser.dir/build.make CMakeFiles/verilog_parser.dir/src/top.cpp.s
+.PHONY : src/top.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -269,6 +296,9 @@ help:
 	@echo "... src/simulator.o"
 	@echo "... src/simulator.i"
 	@echo "... src/simulator.s"
+	@echo "... src/top.o"
+	@echo "... src/top.i"
+	@echo "... src/top.s"
 .PHONY : help
 
 

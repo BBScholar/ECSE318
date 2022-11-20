@@ -5,5 +5,10 @@ CMakeFiles/verilog_parser.dir/src/gate.cpp.o: ../include/gate.h
 CMakeFiles/verilog_parser.dir/src/gate.cpp.o: ../src/gate.cpp
 
 CMakeFiles/verilog_parser.dir/src/parser.cpp.o: ../include/gate.h
+CMakeFiles/verilog_parser.dir/src/parser.cpp.o: ../include/top.h
 CMakeFiles/verilog_parser.dir/src/parser.cpp.o: ../src/parser.cpp
+
+CMakeFiles/verilog_parser.dir/src/top.cpp.o: ../include/gate.h
+CMakeFiles/verilog_parser.dir/src/top.cpp.o: ../include/top.h
+CMakeFiles/verilog_parser.dir/src/top.cpp.o: ../src/top.cpp
 

@@ -91,7 +91,9 @@ public:
   inline GateType::GateType get_type() const { return m_type; }
   inline SignalState get_state() const { return m_state; }
   inline const std::string &get_name() const { return m_name; }
+  inline uint32_t get_level() const { return m_level; }
 
+  inline void set_level(uint32_t level) { m_level = level; }
   inline void set_state(SignalState sig) { m_state = sig; }
 
   inline void add_input_gate(GateId id) { m_fan_in.push_back(id); }

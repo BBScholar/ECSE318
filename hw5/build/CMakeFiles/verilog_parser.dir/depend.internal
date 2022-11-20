@@ -6,4 +6,9 @@ CMakeFiles/verilog_parser.dir/src/gate.cpp.o
  /home/bscholar/Documents/ECSE318/hw5/src/gate.cpp
 CMakeFiles/verilog_parser.dir/src/parser.cpp.o
  ../include/gate.h
+ ../include/top.h
  /home/bscholar/Documents/ECSE318/hw5/src/parser.cpp
+CMakeFiles/verilog_parser.dir/src/top.cpp.o
+ ../include/gate.h
+ ../include/top.h
+ /home/bscholar/Documents/ECSE318/hw5/src/top.cpp

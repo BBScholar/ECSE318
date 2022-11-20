@@ -9,6 +9,7 @@ CMakeFiles/verilog_sim.dir/src/sim.cpp.o: ../include/simulator.h
 CMakeFiles/verilog_sim.dir/src/sim.cpp.o: ../src/sim.cpp
 
 CMakeFiles/verilog_sim.dir/src/simulator.cpp.o: ../include/gate.h
+CMakeFiles/verilog_sim.dir/src/simulator.cpp.o: ../include/lut.h
 CMakeFiles/verilog_sim.dir/src/simulator.cpp.o: ../include/simulator.h
 CMakeFiles/verilog_sim.dir/src/simulator.cpp.o: ../src/simulator.cpp
 

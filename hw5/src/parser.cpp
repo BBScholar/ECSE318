@@ -11,6 +11,7 @@
 #include <boost/algorithm/string/trim_all.hpp>
 
 #include "gate.h"
+#include "top.h"
 
 void print_string_vector(const std::vector<std::string> &vec) {
   std::cout << "[";
@@ -196,6 +197,9 @@ int main(int argc, char **argv) {
   }
 
   // TODO: resolve top ordering??
+
+  std::vector<GateId> order;
+  topological_ordering(max_gate_id, gates);
 
   // write gates to output file
   std::ofstream output_file(output_fn, std::fstream::out);

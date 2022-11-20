@@ -76,12 +76,12 @@ clean: CMakeFiles/verilog_sim.dir/clean
 CMakeFiles/verilog_parser.dir/all:
 	$(MAKE) -f CMakeFiles/verilog_parser.dir/build.make CMakeFiles/verilog_parser.dir/depend
 	$(MAKE) -f CMakeFiles/verilog_parser.dir/build.make CMakeFiles/verilog_parser.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bscholar/Documents/ECSE318/hw5/build/CMakeFiles --progress-num=1,2,3 "Built target verilog_parser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bscholar/Documents/ECSE318/hw5/build/CMakeFiles --progress-num=1,2,3,4 "Built target verilog_parser"
 .PHONY : CMakeFiles/verilog_parser.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/verilog_parser.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bscholar/Documents/ECSE318/hw5/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bscholar/Documents/ECSE318/hw5/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/verilog_parser.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/bscholar/Documents/ECSE318/hw5/build/CMakeFiles 0
 .PHONY : CMakeFiles/verilog_parser.dir/rule
@@ -103,7 +103,7 @@ CMakeFiles/verilog_parser.dir/clean:
 CMakeFiles/verilog_sim.dir/all:
 	$(MAKE) -f CMakeFiles/verilog_sim.dir/build.make CMakeFiles/verilog_sim.dir/depend
 	$(MAKE) -f CMakeFiles/verilog_sim.dir/build.make CMakeFiles/verilog_sim.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bscholar/Documents/ECSE318/hw5/build/CMakeFiles --progress-num=4,5,6,7 "Built target verilog_sim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bscholar/Documents/ECSE318/hw5/build/CMakeFiles --progress-num=5,6,7,8 "Built target verilog_sim"
 .PHONY : CMakeFiles/verilog_sim.dir/all
 
 # Build rule for subdir invocation for target.

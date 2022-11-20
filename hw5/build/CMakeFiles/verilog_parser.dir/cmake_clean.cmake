@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/verilog_parser.dir/src/gate.cpp.o"
   "CMakeFiles/verilog_parser.dir/src/parser.cpp.o"
+  "CMakeFiles/verilog_parser.dir/src/top.cpp.o"
   "verilog_parser"
   "verilog_parser.pdb"
 )

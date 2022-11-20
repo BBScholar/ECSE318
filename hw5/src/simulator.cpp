@@ -6,6 +6,8 @@
 #include <boost/algorithm/string.hpp>
 #include <boost/algorithm/string/trim_all.hpp>
 
+#include "lut.h"
+
 Simulator::Simulator()
     : m_has_model(false), m_has_inputs(false), m_num_gates(0) {
   std::cout << "Initialized simulator" << std::endl;
@@ -16,12 +18,95 @@ bool Simulator::run() {
     std::cerr << "Cannot run sim without model and inputs" << std::endl;
     return false;
   }
+  reset_state();
+
   const int iterations = m_inputs.size();
 
-  for (int iter = 0; iter < iterations; ++iter) {
+  for (int i = 0; i < iterations; ++i) {
+    // print logic values at PI, PO, and States
+    print_state(false);
+    // read inputs and schedule fanouts of changed inputs.
+    update_inputs(i);
+    // load next state and schedule fanout.
+    update_state();
+
+    // traverse tree
+    for (int j = 0; j < m_top_order.size(); ++i) {
+      GateId current_id = m_top_order[j];
+      if (m_needs_update[current_id]) {
+        if (evaluate_gate(current_id)) { // TODO: schedule fanout
+          schedule_fanout(current_id);
+        }
+        m_needs_update[current_id] = false;
+      }
+    }
   }
 
   return true;
+}
+
+void Simulator::schedule_fanout(GateId id) {
+  for (GateId &child_id : m_gates[id]->get_fan_out()) {
+    m_needs_update[child_id] = true;
+  }
+}
+
+void Simulator::update_state() {
+  SignalState prev_state, next_state;
+  GateId id;
+
+  for (int i = 0; i < m_dff_gates.size(); ++i) {
+    id = m_dff_gates[i];
+    prev_state = m_gates[id]->get_state();
+    next_state = m_gates[m_gates[id]->get_fan_out()[0]]->get_state();
+
+    if (prev_state != next_state) {
+      m_gates[id]->set_state(next_state);
+      schedule_fanout(id);
+    }
+
+    m_needs_update[id] = false;
+  }
+}
+
+void Simulator::update_inputs(uint32_t iteration) {
+  SignalState prev_state, next_state;
+  GateType::GateType type;
+  GateId id;
+
+  for (int i = 0; i < m_input_gates.size(); ++i) {
+    id = m_input_gates[i];
+    prev_state = m_gates[id]->get_state();
+    next_state = m_inputs[iteration][i];
+
+    if (prev_state != next_state) {
+      m_gates[id]->set_state(next_state);
+      schedule_fanout(m_input_gates[id]);
+    }
+
+    m_needs_update[id] = false;
+  }
+}
+
+bool Simulator::evaluate_gate(GateId id) {
+
+  GateType::GateType type = m_gates[id]->get_type();
+
+  SignalState prev_state, next_state;
+
+  prev_state = m_gates[id]->get_state();
+
+  if (type == GateType::Dff || type == GateType::Input) {
+    return false;
+  } else if (type == GateType::Output) {
+    // TODO: something here
+    return false;
+  } else if (type == GateType::Not) {
+    // next_state =
+  } else {
+  }
+
+  // else do stuff
 }
 
 bool Simulator::load_model(const std::string &fn) {
@@ -50,6 +135,26 @@ bool Simulator::load_model(const std::string &fn) {
 
   std::string line;
   std::vector<std::string> splits;
+
+  int num_lines = 0;
+
+  for (; std::getline(file, line);)
+    num_lines++;
+  file.clear();
+  file.seekg(0, std::ios::beg);
+
+  m_gates.reserve(num_lines);
+  m_input_gates.reserve(num_lines);
+  m_output_gates.reserve(num_lines);
+  m_dff_gates.reserve(num_lines);
+
+  // m_top_order.reserve(num_lines);
+  // m_needs_update.reserve(num_lines);
+  m_top_order.clear();
+  m_top_order.resize(num_lines, 0);
+
+  m_needs_update.clear();
+  m_needs_update.resize(num_lines, false);
 
   for (; std::getline(file, line);) {
     // boost::trim(line);
@@ -88,6 +193,8 @@ bool Simulator::load_model(const std::string &fn) {
       m_dff_gates.push_back(current_id);
     }
 
+    m_top_order[current_level] = current_id;
+    m_needs_update[current_id] = false;
     m_gates.insert({current_id, gate_p});
     current_id++;
   }
@@ -116,7 +223,7 @@ bool Simulator::load_inputs(const std::string &fn) {
 
   m_inputs.clear();
   // SimInput inputs;
-  // inputs.reserve(16);
+  m_inputs.reserve(16);
 
   std::vector<SignalState> row;
 

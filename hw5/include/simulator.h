@@ -27,6 +27,17 @@ private:
   void print_inputs(bool with_legend = false);
   void print_state(bool with_legend = false);
 
+  // returns true if state changed
+  bool evaluate_gate(GateId id);
+  // SignalState calculate_next(const std::vector<SignalState>& state, )
+
+  SignalState input_scan(GateType::GateType type);
+  SignalState table_lookup(GateType::GateType type);
+
+  void update_inputs(uint32_t iteration);
+  void update_state();
+  void schedule_fanout(GateId id);
+
 private:
   bool m_has_model, m_has_inputs;
 
@@ -37,6 +48,9 @@ private:
   std::vector<GateId> m_input_gates;
   std::vector<GateId> m_output_gates;
   std::vector<GateId> m_dff_gates;
+
+  std::vector<GateId> m_top_order;
+  std::vector<bool> m_needs_update;
 
   SimInput m_inputs;
 };

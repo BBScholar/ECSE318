@@ -26,6 +26,7 @@ target_link_libraries(
 
 add_executable(verilog_parser 
   src/parser.cpp
+  src/top.cpp
   src/gate.cpp
 )
 
