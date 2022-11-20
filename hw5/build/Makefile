@@ -123,6 +123,19 @@ verilog_parser/fast:
 	$(MAKE) -f CMakeFiles/verilog_parser.dir/build.make CMakeFiles/verilog_parser.dir/build
 .PHONY : verilog_parser/fast
 
+#=============================================================================
+# Target rules for targets named verilog_sim
+
+# Build rule for target.
+verilog_sim: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 verilog_sim
+.PHONY : verilog_sim
+
+# fast build rule for target.
+verilog_sim/fast:
+	$(MAKE) -f CMakeFiles/verilog_sim.dir/build.make CMakeFiles/verilog_sim.dir/build
+.PHONY : verilog_sim/fast
+
 src/gate.o: src/gate.cpp.o
 
 .PHONY : src/gate.o
@@ -130,6 +143,7 @@ src/gate.o: src/gate.cpp.o
 # target to build an object file
 src/gate.cpp.o:
 	$(MAKE) -f CMakeFiles/verilog_parser.dir/build.make CMakeFiles/verilog_parser.dir/src/gate.cpp.o
+	$(MAKE) -f CMakeFiles/verilog_sim.dir/build.make CMakeFiles/verilog_sim.dir/src/gate.cpp.o
 .PHONY : src/gate.cpp.o
 
 src/gate.i: src/gate.cpp.i
@@ -139,6 +153,7 @@ src/gate.i: src/gate.cpp.i
 # target to preprocess a source file
 src/gate.cpp.i:
 	$(MAKE) -f CMakeFiles/verilog_parser.dir/build.make CMakeFiles/verilog_parser.dir/src/gate.cpp.i
+	$(MAKE) -f CMakeFiles/verilog_sim.dir/build.make CMakeFiles/verilog_sim.dir/src/gate.cpp.i
 .PHONY : src/gate.cpp.i
 
 src/gate.s: src/gate.cpp.s
@@ -148,6 +163,7 @@ src/gate.s: src/gate.cpp.s
 # target to generate assembly for a file
 src/gate.cpp.s:
 	$(MAKE) -f CMakeFiles/verilog_parser.dir/build.make CMakeFiles/verilog_parser.dir/src/gate.cpp.s
+	$(MAKE) -f CMakeFiles/verilog_sim.dir/build.make CMakeFiles/verilog_sim.dir/src/gate.cpp.s
 .PHONY : src/gate.cpp.s
 
 src/parser.o: src/parser.cpp.o
@@ -177,6 +193,60 @@ src/parser.cpp.s:
 	$(MAKE) -f CMakeFiles/verilog_parser.dir/build.make CMakeFiles/verilog_parser.dir/src/parser.cpp.s
 .PHONY : src/parser.cpp.s
 
+src/sim.o: src/sim.cpp.o
+
+.PHONY : src/sim.o
+
+# target to build an object file
+src/sim.cpp.o:
+	$(MAKE) -f CMakeFiles/verilog_sim.dir/build.make CMakeFiles/verilog_sim.dir/src/sim.cpp.o
+.PHONY : src/sim.cpp.o
+
+src/sim.i: src/sim.cpp.i
+
+.PHONY : src/sim.i
+
+# target to preprocess a source file
+src/sim.cpp.i:
+	$(MAKE) -f CMakeFiles/verilog_sim.dir/build.make CMakeFiles/verilog_sim.dir/src/sim.cpp.i
+.PHONY : src/sim.cpp.i
+
+src/sim.s: src/sim.cpp.s
+
+.PHONY : src/sim.s
+
+# target to generate assembly for a file
+src/sim.cpp.s:
+	$(MAKE) -f CMakeFiles/verilog_sim.dir/build.make CMakeFiles/verilog_sim.dir/src/sim.cpp.s
+.PHONY : src/sim.cpp.s
+
+src/simulator.o: src/simulator.cpp.o
+
+.PHONY : src/simulator.o
+
+# target to build an object file
+src/simulator.cpp.o:
+	$(MAKE) -f CMakeFiles/verilog_sim.dir/build.make CMakeFiles/verilog_sim.dir/src/simulator.cpp.o
+.PHONY : src/simulator.cpp.o
+
+src/simulator.i: src/simulator.cpp.i
+
+.PHONY : src/simulator.i
+
+# target to preprocess a source file
+src/simulator.cpp.i:
+	$(MAKE) -f CMakeFiles/verilog_sim.dir/build.make CMakeFiles/verilog_sim.dir/src/simulator.cpp.i
+.PHONY : src/simulator.cpp.i
+
+src/simulator.s: src/simulator.cpp.s
+
+.PHONY : src/simulator.s
+
+# target to generate assembly for a file
+src/simulator.cpp.s:
+	$(MAKE) -f CMakeFiles/verilog_sim.dir/build.make CMakeFiles/verilog_sim.dir/src/simulator.cpp.s
+.PHONY : src/simulator.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +256,19 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... verilog_parser"
+	@echo "... verilog_sim"
 	@echo "... src/gate.o"
 	@echo "... src/gate.i"
 	@echo "... src/gate.s"
 	@echo "... src/parser.o"
 	@echo "... src/parser.i"
 	@echo "... src/parser.s"
+	@echo "... src/sim.o"
+	@echo "... src/sim.i"
+	@echo "... src/sim.s"
+	@echo "... src/simulator.o"
+	@echo "... src/simulator.i"
+	@echo "... src/simulator.s"
 .PHONY : help
 
 

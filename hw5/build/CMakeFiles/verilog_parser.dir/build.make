@@ -94,6 +94,7 @@ verilog_parser_EXTERNAL_OBJECTS =
 verilog_parser: CMakeFiles/verilog_parser.dir/src/parser.cpp.o
 verilog_parser: CMakeFiles/verilog_parser.dir/src/gate.cpp.o
 verilog_parser: CMakeFiles/verilog_parser.dir/build.make
+verilog_parser: /usr/lib/x86_64-linux-gnu/libspdlog.so.1.5.0
 verilog_parser: CMakeFiles/verilog_parser.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bscholar/Documents/ECSE318/hw5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable verilog_parser"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/verilog_parser.dir/link.txt --verbose=$(VERBOSE)

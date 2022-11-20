@@ -3,15 +3,12 @@
 
 CMakeFiles/verilog_sim.dir/src/gate.cpp.o
  ../include/gate.h
- ../include/types.h
  /home/bscholar/Documents/ECSE318/hw5/src/gate.cpp
 CMakeFiles/verilog_sim.dir/src/sim.cpp.o
  ../include/gate.h
  ../include/simulator.h
- ../include/types.h
  /home/bscholar/Documents/ECSE318/hw5/src/sim.cpp
 CMakeFiles/verilog_sim.dir/src/simulator.cpp.o
  ../include/gate.h
  ../include/simulator.h
- ../include/types.h
  /home/bscholar/Documents/ECSE318/hw5/src/simulator.cpp

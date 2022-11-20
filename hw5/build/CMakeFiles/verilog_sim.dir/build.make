@@ -109,6 +109,7 @@ verilog_sim: CMakeFiles/verilog_sim.dir/src/sim.cpp.o
 verilog_sim: CMakeFiles/verilog_sim.dir/src/gate.cpp.o
 verilog_sim: CMakeFiles/verilog_sim.dir/src/simulator.cpp.o
 verilog_sim: CMakeFiles/verilog_sim.dir/build.make
+verilog_sim: /usr/lib/x86_64-linux-gnu/libspdlog.so.1.5.0
 verilog_sim: CMakeFiles/verilog_sim.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bscholar/Documents/ECSE318/hw5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable verilog_sim"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/verilog_sim.dir/link.txt --verbose=$(VERBOSE)

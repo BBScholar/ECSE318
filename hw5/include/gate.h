@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cstdint>
+#include <iostream>
 #include <optional>
 #include <string>
 #include <string_view>
@@ -12,8 +13,6 @@ typedef uint32_t GateId;
 namespace GateType {
 enum GateType : uint8_t { Input = 0, Output, Not, Dff, Or, Nor, And, Nand };
 }
-
-enum class SignalState : uint8_t { Zero = 0, One = 1, X = 2 };
 
 inline uint32_t gate_num_inputs(GateType::GateType type) {
   switch (type) {
@@ -54,19 +53,33 @@ gate_type_from_string(std::string_view s) {
   }
 }
 
-// inline std::string gate_type_to_string(GateType type) {
-//   switch (type) {
-//   case Input:
-//     return "input";
-//   case Output:
-//     return "output";
-//   case Dff:
-//     return "dff1";
-//   case Not:
-//     return "not"
-//   case
-//   }
-// }
+enum class SignalState : uint8_t { Zero = 0, One = 1, X = 2 };
+
+inline char signal_state_to_char(SignalState sig) {
+  switch (sig) {
+  case SignalState::Zero:
+    return '0';
+  case SignalState::One:
+    return '1';
+  default:
+  case SignalState::X:
+    return '4';
+  }
+}
+
+inline SignalState signal_state_from_char(char c) {
+  switch (c) {
+  case '0':
+    return SignalState::Zero;
+  case '1':
+    return SignalState::One;
+  default:
+    std::cerr << "Invalid character (" << c
+              << ") in input. Interpretting as 'X' instead." << std::endl;
+  case '4':
+    return SignalState::X;
+  }
+}
 
 class Gate {
 public:
@@ -77,12 +90,15 @@ public:
   inline GateId get_id() const { return m_id; }
   inline GateType::GateType get_type() const { return m_type; }
   inline SignalState get_state() const { return m_state; }
+  inline const std::string &get_name() const { return m_name; }
+
+  inline void set_state(SignalState sig) { m_state = sig; }
 
   inline void add_input_gate(GateId id) { m_fan_in.push_back(id); }
   inline void add_output_gate(GateId id) { m_fan_out.push_back(id); }
 
-  const std::vector<GateId> &get_fan_in() { return m_fan_in; }
-  const std::vector<GateId> &get_fan_out() { return m_fan_out; }
+  std::vector<GateId> &get_fan_in() { return m_fan_in; }
+  std::vector<GateId> &get_fan_out() { return m_fan_out; }
 
   std::string to_string();
 

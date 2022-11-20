@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/bscholar/Documents/ECSE318/hw5/build
 
 # The main recursive "all" target.
 all: CMakeFiles/verilog_parser.dir/all
+all: CMakeFiles/verilog_sim.dir/all
 
 .PHONY : all
 
@@ -64,6 +65,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/verilog_parser.dir/clean
+clean: CMakeFiles/verilog_sim.dir/clean
 
 .PHONY : clean
 
@@ -93,6 +95,33 @@ verilog_parser: CMakeFiles/verilog_parser.dir/rule
 CMakeFiles/verilog_parser.dir/clean:
 	$(MAKE) -f CMakeFiles/verilog_parser.dir/build.make CMakeFiles/verilog_parser.dir/clean
 .PHONY : CMakeFiles/verilog_parser.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/verilog_sim.dir
+
+# All Build rule for target.
+CMakeFiles/verilog_sim.dir/all:
+	$(MAKE) -f CMakeFiles/verilog_sim.dir/build.make CMakeFiles/verilog_sim.dir/depend
+	$(MAKE) -f CMakeFiles/verilog_sim.dir/build.make CMakeFiles/verilog_sim.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bscholar/Documents/ECSE318/hw5/build/CMakeFiles --progress-num=4,5,6,7 "Built target verilog_sim"
+.PHONY : CMakeFiles/verilog_sim.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/verilog_sim.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bscholar/Documents/ECSE318/hw5/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/verilog_sim.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bscholar/Documents/ECSE318/hw5/build/CMakeFiles 0
+.PHONY : CMakeFiles/verilog_sim.dir/rule
+
+# Convenience name for target.
+verilog_sim: CMakeFiles/verilog_sim.dir/rule
+
+.PHONY : verilog_sim
+
+# clean rule for target.
+CMakeFiles/verilog_sim.dir/clean:
+	$(MAKE) -f CMakeFiles/verilog_sim.dir/build.make CMakeFiles/verilog_sim.dir/clean
+.PHONY : CMakeFiles/verilog_sim.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
