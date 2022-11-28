@@ -2,6 +2,7 @@
 
 #include <fstream>
 #include <iostream>
+#include <sstream>
 
 #include <boost/algorithm/string.hpp>
 #include <boost/algorithm/string/trim_all.hpp>
@@ -13,12 +14,19 @@ Simulator::Simulator()
   std::cout << "Initialized simulator" << std::endl;
 }
 
-bool Simulator::run() {
+bool Simulator::run(const std::string &fn) {
   if (!m_has_model || !m_has_inputs) {
     std::cerr << "Cannot run sim without model and inputs" << std::endl;
     return false;
   }
   reset_state();
+
+  std::ofstream out_file(fn);
+
+  if (out_file.bad()) {
+    std::cerr << "Could not open file for simulator output: " << fn
+              << std::endl;
+  }
 
   const int iterations = m_inputs.size();
 
@@ -39,15 +47,18 @@ bool Simulator::run() {
       }
     }
     // print logic values at PI, PO, and States
-    print_state(i == 0);
+    print_state(out_file, i == 0);
   }
 
+  out_file.close();
   return true;
 }
 
 void Simulator::schedule_fanout(GateId id) {
   for (GateId &child_id : m_gates[id]->get_fan_out()) {
-      // std::cout << "Gate " << m_gates[id]->get_name() << " (" << id << ") is scheduling " << m_gates[child_id]->get_name()  << " (" << child_id << ") for update" << std::endl;
+    // std::cout << "Gate " << m_gates[id]->get_name() << " (" << id << ") is
+    // scheduling " << m_gates[child_id]->get_name()  << " (" << child_id << ")
+    // for update" << std::endl;
     m_needs_update[child_id] = true;
   }
 }
@@ -106,7 +117,7 @@ bool Simulator::evaluate_gate(GateId id) {
     return false;
   }
 
-#define INPUT_SCAN
+// #define INPUT_SCAN
 #ifdef INPUT_SCAN
   next_state = input_scan(id);
 #else
@@ -114,7 +125,9 @@ bool Simulator::evaluate_gate(GateId id) {
 #endif
 
   m_gates[id]->set_state(next_state);
-  std::cout << "Setting " << m_gates[id]->get_name() << " (" << id << ") changing to state " << signal_state_to_char(next_state) << std::endl;
+  std::cout << "Setting " << m_gates[id]->get_name() << " (" << id
+            << ") changing to state " << signal_state_to_char(next_state)
+            << std::endl;
 
   return next_state != prev_state;
   // else do stuff
@@ -340,49 +353,51 @@ void Simulator::print_inputs(bool with_legend) {
   }
 }
 
-void Simulator::print_state(bool with_legend) {
+void Simulator::print_state(std::ofstream &of, bool with_legend) {
   SignalState state;
 
-  std::cout << "INPUT   :";
+  // std::stringstream ss;
+
+  of << "INPUT   :";
   for (auto &id : m_input_gates) {
     state = m_gates[id]->get_state();
-    std::cout << signal_state_to_char(state);
+    of << signal_state_to_char(state);
   }
 
   if (with_legend) {
-    std::cout << "\t// ";
+    of << "\t// ";
     for (auto &id : m_input_gates) {
-      std::cout << m_gates[id]->get_name() << ", ";
+      of << m_gates[id]->get_name() << ", ";
     }
   }
 
-  std::cout << "\nSTATE   :";
+  of << "\nSTATE   :";
 
   for (auto &id : m_dff_gates) {
     state = m_gates[id]->get_state();
-    std::cout << signal_state_to_char(state);
+    of << signal_state_to_char(state);
   }
 
   if (with_legend) {
-    std::cout << "\t// ";
+    of << "\t// ";
     for (auto &id : m_dff_gates) {
-      std::cout << m_gates[id]->get_name() << ", ";
+      of << m_gates[id]->get_name() << ", ";
     }
   }
 
-  std::cout << "\nOUTPUT  :";
+  of << "\nOUTPUT  :";
 
   for (auto &id : m_output_gates) {
     state = m_gates[id]->get_state();
-    std::cout << signal_state_to_char(state);
+    of << signal_state_to_char(state);
   }
 
   if (with_legend) {
-    std::cout << "\t// ";
+    of << "\t// ";
     for (auto &id : m_output_gates) {
-      std::cout << m_gates[id]->get_name() << ", ";
+      of << m_gates[id]->get_name() << ", ";
     }
   }
 
-  std::cout << "\n\n";
+  of << "\n\n";
 }

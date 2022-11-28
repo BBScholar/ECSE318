@@ -1,0 +1,20 @@
+INPUT   :0000	// g0, g1, g2, g3, 
+STATE   :444	// xg1, xg2, xg3, 
+OUTPUT  :0	// g17, 
+
+INPUT   :0010
+STATE   :104
+OUTPUT  :0
+
+INPUT   :0100
+STATE   :100
+OUTPUT  :0
+
+INPUT   :1000
+STATE   :101
+OUTPUT  :0
+
+INPUT   :1111
+STATE   :001
+OUTPUT  :0
+

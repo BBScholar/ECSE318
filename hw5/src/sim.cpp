@@ -1,10 +1,17 @@
 
+#include <chrono>
 #include <iostream>
 #include <string>
 
 #include "simulator.h"
 
 int main(int argc, char **argv) {
+  using std::chrono::duration_cast;
+  using std::chrono::nanoseconds;
+  using clock = std::chrono::high_resolution_clock;
+
+  argc--;
+  argv++;
 
   if (argc < 3) {
     std::cerr
@@ -12,11 +19,10 @@ int main(int argc, char **argv) {
         << std::endl;
     return 1;
   }
-  // get rid of unused argument
-  argv++;
 
   const std::string gate_fn(argv[0]);
   const std::string input_fn(argv[1]);
+  const std::string output_fn(argv[2]);
 
   auto *sim = new Simulator();
 
@@ -30,7 +36,12 @@ int main(int argc, char **argv) {
     return -1;
   }
 
-  sim->run();
+  auto start = clock::now();
+  sim->run(output_fn);
+  auto end = clock::now();
+  std::cout << "Simulation took "
+            << duration_cast<nanoseconds>(end - start).count() << "ns"
+            << std::endl;
 
   return 0;
 }

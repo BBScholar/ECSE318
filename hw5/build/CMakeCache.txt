@@ -398,4 +398,6 @@ FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 boost_headers_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: boost_program_options_DIR
 boost_program_options_DIR-ADVANCED:INTERNAL=1
+//Result of TRY_COMPILE
+result:INTERNAL=TRUE
 
