@@ -22,7 +22,15 @@ type_traits
 vector
 -
 
+../include/lut.h
+cinttypes
+-
+gate.h
+../include/gate.h
+
 ../include/simulator.h
+fstream
+-
 memory
 -
 string
@@ -34,13 +42,19 @@ vector
 gate.h
 ../include/gate.h
 
-/home/bscholar/Documents/ECSE318/hw5/src/sim.cpp
+/home/bscholar/Documents/ECSE318/hw5/src/simulator.cpp
+simulator.h
+/home/bscholar/Documents/ECSE318/hw5/src/simulator.h
 chrono
+-
+fstream
 -
 iostream
 -
-string
+boost/algorithm/string.hpp
 -
-simulator.h
-/home/bscholar/Documents/ECSE318/hw5/src/simulator.h
+boost/algorithm/string/trim_all.hpp
+-
+lut.h
+/home/bscholar/Documents/ECSE318/hw5/src/lut.h
 

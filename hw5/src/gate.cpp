@@ -33,5 +33,5 @@ Gate::Gate(const std::string &name, GateId id, GateType::GateType type,
     : m_name(name), m_id(id), m_type(type), m_level(level), m_fan_in(),
       m_fan_out() {
 
-  std::cout << "Creating gate with name: " << name << std::endl;
+  // std::cout << "Creating gate with name: " << name << std::endl;
 }

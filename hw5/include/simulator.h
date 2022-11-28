@@ -1,5 +1,6 @@
 #pragma once
 
+#include <fstream>
 #include <memory>
 #include <string>
 #include <unordered_map>
@@ -18,14 +19,14 @@ public:
   bool load_model(const std::string &fn);
   bool load_inputs(const std::string &fn);
 
-  bool run();
+  bool run(const std::string &fn);
 
   void reset_state();
   void clear();
 
 private:
   void print_inputs(bool with_legend = false);
-  void print_state(bool with_legend = false);
+  void print_state(std::ofstream &of, bool with_legend = false);
 
   // returns true if state changed
   bool evaluate_gate(GateId id);

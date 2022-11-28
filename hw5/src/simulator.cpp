@@ -1,5 +1,6 @@
 #include "simulator.h"
 
+#include <chrono>
 #include <fstream>
 #include <iostream>
 
@@ -13,12 +14,25 @@ Simulator::Simulator()
   std::cout << "Initialized simulator" << std::endl;
 }
 
-bool Simulator::run() {
+bool Simulator::run(const std::string &fn) {
   if (!m_has_model || !m_has_inputs) {
     std::cerr << "Cannot run sim without model and inputs" << std::endl;
     return false;
   }
   reset_state();
+
+  std::ofstream out_file(fn);
+
+  if (out_file.bad()) {
+    std::cerr << "Could not open output file " << fn << std::endl;
+    return false;
+  }
+
+  using std::chrono::duration_cast;
+  using std::chrono::microseconds;
+  using clock = std::chrono::high_resolution_clock;
+
+  auto start = clock::now();
 
   const int iterations = m_inputs.size();
 
@@ -39,8 +53,14 @@ bool Simulator::run() {
       }
     }
     // print logic values at PI, PO, and States
-    print_state(i == 0);
+    print_state(out_file, i == 0);
   }
+
+  auto end = clock::now();
+
+  std::cout << "Simulation took "
+            << duration_cast<microseconds>(end - start).count() << "us to run."
+            << std::endl;
 
   return true;
 }
@@ -343,49 +363,49 @@ void Simulator::print_inputs(bool with_legend) {
   }
 }
 
-void Simulator::print_state(bool with_legend) {
+void Simulator::print_state(std::ofstream &of, bool with_legend) {
   SignalState state;
 
-  std::cout << "INPUT   :";
+  of << "INPUT   :";
   for (auto &id : m_input_gates) {
     state = m_gates[id]->get_state();
-    std::cout << signal_state_to_char(state);
+    of << signal_state_to_char(state);
   }
 
   if (with_legend) {
-    std::cout << "\t// ";
+    of << "\t// ";
     for (auto &id : m_input_gates) {
-      std::cout << m_gates[id]->get_name() << ", ";
+      of << m_gates[id]->get_name() << ", ";
     }
   }
 
-  std::cout << "\nSTATE   :";
+  of << "\nSTATE   :";
 
   for (auto &id : m_dff_gates) {
     state = m_gates[id]->get_state();
-    std::cout << signal_state_to_char(state);
+    of << signal_state_to_char(state);
   }
 
   if (with_legend) {
-    std::cout << "\t// ";
+    of << "\t// ";
     for (auto &id : m_dff_gates) {
-      std::cout << m_gates[id]->get_name() << ", ";
+      of << m_gates[id]->get_name() << ", ";
     }
   }
 
-  std::cout << "\nOUTPUT  :";
+  of << "\nOUTPUT  :";
 
   for (auto &id : m_output_gates) {
     state = m_gates[id]->get_state();
-    std::cout << signal_state_to_char(state);
+    of << signal_state_to_char(state);
   }
 
   if (with_legend) {
-    std::cout << "\t// ";
+    of << "\t// ";
     for (auto &id : m_output_gates) {
-      std::cout << m_gates[id]->get_name() << ", ";
+      of << m_gates[id]->get_name() << ", ";
     }
   }
 
-  std::cout << "\n\n";
+  of << "\n\n";
 }
