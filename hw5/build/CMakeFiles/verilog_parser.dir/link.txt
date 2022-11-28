@@ -1,1 +1,0 @@
-/usr/bin/c++   -O3 -s   CMakeFiles/verilog_parser.dir/src/parser.cpp.o CMakeFiles/verilog_parser.dir/src/top.cpp.o CMakeFiles/verilog_parser.dir/src/gate.cpp.o  -o verilog_parser  /usr/lib/x86_64-linux-gnu/libspdlog.so.1.5.0 -lpthread 

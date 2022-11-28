@@ -1,6 +1,0 @@
-# ninja log v5
-2922	3041	1669672805919269415	verilog_sim	2b2582d3a2d1d559
-0	451	1669675502127156845	build.ninja	6537ef8c2c96a973
-2	905	1669672803783187463	CMakeFiles/verilog_sim.dir/src/gate.cpp.o	ef4dd1392c57d32d
-2	2922	1669672805795264620	CMakeFiles/verilog_sim.dir/src/simulator.cpp.o	5963635b61769930
-2	1113	1669672803987195169	CMakeFiles/verilog_sim.dir/src/sim.cpp.o	f89f19d52b658e0c
