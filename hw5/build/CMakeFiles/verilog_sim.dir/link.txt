@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/verilog_sim.dir/src/sim.cpp.o CMakeFiles/verilog_sim.dir/src/gate.cpp.o CMakeFiles/verilog_sim.dir/src/simulator.cpp.o  -o verilog_sim  /usr/lib/x86_64-linux-gnu/libspdlog.so.1.5.0 -lpthread 
+/usr/bin/c++   -O3 -s   CMakeFiles/verilog_sim.dir/src/sim.cpp.o CMakeFiles/verilog_sim.dir/src/gate.cpp.o CMakeFiles/verilog_sim.dir/src/simulator.cpp.o  -o verilog_sim  /usr/lib/x86_64-linux-gnu/libspdlog.so.1.5.0 -lpthread 

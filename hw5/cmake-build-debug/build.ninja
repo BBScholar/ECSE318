@@ -52,7 +52,7 @@ build cmake_object_order_depends_target_verilog_sim: phony || CMakeFiles/verilog
 build CMakeFiles/verilog_sim.dir/src/sim.cpp.o: CXX_COMPILER__verilog_sim_Debug /home/bscholar/Documents/ECSE318/hw5/src/sim.cpp || cmake_object_order_depends_target_verilog_sim
   DEFINES = -DSPDLOG_COMPILED_LIB
   DEP_FILE = CMakeFiles/verilog_sim.dir/src/sim.cpp.o.d
-  FLAGS = -g -std=gnu++2a
+  FLAGS = -O3 -s -g -std=gnu++2a
   INCLUDES = -I/home/bscholar/Documents/ECSE318/hw5/include
   OBJECT_DIR = CMakeFiles/verilog_sim.dir
   OBJECT_FILE_DIR = CMakeFiles/verilog_sim.dir/src
@@ -60,7 +60,7 @@ build CMakeFiles/verilog_sim.dir/src/sim.cpp.o: CXX_COMPILER__verilog_sim_Debug 
 build CMakeFiles/verilog_sim.dir/src/gate.cpp.o: CXX_COMPILER__verilog_sim_Debug /home/bscholar/Documents/ECSE318/hw5/src/gate.cpp || cmake_object_order_depends_target_verilog_sim
   DEFINES = -DSPDLOG_COMPILED_LIB
   DEP_FILE = CMakeFiles/verilog_sim.dir/src/gate.cpp.o.d
-  FLAGS = -g -std=gnu++2a
+  FLAGS = -O3 -s -g -std=gnu++2a
   INCLUDES = -I/home/bscholar/Documents/ECSE318/hw5/include
   OBJECT_DIR = CMakeFiles/verilog_sim.dir
   OBJECT_FILE_DIR = CMakeFiles/verilog_sim.dir/src
@@ -68,7 +68,7 @@ build CMakeFiles/verilog_sim.dir/src/gate.cpp.o: CXX_COMPILER__verilog_sim_Debug
 build CMakeFiles/verilog_sim.dir/src/simulator.cpp.o: CXX_COMPILER__verilog_sim_Debug /home/bscholar/Documents/ECSE318/hw5/src/simulator.cpp || cmake_object_order_depends_target_verilog_sim
   DEFINES = -DSPDLOG_COMPILED_LIB
   DEP_FILE = CMakeFiles/verilog_sim.dir/src/simulator.cpp.o.d
-  FLAGS = -g -std=gnu++2a
+  FLAGS = -O3 -s -g -std=gnu++2a
   INCLUDES = -I/home/bscholar/Documents/ECSE318/hw5/include
   OBJECT_DIR = CMakeFiles/verilog_sim.dir
   OBJECT_FILE_DIR = CMakeFiles/verilog_sim.dir/src
@@ -82,7 +82,7 @@ build CMakeFiles/verilog_sim.dir/src/simulator.cpp.o: CXX_COMPILER__verilog_sim_
 # Link the executable verilog_sim
 
 build verilog_sim: CXX_EXECUTABLE_LINKER__verilog_sim_Debug CMakeFiles/verilog_sim.dir/src/sim.cpp.o CMakeFiles/verilog_sim.dir/src/gate.cpp.o CMakeFiles/verilog_sim.dir/src/simulator.cpp.o | /usr/lib/x86_64-linux-gnu/libspdlog.so.1.5.0
-  FLAGS = -g
+  FLAGS = -O3 -s -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libspdlog.so.1.5.0  -lpthread
   OBJECT_DIR = CMakeFiles/verilog_sim.dir
   POST_BUILD = :
@@ -102,7 +102,7 @@ build cmake_object_order_depends_target_verilog_parser: phony || CMakeFiles/veri
 build CMakeFiles/verilog_parser.dir/src/parser.cpp.o: CXX_COMPILER__verilog_parser_Debug /home/bscholar/Documents/ECSE318/hw5/src/parser.cpp || cmake_object_order_depends_target_verilog_parser
   DEFINES = -DSPDLOG_COMPILED_LIB
   DEP_FILE = CMakeFiles/verilog_parser.dir/src/parser.cpp.o.d
-  FLAGS = -g -std=gnu++2a
+  FLAGS = -O3 -s -g -std=gnu++2a
   INCLUDES = -I/home/bscholar/Documents/ECSE318/hw5/include
   OBJECT_DIR = CMakeFiles/verilog_parser.dir
   OBJECT_FILE_DIR = CMakeFiles/verilog_parser.dir/src
@@ -110,7 +110,7 @@ build CMakeFiles/verilog_parser.dir/src/parser.cpp.o: CXX_COMPILER__verilog_pars
 build CMakeFiles/verilog_parser.dir/src/top.cpp.o: CXX_COMPILER__verilog_parser_Debug /home/bscholar/Documents/ECSE318/hw5/src/top.cpp || cmake_object_order_depends_target_verilog_parser
   DEFINES = -DSPDLOG_COMPILED_LIB
   DEP_FILE = CMakeFiles/verilog_parser.dir/src/top.cpp.o.d
-  FLAGS = -g -std=gnu++2a
+  FLAGS = -O3 -s -g -std=gnu++2a
   INCLUDES = -I/home/bscholar/Documents/ECSE318/hw5/include
   OBJECT_DIR = CMakeFiles/verilog_parser.dir
   OBJECT_FILE_DIR = CMakeFiles/verilog_parser.dir/src
@@ -118,7 +118,7 @@ build CMakeFiles/verilog_parser.dir/src/top.cpp.o: CXX_COMPILER__verilog_parser_
 build CMakeFiles/verilog_parser.dir/src/gate.cpp.o: CXX_COMPILER__verilog_parser_Debug /home/bscholar/Documents/ECSE318/hw5/src/gate.cpp || cmake_object_order_depends_target_verilog_parser
   DEFINES = -DSPDLOG_COMPILED_LIB
   DEP_FILE = CMakeFiles/verilog_parser.dir/src/gate.cpp.o.d
-  FLAGS = -g -std=gnu++2a
+  FLAGS = -O3 -s -g -std=gnu++2a
   INCLUDES = -I/home/bscholar/Documents/ECSE318/hw5/include
   OBJECT_DIR = CMakeFiles/verilog_parser.dir
   OBJECT_FILE_DIR = CMakeFiles/verilog_parser.dir/src
@@ -132,7 +132,7 @@ build CMakeFiles/verilog_parser.dir/src/gate.cpp.o: CXX_COMPILER__verilog_parser
 # Link the executable verilog_parser
 
 build verilog_parser: CXX_EXECUTABLE_LINKER__verilog_parser_Debug CMakeFiles/verilog_parser.dir/src/parser.cpp.o CMakeFiles/verilog_parser.dir/src/top.cpp.o CMakeFiles/verilog_parser.dir/src/gate.cpp.o | /usr/lib/x86_64-linux-gnu/libspdlog.so.1.5.0
-  FLAGS = -g
+  FLAGS = -O3 -s -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libspdlog.so.1.5.0  -lpthread
   OBJECT_DIR = CMakeFiles/verilog_parser.dir
   POST_BUILD = :

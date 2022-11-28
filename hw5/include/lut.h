@@ -16,8 +16,10 @@ constexpr uint32_t gate_type_to_lut_index(GateType::GateType type) {
     return 2;
   case GateType::Nor:
     return 3;
+  case GateType::Not:
+    return 1;
   default:
-    return 4; // cause segfault
+    return 1; // cause segfault
   }
 }
 
