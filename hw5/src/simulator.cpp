@@ -23,15 +23,13 @@ bool Simulator::run() {
   const int iterations = m_inputs.size();
 
   for (int i = 0; i < iterations; ++i) {
-    // print logic values at PI, PO, and States
-    print_state(false);
     // read inputs and schedule fanouts of changed inputs.
     update_inputs(i);
     // load next state and schedule fanout.
     update_state();
 
     // traverse tree
-    for (int j = 0; j < m_top_order.size(); ++i) {
+    for (int j = 0; j < m_top_order.size(); ++j) {
       GateId current_id = m_top_order[j];
       if (m_needs_update[current_id]) {
         if (evaluate_gate(current_id)) { // TODO: schedule fanout
@@ -40,6 +38,8 @@ bool Simulator::run() {
         m_needs_update[current_id] = false;
       }
     }
+    // print logic values at PI, PO, and States
+    print_state(i == 0);
   }
 
   return true;
@@ -47,6 +47,7 @@ bool Simulator::run() {
 
 void Simulator::schedule_fanout(GateId id) {
   for (GateId &child_id : m_gates[id]->get_fan_out()) {
+      // std::cout << "Gate " << m_gates[id]->get_name() << " (" << id << ") is scheduling " << m_gates[child_id]->get_name()  << " (" << child_id << ") for update" << std::endl;
     m_needs_update[child_id] = true;
   }
 }
@@ -58,7 +59,7 @@ void Simulator::update_state() {
   for (int i = 0; i < m_dff_gates.size(); ++i) {
     id = m_dff_gates[i];
     prev_state = m_gates[id]->get_state();
-    next_state = m_gates[m_gates[id]->get_fan_out()[0]]->get_state();
+    next_state = m_gates[m_gates[id]->get_fan_in()[0]]->get_state();
 
     if (prev_state != next_state) {
       m_gates[id]->set_state(next_state);
@@ -100,13 +101,73 @@ bool Simulator::evaluate_gate(GateId id) {
     return false;
   } else if (type == GateType::Output) {
     // TODO: something here
+    next_state = m_gates[m_gates[id]->get_fan_in()[0]]->get_state();
+    m_gates[id]->set_state(next_state);
     return false;
-  } else if (type == GateType::Not) {
-    // next_state =
-  } else {
   }
 
+#define INPUT_SCAN
+#ifdef INPUT_SCAN
+  next_state = input_scan(id);
+#else
+  next_state = table_lookup(id);
+#endif
+
+  m_gates[id]->set_state(next_state);
+  std::cout << "Setting " << m_gates[id]->get_name() << " (" << id << ") changing to state " << signal_state_to_char(next_state) << std::endl;
+
+  return next_state != prev_state;
   // else do stuff
+}
+
+SignalState Simulator::input_scan(GateId id) {
+  bool uvalue = false;
+  const auto type = m_gates[id]->get_type();
+  const uint8_t c = lut::k_c_input[lut::gate_type_to_lut_index(type)];
+  const uint8_t i = lut::k_i_input[lut::gate_type_to_lut_index(type)];
+  const SignalState cxi = lut::signal_state_from_int(c ^ i);
+
+  for (GateId child_id : m_gates[id]->get_fan_in()) {
+    const uint8_t V =
+        lut::signal_state_to_lut_index(m_gates[child_id]->get_state());
+    if (V == c)
+      return cxi;
+    else if (V == 2)
+      uvalue = true;
+  }
+
+  if (uvalue)
+    return SignalState::X;
+
+  return lut::signal_state_from_int(c ^ !i);
+}
+
+SignalState Simulator::table_lookup(GateId id) {
+  // const auto initial_state =
+  const auto &gate = m_gates[id];
+  const auto type = gate->get_type();
+  const auto type_idx = lut::gate_type_to_lut_index(type);
+
+  SignalState first_state = m_gates[gate->get_fan_in()[0]]->get_state();
+
+  if (type == GateType::Not)
+    return lut::signal_state_from_int(
+        lut::k_inv_table[lut::signal_state_to_lut_index(first_state)]);
+  // else if (type == GateType::Buf)
+  //   return lut::k_buf_table[lut::signal_state_to_lut_index(first_gate)];
+
+  for (int i = 1; i < m_gates[id]->get_fan_in().size(); ++i) {
+    SignalState s2 = m_gates[m_gates[id]->get_fan_in()[i]]->get_state();
+    const uint8_t l1 = lut::signal_state_to_lut_index(first_state);
+    const uint8_t l2 = lut::signal_state_to_lut_index(s2);
+    first_state = lut::signal_state_from_int(lut::k_table[type_idx][l1][l2]);
+  }
+
+  if (lut::k_i_input[type_idx])
+    return lut::signal_state_from_int(
+        lut::k_inv_table[lut::signal_state_to_lut_index(first_state)]);
+
+  return first_state;
 }
 
 bool Simulator::load_model(const std::string &fn) {
@@ -181,7 +242,7 @@ bool Simulator::load_model(const std::string &fn) {
     }
 
     for (int i = 0; i < fan_out_m; ++i) {
-      child_id = std::stoi(splits[3 + 1 + fan_in_n + i]);
+      child_id = std::stoi(splits[3 + 2 + fan_in_n + i]);
       gate_p->add_output_gate(child_id);
     }
 
@@ -282,7 +343,7 @@ void Simulator::print_inputs(bool with_legend) {
 void Simulator::print_state(bool with_legend) {
   SignalState state;
 
-  std::cout << "INPUT   : ";
+  std::cout << "INPUT   :";
   for (auto &id : m_input_gates) {
     state = m_gates[id]->get_state();
     std::cout << signal_state_to_char(state);
@@ -304,7 +365,7 @@ void Simulator::print_state(bool with_legend) {
 
   if (with_legend) {
     std::cout << "\t// ";
-    for (auto &id : m_output_gates) {
+    for (auto &id : m_dff_gates) {
       std::cout << m_gates[id]->get_name() << ", ";
     }
   }
@@ -323,5 +384,5 @@ void Simulator::print_state(bool with_legend) {
     }
   }
 
-  std::cout << "\n";
+  std::cout << "\n\n";
 }

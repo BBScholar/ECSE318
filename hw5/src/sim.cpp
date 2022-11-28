@@ -10,6 +10,7 @@ int main(int argc, char **argv) {
     std::cerr
         << "Not enough arguments. Usage: verilog_sim <gate file> <input file>"
         << std::endl;
+    return 1;
   }
   // get rid of unused argument
   argv++;

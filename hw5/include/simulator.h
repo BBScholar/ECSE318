@@ -31,8 +31,8 @@ private:
   bool evaluate_gate(GateId id);
   // SignalState calculate_next(const std::vector<SignalState>& state, )
 
-  SignalState input_scan(GateType::GateType type);
-  SignalState table_lookup(GateType::GateType type);
+  SignalState input_scan(GateId id);
+  SignalState table_lookup(GateId id);
 
   void update_inputs(uint32_t iteration);
   void update_state();

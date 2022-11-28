@@ -22,10 +22,6 @@ type_traits
 vector
 -
 
-../include/lut.h
-gate.h
-../include/gate.h
-
 ../include/simulator.h
 memory
 -
@@ -38,14 +34,6 @@ vector
 gate.h
 ../include/gate.h
 
-/home/bscholar/Documents/ECSE318/hw5/src/gate.cpp
-gate.h
-/home/bscholar/Documents/ECSE318/hw5/src/gate.h
-iostream
--
-sstream
--
-
 /home/bscholar/Documents/ECSE318/hw5/src/sim.cpp
 iostream
 -
@@ -53,18 +41,4 @@ string
 -
 simulator.h
 /home/bscholar/Documents/ECSE318/hw5/src/simulator.h
-
-/home/bscholar/Documents/ECSE318/hw5/src/simulator.cpp
-simulator.h
-/home/bscholar/Documents/ECSE318/hw5/src/simulator.h
-fstream
--
-iostream
--
-boost/algorithm/string.hpp
--
-boost/algorithm/string/trim_all.hpp
--
-lut.h
-/home/bscholar/Documents/ECSE318/hw5/src/lut.h
 
