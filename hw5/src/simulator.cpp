@@ -47,7 +47,9 @@ bool Simulator::run() {
 
 void Simulator::schedule_fanout(GateId id) {
   for (GateId &child_id : m_gates[id]->get_fan_out()) {
-      // std::cout << "Gate " << m_gates[id]->get_name() << " (" << id << ") is scheduling " << m_gates[child_id]->get_name()  << " (" << child_id << ") for update" << std::endl;
+    // std::cout << "Gate " << m_gates[id]->get_name() << " (" << id << ") is
+    // scheduling " << m_gates[child_id]->get_name()  << " (" << child_id << ")
+    // for update" << std::endl;
     m_needs_update[child_id] = true;
   }
 }
@@ -114,7 +116,8 @@ bool Simulator::evaluate_gate(GateId id) {
 #endif
 
   m_gates[id]->set_state(next_state);
-  std::cout << "Setting " << m_gates[id]->get_name() << " (" << id << ") changing to state " << signal_state_to_char(next_state) << std::endl;
+  // std::cout << "Setting " << m_gates[id]->get_name() << " (" << id << ")
+  // changing to state " << signal_state_to_char(next_state) << std::endl;
 
   return next_state != prev_state;
   // else do stuff

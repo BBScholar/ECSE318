@@ -1,10 +1,16 @@
 
+#include <chrono>
 #include <iostream>
 #include <string>
 
 #include "simulator.h"
 
 int main(int argc, char **argv) {
+  using std::chrono::duration_cast;
+  using std::chrono::microseconds;
+  using std::chrono::milliseconds;
+  using std::chrono::nanoseconds;
+  using clock = std::chrono::high_resolution_clock;
 
   if (argc < 3) {
     std::cerr
@@ -30,7 +36,11 @@ int main(int argc, char **argv) {
     return -1;
   }
 
+  auto start = clock::now();
   sim->run();
+  auto end = clock::now();
+  std::cout << duration_cast<microseconds>(end - start).count() << "us"
+            << std::endl;
 
   return 0;
 }
