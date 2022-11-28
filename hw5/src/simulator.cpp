@@ -148,11 +148,10 @@ SignalState Simulator::input_scan(GateId id) {
   const auto type = m_gates[id]->get_type();
   const uint8_t c = lut::k_c_input[lut::gate_type_to_lut_index(type)];
   const uint8_t i = lut::k_i_input[lut::gate_type_to_lut_index(type)];
-  const SignalState cxi = lut::signal_state_from_int(c ^ i);
+  const SignalState cxi = (SignalState)(c ^ i);
 
   for (GateId child_id : m_gates[id]->get_fan_in()) {
-    const uint8_t V =
-        lut::signal_state_to_lut_index(m_gates[child_id]->get_state());
+    const SignalState V = m_gates[child_id]->get_state();
     if (V == c)
       return cxi;
     else if (V == 2)
@@ -162,7 +161,7 @@ SignalState Simulator::input_scan(GateId id) {
   if (uvalue)
     return SignalState::X;
 
-  return lut::signal_state_from_int(c ^ !i);
+  return (SignalState)(c ^ !i);
 }
 
 SignalState Simulator::table_lookup(GateId id) {
@@ -174,21 +173,17 @@ SignalState Simulator::table_lookup(GateId id) {
   SignalState first_state = m_gates[gate->get_fan_in()[0]]->get_state();
 
   if (type == GateType::Not)
-    return lut::signal_state_from_int(
-        lut::k_inv_table[lut::signal_state_to_lut_index(first_state)]);
+    return (SignalState)lut::k_inv_table[first_state];
   // else if (type == GateType::Buf)
   //   return lut::k_buf_table[lut::signal_state_to_lut_index(first_gate)];
 
   for (int i = 1; i < m_gates[id]->get_fan_in().size(); ++i) {
     SignalState s2 = m_gates[m_gates[id]->get_fan_in()[i]]->get_state();
-    const uint8_t l1 = lut::signal_state_to_lut_index(first_state);
-    const uint8_t l2 = lut::signal_state_to_lut_index(s2);
-    first_state = lut::signal_state_from_int(lut::k_table[type_idx][l1][l2]);
+    first_state = (SignalState)lut::k_table[type_idx][first_state][s2];
   }
 
   if (lut::k_i_input[type_idx])
-    return lut::signal_state_from_int(
-        lut::k_inv_table[lut::signal_state_to_lut_index(first_state)]);
+    return (SignalState)lut::k_inv_table[first_state];
 
   return first_state;
 }

@@ -53,7 +53,7 @@ gate_type_from_string(std::string_view s) {
   }
 }
 
-enum class SignalState : uint8_t { Zero = 0, One = 1, X = 2 };
+enum SignalState : uint8_t { Zero = 0, One = 1, X = 2 };
 
 inline char signal_state_to_char(SignalState sig) {
   switch (sig) {
