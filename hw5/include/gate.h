@@ -36,7 +36,7 @@ gate_type_from_string(std::string_view s) {
     return std::optional<GateType::GateType>(GateType::Input);
   } else if (s == "output") {
     return std::optional<GateType::GateType>(GateType::Output);
-  } else if (s == "dff1") {
+  } else if (s == "dff1" || s == "dff") {
     return std::optional<GateType::GateType>(GateType::Dff);
   } else if (s == "not") {
     return std::optional<GateType::GateType>(GateType::Not);

@@ -21,6 +21,14 @@ void print_string_vector(const std::vector<std::string> &vec) {
   std::cout << "]" << std::endl;
 }
 
+std::vector<std::string> tokenize(const std::string &str) {
+  bool in_module = false;
+
+  std::vector<char> delimiters;
+
+  return {};
+}
+
 int main(int argc, char **argv) {
   // something
   if (argc < 3) {
@@ -64,7 +72,12 @@ int main(int argc, char **argv) {
   net_inputs.reserve(1024);
   net_outputs.reserve(1024);
 
-  for (std::string line; std::getline(input_file, line); line_num++) {
+  // for (std::string line; std::getline(input_file, line, ';');) {
+  //   boost::trim_all(line);
+  //   boost::to_lower(line);
+  // }
+
+  for (std::string line; std::getline(input_file, line, ';'); line_num++) {
     // boost::trim_if(line, boost::is_any_of(" \t"));
     boost::trim_all(line);
     boost::to_lower(line);
@@ -154,7 +167,7 @@ int main(int argc, char **argv) {
       std::string gate_args;
       gate_args = splits[2].substr(lp + 1, pn);
 
-      std::cout << "Gate args: " << gate_args << std::endl;
+      // std::cout << "Gate args: " << gate_args << std::endl;
 
       boost::split(splits, gate_args, boost::is_any_of(","));
 
