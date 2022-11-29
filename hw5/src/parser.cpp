@@ -21,14 +21,6 @@ void print_string_vector(const std::vector<std::string> &vec) {
   std::cout << "]" << std::endl;
 }
 
-std::vector<std::string> tokenize(const std::string &str) {
-  bool in_module = false;
-
-  std::vector<char> delimiters;
-
-  return {};
-}
-
 int main(int argc, char **argv) {
   // something
   if (argc < 3) {
