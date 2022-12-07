@@ -5,8 +5,8 @@ include(CheckIPOSupported)
 
 set(CMAKE_CXX_STANDARD 20)
 
-find_package(Boost COMPONENTS program_options REQUIRED)
-find_package(spdlog REQUIRED)
+set(Boost_USE_STATIC_LIBS ON)
+find_package(Boost REQUIRED)
 
 include_directories(${Boost_INCLUDE_DIR})
 
@@ -23,7 +23,7 @@ add_executable(verilog_sim
 )
 
 target_link_libraries(
-  verilog_sim PRIVATE spdlog::spdlog ${Boost_Libraries}
+  verilog_sim PRIVATE  ${Boost_Libraries}
 )
 
 add_executable(verilog_parser 
@@ -33,7 +33,7 @@ add_executable(verilog_parser
 )
 
 target_link_libraries(
-  verilog_parser PRIVATE spdlog::spdlog ${Boost_Libraries}
+  verilog_parser PRIVATE ${Boost_Libraries}
 )
 
 check_ipo_supported(RESULT supported OUTPUT error)

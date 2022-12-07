@@ -47,5 +47,7 @@ int main(int argc, char **argv) {
             << duration_cast<microseconds>(end - start).count() << "us to run."
             << std::endl;
 
+  delete sim;
+
   return 0;
 }

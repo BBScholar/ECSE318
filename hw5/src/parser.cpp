@@ -55,7 +55,6 @@ int main(int argc, char **argv) {
   splits.reserve(64);
 
   std::unordered_map<GateId, std::shared_ptr<Gate>> gates;
-  // std::unordered_map<std::string, GateId> net_inputs;
   std::unordered_map<std::string, std::vector<GateId>> net_outputs;
   std::unordered_map<GateId, std::string> net_inputs;
   // reserve memory to prevent rehashing
@@ -63,11 +62,6 @@ int main(int argc, char **argv) {
   gates.reserve(1024); // TODO: do this in a smarter way?
   net_inputs.reserve(1024);
   net_outputs.reserve(1024);
-
-  // for (std::string line; std::getline(input_file, line, ';');) {
-  //   boost::trim_all(line);
-  //   boost::to_lower(line);
-  // }
 
   for (std::string line; std::getline(input_file, line, ';'); line_num++) {
     // boost::trim_if(line, boost::is_any_of(" \t"));
