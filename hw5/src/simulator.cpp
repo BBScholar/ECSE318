@@ -4,10 +4,9 @@
 #include <fstream>
 #include <iostream>
 
-#include <boost/algorithm/string.hpp>
-#include <boost/algorithm/string/trim_all.hpp>
 
 #include "lut.h"
+#include "string_util.h"
 
 Simulator::Simulator()
     : m_has_model(false), m_has_inputs(false), m_num_gates(0) {
@@ -240,7 +239,8 @@ bool Simulator::load_model(const std::string &fn) {
     // if(line.empty()) {
     //   continue;
     // }
-    boost::split(splits, line, boost::is_any_of("\t"));
+    // boost::split(splits, line, boost::is_any_of("\t"));
+    util::split(splits, line, "\t");
 
     current_type = (GateType::GateType)std::stoi(splits[0]);
     current_level = std::stoi(splits[2]);
@@ -309,7 +309,8 @@ bool Simulator::load_inputs(const std::string &fn) {
   uint32_t line_num = 0;
 
   for (std::string line; std::getline(file, line); ++line_num) {
-    boost::trim(line);
+    // boost::trim(line);
+    util::trim(line);
 
     if (line.empty() || line.starts_with("//")) {
       continue;
