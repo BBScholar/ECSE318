@@ -2,8 +2,10 @@
 
 #include <fstream>
 #include <memory>
+#include <queue>
 #include <string>
 #include <unordered_map>
+#include <unordered_set>
 #include <vector>
 
 #include "gate.h"
@@ -43,6 +45,7 @@ private:
   bool m_has_model, m_has_inputs;
 
   uint32_t m_num_gates;
+  uint32_t m_max_level;
 
   std::unordered_map<GateId, std::shared_ptr<Gate>> m_gates;
 
@@ -50,8 +53,10 @@ private:
   std::vector<GateId> m_output_gates;
   std::vector<GateId> m_dff_gates;
 
-  std::vector<GateId> m_top_order;
-  std::vector<bool> m_needs_update;
+  // std::vector<bool> m_needs_update;
+
+  std::vector<std::queue<GateId>> m_level_updates;
+  std::unordered_set<GateId> m_update_queued;
 
   SimInput m_inputs;
 };

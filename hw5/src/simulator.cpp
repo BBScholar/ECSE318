@@ -1,5 +1,6 @@
 #include "simulator.h"
 
+#include <algorithm>
 #include <chrono>
 #include <fstream>
 #include <iostream>
@@ -37,6 +38,25 @@ bool Simulator::run(const std::string &fn) {
   const int iterations = m_inputs.size();
 
   for (int i = 0; i < iterations; ++i) {
+
+    m_update_queued.clear();
+    update_inputs(i);
+    update_state();
+
+    for (int level = 0; level <= m_max_level; ++level) {
+      while (!m_level_updates[level].empty()) {
+        const GateId id = m_level_updates[level].front();
+        m_level_updates[level].pop();
+        if (evaluate_gate(id)) {
+          schedule_fanout(id);
+        }
+      }
+    }
+    print_state(out_file, i == 0);
+  }
+
+  /*
+  for (int i = 0; i < iterations; ++i) {
     // read inputs and schedule fanouts of changed inputs.
     update_inputs(i);
     // load next state and schedule fanout.
@@ -55,7 +75,7 @@ bool Simulator::run(const std::string &fn) {
     // print logic values at PI, PO, and States
     print_state(out_file, i == 0);
   }
-
+  */
   auto end = clock::now();
 
   std::cout << "Simulation took "
@@ -70,7 +90,10 @@ void Simulator::schedule_fanout(GateId id) {
     // std::cout << "Gate " << m_gates[id]->get_name() << " (" << id << ") is
     // scheduling " << m_gates[child_id]->get_name()  << " (" << child_id << ")
     // for update" << std::endl;
-    m_needs_update[child_id] = true;
+    if (!m_update_queued.contains(child_id)) {
+      m_update_queued.insert(child_id);
+      m_level_updates[m_gates[child_id]->get_level()].push(child_id);
+    }
   }
 }
 
@@ -87,8 +110,6 @@ void Simulator::update_state() {
       m_gates[id]->set_state(next_state);
       schedule_fanout(id);
     }
-
-    m_needs_update[id] = false;
   }
 }
 
@@ -106,8 +127,6 @@ void Simulator::update_inputs(uint32_t iteration) {
       m_gates[id]->set_state(next_state);
       schedule_fanout(m_input_gates[id]);
     }
-
-    m_needs_update[id] = false;
   }
 }
 
@@ -195,6 +214,7 @@ bool Simulator::load_model(const std::string &fn) {
   m_output_gates.clear();
   m_dff_gates.clear();
   m_inputs.clear();
+  m_level_updates.clear();
 
   m_has_model = false;
   m_has_inputs = false;
@@ -227,13 +247,12 @@ bool Simulator::load_model(const std::string &fn) {
   m_output_gates.reserve(num_lines);
   m_dff_gates.reserve(num_lines);
 
-  // m_top_order.reserve(num_lines);
-  // m_needs_update.reserve(num_lines);
-  m_top_order.clear();
-  m_top_order.resize(num_lines, 0);
+  m_max_level = 0;
 
-  m_needs_update.clear();
-  m_needs_update.resize(num_lines, false);
+  // m_needs_update.clear();
+  // m_needs_update.resize(num_lines, false);
+
+  m_update_queued.rehash(num_lines);
 
   for (; std::getline(file, line);) {
     // boost::trim(line);
@@ -246,6 +265,8 @@ bool Simulator::load_model(const std::string &fn) {
     current_level = std::stoi(splits[2]);
     fan_in_n = std::stoi(splits[3]);
     fan_out_m = std::stoi(splits[3 + fan_in_n + 1]);
+
+    m_max_level = std::max(m_max_level, current_level);
 
     auto gate_p = std::make_shared<Gate>(splits.back(), current_id,
                                          current_type, current_level);
@@ -272,10 +293,15 @@ bool Simulator::load_model(const std::string &fn) {
       m_dff_gates.push_back(current_id);
     }
 
-    m_top_order[current_level] = current_id;
-    m_needs_update[current_id] = false;
+    // m_needs_update[current_id] = false;
     m_gates.insert({current_id, gate_p});
     current_id++;
+  }
+
+  m_level_updates.reserve(m_max_level + 1);
+  for (int i = 0; i <= m_max_level; ++i) {
+    m_level_updates.push_back(std::queue<GateId>());
+    // m_level_updates[i].reserve(1024);
   }
 
   m_num_gates = current_id;

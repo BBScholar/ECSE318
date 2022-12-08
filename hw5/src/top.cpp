@@ -48,7 +48,7 @@ std::vector<GateId> topological_ordering(uint32_t num_gates,
     order.push_back(current_id);
 
     // set order_num in gate
-    gate_map[current_id]->set_level(order_num++);
+    // gate_map[current_id]->set_level(order_num++);
 
     //
     for (GateId &child_id : gate_map[current_id]->get_fan_out()) {

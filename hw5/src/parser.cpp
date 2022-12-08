@@ -1,4 +1,5 @@
 
+#include <algorithm>
 #include <fstream>
 #include <iostream>
 #include <memory>
@@ -195,10 +196,21 @@ int main(int argc, char **argv) {
     }
   }
 
-  // TODO: resolve top ordering??
+  std::vector<GateId> order = topological_ordering(max_gate_id, gates);
 
-  std::vector<GateId> order;
-  topological_ordering(max_gate_id, gates);
+  for (GateId id : order) {
+    GateType::GateType type = gates[id]->get_type();
+    if (type == GateType::Dff || type == GateType::Input) {
+      gates[id]->set_level(0);
+      continue;
+    }
+    uint32_t max_level = 0;
+    for (GateId child_id : gates[id]->get_fan_in()) {
+      max_level = std::max({max_level, gates[child_id]->get_level()});
+    }
+    max_level++;
+    gates[id]->set_level(max_level);
+  }
 
   // write gates to output file
   std::ofstream output_file(output_fn, std::fstream::out);
