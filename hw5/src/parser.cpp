@@ -6,12 +6,12 @@
 #include <string>
 #include <unordered_map>
 #include <vector>
-
-#include <boost/algorithm/string.hpp>
-#include <boost/algorithm/string/trim_all.hpp>
+#include <algorithm>
+#include <cctype>
 
 #include "gate.h"
 #include "top.h"
+#include "string_util.h"
 
 void print_string_vector(const std::vector<std::string> &vec) {
   std::cout << "[";
@@ -65,8 +65,11 @@ int main(int argc, char **argv) {
 
   for (std::string line; std::getline(input_file, line, ';'); line_num++) {
     // boost::trim_if(line, boost::is_any_of(" \t"));
-    boost::trim_all(line);
-    boost::to_lower(line);
+    // boost::trim_all(line);
+    // boost::to_lower(line);
+
+    util::trim_all(line);
+    std::transform(line.begin(), line.end(), line.begin(), [](unsigned char c) { return std::tolower(c); } );
 
     // if empty line or comment continue
     if (line.empty() || line.starts_with("//")) {
@@ -86,7 +89,8 @@ int main(int argc, char **argv) {
     }
 
     splits.clear();
-    boost::split(splits, line, boost::is_any_of(" "));
+    // boost::split(splits, line, boost::is_any_of(" "));
+    util::split(splits, line, " ");
 
     if (splits.size() < 2) {
       std::cerr << "Malformed line (" << line_num << "): " << line << std::endl;
@@ -95,7 +99,8 @@ int main(int argc, char **argv) {
 
     if (splits[0] == "wire") {
       std::cout << "Found wires: ";
-      boost::split(splits, splits[1], boost::is_any_of(",;"));
+      // boost::split(splits, splits[1], boost::is_any_of(",;"));
+      util::split(splits, splits[1], ",;");
       for (const auto &s : splits) {
         if (!s.empty()) {
           std::cout << s << ", ";
@@ -112,7 +117,8 @@ int main(int argc, char **argv) {
 
     current_type_opt = gate_type_from_string(splits[0]);
     current_name = splits[1];
-    boost::erase_all(current_name, ";"); // remove semicolon from name
+    // boost::erase_all(current_name, ";"); // remove semicolon from name
+    util::erase_all_char(current_name, ';');
 
     if (!current_type_opt) {
       std::cerr << "Invalid gate type (" << splits[0] << ") at line" << line_num
@@ -155,7 +161,8 @@ int main(int argc, char **argv) {
 
       // std::cout << "Gate args: " << gate_args << std::endl;
 
-      boost::split(splits, gate_args, boost::is_any_of(","));
+      // boost::split(splits, gate_args, boost::is_any_of(","));
+      util::split(splits, gate_args, ",");
 
       // TOOD: check lengths here
       if (splits.size() < gate_num_inputs(current_type) + 1) {
@@ -171,7 +178,7 @@ int main(int argc, char **argv) {
       // mark this gate as a reader of all the following nets
       for (int i = 1; i < splits.size(); ++i) {
         net_outputs[splits[i]].push_back(current_id);
-      }
+        }
     }
 
     gates.insert({current_id++, gate_p});

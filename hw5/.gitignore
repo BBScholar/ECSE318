@@ -2,3 +2,5 @@ build/**
 cmake-build-debug/
 input2-2.txt
 simoutput2-2.txt
+.vscode
+.idea

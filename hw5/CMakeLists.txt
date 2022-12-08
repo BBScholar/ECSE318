@@ -5,11 +5,6 @@ include(CheckIPOSupported)
 
 set(CMAKE_CXX_STANDARD 20)
 
-set(Boost_USE_STATIC_LIBS ON)
-find_package(Boost REQUIRED)
-
-include_directories(${Boost_INCLUDE_DIR})
-
 include_directories(include)
 
 file(GLOB_RECURSE include_files
@@ -20,20 +15,14 @@ add_executable(verilog_sim
    src/sim.cpp
    src/gate.cpp 
    src/simulator.cpp
+   src/string_util.cpp
 )
 
-target_link_libraries(
-  verilog_sim PRIVATE  ${Boost_Libraries}
-)
-
-add_executable(verilog_parser 
+add_executable(verilog_parser
   src/parser.cpp
   src/top.cpp
   src/gate.cpp
-)
-
-target_link_libraries(
-  verilog_parser PRIVATE ${Boost_Libraries}
+  src/string_util.cpp
 )
 
 check_ipo_supported(RESULT supported OUTPUT error)
