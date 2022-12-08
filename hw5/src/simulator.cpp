@@ -55,27 +55,6 @@ bool Simulator::run(const std::string &fn) {
     print_state(out_file, i == 0);
   }
 
-  /*
-  for (int i = 0; i < iterations; ++i) {
-    // read inputs and schedule fanouts of changed inputs.
-    update_inputs(i);
-    // load next state and schedule fanout.
-    update_state();
-
-    // traverse tree
-    for (int j = 0; j < m_top_order.size(); ++j) {
-      GateId current_id = m_top_order[j];
-      if (m_needs_update[current_id]) {
-        if (evaluate_gate(current_id)) { // TODO: schedule fanout
-          schedule_fanout(current_id);
-        }
-        m_needs_update[current_id] = false;
-      }
-    }
-    // print logic values at PI, PO, and States
-    print_state(out_file, i == 0);
-  }
-  */
   auto end = clock::now();
 
   std::cout << "Simulation took "
@@ -147,7 +126,7 @@ bool Simulator::evaluate_gate(GateId id) {
     return false;
   }
 
-#define INPUT_SCAN
+// #define INPUT_SCAN
 #ifdef INPUT_SCAN
   next_state = input_scan(id);
 #else
